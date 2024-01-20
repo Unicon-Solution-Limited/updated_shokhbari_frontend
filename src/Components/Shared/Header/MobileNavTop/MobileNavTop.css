@@ -1,0 +1,26 @@
+.MobileNav div table {
+  margin: auto;
+}
+.MobileNav .MobileContact {
+  padding: 5px 0;
+}
+.MobileNav .MobileContact i {
+  color: var(--yellow);
+}
+.MobileNav .MobileContact td:first-child {
+  padding-right: 15px;
+}
+.MobileNav {
+  background-color: var(--blue);
+  color: var(--white);
+  z-index: 4;
+}
+
+@media only screen and (max-width: 900px) {
+  .TopHeaderMain {
+    display: none;
+  }
+  .MobileNav div {
+    margin: auto;
+  }
+}

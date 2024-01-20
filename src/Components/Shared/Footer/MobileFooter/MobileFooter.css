@@ -1,0 +1,90 @@
+.MobileFooter {
+  position: fixed;
+  width: 100% !important;
+  height: auto;
+  bottom: 0;
+  left: 0;
+  background-color: var(--blue);
+  padding: 15px 0;
+  z-index: 5;
+}
+
+.Mlogo img {
+  width: 90px;
+  height: 50px;
+  object-fit: cover;
+}
+
+.UserImageMobile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.MFMain {
+  display: flex;
+  justify-content: space-around;
+}
+.MobileFooter .MFMain .Micon i {
+  font-size: 25px;
+  color: var(--white);
+}
+.MobileFooter .MFMain div a.hamB i {
+  font-size: 35px;
+  margin-bottom: -20px;
+}
+.UserImageMobile {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.offcanvas-bottom {
+  width: 60% !important;
+  height: auto;
+  background-color: var(--yellow);
+}
+.MobileBottonOffcanvasHeader {
+  border-bottom: 1px solid var(--blue);
+}
+.offcanvasbodyMobile {
+  overflow-y: scroll !important;
+}
+.MobileBottonOffcanvasHeader,
+.offcanvasbodyMobile ul {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+  color: var(--blue);
+}
+.MobileBottonOffcanvasHeader > h5 {
+  color: var(--blue);
+}
+.MobileBottonOffcanvasHeader button {
+  color: var(--blue) !important;
+}
+.offcanvasbodyMobile ul li {
+  margin-bottom: 5%;
+}
+
+.MobileBottomOffcanvasLinks {
+  text-decoration: none !important;
+  color: var(--blue) !important;
+  font-size: 20px;
+}
+.MobileBottomOffcanvasLinks:hover {
+  font-weight: 400;
+  text-decoration: underline !important;
+}
+@media only screen and (min-width: 900px) {
+  /* 900px or more... */
+  .MobileFooter {
+    display: none;
+  }
+}
+@media only screen and (max-width: 900px) {
+  .person-circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    text-align: center;
+  }
+}

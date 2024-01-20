@@ -1,0 +1,67 @@
+.ManageProductPageButton button {
+  background-color: var(--white);
+  color: var(--blue);
+  border: 1px solid var(--yellow) !important;
+}
+.ManageProductPageButton button:focus,
+.ManageProductPageButton button:hover {
+  background-color: var(--blue) !important;
+  color: var(--yellow) !important;
+}
+
+.ProductTable {
+  table-layout: fixed;
+  width: 100%;
+  font-weight: bold;
+}
+.table1stCol {
+  width: 5%;
+}
+.ProductTable td,
+.ProductTable th {
+  border: 1px solid #fff;
+}
+.ProductTable thead {
+  background-color: var(--yellow) !important;
+}
+.ProductTable tbody {
+  border-top: none !important;
+}
+
+.productAction span {
+  cursor: pointer;
+  font-size: 20px;
+}
+.productAction span:first-child {
+  color: red;
+}
+.editIcon {
+  color: green;
+}
+.deleteSuccessMessage {
+  text-align: center;
+  color: green;
+  font-weight: bold;
+}
+
+/* edit mangaeProduct */
+.outline_none {
+  outline: none !important;
+  box-shadow: none !important;
+  background-image: none !important;
+}
+
+/* pagination */
+.pagination {
+  margin: 30px;
+}
+.pagination button {
+  padding: 0 8px;
+  margin-right: 3px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+.pagination .selected {
+  background-color: var(--yellow);
+  color: black;
+}

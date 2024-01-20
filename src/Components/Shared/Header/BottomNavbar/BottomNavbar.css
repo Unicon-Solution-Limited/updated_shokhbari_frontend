@@ -1,0 +1,178 @@
+.BottomNavbar {
+  background: var(--yellow) !important;
+  height: 100%;
+  padding: 4px 0;
+}
+.bottomNavBody {
+  margin-left: -3% !important;
+}
+.catLogo {
+  width: 100%;
+  height: auto;
+}
+.bottomNavMenus {
+  display: flex;
+  margin-bottom: 0 !important;
+}
+.bottomNavMenuLink {
+  color: var(--blue);
+  text-decoration: none;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 30px;
+  margin-left: 35px;
+}
+.bottomNavMenuLink:hover {
+  color: var(--white);
+}
+
+@media only screen and (max-width: 900px) {
+  .BottomNavbar {
+    display: none;
+  }
+}
+
+/* ================Start Category Side Offcanvas Menus=================== */
+
+#offcanvas {
+  height: 100%;
+  width: 220px !important;
+  background-color: var(--blue);
+}
+.offcanvasHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px;
+  color: var(--yellow);
+}
+.skbOffcanvasTitle {
+  margin-left: -15px !important;
+}
+.offcanvasHeader button {
+  font-size: var(--h2);
+}
+.navBar_offcanvas_body {
+  background-color: var(--yellow);
+  background-image: url("../../../Image/Logo/popup_back.png");
+  overflow-x: hidden;
+}
+
+.offcanvasLink {
+  width: 215px;
+  color: var(--blue) !important;
+  font-weight: 600;
+}
+.offcanvasLink:hover {
+  background-color: #fff;
+}
+/* ====================== Mega menus id's */
+.mega_menu {
+  background: #fff;
+  width: auto !important;
+  position: fixed !important;
+  left: 200px !important;
+}
+#apparel_mega {
+  height: auto !important;
+}
+
+#fashion_mega,
+#beauty_personal_care_mega,
+#GiftCraft_mega,
+#TripTours_mega,
+#SportsEntertainment_mega,
+#Medical_mega,
+#homeLifeStyle_mega,
+#Matrinonial_mega,
+#Electronics_mega,
+#autoMobilesMotorBike_mega {
+  height: 96vh !important;
+  top: 10px !important;
+  overflow-y: scroll !important;
+}
+
+#gift_mega,
+#office-supplies-mega,
+#HomeAppliance_megaMenu {
+  height: auto !important;
+  top: 20% !important;
+}
+#HomeAndLife_mega {
+  height: auto !important;
+  top: 30% !important;
+}
+/*  Mega menus id's ====================== */
+
+.sidebar {
+  margin-left: -15px !important;
+  padding: 0 !important;
+  width: 215px !important;
+}
+
+.headline {
+  font-size: var(--h2);
+  font-weight: bold;
+  background: var(--yellow);
+  background: linear-gradient(
+    to bottom left,
+    var(--yellow) 0%,
+    var(--blue) 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.subHeadline {
+  font-weight: 900;
+}
+
+#megaMenuLink {
+  padding-top: 10px;
+  text-align: left !important;
+  text-decoration: none;
+  color: var(--blue);
+}
+ul.text-center {
+  padding-left: 0 !important;
+}
+.megaMenu_li {
+  border-bottom: 1px solid #0000001c;
+  padding: 5px 0;
+}
+#megaMenuLink:hover {
+  color: var(--yellow);
+}
+.megaMenuImage {
+  width: 100%;
+  height: 100%;
+}
+.subcategorySection {
+  border-left: 1px solid rgba(0, 0, 0, 0.205);
+}
+
+@media all and (min-width: 992px) {
+  .sidebar li {
+    position: relative;
+  }
+  .sidebar li .submenu {
+    display: none;
+    position: absolute;
+    left: 100%;
+    top: -7px;
+    min-width: 240px;
+  }
+  .sidebar li:hover > .submenu {
+    display: block;
+  }
+}
+
+@media (max-width: 991px) {
+  .sidebar .submenu,
+  .sidebar .dropdown-menu {
+    position: static !important;
+    margin-left: 0.7rem;
+    margin-right: 0.7rem;
+    margin-bottom: 0.5rem;
+  }
+}
+/* ================End Category Side Offcanvas Menus=================== */

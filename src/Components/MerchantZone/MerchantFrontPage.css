@@ -1,0 +1,10 @@
+.merchant-front-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 10px;
+}
+.merchant-front-button a{
+    border-radius: 5px;
+    text-decoration: none;
+}

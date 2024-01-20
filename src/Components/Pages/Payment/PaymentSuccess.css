@@ -1,0 +1,19 @@
+.successPageBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.successMessageBody {
+  text-align: center;
+  padding: 50px;
+  color: var(--blue);
+}
+.successBodyButtons {
+  display: flex;
+  /* justify-content: space-around; */
+  justify-content: center;
+}
+.successBodyButtons a {
+  margin: 0 5px;
+}

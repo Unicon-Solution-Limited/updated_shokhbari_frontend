@@ -1,0 +1,92 @@
+/*============Start TopHeader=============*/
+.TopHeaderMain {
+  background: var(--blue) !important;
+  padding: 20px 0;
+}
+
+.HomeLogo {
+  width: 100%;
+  max-width: 100px;
+  height: auto;
+}
+.productSearchBar {
+  width: 100%;
+  height: 80%;
+}
+
+.productSearchBarButton {
+  background-color: var(--yellow);
+  color: var(--blur);
+}
+.productSearchBarButton:hover {
+  background-color: var(--blue);
+  color: var(--yellow);
+  border: 1px solid var(--yellow);
+}
+
+.searchbarAndIcons {
+  display: flex;
+  align-items: center;
+}
+.TopHeaderIcons {
+  display: flex;
+  margin-left: 5%;
+}
+.TopHeaderIcons i {
+  color: var(--white);
+  font-size: 22px;
+}
+.text-dark {
+  background-color: var(--yellow) !important;
+}
+.UserImage {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+}
+.person-circle {
+  background-color: var(--yellow);
+  color: var(--blue);
+  display: inline-block;
+  width: 22px;
+  height: 22px;
+  text-align: center;
+  border-radius: 50%;
+}
+.tooltipBody {
+  margin-left: 20px;
+  color: var(--white);
+  position: relative;
+}
+.tooltipBody:first-child {
+  margin-left: 0;
+}
+.tooltipText {
+  visibility: hidden;
+  width: 100px;
+  color: var(--yellow);
+  text-align: center;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 1;
+  bottom: 25px;
+  left: 50%;
+  margin-left: -50px;
+}
+.tooltipBody:hover .tooltipText {
+  visibility: visible;
+}
+.TopHeaderContact {
+  color: var(--yellow);
+}
+.TopHeaderContact span {
+  color: var(--white);
+}
+
+@media only screen and (min-width: 890px) {
+  .MobileNav {
+    display: none;
+  }
+}
+
+/*============End TopHeader=============*/

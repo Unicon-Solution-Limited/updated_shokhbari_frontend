@@ -1,0 +1,416 @@
+/* ******************************************************
+This Page Contain All The design Of home page
+******************************************************* */
+
+/* campaign popup */
+.homepage#blur.active {
+  filter: blur(10px);
+  pointer-events: none;
+  user-select: none;
+  overflow-x: hidden !important;
+}
+
+.adsPopup {
+  max-width: 100%;
+  height: auto;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+  text-align: center;
+}
+.adsPopup button {
+  font-size: 30px;
+  color: white !important;
+  border: 2px solid yellow;
+  cursor: pointer;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  background-color: red;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.adsPopup img {
+  width: 100%;
+  height: 90vh;
+}
+
+#close {
+  color: #0f72e5;
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 768px) {
+  /* ************************* Welcome Section */
+  .left_image {
+    margin-bottom: 30px !important;
+  }
+  /* ************************ Menu Section */
+  .menu_middle_items .col-md-4 {
+    border: none;
+  }
+  /* ****************** Carousel section */
+
+  .offer_img_m {
+    width: 100%;
+  }
+
+  .offer-img-spans {
+    grid-template-columns: auto auto;
+  }
+
+  .offer-img-span:last-child {
+    grid-column: 1 / 3;
+    padding: 0 100px;
+  }
+
+  /* On smaller screens, decrease text size */
+  @media only screen and (max-width: 300px) {
+    .prev,
+    .next,
+    .text {
+      font-size: 11px;
+    }
+  }
+
+  /* Ads Popup */
+  .adsPopup img {
+    width: 95vw;
+    height: 50vh;
+    object-fit: cover;
+  }
+}
+
+/* =========================== Carousel section */
+.myCarousal {
+  margin: 0 !important;
+  padding: 0 !important;
+  border-bottom: 1px solid var(--yellow);
+}
+
+.bannerImg {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+}
+/* =Start Mid Menus= */
+.MidNavMain {
+  margin: 15vh 0 0 0;
+  width: 100%;
+}
+.MidNav {
+  padding: 0 30px;
+}
+
+.midNavLink {
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: -5px !important;
+  padding: 0 !important;
+  line-height: 1;
+}
+
+.midNavBody {
+  text-align: center;
+  color: var(--blue);
+  margin: 0;
+  border-radius: 10px;
+}
+
+.midNavBody:hover .midNavLink {
+  font-weight: 500;
+  color: var(--blue);
+}
+
+.midnavImg {
+  width: 100%;
+  height: 120px;
+  object-fit: contain;
+  margin: auto;
+  margin-bottom: 10px;
+}
+.MidNavRow {
+  padding: 0 0 20px 0;
+}
+.MidNavRow button.slick-arrow {
+  background-color: var(--blue) !important;
+  border-radius: 50%;
+}
+@media only screen and (max-width: 900px) {
+  .MidNavMain {
+    margin: 8vh 0;
+  }
+  .midNavLink {
+    font-size: 2.5vw;
+  }
+
+  .bannerImg {
+    width: 100%;
+    height: 40vh;
+    object-fit: fill;
+  }
+}
+/* =End Mid Menus= */
+/* Carousel section end ======================= */
+
+/* =========================== Flash Sale section */
+/* Some Css in popular items section */
+.flashSale {
+  overflow-x: hidden !important;
+  margin: 0 0 15vh 0;
+}
+/* Flash Sale section end =========================== */
+
+/* ============================ Shokh Brand */
+.shokhBrands {
+  overflow-x: hidden;
+  margin-bottom: 15vh;
+}
+.brandImage {
+  padding: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 8px 0px;
+  width: 200px;
+  height: 120px;
+  object-fit: contain;
+}
+.brandCard {
+  cursor: w-resize;
+}
+
+@media only screen and (max-width: 900px) {
+  .shokhBrands {
+    margin-bottom: 8vh;
+  }
+  .brandImage {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* Shokh Brand end ======================= */
+
+/* =========================== Campaign Section */
+.campaignsStyle {
+  background: var(--yellow);
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.campaignsStyle img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.campaignsStyle .categoryHeader {
+  text-align: center;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+/* =Start endHome Section= */
+.EndHome {
+  background: rgb(255, 170, 0);
+  background: radial-gradient(
+    circle,
+    rgba(255, 170, 0, 1) 0%,
+    rgba(232, 237, 231, 1) 100%
+  );
+  margin-bottom: 20px;
+  padding: 10px 0 5px 0;
+}
+.EndHome img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.EndHome p {
+  text-align: center;
+  margin-top: 5px;
+  color: var(--blue);
+}
+/* =End endHome Section= */
+/* Campaign Section end ======================= */
+
+/* ======================= Popular Items Section */
+/* popular product in home section */
+.PopularItemsSection,
+.flashSale {
+  overflow-x: hidden !important;
+  margin: 15vh 0;
+}
+.PopularItemsSection .slick-arrow,
+.flashSale .slick-arrow {
+  width: 50px !important;
+  height: 50px !important;
+  background-color: var(--blue) !important;
+  color: var(--yellow) !important;
+  z-index: 1;
+}
+.PopularItemsSection .slick-slider .slick-arrow:hover,
+.flashSale .slick-slider .slick-arrow:hover {
+  background-color: var(--yellow) !important;
+}
+
+.product_section_top_banner {
+  display: flex;
+  justify-content: center;
+}
+
+.slider_items {
+  padding: 10px;
+  background-color: #f4f9e7 !important;
+}
+.popularItem {
+  padding: 0 3px;
+  width: 100%;
+}
+.popularProductCard {
+  /* height: 57vh; */
+  padding-bottom: 10px;
+}
+
+.popularProductCard:hover {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px,
+    rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+
+.popularProductCardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  min-height: 18vh;
+  margin: 5px;
+  background-color: #fff;
+}
+.popularProductCardBody p {
+  line-height: 0.5;
+}
+.ProductTitle {
+  font-size: 30px !important;
+  text-align: justify;
+}
+
+.sliderSlick {
+  background-color: red;
+  margin-right: 5px;
+}
+.ViewMore {
+  border: 1px solid var(--yellow);
+  border-bottom: none !important;
+  font-size: 14px;
+  background-color: #ffaa007e;
+  padding: 5px;
+}
+.ViewMore:hover {
+  background-color: var(--yellow);
+}
+.ViewMore span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.8s;
+}
+.ViewMore span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.ViewMore:hover span {
+  padding-right: 25px;
+  letter-spacing: 1px;
+}
+
+.ViewMore:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+@media only screen and (max-width: 900px) {
+  .popularProductCard {
+    margin-bottom: 5px;
+    width: 100%;
+  }
+  .PopularItemsSection,
+  .flashSale {
+    margin: 0 0 5vh 0;
+  }
+}
+
+/* wishlist */
+.wishlistColor {
+  color: #ff0000 !important;
+}
+.wishlistLink i {
+  font-style: normal !important;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+
+/* / popular product in home section */
+
+/* Popular Items Page */
+.PopularItemsPage {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.popularItemsHeader {
+  text-align: center;
+}
+.popularItemsTitleHr {
+  width: 50%;
+  border: 2px solid var(--yellow);
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: -10px;
+}
+.popularItemsTitle {
+  font-size: 5vw;
+  color: #000;
+}
+.popularItemsPageCard {
+  display: flex;
+  overflow-x: hidden;
+  border: none;
+  text-align: justify;
+}
+.popularItemsPageCard_main {
+  background-color: #fff;
+  padding: 0;
+  margin: 0;
+  border: 3px solid var(--bodyBack);
+}
+.popularItemsPageCard_main:hover {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.popularItemsPageCardBody {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
+  min-height: 18vh;
+  margin: 5px;
+}
+.popularItemsPageCardBody p {
+  line-height: 1;
+}
+/* Popular Items Page */
+/* Campaign Section end ======================= */

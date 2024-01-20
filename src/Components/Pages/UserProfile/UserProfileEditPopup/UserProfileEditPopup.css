@@ -1,0 +1,24 @@
+.popup-edit-save-btn {
+  background-color: var(--yellow);
+  border-radius: 5px;
+  padding: 5px;
+  outline: none;
+  font-weight: 400;
+}
+
+.popup-edit-save-btn:hover {
+  background-color: var(--blue);
+  color: var(--yellow);
+}
+.modal-close-btn {
+  background-color: var(--yellow);
+  border-radius: 5px;
+  padding: 8px;
+  outline: none;
+  font-weight: 400;
+  width: 80px;
+}
+.modal-close-btn:hover {
+  background-color: var(--blue) !important;
+  color: var(--yellow) !important;
+}

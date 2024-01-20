@@ -1,0 +1,166 @@
+/* ============ Customer Order List CSS =============== */
+.customerOrderList {
+  background-color: #fff !important;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+.customerOrderListHead,
+.customerOrderListFooter {
+  background-color: #cdf8ff8c !important;
+  border-top: 1px solid rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+  display: flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  padding: 0 10px;
+}
+.customerOrderListHead b,
+.customerOrderListFooter b {
+  color: #000;
+  font-weight: bold;
+}
+
+.customerOrdersProducts {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 5px;
+  font-size: 14px;
+}
+.customerOrdersProducts:last-child {
+  margin-bottom: 0;
+}
+.customerOrdersProductsImg {
+  width: 20%;
+  height: 100%;
+  max-height: 130px;
+  min-height: 130px;
+  border-radius: 5px 0 0 5px;
+  margin-right: 2.5%;
+}
+.detailsOfProduct {
+  display: flex;
+  flex-direction: column !important;
+  margin-left: 5%;
+  margin-right: 8%;
+}
+.orderCancel,
+.invoiceBtn {
+  background-color: var(--blue) !important;
+  color: var(--yellow);
+  border: none;
+  padding: 5px 20px;
+}
+.orderCancel:hover {
+  background-color: #ff0000 !important;
+  color: #fff !important;
+}
+.orderCancelDisabled {
+  background-color: var(--ash) !important;
+  color: var(--yellow);
+  border: none;
+  padding: 5px 20px;
+  cursor: no-drop !important;
+}
+.invoiceBtn:hover {
+  background-color: var(--yellow) !important;
+  color: var(--blue);
+}
+.customerOrderHeadText {
+  font-size: 14px;
+  border-right: 1px solid #0000001c;
+  padding: 0 10px;
+}
+.customerOrderHeadText:last-child {
+  color: #008000;
+  border-right: none;
+}
+
+.statusMainSection {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.statusbtn,
+.statusbtnActive {
+  border: 1px solid var(--yellow);
+  background-color: #e7e7e7;
+  padding: 5px;
+  border-radius: 15px;
+  cursor: help;
+  width: 100%;
+  text-align: center;
+}
+.statusHr {
+  width: 100%;
+  height: 4px;
+  background-color: #e7e7e7;
+  line-height: 5px;
+}
+.statusHrActive {
+  width: 100%;
+  height: 4px;
+  background-color: green;
+}
+.statusbtnActive {
+  background-color: #299617;
+  color: #fff;
+  border: 1px solid #299617;
+  position: relative;
+  display: inline-block;
+}
+.hoverText {
+  visibility: hidden;
+  width: 100%;
+  background-color: var(--blue);
+  color: var(--yellow);
+  text-align: center;
+  padding: 5px;
+  border-radius: 20px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 50%;
+  margin-left: -50%;
+}
+.statusbtnActive:hover .hoverText {
+  visibility: visible;
+}
+.statusbtnActive:hover .hoverText::after {
+  content: " ";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--blue) transparent;
+}
+.orderCancleMsg {
+  margin-top: 5px;
+  color: green;
+  text-align: center;
+}
+
+/* ============ Customer Order List CSS =============== */
+
+/* ============ All Order List CSS =============== */
+.customerInfoHeader {
+  font-weight: bold;
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 0;
+}
+.orderDeleteButton {
+  color: #ff0000;
+  font-size: 18px;
+}
+.orderDeleteButton:hover {
+  color: var(--blue);
+  transform: rotate(360deg);
+  transition: 1s;
+}
+/* ============ All Order List CSS =============== */

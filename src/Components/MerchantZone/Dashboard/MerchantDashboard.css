@@ -1,0 +1,13 @@
+/* ================This Page contain all design of Merchant section================== 
+======================================================================================
+*/
+/* ---------------------------- */
+/* -----Merchant-Profile----- */
+/* ---------------------------- */
+.merchant-profile-nav{
+    color: var(--blue) !important;
+}
+.merchant-profile-content{
+    background-color: #fff;
+    padding: 30px 20px;
+}

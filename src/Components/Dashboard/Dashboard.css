@@ -1,0 +1,99 @@
+/* Dashboard Header */
+.dashboardNav {
+  background-color: var(--blue);
+  color: var(--white);
+  border-bottom: 1px solid var(--yellow);
+  width: 100%;
+}
+.dashBoard {
+  color: #fff;
+}
+.dashBoard:hover {
+  color: var(--yellow);
+}
+.rightnavbarItems p {
+  margin: 6px 0 0 10px;
+}
+.rightnavbarItems * {
+  display: inline;
+  text-decoration: none !important;
+}
+
+.dashboardProfileImage {
+  width: 30px !important;
+  height: 30px !important;
+  border-radius: 50%;
+}
+
+.dashboardProfileName {
+  text-decoration: none !important;
+  color: var(--white);
+}
+/* Dashboard Header end */
+
+/* Dashboard Body start*/
+.dashboardSideNav {
+  background-color: var(--yellow);
+  width: auto;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+}
+.dashboardTabsContent,
+.dashboardMainBody {
+  margin: 0;
+  padding: 0;
+}
+.dashboardTabsContent {
+  width: 81%;
+}
+
+.dashboardSidenavButton {
+  border-radius: 0 !important;
+  text-align: left !important;
+  color: var(--blue);
+  font-size: 20px;
+}
+.dashboardIcons > i {
+  margin-right: 10px;
+  font-size: 26px;
+}
+
+.dashboardSidenavButton:hover {
+  background-color: var(--blue) !important;
+  color: var(--yellow);
+}
+.dashboardSidenavButton.active {
+  background-color: var(--blue) !important;
+  color: var(--white);
+  border-bottom: 1px solid var(--yellow);
+}
+
+@media only screen and (max-width: 900px) {
+  .dashboardSideNav {
+    width: 100% !important;
+  }
+  .dashboardTabsContent {
+    width: 100%;
+  }
+}
+/* Dashboard Body end*/
+
+/* Dashboard Footer */
+.dashboardFooter {
+  background-color: var(--blue);
+  border-top: 1px solid var(--yellow);
+}
+.ulDashboardFooter li {
+  display: inline;
+  padding-left: 10px;
+}
+.dashboardFooterLinks {
+  text-decoration: none;
+  color: var(--white);
+}
+.dashboardFooterLinks:hover {
+  color: var(--yellow);
+}
+
+/* Dashboard Footer end */

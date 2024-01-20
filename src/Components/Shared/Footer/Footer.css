@@ -1,0 +1,129 @@
+#myFooter {
+  background: var(--blue) !important;
+  color: var(--yellow);
+}
+#myFooter .hr {
+  border-bottom: 1px solid var(--yellow);
+}
+.TopFooter .row div h5 {
+  text-align: left;
+}
+.TopFooter .row div ul {
+  text-align: left;
+  color: var(--white);
+  text-decoration: none;
+}
+.footLink {
+  text-decoration: none;
+  color: var(--white);
+}
+.TopFooter .row div ul li {
+  margin-bottom: 10px;
+}
+.TopFooter .row div ul li a:hover {
+  color: var(--yellow);
+}
+#Fvhr {
+  border-right: 1px solid var(--yellow);
+}
+#Fvhr1 ul li {
+  margin: 20px 0;
+}
+#Fvhr1 ul li span {
+  margin-left: 10px;
+}
+#Fvhr1 ul li i {
+  font-weight: bold;
+}
+#subscribe .btn {
+  background: var(--yellow);
+}
+
+#subscribe .btn:hover {
+  color: var(--yellow);
+  background: var(--blue);
+  border-color: var(--yellow);
+}
+#paymentImg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+#paymentImg img {
+  width: 50px;
+  height: 30px;
+  object-fit: contain;
+  filter: brightness(110%);
+  display: inline;
+}
+#socialMedia a {
+  font-size: var(--h1);
+  margin: 10px;
+  color: var(--white);
+}
+.bi-facebook:hover {
+  color: #1877f2 !important;
+}
+.bi-youtube:hover {
+  color: #ff0000 !important;
+}
+.bi-instagram:hover {
+  color: rgba(255, 69, 0, 1) !important;
+}
+footer .copyRight .BrName {
+  text-decoration: none;
+  color: var(--white);
+}
+footer .copyRight .BrName:hover {
+  color: var(--yellow);
+}
+.footer_contactUs {
+  color: var(--white);
+  text-align: left;
+}
+.footer_contactUs tr td {
+  padding: 10px;
+  border-bottom: 1px solid rgba(255, 170, 0, 0.3);
+}
+.secure_img {
+  width: 100px;
+  height: 60px;
+  object-fit: cover;
+}
+.QrCode-column {
+  position: relative;
+}
+.qr_code {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 150px;
+  height: auto;
+}
+
+@media only screen and (max-width: 900px) {
+  .followUS,
+  .securedBy {
+    margin-top: 10%;
+  }
+  #Fvhr {
+    border: none;
+  }
+  .responsive-text {
+    text-align: center !important;
+  }
+  .FooterMenuSection {
+    margin-bottom: 10%;
+  }
+  .footer_contactUs tr td {
+    padding: 5px;
+  }
+  .messenger_chat_plugin {
+    position: fixed !important;
+    bottom: 90px !important;
+    right: 10px !important;
+  }
+}

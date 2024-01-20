@@ -1,0 +1,25 @@
+.MobileNav .hamser {
+  display: flex;
+  padding: 12px 0;
+}
+
+.MobileNav .hamser .input-group {
+  margin: 0 10px;
+  width: 100%;
+}
+.MobileNav .hamser .input-group input[type="text"] {
+  padding: 8px;
+  font-size: 17px;
+  border: 1px solid var(--yellow);
+}
+.MobileNav .hamser .input-group button {
+  padding: 8px 10px;
+  background: var(--yellow);
+  color: var(--blue);
+  font-size: 17px;
+}
+.MobileNav .hamser .input-group button:hover {
+  color: var(--yellow);
+  background: var(--blue);
+  border: 1px solid var(--yellow);
+}

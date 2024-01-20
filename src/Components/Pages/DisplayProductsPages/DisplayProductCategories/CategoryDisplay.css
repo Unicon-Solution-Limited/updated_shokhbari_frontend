@@ -1,0 +1,95 @@
+/*============== Category Display sidebar */
+.categoryDisplay {
+  overflow-x: hidden;
+}
+.categoryButtonBody {
+  width: 15%;
+  height: 100%;
+  border-right: 1px solid rgba(0, 0, 0, 0.08);
+}
+.categoryButtonHeader {
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 600;
+  margin: 10px 0;
+  border-bottom: 1px solid var(--blue);
+}
+.categoryButtonHeader span {
+  letter-spacing: 2px;
+}
+.categoryButton {
+  color: var(--blue) !important;
+  margin: 10px 0;
+}
+.categoryButton:hover {
+  font-weight: 700;
+}
+.categoryButton.active {
+  color: var(--yellow) !important;
+  background-color: var(--blue) !important;
+  border-radius: 0 !important;
+}
+/* Category Display sidebar ======================*/
+
+/* ============== Category Display main start*/
+.categoryContentDisplay {
+  margin-left: auto;
+  margin-right: auto;
+  width: 85%;
+  height: 100%;
+}
+.subCateBanner {
+  object-fit: cover;
+}
+
+.categoryContentBody {
+  text-decoration: none !important;
+  color: var(--blue) !important;
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: transparent !important;
+}
+.categoryContentBody:hover .categoryImageCaption {
+  background-color: var(--blue);
+  color: var(--yellow);
+  transition: 0.5s;
+}
+.categoryImage {
+  width: 50vw;
+  height: 30vh;
+  object-fit: contain !important;
+}
+.categoryImageCaption {
+  text-align: center;
+  margin-top: 0 !important;
+  letter-spacing: 1px;
+  background-color: #ffaa00;
+  width: 100%;
+  border-top: 20px solid var(--bodyBack);
+  font-size: 1vw;
+  padding: 5px !important;
+}
+
+/* Category Display main end ==========================*/
+
+@media only screen and (max-width: 900px) {
+  .categoryDisplay {
+    padding: 0 5px 0 0;
+  }
+  .categoryButtonBody {
+    width: 100% !important;
+  }
+  .categoryContentDisplay {
+    width: 100% !important;
+    margin-bottom: 20px !important;
+  }
+  .subCateBanner {
+    padding: 0;
+  }
+  .categoryImageCaption {
+    font-size: 3vw;
+  }
+}

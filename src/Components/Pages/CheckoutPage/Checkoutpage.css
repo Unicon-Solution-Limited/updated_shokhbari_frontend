@@ -1,0 +1,79 @@
+.CheckoutPage {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+/* Left Input Form */
+.shippingInputFormTop {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+.shippingForm {
+  background-color: #c0c0c00a;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.shippingFormMain {
+  background-image: url("https://i.ibb.co/6D17Mx3/checkout-Form-Back.webp");
+  padding: 20px 0;
+  border-top: 1px solid var(--ash);
+}
+.shippingForm input,
+.shippingForm textarea,
+.shippingForm select {
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  border-bottom: 1px solid var(--yellow);
+}
+.locationSelect option:hover {
+  background-color: var(--blue) !important;
+  color: var(--yellow) !important;
+}
+
+.locationSelect:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.locationDetect * {
+  margin-left: 10px;
+}
+/* Right Order Summary */
+.shippingInfoHead {
+  padding: 20px 10px;
+  background-color: #c0c0c00a;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  color: #000;
+  border-radius: 5px;
+  letter-spacing: 2px;
+  word-spacing: 3px;
+}
+.shippingInfoMain {
+  background-color: #c0c0c00a;
+  margin: 30px 0;
+  padding: 20px 10px;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.TableHead {
+  border-bottom: 3px solid #fad17eb0 !important;
+}
+.TotalAmount {
+  border-top: 3px solid #fad17eb0 !important;
+}
+
+.confirmOrder {
+  padding: 15px 0;
+  width: 100%;
+  font-size: 20px;
+  text-transform: uppercase;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.payment:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
