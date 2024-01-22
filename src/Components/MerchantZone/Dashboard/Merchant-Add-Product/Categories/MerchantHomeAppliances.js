@@ -1,17 +1,13 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
-import "react-quill/dist/quill.snow.css";
 import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 import { useAuth } from "./../../../../Authentication/AuthContext/AuthContext";
+import { v4 as uuidv4 } from "uuid";
 
 const MerchantHomeAppliances = () => {
   const { currentUser } = useAuth();
   const [message, setMessage] = useState("");
-  const [imageUrl1, setImageUrl1] = useState("");
-  const [imageUrl2, setImageUrl2] = useState("");
-  const [imageUrl3, setImageUrl3] = useState("");
-  const [imageUrl4, setImageUrl4] = useState("");
-  const [imageUrl5, setImageUrl5] = useState("");
 
   //Conditionally set category in select options
   const [selectOption, setSelectOption] = useState("");
@@ -30,9 +26,7 @@ const MerchantHomeAppliances = () => {
   const nameRef = useRef();
   const productCodeRef = useRef();
   const shortDescriptionRef = useRef();
-  const mainColorRef = useRef();
-  // const colorRef = useRef();
-  const sizeRef = useRef();
+
   const weightRef = useRef();
   const flashRef = useRef();
   // const PopularItemsRef = useRef();
@@ -47,82 +41,17 @@ const MerchantHomeAppliances = () => {
   // const oldPriceRef = useRef();
   // const extraDeliveryCostRef = useRef();
 
-  //avaiable product size function with multiple input start form here
-  const [inputList, setInputList] = useState([{ size: "" }]);
-  // handle input change (avaiable product size)
-  const handleInputChange = (e, index) => {
-    const { name, value } = e.target;
-    const list = [...inputList];
-    list[index][name] = value;
-    setInputList(list);
-  };
-  // handle click event of the Remove button (avaiable product size)
-  const handleRemoveClick = (index) => {
-    const list = [...inputList];
-    list.splice(index, 1);
-    setInputList(list);
-  };
-  // handle click event of the Add button (avaiable product size)
-  const handleAddClick = () => {
-    setInputList([...inputList, { size: "" }]);
-  };
-
-  //avaiable product color function with multiple input start form here
-  const [inputColorList, setInputColorList] = useState([{ colors: "" }]);
-  // handle input change (avaiable product color)
-  const handleInputColorChange = (e, index) => {
-    const { name, value } = e.target;
-    const list = [...inputColorList];
-    list[index][name] = value;
-    setInputColorList(list);
-  };
-  // handle click event of the Remove button (avaiable product color)
-  const handleColorRemoveClick = (index) => {
-    const list = [...inputColorList];
-    list.splice(index, 1);
-    setInputColorList(list);
-  };
-  // handle click event of the Add button (avaiable product color)
-  const handleColorAddClick = () => {
-    setInputColorList([...inputColorList, { colors: "" }]);
-  };
-
-  // Handle Image Upload (image upload by api in cloudenery)
-  const imageUploadHandler = (event, setImg) => {
-    const imageData = new FormData();
-    imageData.append("upload_preset", "shokh_img");
-    imageData.append("file", event.target.files[0]);
-
-    axios
-      .post("https://api.cloudinary.com/v1_1/shokh-bari/upload", imageData)
-      .then(function (response) {
-        setImg(response?.data?.url);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  };
-
   // handle add product and save at the database
   const handleAddProduct = async (e) => {
     e.preventDefault();
 
     //this poroduct sotoreing all input value like object and properties
     const product = {
-      img1: imageUrl1,
-      img2: imageUrl2,
-      img3: imageUrl3,
-      img4: imageUrl4,
-      img5: imageUrl5,
+      variantItems: products,
       name: nameRef.current.value,
       code: productCodeRef.current.value,
       description: showDescription,
       shortDescription: shortDescriptionRef.current.value,
-      mainColor: mainColorRef.current.value.toLowerCase(),
-      // color: colorRef.current.value,
-      size: sizeRef.current.value,
-      availableSize: inputList,
-      availableColor: inputColorList,
       weight: weightRef.current.value,
       flashSale: flashRef.current.value,
       popularItems: "no",
@@ -159,13 +88,8 @@ const MerchantHomeAppliances = () => {
         nameRef.current.value = "";
         productCodeRef.current.value = "";
         shortDescriptionRef.current.value = "";
-        mainColorRef.current.value = "";
-        // colorRef.current.value = "";
-        sizeRef.current.value = "";
         weightRef.current.value = "";
         flashRef.current.value = "";
-        // PopularItemsRef.current.value = "";
-        // campainRef.current.value = "";
         marchentRef.current.value = "";
         categoriesRef.current.value = "";
         subCategoriesRef.current.value = "";
@@ -173,13 +97,61 @@ const MerchantHomeAppliances = () => {
         subChildCategoriesRef.current.value = "";
         stockRef.current.value = "";
         currentPriceRef.current.value = "";
-        // oldPriceRef.current.value = "";
-        // extraDeliveryCostRef.current.value = "";
         window.location.reload();
       }
     } catch (error) {
       console.log("err", error);
     }
+  };
+
+  //varient system
+  const initialVariant = {
+    variantId: "",
+    size: "",
+    colorInput: "",
+    color: "",
+    price: 0,
+    stock: 0,
+    image: "", // Single image for each variant
+  };
+
+  const [products, setProducts] = useState({ variants: [] });
+  const [newVariantItem, setnewVariantItem] = useState({ ...initialVariant });
+  const imageInputRef = useRef(null);
+
+  const handleVariantChange = (e) => {
+    const { name, value } = e.target;
+    setnewVariantItem((prevVariant) => ({ ...prevVariant, [name]: value }));
+  };
+
+  const handleAddVariant = () => {
+    const variantWithId = { ...newVariantItem, variantId: uuidv4() };
+    setProducts((prevProducts) => ({
+      ...prevProducts,
+      variants: [...prevProducts.variants, variantWithId],
+    }));
+    setnewVariantItem({ ...initialVariant });
+    // Reset the image input field
+    imageInputRef.current.value = null;
+  };
+
+  // Handle Image Upload (image upload by API to Cloudinary)
+  const imageUploadHandler = (event) => {
+    const imageData = new FormData();
+    imageData.append("upload_preset", "shokh_img");
+    imageData.append("file", event.target.files[0]);
+
+    axios
+      .post("https://api.cloudinary.com/v1_1/shokh-bari/upload", imageData)
+      .then(function (response) {
+        setnewVariantItem((prevVariant) => ({
+          ...prevVariant,
+          image: response?.data?.url,
+        }));
+      })
+      .catch(function (error) {
+        console.log(error);
+      });
   };
 
   return (
@@ -218,97 +190,138 @@ const MerchantHomeAppliances = () => {
         </div>
       </div>
       <form onSubmit={handleAddProduct}>
+        {/*varient start  */}
         <div className="row my-4">
           {/* product Image */}
           <div className="col-md-4">
             <div>
-              <label htmlFor="img" className="form-label">
-                Choose 1st photo
+              <label htmlFor="variantImage" className="form-label">
+                Product Image
               </label>
             </div>
             <div>
               <input
-                onChange={(e) => imageUploadHandler(e, setImageUrl1)}
                 type="file"
-                id="img"
-                name="image1"
-                placeholder="Your image.."
-                accept=".jpg, .webp, .png, .jpeg"
-                required
+                className="input-group form-control"
+                id="variantImage"
+                accept="image/*"
+                onChange={imageUploadHandler}
+                ref={imageInputRef}
               />
             </div>
           </div>
+          {/* Product Size */}
           <div className="col-md-4">
             <div>
-              <label htmlFor="img" className="form-label">
-                Choose 2nd photo
+              <label htmlFor="variantSize" className="form-label">
+                Product Size
               </label>
             </div>
             <div>
               <input
-                onChange={(e) => imageUploadHandler(e, setImageUrl2)}
-                type="file"
-                id="img"
-                name="image2"
-                placeholder="Your image.."
-                accept=".jpg, .webp, .png, .jpeg"
+                type="text"
+                className="input-group form-control"
+                id="variantSize"
+                placeholder="Product Size"
+                name="size"
+                value={newVariantItem.size}
+                onChange={handleVariantChange}
               />
             </div>
           </div>
+          {/* Product Color */}
           <div className="col-md-4">
             <div>
-              <label htmlFor="img" className="form-label">
-                Choose 3rd photo
+              <label htmlFor="variantColor" className="form-label">
+                Product Color
               </label>
             </div>
             <div>
               <input
-                onChange={(e) => imageUploadHandler(e, setImageUrl3)}
-                type="file"
-                id="img"
-                name="image3"
-                placeholder="Your image.."
-                accept=".jpg, .webp, .png, .jpeg"
+                type="text"
+                className="input-group form-control"
+                placeholder="Product Color"
+                id="variantColor"
+                name="color"
+                value={newVariantItem.color}
+                onChange={handleVariantChange}
               />
             </div>
           </div>
 
-          <div className="col-md-4 mt-2">
+          {/* color input */}
+          <div className="col-md-3 mt-4">
             <div>
-              <label htmlFor="img4" className="form-label">
-                Choose 4th photo
+              <label htmlFor="variantColorInput" className="form-label">
+                Product Color Input
               </label>
             </div>
             <div>
               <input
-                onChange={(e) => imageUploadHandler(e, setImageUrl4)}
-                type="file"
-                id="img4"
-                name="image4"
-                placeholder="Your image.."
-                accept=".jpg, .webp, .png, .jpeg"
+                type="color"
+                className="input-group form-control"
+                id="variantColorInput"
+                name="colorInput"
+                value={newVariantItem.colorInput}
+                onChange={handleVariantChange}
               />
             </div>
           </div>
 
-          <div className="col-md-4 mt-2">
+          {/* Stock */}
+          <div className="col-md-3 mt-4">
             <div>
-              <label htmlFor="img5" className="form-label">
-                Choose 5th photo
+              <label htmlFor="variantStock" className="form-label">
+                Product Stock
               </label>
             </div>
             <div>
               <input
-                onChange={(e) => imageUploadHandler(e, setImageUrl5)}
-                type="file"
-                id="img5"
-                name="image5"
-                placeholder="Your image.."
-                accept=".jpg, .webp, .png, .jpeg"
+                type="number"
+                className="input-group form-control"
+                id="variantStock"
+                name="stock"
+                value={newVariantItem.stock}
+                onChange={handleVariantChange}
               />
             </div>
           </div>
         </div>
+        <div className="col-md-12">
+          {products.variants.length ? (
+            <h2 className="mt-4">Preview Variants:</h2>
+          ) : (
+            ""
+          )}
+          <div className="d-flex flex-wrap gap-3">
+            {products.variants.map((variant) => (
+              <div key={variant.variantId} className="mt-3">
+                <p>Size: {variant.size}</p>
+                <p>Color: {variant.color}</p>
+                <p>Stock: {variant.stock}</p>
+                <p>ColorInput: {variant.colorInput}</p>
+                {variant.image && (
+                  <img
+                    src={variant.image}
+                    alt={`Variant`}
+                    className="img-fluid mt-2"
+                    style={{ maxWidth: "100px", maxHeight: "100px" }}
+                  />
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+        <div className="col-md-4">
+          <button
+            type="button"
+            className="btn myBtn mt-3"
+            onClick={handleAddVariant}
+          >
+            Add Variant Product
+          </button>
+        </div>
+        {/*varient end */}
 
         <div className="row my-4">
           <div className="col-md-8">
@@ -420,146 +433,6 @@ const MerchantHomeAppliances = () => {
 
         {/* product main color */}
         <div className="row my-4">
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="Mainolor" className="form-label">
-                Color Name
-              </label>
-            </div>
-            <input
-              type="text"
-              name="mainColor"
-              id="Mainolor"
-              className="form-control"
-              placeholder="Type your main color"
-              ref={mainColorRef}
-              required
-            />
-          </div>
-          {/* product color  */}
-          {/* <div className="col-md-4">
-            <div>
-              <label htmlFor="color" className="form-label">
-                Color
-              </label>
-            </div>
-            <input
-              type="color"
-              name="color"
-              id="color"
-              className="form-control colorPicker"
-              defaultValue="#000"
-              ref={colorRef}
-            />
-          </div> */}
-
-          {/* product size */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="singleSize" className="form-label">
-                Product Size
-              </label>
-            </div>
-            <input
-              type="text"
-              name="singleSize"
-              id="singleSize"
-              className="form-control"
-              ref={sizeRef}
-              placeholder="Product Size"
-              required
-            />
-          </div>
-
-          {/* product available size */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="size" className="form-label">
-                Available Size(required)
-              </label>
-            </div>
-            <div>
-              {/* available product size  */}
-              {inputList.map((x, i) => (
-                <div key={(x, i)}>
-                  <div>
-                    <div className="d-flex">
-                      <input
-                        className="form-control"
-                        name="size"
-                        placeholder="Enter available size"
-                        value={x.size}
-                        onChange={(e) => handleInputChange(e, i)}
-                        required
-                      />
-                      {inputList.length !== 1 && (
-                        <button
-                          className="btn myBtn removeSize"
-                          onClick={() => handleRemoveClick(i)}
-                        >
-                          Remove
-                        </button>
-                      )}
-                    </div>
-                    <div>
-                      {inputList.length - 1 === i && (
-                        <button onClick={handleAddClick} className="btn myBtn">
-                          Add
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* product available Color */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="colors" className="form-label">
-                Available Color(required)
-              </label>
-            </div>
-            <div>
-              {/* available product Color  */}
-              {inputColorList.map((x, i) => (
-                <div key={(x, i)}>
-                  <div>
-                    <div className="d-flex">
-                      <input
-                        type="color"
-                        className="form-control"
-                        name="colors"
-                        placeholder="Enter available color"
-                        value={x.colors}
-                        onChange={(e) => handleInputColorChange(e, i)}
-                      />
-                      {inputColorList.length !== 1 && (
-                        <button
-                          className="btn myBtn removeSize"
-                          onClick={() => handleColorRemoveClick(i)}
-                        >
-                          Remove
-                        </button>
-                      )}
-                    </div>
-                    <div>
-                      {inputColorList.length - 1 === i && (
-                        <button
-                          onClick={handleColorAddClick}
-                          className="btn myBtn"
-                        >
-                          Add
-                        </button>
-                      )}
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-
           {/* product Flash Sale */}
           <div className="col-md-4">
             <div>
