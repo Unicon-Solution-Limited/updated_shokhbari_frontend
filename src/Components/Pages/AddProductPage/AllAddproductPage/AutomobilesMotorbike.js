@@ -47,7 +47,7 @@ const AutomobilesMotorbike = () => {
 
     //this poroduct sotoreing all input value like object and properties
     const product = {
-      variantItems: products,
+      variantItems: productVariants,
       name: nameRef.current.value,
       code: productCodeRef.current.value,
       description: showDescription,
@@ -107,39 +107,64 @@ const AutomobilesMotorbike = () => {
     }
   };
 
-  //varient system
-  const initialVariant = {
-    variantId: "",
-    size: "",
-    colorInput: "",
-    color: "",
-    price: 0,
-    stock: 0,
-    image: "", // Single image for each variant
-  };
+  // varient system
+  const [productVariants, setProductVariants] = useState([]);
+  const [newProduct, setNewProduct] = useState({
+    variants: [],
+  });
 
-  const [products, setProducts] = useState({ variants: [] });
-  const [newVariantItem, setnewVariantItem] = useState({ ...initialVariant });
-  const imageInputRef = useRef(null);
-
-  const handleVariantChange = (e) => {
+  const handleInputChange = (e, variantIndex, sizeIndex) => {
     const { name, value } = e.target;
-    setnewVariantItem((prevVariant) => ({ ...prevVariant, [name]: value }));
+    const updatedProduct = { ...newProduct };
+
+    if (sizeIndex !== undefined) {
+      updatedProduct.variants[variantIndex].sizes[sizeIndex][name] = value;
+    } else if (variantIndex !== undefined) {
+      updatedProduct.variants[variantIndex][name] = value;
+    } else {
+      updatedProduct[name] = value;
+    }
+
+    setNewProduct(updatedProduct);
   };
 
-  const handleAddVariant = () => {
-    const variantWithId = { ...newVariantItem, variantId: uuidv4() };
-    setProducts((prevProducts) => ({
-      ...prevProducts,
-      variants: [...prevProducts.variants, variantWithId],
-    }));
-    setnewVariantItem({ ...initialVariant });
-    // Reset the image input field
-    imageInputRef.current.value = null;
+  const addVariant = () => {
+    setNewProduct({
+      ...newProduct,
+      variants: [
+        ...newProduct.variants,
+        {
+          variantId: uuidv4(),
+          color: "",
+          colorInput: "",
+          image: "",
+          sizes: [],
+        },
+      ],
+    });
+  };
+
+  const addSize = (variantIndex) => {
+    const updatedVariants = [...newProduct.variants];
+    updatedVariants[variantIndex].sizes = [
+      ...updatedVariants[variantIndex].sizes,
+      { variantItemId: uuidv4(), size: "", stock: 0, price: 0 },
+    ];
+    setNewProduct({
+      ...newProduct,
+      variants: updatedVariants,
+    });
+  };
+
+  const addProduct = () => {
+    setProductVariants([...productVariants, newProduct]);
+    setNewProduct({
+      variants: [],
+    });
   };
 
   // Handle Image Upload (image upload by API to Cloudinary)
-  const imageUploadHandler = (event) => {
+  const imageUploadHandler = (event, variantIndex) => {
     const imageData = new FormData();
     imageData.append("upload_preset", "shokh_img");
     imageData.append("file", event.target.files[0]);
@@ -147,14 +172,19 @@ const AutomobilesMotorbike = () => {
     axios
       .post("https://api.cloudinary.com/v1_1/shokh-bari/upload", imageData)
       .then(function (response) {
-        setnewVariantItem((prevVariant) => ({
-          ...prevVariant,
-          image: response?.data?.url,
-        }));
+        const updatedProduct = { ...newProduct };
+        updatedProduct.variants[variantIndex].image = response?.data?.url;
+        setNewProduct(updatedProduct);
       })
       .catch(function (error) {
         console.log(error);
       });
+  };
+
+  //remove varient by click
+  const handleVarientDlete = () => {
+    setProductVariants([""]);
+    window.location.reload();
   };
 
   return (
@@ -193,138 +223,178 @@ const AutomobilesMotorbike = () => {
         </div>
       </div>
       <form onSubmit={handleAddProduct}>
-        {/*varient start  */}
-        <div className="row my-4">
-          {/* product Image */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="variantImage" className="form-label">
-                Product Image
-              </label>
-            </div>
-            <div>
-              <input
-                type="file"
-                className="input-group form-control"
-                id="variantImage"
-                accept="image/*"
-                onChange={imageUploadHandler}
-                ref={imageInputRef}
-              />
-            </div>
-          </div>
-          {/* Product Size */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="variantSize" className="form-label">
-                Product Size
-              </label>
-            </div>
-            <div>
-              <input
-                type="text"
-                className="input-group form-control"
-                id="variantSize"
-                placeholder="Product Size"
-                name="size"
-                value={newVariantItem.size}
-                onChange={handleVariantChange}
-              />
-            </div>
-          </div>
-          {/* Product Color */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="variantColor" className="form-label">
-                Product Color
-              </label>
-            </div>
-            <div>
-              <input
-                type="text"
-                className="input-group form-control"
-                placeholder="Product Color"
-                id="variantColor"
-                name="color"
-                value={newVariantItem.color}
-                onChange={handleVariantChange}
-              />
-            </div>
-          </div>
-
-          {/* color input */}
-          <div className="col-md-3 mt-4">
-            <div>
-              <label htmlFor="variantColorInput" className="form-label">
-                Product Color Input
-              </label>
-            </div>
-            <div>
-              <input
-                type="color"
-                className="input-group form-control"
-                id="variantColorInput"
-                name="colorInput"
-                value={newVariantItem.colorInput}
-                onChange={handleVariantChange}
-              />
-            </div>
-          </div>
-
-          {/* Stock */}
-          <div className="col-md-3 mt-4">
-            <div>
-              <label htmlFor="variantStock" className="form-label">
-                Product Stock
-              </label>
-            </div>
-            <div>
-              <input
-                type="number"
-                className="input-group form-control"
-                id="variantStock"
-                name="stock"
-                value={newVariantItem.stock}
-                onChange={handleVariantChange}
-              />
-            </div>
-          </div>
-        </div>
-        <div className="col-md-12">
-          {products.variants.length ? (
-            <h2 className="mt-4">Preview Variants:</h2>
-          ) : (
-            ""
-          )}
-          <div className="d-flex flex-wrap gap-3">
-            {products.variants.map((variant) => (
-              <div key={variant.variantId} className="mt-3">
-                <p>Size: {variant.size}</p>
-                <p>Color: {variant.color}</p>
-                <p>Stock: {variant.stock}</p>
-                <p>ColorInput: {variant.colorInput}</p>
-                {variant.image && (
-                  <img
-                    src={variant.image}
-                    alt={`Variant`}
-                    className="img-fluid mt-2"
-                    style={{ maxWidth: "100px", maxHeight: "100px" }}
-                  />
-                )}
+        <div className="container my-4">
+          {/* varient start */}
+          {newProduct.variants.map((variant, variantIndex) => (
+            <div key={variantIndex} className="row mb-4">
+              {/* product Image */}
+              <div className="col-md-4">
+                <label
+                  htmlFor={`variantImage${variantIndex}`}
+                  className="form-label"
+                >
+                  Image:
+                </label>
+                <input
+                  type="file"
+                  className="form-control"
+                  id={`variantImage${variantIndex}`}
+                  accept="image/*"
+                  onChange={(e) => imageUploadHandler(e, variantIndex)}
+                />
               </div>
-            ))}
+
+              {/* variant color */}
+              <div className="col-md-4">
+                <label
+                  htmlFor={`variantColor${variantIndex}`}
+                  className="form-label"
+                >
+                  Variant Color
+                </label>
+                <input
+                  type="text"
+                  className="form-control"
+                  id={`variantColor${variantIndex}`}
+                  name="color"
+                  value={variant.color}
+                  onChange={(e) => handleInputChange(e, variantIndex)}
+                />
+              </div>
+
+              {/* variant color input */}
+              <div className="col-md-4">
+                <label
+                  htmlFor={`variantColorInput${variantIndex}`}
+                  className="form-label"
+                >
+                  Variant Color Input
+                </label>
+                <input
+                  type="color"
+                  className="form-control"
+                  id={`variantColorInput${variantIndex}`}
+                  name="colorInput"
+                  value={variant.colorInput}
+                  onChange={(e) => handleInputChange(e, variantIndex)}
+                />
+              </div>
+
+              {/* size and stock */}
+              <b className="mt-5">Sizes/Stock:</b>
+              {variant.sizes.map((size, sizeIndex) => (
+                <div key={sizeIndex} className="col-md-4 mt-2">
+                  {/* product size */}
+                  <label
+                    htmlFor={`variantSize${variantIndex}_${sizeIndex}`}
+                    className="form-label"
+                  >
+                    Size:
+                  </label>
+                  <input
+                    type="text"
+                    className="form-control"
+                    id={`variantSize${variantIndex}_${sizeIndex}`}
+                    name="size"
+                    value={size.size}
+                    onChange={(e) =>
+                      handleInputChange(e, variantIndex, sizeIndex)
+                    }
+                  />
+
+                  {/* product stock */}
+                  <label
+                    htmlFor={`variantStock${variantIndex}_${sizeIndex}`}
+                    className="form-label"
+                  >
+                    Stock:
+                    <input
+                      type="number"
+                      className="form-control"
+                      id={`variantStock${variantIndex}_${sizeIndex}`}
+                      name="stock"
+                      value={size.stock}
+                      onChange={(e) =>
+                        handleInputChange(e, variantIndex, sizeIndex)
+                      }
+                    />
+                  </label>
+                </div>
+              ))}
+
+              <button
+                type="button"
+                className="btn btn-secondary mt-2"
+                onClick={() => addSize(variantIndex)}
+              >
+                Add Size/Stock
+              </button>
+            </div>
+          ))}
+
+          {/* button */}
+
+          <div className="d-flex justify-content-center align-items-center">
+            <button
+              type="button"
+              className="btn myBtn mr-2"
+              onClick={addVariant}
+            >
+              Add Color Variant
+            </button>
+            <button
+              type="button"
+              className="btn myBtn mx-2"
+              onClick={addProduct}
+            >
+              Add Variant Product
+            </button>
+            <i
+              onClick={() => handleVarientDlete()}
+              className="bi bi-trash"
+              style={{ fontSize: "25px", cursor: "pointer" }}
+            ></i>
           </div>
         </div>
-        <div className="col-md-4">
-          <button
-            type="button"
-            className="btn myBtn mt-3"
-            onClick={handleAddVariant}
-          >
-            Add Variant Product
-          </button>
-        </div>
-        {/*varient end */}
+
+        {/* diplay variant  */}
+        {productVariants.map((product, productIndex) => (
+          <div key={productIndex} className="mb-4">
+            <h3>{product.productName}</h3>
+            <div className="row row-cols-1 row-cols-md-3 g-4">
+              {product.variants.map((variant, variantIndex) => (
+                <div key={variantIndex} className="col">
+                  <div className="card">
+                    <div className="card-body">
+                      <img
+                        style={{
+                          height: "50px",
+                          width: "50px",
+                          borderRadius: "100%",
+                        }}
+                        className="card-img-top"
+                        src={variant.image}
+                        alt=""
+                      />
+                      <br />
+                      <b>Variant Color: {variant.color}</b>
+                      {/* <h4>Sizes/Stock:</h4> */}
+                      {variant.sizes.map((size, sizeIndex) => (
+                        <div key={sizeIndex} className="card mb-3">
+                          <div className="card-body">
+                            <p className="card-text">Size: {size.size}</p>
+                            <p className="card-text">Stock: {size.stock}</p>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+        {/* varient end */}
 
         <div className="row my-4">
           <div className="col-md-8">
