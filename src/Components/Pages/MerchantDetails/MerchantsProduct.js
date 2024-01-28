@@ -156,8 +156,13 @@ const MerchantsProduct = () => {
           {product.map((data, i) => (
             <tr key={i}>
               <th scope="row">{i + 1}</th>
+              {console.log(data)}
               <td>
-                <img src={data?.img1} className="merchant-product-img" alt="" />
+                <img
+                  src={data?.variantItems?.[0]?.variants?.[0]?.image}
+                  className="merchant-product-img"
+                  alt=""
+                />
               </td>
               <td>{data?.name}</td>
               <td>{data?.currentPrice}</td>
@@ -232,28 +237,29 @@ const MerchantsProduct = () => {
                   <tbody>
                     <tr>
                       <td>1</td>
-                      <td>
-                        <img
-                          className="merchant-product-img"
-                          src={singleMerchantProduct?.img2}
-                          alt=""
-                        />
-                        <img
-                          className="merchant-product-img"
-                          src={singleMerchantProduct?.img3}
-                          alt=""
-                        />
-                        <img
-                          className="merchant-product-img"
-                          src={singleMerchantProduct?.img4}
-                          alt=""
-                        />
-                        <img
-                          className="merchant-product-img"
-                          src={singleMerchantProduct?.img5}
-                          alt=""
-                        />
-                      </td>
+                      <div className="container mt-4">
+                        {singleMerchantProduct?.variantItems?.map(
+                          (variantItem) => (
+                            <div key={variantItem.variants[0].variantId}>
+                              {variantItem.variants.map((variant) => (
+                                <div key={variant.variantId}>
+                                  <img
+                                    src={variant.image}
+                                    alt={variant.color}
+                                    className="merchant-product-img"
+                                  />
+                                  <p>{variant.color}</p>
+                                  {variant.sizes.map((size) => (
+                                    <div key={size.variantItemId}>
+                                      <p>{`Size: ${size.size}, Stock: ${size.stock}`}</p>
+                                    </div>
+                                  ))}
+                                </div>
+                              ))}
+                            </div>
+                          )
+                        )}
+                      </div>
                       <td>{singleMerchantProduct?.marchent}</td>
                       <td>
                         <form onSubmit={handleExtraDeliveryCharge}>
@@ -286,8 +292,6 @@ const MerchantsProduct = () => {
                 <table className="table table-bordered">
                   <thead>
                     <tr>
-                      <th scope="col">Color/'s</th>
-                      <th scope="col">Size/'s</th>
                       <th scope="col">Warranty</th>
                       <th scope="col">Package Weight</th>
                       <th scope="col">subCategories</th>
@@ -296,37 +300,6 @@ const MerchantsProduct = () => {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>
-                        {singleMerchantProduct?.availableColor?.map(
-                          (color, i) => (
-                            <span key={i}>
-                              <input
-                                type="radio"
-                                id={color?.colors}
-                                name={color?.colors[0]}
-                                value={color?.colors}
-                                className="radioPoint"
-                              />
-                              <label
-                                htmlFor={color?.colors}
-                                className="radioBackground"
-                                style={{
-                                  backgroundColor: `${color?.colors}`,
-                                }}
-                              ></label>
-                            </span>
-                          )
-                        )}
-                      </td>
-                      <td>
-                        {singleMerchantProduct?.availableSize?.map(
-                          (sizes, i) => (
-                            <div key={i} value={sizes?.size}>
-                              {sizes?.size}
-                            </div>
-                          )
-                        )}
-                      </td>
                       <td>N/A</td>
                       <td>{singleMerchantProduct?.weight}</td>
                       <td>{singleMerchantProduct?.subCategories}</td>
