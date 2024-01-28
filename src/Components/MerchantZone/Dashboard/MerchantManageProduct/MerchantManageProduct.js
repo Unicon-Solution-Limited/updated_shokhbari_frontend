@@ -102,7 +102,11 @@ const MerchantManageProduct = () => {
               <td>{data.categories}</td>
               <td>{data.code}</td>
               <td>
-                <img className="merchant-product-img" src={data.img1} alt="" />
+                <img
+                  className="merchant-product-img"
+                  src={data?.variantItems?.[0]?.variants?.[0]?.image}
+                  alt=""
+                />
               </td>
               <td>{data.oldPrice}</td>
               <td>{data.currentPrice}</td>

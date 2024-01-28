@@ -156,7 +156,6 @@ const MerchantsProduct = () => {
           {product.map((data, i) => (
             <tr key={i}>
               <th scope="row">{i + 1}</th>
-              {console.log(data)}
               <td>
                 <img
                   src={data?.variantItems?.[0]?.variants?.[0]?.image}
