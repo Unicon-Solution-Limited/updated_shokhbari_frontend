@@ -725,8 +725,8 @@ const SingleProductPsize = () => {
                       to={"/singleProduct/" + data?._id}
                       className="decorationLink"
                     >
-                      <img
-                        src={data?.img1}
+                      <LazyLoadImage
+                        src={data?.variantItems?.[0]?.variants?.[0]?.image}
                         className="card-img-top img-fluid HomeProductImsize"
                         alt="..."
                       />

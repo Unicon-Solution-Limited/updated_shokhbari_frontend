@@ -132,7 +132,9 @@ export default function FlashSale() {
                         }
                       >
                         <LazyLoadImage
-                          src={flashSale?.img1}
+                          src={
+                            flashSale?.variantItems?.[0]?.variants?.[0]?.image
+                          }
                           className="card-img-top img-fluid productPageImg"
                           alt="..."
                           placeholderSrc={loader}

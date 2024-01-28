@@ -460,7 +460,7 @@ const DisplayProduct = () => {
                         }
                       >
                         <LazyLoadImage
-                          src={value?.img1}
+                          src={value?.variantItems?.[0]?.variants?.[0]?.image}
                           className="card-img-top img-fluid productPageImg"
                           alt="ProductImage"
                           placeholderSrc={loader}

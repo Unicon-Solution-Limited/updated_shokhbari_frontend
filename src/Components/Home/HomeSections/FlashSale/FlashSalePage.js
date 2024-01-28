@@ -103,7 +103,10 @@ const FlashSalePage = () => {
                       }
                     >
                       <LazyLoadImage
-                        src={popularProduct?.img1}
+                        src={
+                          popularProduct?.variantItems?.[0]?.variants?.[0]
+                            ?.image
+                        }
                         className="card-img-top img-fluid productPageImg"
                         alt="ProductImage"
                         placeholderSrc={loader}

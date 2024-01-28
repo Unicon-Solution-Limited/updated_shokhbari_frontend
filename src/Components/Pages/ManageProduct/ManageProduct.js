@@ -187,7 +187,7 @@ const ManageProduct = () => {
               <td>
                 <LazyLoadImage
                   style={{ width: "50px", height: "50px" }}
-                  src={data.img1}
+                  src={data?.variantItems?.[0]?.variants?.[0]?.image}
                   alt=""
                   placeholderSrc={loader}
                 />
