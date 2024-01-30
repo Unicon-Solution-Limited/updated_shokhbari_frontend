@@ -135,6 +135,7 @@ const GiftsCraft = () => {
         ...newProduct.variants,
         {
           variantId: uuidv4(),
+          sameVariantId: uuidv4(),
           color: "",
           colorInput: "",
           image: "",
@@ -148,7 +149,13 @@ const GiftsCraft = () => {
     const updatedVariants = [...newProduct.variants];
     updatedVariants[variantIndex].sizes = [
       ...updatedVariants[variantIndex].sizes,
-      { variantItemId: uuidv4(), size: "", stock: 0, price: 0 },
+      {
+        variantItemId: uuidv4(),
+        sameVariantItemId: updatedVariants[variantIndex]?.sameVariantId,
+        size: "",
+        stock: 0,
+        price: 0,
+      },
     ];
     setNewProduct({
       ...newProduct,
