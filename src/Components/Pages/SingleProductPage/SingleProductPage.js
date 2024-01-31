@@ -71,9 +71,25 @@ const SingleProductPsize = () => {
   //productDetails state makeing array to multiple size selecting
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
-
+  const [allSizeWithSelectedColor, setAllSizeWithSelectedColor] = useState([]);
+  const [imageAsSelectedColor, setImageAsSelectedColor] = useState([]);
   const sizeRef = useRef();
-  const productDetailsArray = Object.assign([], productDetails);
+
+  // Function to handle color selection
+  const handleColorProduct = (colorInput) => {
+    setSelectedColor(colorInput);
+
+    // If the selected color doesn't have the selected size, reset the size
+    const singleColorProduct = productDetails?.variantItems?.map((data) =>
+      data.variants.find((v) => v?.colorInput === colorInput)
+    );
+    //here all kind of size according to the color
+    setAllSizeWithSelectedColor(singleColorProduct[0]?.sizes);
+
+    //here single image according to the color
+    setImageAsSelectedColor(singleColorProduct[0]?.image);
+    console.log(singleColorProduct[0]?.image);
+  };
 
   const handleSizeSubmit = (e) => {
     e.preventDefault();
@@ -87,7 +103,13 @@ const SingleProductPsize = () => {
     // setCartData([pd]);
     let isAdded = false;
     if (cartData.length === 0) {
-      pd = { ...pd, quantity: 1, selectedSize, selectedColor };
+      pd = {
+        ...pd,
+        quantity: 1,
+        selectedSize,
+        selectedColor,
+        imageAsSelectedColor,
+      };
       setCartData([...cartData, pd]);
     }
 
@@ -97,7 +119,13 @@ const SingleProductPsize = () => {
       }
     });
     if (!isAdded) {
-      pd = { ...pd, quantity: 1, selectedSize, selectedColor };
+      pd = {
+        ...pd,
+        quantity: 1,
+        selectedSize,
+        selectedColor,
+        imageAsSelectedColor,
+      };
       setCartData([...cartData, pd]);
     }
     setAlertMsg(true);
@@ -131,45 +159,6 @@ const SingleProductPsize = () => {
 
   const onPaginationChange = (start, end) => {
     setPagination({ start: start, end: end });
-  };
-
-  // Image magnify && slider (condition for not to empty the productDetails in the initial state when one inter in the page)
-  const newImg = productDetails
-    ? [
-        { images: productDetails?.img1 },
-        { images: productDetails?.img2 },
-        { images: productDetails?.img3 },
-        { images: productDetails?.img4 },
-        { images: productDetails?.img5 },
-      ]
-    : [];
-
-  //find the newImg inside's property by mapping
-  const images = newImg.map((dt) => dt?.images);
-
-  //state for the big img and round it
-  const [img, setImg] = useState(null);
-
-  useEffect(() => {
-    setImg(images[0]);
-  }, [productDetails]);
-
-  // Effect from css in Images Magnify
-  const hoverHandler = (image, i) => {
-    setImg(image);
-    // refs?.current[i]?.classList?.add("active");
-    // for (var j = 0; j < images?.length; j++) {
-    //   if (i !== j) {
-    //     refs?.current[j]?.classList?.add("thumb");
-    //   }
-    // }
-  };
-  const refs = useRef([]);
-  refs.current = [];
-  const addRefs = (el) => {
-    if (el && !refs?.current?.includes(el)) {
-      refs?.current?.push(el);
-    }
   };
 
   //comment and review and start rating
@@ -281,29 +270,27 @@ const SingleProductPsize = () => {
               <div className="col-md-6 col-12">
                 <div className="row productsImagesSection">
                   <div className="col-md-2 col-4 left_1">
-                    {images.map(
-                      (image, i) =>
-                        image && (
-                          <div
-                            className="img_wrap"
-                            key={i}
-                            onClick={() => hoverHandler(image, i)}
-                            ref={addRefs}
-                          >
-                            <LazyLoadImage
-                              src={image}
-                              alt=""
-                              className="thumbsImg"
-                              placeholderSrc={loader}
-                            />
-                          </div>
-                        )
+                    {productDetails?.variantItems?.map((data, dataIndex) =>
+                      data?.variants?.map((variant, variantIndex) => (
+                        <span
+                          className="img_wrap"
+                          onClick={() => handleColorProduct(variant.colorInput)}
+                          key={`${variantIndex}`}
+                        >
+                          <LazyLoadImage
+                            src={variant?.image}
+                            alt=""
+                            className="thumbsImg"
+                            placeholderSrc={loader}
+                          />
+                        </span>
+                      ))
                     )}
                   </div>
                   <div className="col-md-10 col-8 left_2">
-                    {img && (
+                    {imageAsSelectedColor && (
                       <LazyLoadImage
-                        src={img}
+                        src={imageAsSelectedColor}
                         alt="productImage"
                         className="largeThumbs"
                         placeholderSrc={loader}
@@ -369,29 +356,38 @@ const SingleProductPsize = () => {
                         {/* color varient */}
                         <div className="radioFullBtn">
                           <span>
-                            {productDetailsArray?.availableColor?.map(
-                              (color, i) => (
-                                <span key={i}>
-                                  <input
-                                    type="radio"
-                                    id={color?.colors}
-                                    name={color?.colors[0]}
-                                    value={color?.colors}
-                                    className="radioPoint"
-                                    onClick={() =>
-                                      setSelectedColor(`${color?.colors}`)
-                                    }
-                                    required
-                                  />
-                                  <label
-                                    htmlFor={color?.colors}
-                                    className="radioBackground"
-                                    style={{
-                                      backgroundColor: `${color?.colors}`,
-                                    }}
-                                  ></label>
-                                </span>
-                              )
+                            {productDetails?.variantItems?.map(
+                              (data, dataIndex) =>
+                                data?.variants?.map((variant, variantIndex) => (
+                                  <span key={`${dataIndex}-${variantIndex}`}>
+                                    <input
+                                      type="radio"
+                                      id={variant.colorInput}
+                                      name={variant[0]}
+                                      value={variant.colorInput}
+                                      className="radioPoint"
+                                      checked={
+                                        selectedColor === variant.colorInput
+                                      }
+                                      onChange={() => {
+                                        setSelectedColor(variant.colorInput);
+                                        handleColorProduct(variant.colorInput);
+                                      }}
+                                      required
+                                    />
+                                    <label
+                                      htmlFor={variant.colorInput}
+                                      className="radioBackground"
+                                      style={{
+                                        backgroundColor: `${variant?.colorInput}`,
+                                        border:
+                                          selectedColor === variant.colorInput
+                                            ? "2px solid black"
+                                            : "none",
+                                      }}
+                                    ></label>
+                                  </span>
+                                ))
                             )}
                           </span>
                         </div>
@@ -406,14 +402,13 @@ const SingleProductPsize = () => {
                               ref={sizeRef}
                               required
                             >
-                              <option value="">Select Your Size</option>
-                              {productDetailsArray?.availableSize?.map(
-                                (sizes, i) => (
-                                  <option key={i} value={sizes?.size}>
-                                    {sizes?.size}
-                                  </option>
-                                )
-                              )}
+                              <option value="">Select</option>
+
+                              {allSizeWithSelectedColor?.map((data, i) => (
+                                <option key={i} value={data?.size}>
+                                  {data?.size}
+                                </option>
+                              ))}
                             </select>
                             <button type="submit" className="btn submitSize">
                               Confirm Size & Color
