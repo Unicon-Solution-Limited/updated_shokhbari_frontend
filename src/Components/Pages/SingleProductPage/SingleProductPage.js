@@ -88,7 +88,6 @@ const SingleProductPsize = () => {
 
     //here single image according to the color
     setImageAsSelectedColor(singleColorProduct[0]?.image);
-    console.log(singleColorProduct[0]?.image);
   };
 
   const handleSizeSubmit = (e) => {
@@ -372,7 +371,8 @@ const SingleProductPsize = () => {
                                     <input
                                       type="radio"
                                       id={variant.colorInput}
-                                      name={variant[0]}
+                                      // name={variant[0]}
+                                      name={`color-${dataIndex}`}
                                       value={variant.colorInput}
                                       className="radioPoint"
                                       checked={
