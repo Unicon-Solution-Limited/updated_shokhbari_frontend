@@ -288,7 +288,16 @@ const SingleProductPsize = () => {
                     )}
                   </div>
                   <div className="col-md-10 col-8 left_2">
-                    {imageAsSelectedColor && (
+                    {imageAsSelectedColor == "" ? (
+                      <LazyLoadImage
+                        src={
+                          productDetails?.variantItems[0]?.variants[0]?.image
+                        }
+                        alt="productImage"
+                        className="largeThumbs"
+                        placeholderSrc={loader}
+                      />
+                    ) : (
                       <LazyLoadImage
                         src={imageAsSelectedColor}
                         alt="productImage"
@@ -354,7 +363,7 @@ const SingleProductPsize = () => {
                       <aside className="productColor mt-3">
                         Color Family:
                         {/* color varient */}
-                        <div className="radioFullBtn">
+                        <div className="radioFullBtn mt-2">
                           <span>
                             {productDetails?.variantItems?.map(
                               (data, dataIndex) =>
@@ -410,6 +419,7 @@ const SingleProductPsize = () => {
                                 </option>
                               ))}
                             </select>
+
                             <button type="submit" className="btn submitSize">
                               Confirm Size & Color
                             </button>
@@ -715,7 +725,10 @@ const SingleProductPsize = () => {
               ?.slice(pagination.start, pagination.end)
               ?.map((data) => (
                 <div className="col-md-2" key={data._id}>
-                  <div className="card popularProductCard">
+                  <div
+                    className="card popularProductCard"
+                    onClick={() => setImageAsSelectedColor("")}
+                  >
                     <Link
                       to={"/singleProduct/" + data?._id}
                       className="decorationLink"
