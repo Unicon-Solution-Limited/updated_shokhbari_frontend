@@ -144,7 +144,7 @@ const CustomerOrderListPage = () => {
                   <div className="col-md-4" key={i}>
                     <div className="customerOrdersProducts">
                       <img
-                        src={c.img1}
+                        src={c.imageAsSelectedColor}
                         alt="ProductImage"
                         className="customerOrdersProductsImg"
                       />

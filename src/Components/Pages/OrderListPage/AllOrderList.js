@@ -132,7 +132,7 @@ const AllOrderList = () => {
                 {item?.orderedData?.map((c, i) => (
                   <div className="customerOrdersProducts" key={i}>
                     <img
-                      src={c.img1}
+                      src={c.imageAsSelectedColor}
                       alt="ProductImage"
                       className="customerOrdersProductsImg"
                     />

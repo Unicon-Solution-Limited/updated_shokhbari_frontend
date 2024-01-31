@@ -24,7 +24,7 @@ const OrderReviewsDetails = ({
       <div className="cartBodyMain" data-aos="fade-up">
         <section className="row cartBody">
           <span className="col-md-2 productImageCart">
-            <img src={cartProductData?.img1} alt=" " />
+            <img src={cartProductData?.imageAsSelectedColor} alt=" " />
           </span>
           <span className="col-md-4 CartProductName">
             Name: {cartProductData?.name}

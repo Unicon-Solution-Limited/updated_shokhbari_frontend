@@ -281,6 +281,7 @@ const SingleProductPsize = () => {
                             alt=""
                             className="thumbsImg"
                             placeholderSrc={loader}
+                            style={{ cursor: "pointer" }}
                           />
                         </span>
                       ))
@@ -404,21 +405,23 @@ const SingleProductPsize = () => {
                       <div className="customerInputButtons">
                         <aside className="productSizes">
                           <span className="productSizeBody">
-                            <select
-                              id="Campaigns"
-                              name="Campaigns"
-                              className="input-group form-select sizeOutput"
-                              ref={sizeRef}
-                              required
-                            >
-                              <option value="">Select</option>
+                            {selectedColor && (
+                              <select
+                                id="Campaigns"
+                                name="Campaigns"
+                                className="input-group form-select sizeOutput"
+                                ref={sizeRef}
+                                required
+                              >
+                                <option value="">Select</option>
 
-                              {allSizeWithSelectedColor?.map((data, i) => (
-                                <option key={i} value={data?.size}>
-                                  {data?.size}
-                                </option>
-                              ))}
-                            </select>
+                                {allSizeWithSelectedColor?.map((data, i) => (
+                                  <option key={i} value={data?.size}>
+                                    {data?.size}
+                                  </option>
+                                ))}
+                              </select>
+                            )}
 
                             <button type="submit" className="btn submitSize">
                               Confirm Size & Color
