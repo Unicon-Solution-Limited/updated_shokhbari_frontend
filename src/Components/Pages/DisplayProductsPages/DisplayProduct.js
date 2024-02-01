@@ -119,12 +119,20 @@ const DisplayProduct = () => {
   const handleSize = (sizeValue) => {
     if (filteredPrice?.length === 0) {
       const result = filterdArray?.filter((currentData) => {
-        return currentData?.size == sizeValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some((variant) =>
+            variant?.sizes?.some((size) => size.size === sizeValue.toString())
+          )
+        );
       });
       setNewFilteredArray(result);
     } else {
       const result = filteredPrice?.filter((currentData) => {
-        return currentData?.size == sizeValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some((variant) =>
+            variant?.sizes?.some((size) => size.size === sizeValue.toString())
+          )
+        );
       });
       setNewFilteredArray(result);
     }
@@ -164,13 +172,24 @@ const DisplayProduct = () => {
   const { uniqueColors } = getAllColors();
 
   //filtering size to remove the same name/remove duplicate item
-  const uniqueSize = filterdArray?.reduce((finalArray, current) => {
-    let obj = finalArray.find((item) => item?.size === current?.size);
-    if (obj) {
-      return finalArray;
-    }
-    return finalArray.concat([current]);
-  }, []);
+  const getAllSizes = () => {
+    const allSizes = [];
+    const uniqueSizes = new Set();
+
+    filterdArray.forEach((product) => {
+      product.variantItems.forEach((variantItem) => {
+        variantItem.variants.forEach((variant) => {
+          variant.sizes.forEach((size) => {
+            allSizes.push(size.size);
+            uniqueSizes.add(size.size);
+          });
+        });
+      });
+    });
+
+    return { allSizes, uniqueSizes: Array.from(uniqueSizes) };
+  };
+  const { uniqueSizes } = getAllSizes();
 
   //filtering brand to remove the same name/remove duplicate item
   const uniqueMarchent = filterdArray?.reduce((finalArray, current) => {
@@ -297,19 +316,19 @@ const DisplayProduct = () => {
                   Size <hr className="filterHead" />
                 </b>
 
-                {uniqueSize?.map((filterSize) => (
+                {uniqueSizes?.map((filterSize, i) => (
                   <div
-                    key={filterSize?._id}
-                    onClick={() => handleSize(`${filterSize?.size}`)}
+                    key={i}
+                    onClick={() => handleSize(`${filterSize}`)}
                     className="colorCheckbox"
                   >
                     <input
                       type="radio"
-                      id={filterSize?.size}
+                      id={filterSize}
                       name="size"
                       className="radio"
                     />{" "}
-                    <label htmlFor={filterSize?.size}>{filterSize?.size}</label>
+                    <label htmlFor={filterSize}>{filterSize}</label>
                   </div>
                 ))}
               </div>
@@ -402,21 +421,19 @@ const DisplayProduct = () => {
               Size <hr className="filterHead" />
             </b>
 
-            {uniqueSize?.map((filterSize) => (
+            {uniqueSizes?.map((filterSize) => (
               <div
                 key={filterSize?._id}
-                onClick={() => handleSize(`${filterSize?.size}`)}
+                onClick={() => handleSize(`${filterSize}`)}
                 className="colorCheckbox"
               >
                 <input
                   type="radio"
-                  id={filterSize?.size + "a"}
+                  id={filterSize + "a"}
                   name="size"
                   className="radio"
                 />{" "}
-                <label htmlFor={filterSize?.size + "a"}>
-                  {filterSize?.size}
-                </label>
+                <label htmlFor={filterSize + "a"}>{filterSize}</label>
               </div>
             ))}
           </div>
