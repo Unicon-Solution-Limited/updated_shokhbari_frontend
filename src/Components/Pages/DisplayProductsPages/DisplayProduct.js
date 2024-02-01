@@ -96,12 +96,20 @@ const DisplayProduct = () => {
   const handleColor = (colorValue) => {
     if (filteredPrice?.length === 0) {
       const result = filterdArray?.filter((currentData) => {
-        return currentData?.mainColor == colorValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some(
+            (variant) => variant?.color === colorValue.toString()
+          )
+        );
       });
       setNewFilteredArray(result);
     } else {
       const result = filteredPrice?.filter((currentData) => {
-        return currentData?.mainColor == colorValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some(
+            (variant) => variant.color === colorValue.toString()
+          )
+        );
       });
       setNewFilteredArray(result);
     }
@@ -138,13 +146,22 @@ const DisplayProduct = () => {
   };
 
   //filtering brand to remove the same name/remove duplicate item
-  const uniqueColor = filterdArray?.reduce((finalArray, current) => {
-    let obj = finalArray.find((item) => item?.mainColor === current?.mainColor);
-    if (obj) {
-      return finalArray;
-    }
-    return finalArray.concat([current]);
-  }, []);
+  const getAllColors = () => {
+    const allColors = [];
+    const uniqueColors = [];
+    filterdArray?.forEach((product) => {
+      product.variantItems.forEach((variantItem) => {
+        variantItem.variants.forEach((variant) => {
+          allColors.push(variant.color);
+          if (!uniqueColors.includes(variant.color)) {
+            uniqueColors.push(variant.color);
+          }
+        });
+      });
+    });
+    return { allColors, uniqueColors };
+  };
+  const { uniqueColors } = getAllColors();
 
   //filtering size to remove the same name/remove duplicate item
   const uniqueSize = filterdArray?.reduce((finalArray, current) => {
@@ -257,21 +274,19 @@ const DisplayProduct = () => {
                 <b className="text-bold">
                   Color <hr className="filterHead" />
                 </b>
-                {uniqueColor?.map((filterColor) => (
+                {uniqueColors?.map((filterColor) => (
                   <div
                     key={filterColor?._id}
-                    onClick={() => handleColor(`${filterColor?.mainColor}`)}
+                    onClick={() => handleColor(`${filterColor}`)}
                     className="colorCheckbox"
                   >
                     <input
                       type="radio"
-                      id={filterColor?.mainColor}
+                      id={filterColor}
                       name="color"
                       className="radio"
                     />{" "}
-                    <label htmlFor={filterColor?.mainColor}>
-                      {filterColor?.mainColor}
-                    </label>
+                    <label htmlFor={filterColor}>{filterColor}</label>
                   </div>
                 ))}
               </div>
@@ -328,6 +343,7 @@ const DisplayProduct = () => {
           </div>
         </div>
 
+        {/* this is for pc filtering */}
         <section className="col-md-2 actionButtonDisplay_for_PC">
           {/* product price filter*/}
           <b>
@@ -363,21 +379,19 @@ const DisplayProduct = () => {
             <b className="text-bold">
               Color <hr className="filterHead" />
             </b>
-            {uniqueColor?.map((filterColor) => (
+            {uniqueColors?.map((filterColor, i) => (
               <div
-                key={filterColor?._id}
-                onClick={() => handleColor(`${filterColor?.mainColor}`)}
+                key={i}
+                onClick={() => handleColor(`${filterColor}`)}
                 className="colorCheckbox"
               >
                 <input
                   type="radio"
-                  id={filterColor?.mainColor + "a"}
+                  id={filterColor + "a"}
                   name="color"
                   className="radio"
                 />{" "}
-                <label htmlFor={filterColor?.mainColor + "a"}>
-                  {filterColor?.mainColor}
-                </label>
+                <label htmlFor={filterColor + "a"}>{filterColor}</label>
               </div>
             ))}
           </div>
