@@ -92,16 +92,24 @@ const DisplaySubChildCategoryProducts = () => {
     }
   };
 
-  //filter the color item item form filterdArray state and else ta filterdPrice mani price filter krer pore
+  //filter the color item form filterdArray state and else ta filterdPrice mani price filter krer pore
   const handleColor = (colorValue) => {
     if (filteredPrice?.length === 0) {
       const result = filterdArray?.filter((currentData) => {
-        return currentData?.mainColor == colorValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some(
+            (variant) => variant?.color === colorValue.toString()
+          )
+        );
       });
       setNewFilteredArray(result);
     } else {
       const result = filteredPrice?.filter((currentData) => {
-        return currentData?.mainColor == colorValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some(
+            (variant) => variant.color === colorValue.toString()
+          )
+        );
       });
       setNewFilteredArray(result);
     }
@@ -109,14 +117,22 @@ const DisplaySubChildCategoryProducts = () => {
 
   //SIZE filtering item form filterdArray state and else ta filterdPrice mani price filter krer pore
   const handleSize = (sizeValue) => {
-    if (filteredPrice?.length) {
+    if (filteredPrice?.length === 0) {
       const result = filterdArray?.filter((currentData) => {
-        return currentData?.size == sizeValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some((variant) =>
+            variant?.sizes?.some((size) => size.size === sizeValue.toString())
+          )
+        );
       });
       setNewFilteredArray(result);
     } else {
       const result = filteredPrice?.filter((currentData) => {
-        return currentData?.size == sizeValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some((variant) =>
+            variant?.sizes?.some((size) => size.size === sizeValue.toString())
+          )
+        );
       });
       setNewFilteredArray(result);
     }
@@ -138,22 +154,42 @@ const DisplaySubChildCategoryProducts = () => {
   };
 
   //filtering brand to remove the same name/remove duplicate item
-  const uniqueColor = filterdArray?.reduce((finalArray, current) => {
-    let obj = finalArray.find((item) => item?.mainColor === current?.mainColor);
-    if (obj) {
-      return finalArray;
-    }
-    return finalArray.concat([current]);
-  }, []);
+  const getAllColors = () => {
+    const allColors = [];
+    const uniqueColors = [];
+    filterdArray?.forEach((product) => {
+      product.variantItems.forEach((variantItem) => {
+        variantItem.variants.forEach((variant) => {
+          allColors.push(variant.color);
+          if (!uniqueColors.includes(variant.color)) {
+            uniqueColors.push(variant.color);
+          }
+        });
+      });
+    });
+    return { allColors, uniqueColors };
+  };
+  const { uniqueColors } = getAllColors();
 
   //filtering size to remove the same name/remove duplicate item
-  const uniqueSize = filterdArray?.reduce((finalArray, current) => {
-    let obj = finalArray.find((item) => item?.size === current?.size);
-    if (obj) {
-      return finalArray;
-    }
-    return finalArray.concat([current]);
-  }, []);
+  const getAllSizes = () => {
+    const allSizes = [];
+    const uniqueSizes = new Set();
+
+    filterdArray.forEach((product) => {
+      product.variantItems.forEach((variantItem) => {
+        variantItem.variants.forEach((variant) => {
+          variant.sizes.forEach((size) => {
+            allSizes.push(size.size);
+            uniqueSizes.add(size.size);
+          });
+        });
+      });
+    });
+
+    return { allSizes, uniqueSizes: Array.from(uniqueSizes) };
+  };
+  const { uniqueSizes } = getAllSizes();
 
   //filtering brand to remove the same name/remove duplicate item
   const uniqueMarchent = filterdArray?.reduce((finalArray, current) => {
@@ -257,21 +293,19 @@ const DisplaySubChildCategoryProducts = () => {
                 <b className="text-bold">
                   Color <hr className="filterHead" />
                 </b>
-                {uniqueColor?.map((filterColor) => (
+                {uniqueColors?.map((filterColor, i) => (
                   <div
-                    key={filterColor?._id}
-                    onClick={() => handleColor(`${filterColor?.mainColor}`)}
+                    key={i}
+                    onClick={() => handleColor(`${filterColor}`)}
                     className="colorCheckbox"
                   >
                     <input
                       type="radio"
-                      id={filterColor?.mainColor}
+                      id={filterColor + "a"}
                       name="color"
                       className="radio"
                     />{" "}
-                    <label htmlFor={filterColor?.mainColor}>
-                      {filterColor?.mainColor}
-                    </label>
+                    <label htmlFor={filterColor + "a"}>{filterColor}</label>
                   </div>
                 ))}
               </div>
@@ -282,19 +316,19 @@ const DisplaySubChildCategoryProducts = () => {
                   Size <hr className="filterHead" />
                 </b>
 
-                {uniqueSize?.map((filterSize) => (
+                {uniqueSizes?.map((filterSize) => (
                   <div
                     key={filterSize?._id}
-                    onClick={() => handleSize(`${filterSize?.size}`)}
+                    onClick={() => handleSize(`${filterSize}`)}
                     className="colorCheckbox"
                   >
                     <input
                       type="radio"
-                      id={filterSize?.size}
+                      id={filterSize + "a"}
                       name="size"
                       className="radio"
                     />{" "}
-                    <label htmlFor={filterSize?.size}>{filterSize?.size}</label>
+                    <label htmlFor={filterSize + "a"}>{filterSize}</label>
                   </div>
                 ))}
               </div>
@@ -363,21 +397,19 @@ const DisplaySubChildCategoryProducts = () => {
               Color <hr className="filterHead" />
             </b>
 
-            {uniqueColor?.map((filterColor) => (
+            {uniqueColors?.map((filterColor, i) => (
               <div
-                key={filterColor?._id}
-                onClick={() => handleColor(`${filterColor?.mainColor}`)}
+                key={i}
+                onClick={() => handleColor(`${filterColor}`)}
                 className="colorCheckbox"
               >
                 <input
                   type="radio"
-                  id={filterColor?.mainColor + "a"}
+                  id={filterColor + "a"}
                   name="color"
                   className="radio"
                 />{" "}
-                <label htmlFor={filterColor?.mainColor + "a"}>
-                  {filterColor?.mainColor}
-                </label>
+                <label htmlFor={filterColor + "a"}>{filterColor}</label>
               </div>
             ))}
           </div>
@@ -390,21 +422,19 @@ const DisplaySubChildCategoryProducts = () => {
               Size <hr className="filterHead" />
             </b>
 
-            {uniqueSize?.map((filterSize) => (
+            {uniqueSizes?.map((filterSize) => (
               <div
                 key={filterSize?._id}
-                onClick={() => handleSize(`${filterSize?.size}`)}
+                onClick={() => handleSize(`${filterSize}`)}
                 className="colorCheckbox"
               >
                 <input
                   type="radio"
-                  id={filterSize?.size + "a"}
+                  id={filterSize + "a"}
                   name="size"
                   className="radio"
                 />{" "}
-                <label htmlFor={filterSize?.size + "a"}>
-                  {filterSize?.size}
-                </label>
+                <label htmlFor={filterSize + "a"}>{filterSize}</label>
               </div>
             ))}
           </div>

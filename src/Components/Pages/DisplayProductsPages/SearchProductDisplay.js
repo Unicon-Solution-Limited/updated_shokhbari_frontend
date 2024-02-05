@@ -89,31 +89,47 @@ const SearchProductDisplay = () => {
     }
   };
 
-  //color filtering one filtering form allProduct state and else ta filterdPrice mani price filter krer pore
+  //filter the color item form filterdArray state and else ta filterdPrice mani price filter krer pore
   const handleColor = (colorValue) => {
-    if (filteredPrice.length === 0) {
+    if (filteredPrice?.length === 0) {
       const result = allProducts?.filter((currentData) => {
-        return currentData?.mainColor == colorValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some(
+            (variant) => variant?.color === colorValue.toString()
+          )
+        );
       });
       setNewFilteredArray(result);
     } else {
       const result = filteredPrice?.filter((currentData) => {
-        return currentData?.mainColor == colorValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some(
+            (variant) => variant.color === colorValue.toString()
+          )
+        );
       });
       setNewFilteredArray(result);
     }
   };
 
-  //SIZE filtering form allProduct state and else ta filterdPrice mani price filter krer pore
+  //SIZE filtering item form filterdArray state and else ta filterdPrice mani price filter krer pore
   const handleSize = (sizeValue) => {
-    if (filteredPrice.length === 0) {
+    if (filteredPrice?.length === 0) {
       const result = allProducts?.filter((currentData) => {
-        return currentData?.size == sizeValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some((variant) =>
+            variant?.sizes?.some((size) => size.size === sizeValue.toString())
+          )
+        );
       });
       setNewFilteredArray(result);
     } else {
       const result = filteredPrice?.filter((currentData) => {
-        return currentData?.size == sizeValue.toString();
+        return currentData?.variantItems?.some((variantItem) =>
+          variantItem?.variants?.some((variant) =>
+            variant?.sizes?.some((size) => size.size === sizeValue.toString())
+          )
+        );
       });
       setNewFilteredArray(result);
     }
@@ -143,23 +159,43 @@ const SearchProductDisplay = () => {
     return finalArray.concat([current]);
   }, []);
 
-  //filtering size to remove the same name/remove duplicate item
-  const uniqueSize = allProducts?.reduce((finalArray, current) => {
-    let obj = finalArray.find((item) => item?.size === current?.size);
-    if (obj) {
-      return finalArray;
-    }
-    return finalArray.concat([current]);
-  }, []);
+  //filtering brand to remove the same name/remove duplicate item
+  const getAllColors = () => {
+    const allColors = [];
+    const uniqueColors = [];
+    allProducts?.forEach((product) => {
+      product.variantItems.forEach((variantItem) => {
+        variantItem.variants.forEach((variant) => {
+          allColors.push(variant.color);
+          if (!uniqueColors.includes(variant.color)) {
+            uniqueColors.push(variant.color);
+          }
+        });
+      });
+    });
+    return { allColors, uniqueColors };
+  };
+  const { uniqueColors } = getAllColors();
 
-  //filtering color to remove the same name/remove duplicate item
-  const uniqueColor = allProducts?.reduce((finalArray, current) => {
-    let obj = finalArray.find((item) => item?.mainColor === current?.mainColor);
-    if (obj) {
-      return finalArray;
-    }
-    return finalArray.concat([current]);
-  }, []);
+  //filtering size to remove the same name/remove duplicate item
+  const getAllSizes = () => {
+    const allSizes = [];
+    const uniqueSizes = new Set();
+
+    allProducts.forEach((product) => {
+      product.variantItems.forEach((variantItem) => {
+        variantItem.variants.forEach((variant) => {
+          variant.sizes.forEach((size) => {
+            allSizes.push(size.size);
+            uniqueSizes.add(size.size);
+          });
+        });
+      });
+    });
+
+    return { allSizes, uniqueSizes: Array.from(uniqueSizes) };
+  };
+  const { uniqueSizes } = getAllSizes();
 
   //wishlist data with context api
   const [wishlist, setWishlist] = useContext(WishlistProvider);
@@ -255,21 +291,19 @@ const SearchProductDisplay = () => {
                 <b className="text-bold">
                   Color <hr className="filterHead" />
                 </b>
-                {uniqueColor?.map((filterColor) => (
+                {uniqueColors?.map((filterColor) => (
                   <div
                     key={filterColor?._id}
-                    onClick={() => handleColor(`${filterColor?.mainColor}`)}
+                    onClick={() => handleColor(`${filterColor}`)}
                     className="colorCheckbox"
                   >
                     <input
                       type="radio"
-                      id={filterColor?.mainColor}
+                      id={filterColor}
                       name="color"
                       className="radio"
                     />{" "}
-                    <label htmlFor={filterColor?.mainColor}>
-                      {filterColor?.mainColor}
-                    </label>
+                    <label htmlFor={filterColor}>{filterColor}</label>
                   </div>
                 ))}
               </div>
@@ -280,19 +314,19 @@ const SearchProductDisplay = () => {
                   Size <hr className="filterHead" />
                 </b>
 
-                {uniqueSize?.map((filterSize) => (
+                {uniqueSizes?.map((filterSize, i) => (
                   <div
-                    key={filterSize?._id}
-                    onClick={() => handleSize(`${filterSize?.size}`)}
+                    key={i}
+                    onClick={() => handleSize(`${filterSize}`)}
                     className="colorCheckbox"
                   >
                     <input
                       type="radio"
-                      id={filterSize?.size}
+                      id={filterSize}
                       name="size"
                       className="radio"
                     />{" "}
-                    <label htmlFor={filterSize?.size}>{filterSize?.size}</label>
+                    <label htmlFor={filterSize}>{filterSize}</label>
                   </div>
                 ))}
               </div>
@@ -361,21 +395,19 @@ const SearchProductDisplay = () => {
             <b className="text-bold">
               Color <hr className="filterHead" />
             </b>
-            {uniqueColor?.map((filterColor) => (
+            {uniqueColors?.map((filterColor, i) => (
               <div
-                key={filterColor?._id}
-                onClick={() => handleColor(`${filterColor?.mainColor}`)}
+                key={i}
+                onClick={() => handleColor(`${filterColor}`)}
                 className="colorCheckbox"
               >
                 <input
                   type="radio"
-                  id={filterColor?.mainColor + "a"}
+                  id={filterColor + "a"}
                   name="color"
                   className="radio"
                 />{" "}
-                <label htmlFor={filterColor?.mainColor + "a"}>
-                  {filterColor?.mainColor}
-                </label>
+                <label htmlFor={filterColor + "a"}>{filterColor}</label>
               </div>
             ))}
           </div>
@@ -386,21 +418,19 @@ const SearchProductDisplay = () => {
               Size <hr className="filterHead" />
             </b>
 
-            {uniqueSize?.map((filterSize) => (
+            {uniqueSizes?.map((filterSize) => (
               <div
                 key={filterSize?._id}
-                onClick={() => handleSize(`${filterSize?.size}`)}
+                onClick={() => handleSize(`${filterSize}`)}
                 className="colorCheckbox"
               >
                 <input
                   type="radio"
-                  id={filterSize?.size + "a"}
+                  id={filterSize + "a"}
                   name="size"
                   className="radio"
                 />{" "}
-                <label htmlFor={filterSize?.size + "a"}>
-                  {filterSize?.size}
-                </label>
+                <label htmlFor={filterSize + "a"}>{filterSize}</label>
               </div>
             ))}
           </div>
@@ -458,7 +488,7 @@ const SearchProductDisplay = () => {
                         }
                       >
                         <LazyLoadImage
-                          src={value?.img1}
+                          src={value?.variantItems?.[0]?.variants?.[0]?.image}
                           className="card-img-top img-fluid productPageImg"
                           alt="ProductImage"
                           placeholderSrc={loader}
