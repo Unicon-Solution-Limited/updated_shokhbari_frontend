@@ -9,6 +9,7 @@ import AllFooter from "./../../Shared/Footer/AllFooter";
 const Login = () => {
   const [error, setError] = useState("");
   const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const { login, signWithGoogle, setIsNavigate, currentUser } = useAuth();
   const emailRef = useRef();
@@ -22,21 +23,8 @@ const Login = () => {
   // navigation changer
   useEffect(() => {
     setIsNavigate(true);
-  });
+  }, [setIsNavigate]);
 
-  // sign with email and password
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   try {
-  //     setError("");
-  //     setLoading(true);
-  //     await login(emailRef.current.value, passwordRef.current.value);
-  //     history.replace(from);
-  //   } catch (err) {
-  //     setError(err.message);
-  //   }
-  //   setLoading(false);
-  // };
   // sign with email and password
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -49,7 +37,6 @@ const Login = () => {
       const currentUser = {
         email: emailRef.current.value,
       };
-      console.log(currentUser);
 
       fetch(`${process.env.REACT_APP_BACKEND_URL}/jwt`, {
         method: "POST",
@@ -67,8 +54,9 @@ const Login = () => {
         });
     } catch (err) {
       setError(err.message);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
   // sign with google
@@ -80,15 +68,16 @@ const Login = () => {
       history.replace(from);
     } catch (err) {
       setError(err.message);
+    } finally {
+      setLoading(false);
     }
-    setLoading(false);
   };
 
-  //when googlepopup successfull with currentUser email  and then the jwt will set
+  // when google popup successful with currentUser email and then the jwt will set
   useEffect(() => {
     const email = currentUser?.email;
     if (currentUser?.email) {
-      //get jwt token
+      // get jwt token
       const currentUser = {
         email: email,
       };
@@ -134,13 +123,24 @@ const Login = () => {
             <label htmlFor="exampleInputPassword1" className="form-label">
               Password
             </label>
-            <input
-              ref={passwordRef}
-              type="password"
-              className="form-control"
-              id="exampleInputPassword1"
-              required
-            />
+            <div className="input-group">
+              <input
+                ref={passwordRef}
+                type={showPassword ? "text" : "password"}
+                className="form-control"
+                id="exampleInputPassword1"
+                required
+              />
+              <button
+                className="btn btn-outline-secondary"
+                type="button"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                <i
+                  className={`bi ${showPassword ? "bi-eye-slash" : "bi-eye"}`}
+                ></i>
+              </button>
+            </div>
           </div>
           {/* error showing */}
           <p style={{ color: "red", textAlign: "center", fontWeight: "700" }}>
@@ -158,15 +158,13 @@ const Login = () => {
         <div className="google-box" onClick={handleGoogleSignup}>
           <button className="google-btn container">
             <img className="google-icon" src={googleIcon} alt="google" />
-            <span>Continue with google</span>
+            <span>Continue with Google</span>
           </button>
         </div>
 
         <div className="switch-registration-text pb-3">
-          {/* <p>Need an account?</p> */}
-
           <Link to="/forgotPassword" className="login-text pt-3">
-            Forget Password ?
+            Forgot Password?
           </Link>
 
           <Link to="/signup" className="login-text pt-3">

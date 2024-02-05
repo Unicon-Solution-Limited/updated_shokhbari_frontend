@@ -16,10 +16,13 @@ const Signup = () => {
   const passwordRef = useRef();
   const confirmPasswordRef = useRef();
 
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   // navigation changer
   useEffect(() => {
     setIsNavigate(true);
-  });
+  }, [setIsNavigate]);
 
   // sign with email and password
   const handleSubmit = async (e) => {
@@ -28,7 +31,7 @@ const Signup = () => {
       return setError("password must be at least 6 characters");
     }
     if (passwordRef.current.value !== confirmPasswordRef.current.value) {
-      return setError("Password does not matched!");
+      return setError("Password does not match!");
     }
     try {
       setError("");
@@ -38,11 +41,11 @@ const Signup = () => {
         emailRef.current.value,
         passwordRef.current.value
       );
+
       //get jwt token
       const currentUser = {
         email: emailRef.current.value,
       };
-      console.log(currentUser);
 
       fetch(`${process.env.REACT_APP_BACKEND_URL}/jwt`, {
         method: "POST",
@@ -57,6 +60,7 @@ const Signup = () => {
             localStorage.setItem("shokhbari-token", data.token);
           }
         });
+
       history.push("/");
     } catch (err) {
       setError(err.message);
@@ -90,13 +94,26 @@ const Signup = () => {
                 <label htmlFor="exampleInputPassword1" className="form-label">
                   Password
                 </label>
-                <input
-                  ref={passwordRef}
-                  required
-                  type="password"
-                  className="form-control"
-                  id="exampleInputPassword1"
-                />
+                <div className="input-group">
+                  <input
+                    ref={passwordRef}
+                    required
+                    type={showPassword ? "text" : "password"}
+                    className="form-control"
+                    id="exampleInputPassword1"
+                  />
+                  <span
+                    className="input-group-text"
+                    onClick={() => setShowPassword(!showPassword)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <i
+                      className={`bi ${
+                        showPassword ? "bi-eye-slash" : "bi-eye"
+                      }`}
+                    ></i>
+                  </span>
+                </div>
               </div>
             </div>
 
@@ -122,13 +139,26 @@ const Signup = () => {
                 >
                   Confirm password
                 </label>
-                <input
-                  ref={confirmPasswordRef}
-                  required
-                  type="password"
-                  className="form-control"
-                  id="exampleInputConfirmPassword"
-                />
+                <div className="input-group">
+                  <input
+                    ref={confirmPasswordRef}
+                    required
+                    type={showConfirmPassword ? "text" : "password"}
+                    className="form-control"
+                    id="exampleInputConfirmPassword"
+                  />
+                  <span
+                    className="input-group-text"
+                    onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                    style={{ cursor: "pointer" }}
+                  >
+                    <i
+                      className={`bi ${
+                        showConfirmPassword ? "bi-eye-slash" : "bi-eye"
+                      }`}
+                    ></i>
+                  </span>
+                </div>
               </div>
             </div>
           </div>
@@ -151,7 +181,7 @@ const Signup = () => {
         </form>
 
         <div className="switch-registration-text-signup">
-          <p>Allready have an account?</p>
+          <p>Already have an account?</p>
           <Link to="/login" className="text-signup">
             Login
           </Link>
