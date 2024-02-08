@@ -684,10 +684,10 @@ const ApparelProductsDisplay = () => {
                         aria-label="Close"
                       ></button>
                     </div>
-                    <div className="row modal-body">
+                    <div className="row modal-body" data-bs-dismiss="modal">
                       <Link
                         className="col-12 col-lg-4 col-md-4 categoryContentBody"
-                        to={`/displayProduct/${"Tant"}`}
+                        to={`/displaySubChildProduct/${"Tant"}`}
                       >
                         <LazyLoadImage
                           src="https://res.cloudinary.com/shokhbari/image/upload/v1686208410/shokhbari_apparel/Tant_qiwcyx.webp"
@@ -701,7 +701,7 @@ const ApparelProductsDisplay = () => {
                       </Link>
                       <Link
                         className="col-12 col-lg-4 col-md-4 categoryContentBody"
-                        to={`/displayProduct/${"Tangails"}`}
+                        to={`/displaySubChildProduct/${"Tangails"}`}
                       >
                         <LazyLoadImage
                           src="https://res.cloudinary.com/shokhbari/image/upload/v1686208410/shokhbari_apparel/Tangails_bjc5oh.webp"
@@ -715,7 +715,7 @@ const ApparelProductsDisplay = () => {
                       </Link>
                       <Link
                         className="col-12 col-lg-4 col-md-4 categoryContentBody"
-                        to={`/displayProduct/${"Jamdani"}`}
+                        to={`/displaySubChildProduct/${"Jamdani"}`}
                       >
                         <LazyLoadImage
                           src="https://res.cloudinary.com/shokhbari/image/upload/v1686208410/shokhbari_apparel/Jamdani_r9pe33.webp"
