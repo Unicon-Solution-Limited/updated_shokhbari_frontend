@@ -8,16 +8,17 @@ import "./CategoryDisplay.css";
 import loader from "../../../Image/loder.gif";
 
 const BeautyAndPersonalCareDisplay = () => {
-  const [activeTab, setActiveTab] = useState("");
+  const [helthMedicalActiveTab, setHelthMedicalhelthMedicalActiveTab] =
+    useState("");
 
   useEffect(() => {
-    const storedTab = localStorage.getItem("activeTab");
-    setActiveTab(storedTab || "#Personal_Care-tab"); // Setting default active tab
+    const storedTab = localStorage.getItem("helthMedicalActiveTab");
+    setHelthMedicalhelthMedicalActiveTab(storedTab || "#Personal_Care-tab"); // Setting default active tab
   }, []);
 
   const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    localStorage.setItem("activeTab", tab);
+    setHelthMedicalhelthMedicalActiveTab(tab);
+    localStorage.setItem("helthMedicalActiveTab", tab);
   };
   return (
     <>
@@ -39,9 +40,9 @@ const BeautyAndPersonalCareDisplay = () => {
             type="button"
             role="tab"
             aria-controls="Personal_Care"
-            aria-selected={activeTab === "#" ? "true" : "false"}
+            aria-selected={helthMedicalActiveTab === "#" ? "true" : "false"}
             className={`nav-link categoryButton ${
-              activeTab === "#Personal_Care-tab" ? "active" : ""
+              helthMedicalActiveTab === "#Personal_Care-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#")}
           >
@@ -56,10 +57,12 @@ const BeautyAndPersonalCareDisplay = () => {
             role="tab"
             aria-controls="Medical_Supplies"
             aria-selected={
-              activeTab === "#Medical_Supplies-tab" ? "true" : "false"
+              helthMedicalActiveTab === "#Medical_Supplies-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#Medical_Supplies-tab" ? "active" : ""
+              helthMedicalActiveTab === "#Medical_Supplies-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Medical_Supplies-tab")}
           >
@@ -74,10 +77,12 @@ const BeautyAndPersonalCareDisplay = () => {
             role="tab"
             aria-controls="Food_Supplement"
             aria-selected={
-              activeTab === "#Food_Supplement-tab" ? "true" : "false"
+              helthMedicalActiveTab === "#Food_Supplement-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#Food_Supplement-tab" ? "active" : ""
+              helthMedicalActiveTab === "#Food_Supplement-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Food_Supplement-tab")}
           >
@@ -92,10 +97,12 @@ const BeautyAndPersonalCareDisplay = () => {
             role="tab"
             aria-controls="Sexual_Wellness"
             aria-selected={
-              activeTab === "#Sexual_Wellness-tab" ? "true" : "false"
+              helthMedicalActiveTab === "#Sexual_Wellness-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#Sexual_Wellness-tab" ? "active" : ""
+              helthMedicalActiveTab === "#Sexual_Wellness-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Sexual_Wellness-tab")}
           >
@@ -115,7 +122,9 @@ const BeautyAndPersonalCareDisplay = () => {
             role="tabpanel"
             aria-labelledby="Personal_Care-tab"
             className={`tab-pane fade ${
-              activeTab === "#Personal_Care-tab" ? "show active" : ""
+              helthMedicalActiveTab === "#Personal_Care-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -150,7 +159,9 @@ const BeautyAndPersonalCareDisplay = () => {
             role="tabpanel"
             aria-labelledby="Medical_Supplies-tab"
             className={`tab-pane fade ${
-              activeTab === "#Medical_Supplies-tab" ? "show active" : ""
+              helthMedicalActiveTab === "#Medical_Supplies-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -183,7 +194,9 @@ const BeautyAndPersonalCareDisplay = () => {
             role="tabpanel"
             aria-labelledby="Food_Supplement-tab"
             className={`tab-pane fade ${
-              activeTab === "#Food_Supplement-tab" ? "show active" : ""
+              helthMedicalActiveTab === "#Food_Supplement-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -218,7 +231,9 @@ const BeautyAndPersonalCareDisplay = () => {
             role="tabpanel"
             aria-labelledby="Sexual_Wellness-tab"
             className={`tab-pane fade ${
-              activeTab === "#Sexual_Wellness-tab" ? "show active" : ""
+              helthMedicalActiveTab === "#Sexual_Wellness-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
