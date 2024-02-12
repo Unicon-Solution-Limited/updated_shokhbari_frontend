@@ -8,6 +8,18 @@ import "./CategoryDisplay.css";
 import loader from "../../../Image/loder.gif";
 
 const GiftAndCraftsDisplay = () => {
+  const [giftCraftActiveTab, setGiftCraftgiftCraftActiveTab] = useState("");
+
+  useEffect(() => {
+    const storedTab = localStorage.getItem("giftCraftActiveTab");
+    setGiftCraftgiftCraftActiveTab(storedTab || "#Novelty_Gifts-tab"); // Setting default active tab
+  }, []);
+
+  const handleTabChange = (tab) => {
+    setGiftCraftgiftCraftActiveTab(tab);
+    localStorage.setItem("giftCraftActiveTab", tab);
+  };
+
   return (
     <>
       <AllHeader />
@@ -22,66 +34,99 @@ const GiftAndCraftsDisplay = () => {
             <span>Gift And Craft</span>
           </section>
           <button
-            className="nav-link active categoryButton"
             id="Novelty_Gifts-tab"
             data-bs-toggle="pill"
             data-bs-target="#Novelty_Gifts"
             type="button"
             role="tab"
             aria-controls="Novelty_Gifts"
-            aria-selected="true"
+            aria-selected={
+              giftCraftActiveTab === "#Novelty_Gifts-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              giftCraftActiveTab === "#Novelty_Gifts-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Novelty_Gifts-tab")}
           >
             Novelty Gifts
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Promotional_Items-tab"
             data-bs-toggle="pill"
             data-bs-target="#Promotional_Items"
             type="button"
             role="tab"
             aria-controls="Promotional_Items"
-            aria-selected="false"
+            aria-selected={
+              giftCraftActiveTab === "#Promotional_Items-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              giftCraftActiveTab === "#Promotional_Items-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Promotional_Items-tab")}
           >
             Promotional Items
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Crafting_Accessories-tab"
             data-bs-toggle="pill"
             data-bs-target="#Crafting_Accessories"
             type="button"
             role="tab"
             aria-controls="Crafting_Accessories"
-            aria-selected="false"
+            aria-selected={
+              giftCraftActiveTab === "#Crafting_Accessories-tab"
+                ? "true"
+                : "false"
+            }
+            className={`nav-link categoryButton ${
+              giftCraftActiveTab === "#Crafting_Accessories-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Crafting_Accessories-tab")}
           >
             Crafting Accessories
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Festival_Decoration-tab"
             data-bs-toggle="pill"
             data-bs-target="#Festival_Decoration"
             type="button"
             role="tab"
             aria-controls="Festival_Decoration"
-            aria-selected="false"
+            aria-selected={
+              giftCraftActiveTab === "#Festival_Decoration-tab"
+                ? "true"
+                : "false"
+            }
+            className={`nav-link categoryButton ${
+              giftCraftActiveTab === "#Festival_Decoration-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Festival_Decoration-tab")}
           >
             Festival Decoration
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Gift_Wrapping_Supplies-tab"
             data-bs-toggle="pill"
             data-bs-target="#Gift_Wrapping_Supplies"
             type="button"
             role="tab"
             aria-controls="Gift_Wrapping_Supplies"
-            aria-selected="false"
+            aria-selected={
+              giftCraftActiveTab === "#Gift_Wrapping_Supplies-tab"
+                ? "true"
+                : "false"
+            }
+            className={`nav-link categoryButton ${
+              giftCraftActiveTab === "#Gift_Wrapping_Supplies-tab"
+                ? "active"
+                : ""
+            }`}
+            onClick={() => handleTabChange("#Gift_Wrapping_Supplies-tab")}
           >
             Gift Wrapping Supplies
           </button>
@@ -95,10 +140,12 @@ const GiftAndCraftsDisplay = () => {
         >
           {/* Novelty */}
           <div
-            className="tab-pane fade show active"
             id="Novelty_Gifts"
             role="tabpanel"
             aria-labelledby="Novelty_Gifts-tab"
+            className={`tab-pane fade ${
+              giftCraftActiveTab === "#Novelty_Gifts-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -128,10 +175,14 @@ const GiftAndCraftsDisplay = () => {
 
           {/* Promotional Item */}
           <div
-            className="tab-pane fade"
             id="Promotional_Items"
             role="tabpanel"
             aria-labelledby="Promotional_Items-tab"
+            className={`tab-pane fade ${
+              giftCraftActiveTab === "#Promotional_Items-tab"
+                ? "show active"
+                : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -161,10 +212,14 @@ const GiftAndCraftsDisplay = () => {
 
           {/* Crafting Accessories */}
           <div
-            className="tab-pane fade"
             id="Crafting_Accessories"
             role="tabpanel"
             aria-labelledby="Crafting_Accessories-tab"
+            className={`tab-pane fade ${
+              giftCraftActiveTab === "#Crafting_Accessories-tab"
+                ? "show active"
+                : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -194,10 +249,14 @@ const GiftAndCraftsDisplay = () => {
 
           {/* Festival Decoration */}
           <div
-            className="tab-pane fade"
             id="Festival_Decoration"
             role="tabpanel"
             aria-labelledby="Festival_Decoration-tab"
+            className={`tab-pane fade ${
+              giftCraftActiveTab === "#Festival_Decoration-tab"
+                ? "show active"
+                : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -227,10 +286,14 @@ const GiftAndCraftsDisplay = () => {
 
           {/* Gift Wrapping Supplies */}
           <div
-            className="tab-pane fade"
             id="Gift_Wrapping_Supplies"
             role="tabpanel"
             aria-labelledby="Gift_Wrapping_Supplies-tab"
+            className={`tab-pane fade ${
+              giftCraftActiveTab === "#Gift_Wrapping_Supplies-tab"
+                ? "show active"
+                : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">

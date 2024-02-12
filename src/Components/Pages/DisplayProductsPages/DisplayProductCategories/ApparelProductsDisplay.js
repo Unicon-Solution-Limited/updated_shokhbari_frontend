@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from "react";
 import AllHeader from "../../../Shared/Header/AllHeader";
 import AllFooter from "../../../Shared/Footer/AllFooter";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "./CategoryDisplay.css";
 import loader from "../../../Image/loder.gif";
 
 const ApparelProductsDisplay = () => {
+  const history = useHistory();
+  const [ApparelActiveTab, setApparelApparelActiveTab] = useState("");
+
+  useEffect(() => {
+    const storedTab = localStorage.getItem("ApparelActiveTab");
+    setApparelApparelActiveTab(storedTab || "#Men’s-Clothing"); // Setting default active tab
+  }, []);
+
+  const handleTabChange = (tab) => {
+    setApparelApparelActiveTab(tab);
+    localStorage.setItem("ApparelActiveTab", tab);
+  };
+
   return (
     <>
       <AllHeader />
@@ -22,40 +35,53 @@ const ApparelProductsDisplay = () => {
             <span>Apparel</span>
           </section>
           <button
-            className="nav-link active categoryButton"
             id="Men’s-Clothing-tab"
             data-bs-toggle="pill"
             data-bs-target="#Men’s-Clothing"
             type="button"
             role="tab"
             aria-controls="Men’s-Clothing"
-            aria-selected="true"
+            aria-selected={
+              ApparelActiveTab === "#Men’s-Clothing" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              ApparelActiveTab === "#Men’s-Clothing" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Men’s-Clothing")}
           >
             Men’s Clothing
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Women’s-Clothing-tab"
             data-bs-toggle="pill"
             data-bs-target="#Women’s-Clothing"
             type="button"
             role="tab"
             aria-controls="Women’s-Clothing"
-            aria-selected="false"
+            aria-selected={
+              ApparelActiveTab === "#Women’s-Clothing" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              ApparelActiveTab === "#Women’s-Clothing" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Women’s-Clothing")}
           >
             Women’s Clothing
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Fabrics-tab"
             data-bs-toggle="pill"
             data-bs-target="#Fabrics"
             type="button"
             role="tab"
             aria-controls="Fabrics"
-            aria-selected="false"
+            aria-selected={ApparelActiveTab === "#Fabrics" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              ApparelActiveTab === "#Fabrics" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Fabrics")}
           >
             Fabrics
           </button>
@@ -68,10 +94,12 @@ const ApparelProductsDisplay = () => {
           id="v-pills-tabContent"
         >
           <div
-            className="tab-pane fade show active"
             id="Men’s-Clothing"
             role="tabpanel"
             aria-labelledby="Men’s-Clothing-tab"
+            className={`tab-pane fade ${
+              ApparelActiveTab === "#Men’s-Clothing" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -342,10 +370,12 @@ const ApparelProductsDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Women’s-Clothing"
             role="tabpanel"
             aria-labelledby="Women’s-Clothing-tab"
+            className={`tab-pane fade ${
+              ApparelActiveTab === "#Women’s-Clothing" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -867,10 +897,12 @@ const ApparelProductsDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Fabrics"
             role="tabpanel"
             aria-labelledby="Fabrics-tab"
+            className={`tab-pane fade ${
+              ApparelActiveTab === "#Fabrics" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">

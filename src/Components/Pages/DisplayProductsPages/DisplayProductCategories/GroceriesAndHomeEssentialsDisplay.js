@@ -8,6 +8,17 @@ import "./CategoryDisplay.css";
 import loader from "../../../Image/loder.gif";
 
 const GroceriesAndHomeEssentialsDisplay = () => {
+  const [groceriesActiveTab, setGroceriesgroceriesActiveTab] = useState("");
+
+  useEffect(() => {
+    const storedTab = localStorage.getItem("groceriesActiveTab");
+    setGroceriesgroceriesActiveTab(storedTab || "#Prime_Food-tab"); // Setting default active tab
+  }, []);
+
+  const handleTabChange = (tab) => {
+    setGroceriesgroceriesActiveTab(tab);
+    localStorage.setItem("groceriesActiveTab", tab);
+  };
   return (
     <>
       <AllHeader />
@@ -22,170 +33,239 @@ const GroceriesAndHomeEssentialsDisplay = () => {
             <span>Groceries And Home Essentials</span>
           </section>
           <button
-            className="nav-link active categoryButton"
             id="Prime_Food-tab"
             data-bs-toggle="pill"
             data-bs-target="#Prime_Food"
             type="button"
             role="tab"
             aria-controls="Prime_Food"
-            aria-selected="true"
+            aria-selected={
+              groceriesActiveTab === "#Prime_Food-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Prime_Food-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Prime_Food-tab")}
           >
             Prime Food
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Fruits_Vagetables-tab"
             data-bs-toggle="pill"
             data-bs-target="#Fruits_Vagetables"
             type="button"
             role="tab"
             aria-controls="Fruits_Vagetables"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Fruits_Vagetables-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Fruits_Vagetables-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Fruits_Vagetables-tab")}
           >
             Fruits & Vagetables
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="MeatFish_Seafood-tab"
             data-bs-toggle="pill"
             data-bs-target="#MeatFish_Seafood"
             type="button"
             role="tab"
             aria-controls="MeatFish_Seafood"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#MeatFish_Seafood-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#MeatFish_Seafood-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#MeatFish_Seafood-tab")}
           >
             Meat Fish & Seafood
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Cooking_Ingredient-tab"
             data-bs-toggle="pill"
             data-bs-target="#Cooking_Ingredient"
             type="button"
             role="tab"
             aria-controls="Cooking_Ingredient"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Cooking_Ingredient-tab"
+                ? "true"
+                : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Cooking_Ingredient-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Cooking_Ingredient-tab")}
           >
             Cooking Ingredient
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Breakfast_Tea-tab"
             data-bs-toggle="pill"
             data-bs-target="#Breakfast_Tea"
             type="button"
             role="tab"
             aria-controls="Breakfast_Tea"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Breakfast_Tea-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Breakfast_Tea-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Breakfast_Tea-tab")}
           >
             Breakfast Tea & Coffee
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Sweets_Dairy-tab"
             data-bs-toggle="pill"
             data-bs-target="#Sweets_Dairy"
             type="button"
             role="tab"
             aria-controls="Sweets_Dairy"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Sweets_Dairy-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Sweets_Dairy-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Sweets_Dairy-tab")}
           >
             Sweets & Dairy
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Bakery_Snacks-tab"
             data-bs-toggle="pill"
             data-bs-target="#Bakery_Snacks"
             type="button"
             role="tab"
             aria-controls="Bakery_Snacks"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Bakery_Snacks-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Bakery_Snacks-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Bakery_Snacks-tab")}
           >
             Bakery Snacks
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Forzen_Item-tab"
             data-bs-toggle="pill"
             data-bs-target="#Forzen_Item"
             type="button"
             role="tab"
             aria-controls="Forzen_Item"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Forzen_Item-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Forzen_Item-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Forzen_Item-tab")}
           >
             Forzen Item
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Jarred_Canned-tab"
             data-bs-toggle="pill"
             data-bs-target="#Jarred_Canned"
             type="button"
             role="tab"
             aria-controls="Jarred_Canned"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Jarred_Canned-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Jarred_Canned-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Jarred_Canned-tab")}
           >
             Jarred and Canned Food
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Beverage_Chocolate-tab"
             data-bs-toggle="pill"
             data-bs-target="#Beverage_Chocolate"
             type="button"
             role="tab"
             aria-controls="Beverage_Chocolate"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Beverage_Chocolate-tab"
+                ? "true"
+                : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Beverage_Chocolate-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Beverage_Chocolate-tab")}
           >
             Beverage Chocolate
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Soup_Noodles-tab"
             data-bs-toggle="pill"
             data-bs-target="#Soup_Noodles"
             type="button"
             role="tab"
             aria-controls="Soup_Noodles"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Soup_Noodles-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Soup_Noodles-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Soup_Noodles-tab")}
           >
             Soup & Noodles
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Home_Essentials-tab"
             data-bs-toggle="pill"
             data-bs-target="#Home_Essentials"
             type="button"
             role="tab"
             aria-controls="Home_Essentials"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Home_Essentials-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Home_Essentials-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Home_Essentials-tab")}
           >
             Home Essentials
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Clearing_Needs-tab"
             data-bs-toggle="pill"
             data-bs-target="#Clearing_Needs"
             type="button"
             role="tab"
             aria-controls="Clearing_Needs"
-            aria-selected="false"
+            aria-selected={
+              groceriesActiveTab === "#Clearing_Needs-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              groceriesActiveTab === "#Clearing_Needs-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Clearing_Needs-tab")}
           >
             Clearing Needs
           </button>
@@ -199,10 +279,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
         >
           {/* Prime food */}
           <div
-            className="tab-pane fade show active"
             id="Prime_Food"
             role="tabpanel"
             aria-labelledby="Prime_Food-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Prime_Food-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -303,10 +385,14 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Fruits and vegetables */}
           <div
-            className="tab-pane fade"
             id="Fruits_Vagetables"
             role="tabpanel"
             aria-labelledby="Fruits_Vagetables-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Fruits_Vagetables-tab"
+                ? "show active"
+                : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -364,10 +450,14 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Meat Fish and sea food */}
           <div
-            className="tab-pane fade"
             id="MeatFish_Seafood"
             role="tabpanel"
             aria-labelledby="MeatFish_Seafood-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#MeatFish_Seafood-tab"
+                ? "show active"
+                : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -438,10 +528,14 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Cooking Inredient */}
           <div
-            className="tab-pane fade"
             id="Cooking_Ingredient"
             role="tabpanel"
             aria-labelledby="Cooking_Ingredient-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Cooking_Ingredient-tab"
+                ? "show active"
+                : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -542,10 +636,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Breakfast and tea-coffe */}
           <div
-            className="tab-pane fade"
             id="Breakfast_Tea"
             role="tabpanel"
             aria-labelledby="Breakfast_Tea-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Breakfast_Tea-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -601,10 +697,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Sweets and Dairy */}
           <div
-            className="tab-pane fade"
             id="Sweets_Dairy"
             role="tabpanel"
             aria-labelledby="Sweets_Dairy-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Sweets_Dairy-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -701,10 +799,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Bakery and snacks */}
           <div
-            className="tab-pane fade"
             id="Bakery_Snacks"
             role="tabpanel"
             aria-labelledby="Bakery_Snacks-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Bakery_Snacks-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -773,10 +873,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Forzen Item */}
           <div
-            className="tab-pane fade"
             id="Forzen_Item"
             role="tabpanel"
             aria-labelledby="Forzen_Item-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Forzen_Item-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -821,10 +923,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Jarred and canned food */}
           <div
-            className="tab-pane fade"
             id="Jarred_Canned"
             role="tabpanel"
             aria-labelledby="Jarred_Canned-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Jarred_Canned-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -869,10 +973,14 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Beverage and chocolate */}
           <div
-            className="tab-pane fade"
             id="Beverage_Chocolate"
             role="tabpanel"
             aria-labelledby="Beverage_Chocolate-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Beverage_Chocolate-tab"
+                ? "show active"
+                : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -958,10 +1066,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Soup and Noodles */}
           <div
-            className="tab-pane fade"
             id="Soup_Noodles"
             role="tabpanel"
             aria-labelledby="Soup_Noodles-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Soup_Noodles-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -1032,10 +1142,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Home Essentials */}
           <div
-            className="tab-pane fade"
             id="Home_Essentials"
             role="tabpanel"
             aria-labelledby="Home_Essentials-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Home_Essentials-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -1093,10 +1205,12 @@ const GroceriesAndHomeEssentialsDisplay = () => {
 
           {/* Cleaning needs */}
           <div
-            className="tab-pane fade"
             id="Clearing_Needs"
             role="tabpanel"
             aria-labelledby="Clearing_Needs-tab"
+            className={`tab-pane fade ${
+              groceriesActiveTab === "#Clearing_Needs-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">

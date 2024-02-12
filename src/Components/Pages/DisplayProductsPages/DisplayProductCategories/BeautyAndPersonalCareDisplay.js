@@ -1,13 +1,26 @@
 import React, { useState, useEffect } from "react";
 import AllHeader from "../../../Shared/Header/AllHeader";
 import AllFooter from "../../../Shared/Footer/AllFooter";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import "./CategoryDisplay.css";
 import loader from "../../../Image/loder.gif";
 
 const BeautyAndPersonalCareDisplay = () => {
+  const history = useHistory();
+  const [beautyPersonalActiveTab, setBeautyPersonalbeautyPersonalActiveTab] =
+    useState("");
+
+  useEffect(() => {
+    const storedTab = localStorage.getItem("beautyPersonalActiveTab");
+    setBeautyPersonalbeautyPersonalActiveTab(storedTab || "#Bath_Body"); // Setting default active tab
+  }, []);
+
+  const handleTabChange = (tab) => {
+    setBeautyPersonalbeautyPersonalActiveTab(tab);
+    localStorage.setItem("beautyPersonalActiveTab", tab);
+  };
   return (
     <>
       <AllHeader />
@@ -22,105 +35,145 @@ const BeautyAndPersonalCareDisplay = () => {
             <span>Beauty And Personal Care</span>
           </section>
           <button
-            className="nav-link active categoryButton"
             id="Bath_Body-tab"
             data-bs-toggle="pill"
             data-bs-target="#Bath_Body"
             type="button"
             role="tab"
             aria-controls="Bath_Body"
-            aria-selected="true"
+            aria-selected={
+              beautyPersonalActiveTab === "#Bath_Body" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              beautyPersonalActiveTab === "#Bath_Body" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Bath_Body")}
           >
             Bath & Body
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Beauty_Tools-tab"
             data-bs-toggle="pill"
             data-bs-target="#Beauty_Tools"
             type="button"
             role="tab"
             aria-controls="Beauty_Tools"
-            aria-selected="false"
+            aria-selected={
+              beautyPersonalActiveTab === "#Beauty_Tools" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              beautyPersonalActiveTab === "#Beauty_Tools" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Beauty_Tools")}
           >
             Beauty Tools
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Fragrances-tab"
             data-bs-toggle="pill"
             data-bs-target="#Fragrances"
             type="button"
             role="tab"
             aria-controls="Fragrances"
-            aria-selected="false"
+            aria-selected={
+              beautyPersonalActiveTab === "#Fragrances" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              beautyPersonalActiveTab === "#Fragrances" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Fragrances")}
           >
             Fragrances
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Hair_Care-tab"
             data-bs-toggle="pill"
             data-bs-target="#Hair_Care"
             type="button"
             role="tab"
             aria-controls="Hair_Care"
-            aria-selected="false"
+            aria-selected={
+              beautyPersonalActiveTab === "#Hair_Care" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              beautyPersonalActiveTab === "#Hair_Care" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Hair_Care")}
           >
             Hair Care
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Skin_Care-tab"
             data-bs-toggle="pill"
             data-bs-target="#Skin_Care"
             type="button"
             role="tab"
             aria-controls="Skin_Care"
-            aria-selected="false"
+            aria-selected={
+              beautyPersonalActiveTab === "#Skin_Care" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              beautyPersonalActiveTab === "#Skin_Care" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Skin_Care")}
           >
             Skin Care
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Make_up-tab"
             data-bs-toggle="pill"
             data-bs-target="#Make_up"
             type="button"
             role="tab"
             aria-controls="Make_up"
-            aria-selected="false"
+            aria-selected={
+              beautyPersonalActiveTab === "#Make_up" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              beautyPersonalActiveTab === "#Make_up" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Make_up")}
           >
             Make up
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Oral_Care-tab"
             data-bs-toggle="pill"
             data-bs-target="#Oral_Care"
             type="button"
             role="tab"
             aria-controls="Oral_Care"
-            aria-selected="false"
+            aria-selected={
+              beautyPersonalActiveTab === "#Oral_Care" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              beautyPersonalActiveTab === "#Oral_Care" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Oral_Care")}
           >
             Oral Care
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Feminine_Care-tab"
             data-bs-toggle="pill"
             data-bs-target="#Feminine_Care"
             type="button"
             role="tab"
             aria-controls="Feminine_Care"
-            aria-selected="false"
+            aria-selected={
+              beautyPersonalActiveTab === "#Feminine_Care" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              beautyPersonalActiveTab === "#Feminine_Care" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Feminine_Care")}
           >
             Feminine Care
           </button>
@@ -134,10 +187,12 @@ const BeautyAndPersonalCareDisplay = () => {
         >
           {/* Bath_body */}
           <div
-            className="tab-pane fade show active"
             id="Bath_Body"
             role="tabpanel"
             aria-labelledby="Bath_Body-tab"
+            className={`tab-pane fade ${
+              beautyPersonalActiveTab === "#Bath_Body" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -272,10 +327,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Beauty tools */}
           <div
-            className="tab-pane fade"
             id="Beauty_Tools"
             role="tabpanel"
             aria-labelledby="Beauty_Tools-tab"
+            className={`tab-pane fade ${
+              beautyPersonalActiveTab === "#Beauty_Tools" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -365,10 +422,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Fragrances Care */}
           <div
-            className="tab-pane fade"
             id="Fragrances"
             role="tabpanel"
             aria-labelledby="Fragrances-tab"
+            className={`tab-pane fade ${
+              beautyPersonalActiveTab === "#Fragrances" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -428,10 +487,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Hair Care */}
           <div
-            className="tab-pane fade"
             id="Hair_Care"
             role="tabpanel"
             aria-labelledby="Hair_Care-tab"
+            className={`tab-pane fade ${
+              beautyPersonalActiveTab === "#Hair_Care" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -581,10 +642,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Skin care  */}
           <div
-            className="tab-pane fade"
             id="Skin_Care"
             role="tabpanel"
             aria-labelledby="Skin_Care-tab"
+            className={`tab-pane fade ${
+              beautyPersonalActiveTab === "#Skin_Care" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -734,10 +797,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Make up */}
           <div
-            className="tab-pane fade"
             id="Make_up"
             role="tabpanel"
             aria-labelledby="Make_up-tab"
+            className={`tab-pane fade ${
+              beautyPersonalActiveTab === "#Make_up" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -857,10 +922,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Oral Care */}
           <div
-            className="tab-pane fade"
             id="Oral_Care"
             role="tabpanel"
             aria-labelledby="Oral_Care-tab"
+            className={`tab-pane fade ${
+              beautyPersonalActiveTab === "#Oral_Care" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -935,10 +1002,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Feminine Care */}
           <div
-            className="tab-pane fade"
             id="Feminine_Care"
             role="tabpanel"
             aria-labelledby="Feminine_Care-tab"
+            className={`tab-pane fade ${
+              beautyPersonalActiveTab === "#Feminine_Care" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">

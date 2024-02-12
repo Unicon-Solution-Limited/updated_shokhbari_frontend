@@ -1,13 +1,24 @@
 import React, { useState, useEffect } from "react";
 import AllHeader from "../../../Shared/Header/AllHeader";
 import AllFooter from "../../../Shared/Footer/AllFooter";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import "./CategoryDisplay.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
 import loader from "../../../Image/loder.gif";
 
 const ElectronicDevicesAndAccessoriesDisplay = () => {
+  const [activeTab, setActiveTab] = useState("");
+
+  useEffect(() => {
+    const storedTab = localStorage.getItem("activeTab");
+    setActiveTab(storedTab || "#Laptop-tab"); // Setting default active tab
+  }, []);
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    localStorage.setItem("activeTab", tab);
+  };
   return (
     <>
       <AllHeader />
@@ -22,222 +33,289 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             <span>Computers, Electronic Devices and Accessories</span>
           </section>
           <button
-            className="nav-link active categoryButton"
             id="Laptop-tab"
             data-bs-toggle="pill"
             data-bs-target="#Laptop"
             type="button"
             role="tab"
             aria-controls="Laptop"
-            aria-selected="true"
+            aria-selected={activeTab === "#Laptop-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#Laptop-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Laptop-tab")}
           >
             Laptop
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="DesktopBrandPC-tab"
             data-bs-toggle="pill"
             data-bs-target="#DesktopBrandPC"
             type="button"
             role="tab"
             aria-controls="DesktopBrandPC"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#DesktopBrandPC-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#DesktopBrandPC-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#DesktopBrandPC-tab")}
           >
             Desktop & Brand PC
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Components-tab"
             data-bs-toggle="pill"
             data-bs-target="#Components"
             type="button"
             role="tab"
             aria-controls="Components"
-            aria-selected="false"
+            aria-selected={activeTab === "#Components-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#Components-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Components-tab")}
           >
             Components
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Accessories-tab"
             data-bs-toggle="pill"
             data-bs-target="#Accessories"
             type="button"
             role="tab"
             aria-controls="Accessories"
-            aria-selected="false"
+            aria-selected={activeTab === "#Accessories-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#Accessories-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Accessories-tab")}
           >
             Accessories
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="SmartphoneTablet-tab"
             data-bs-toggle="pill"
             data-bs-target="#SmartphoneTablet"
             type="button"
             role="tab"
             aria-controls="SmartphoneTablet"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#SmartphoneTablet-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#SmartphoneTablet-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#SmartphoneTablet-tab")}
           >
             Smartphone & Tablet
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Monitor-tab"
             data-bs-toggle="pill"
             data-bs-target="#Monitor"
             type="button"
             role="tab"
             aria-controls="Monitor"
-            aria-selected="false"
+            aria-selected={activeTab === "#Monitor-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#Monitor-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Monitor-tab")}
           >
             Monitor
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="NetworkAndRouter-tab"
             data-bs-toggle="pill"
             data-bs-target="#NetworkAndRouter"
             type="button"
             role="tab"
             aria-controls="NetworkAndRouter"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#NetworkAndRouter-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#NetworkAndRouter-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#NetworkAndRouter-tab")}
           >
             Network & Router
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="OfficeEquipments-tab"
             data-bs-toggle="pill"
             data-bs-target="#OfficeEquipments"
             type="button"
             role="tab"
             aria-controls="OfficeEquipments"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#OfficeEquipments-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#OfficeEquipments-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#OfficeEquipments-tab")}
           >
             Office Equipments
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="GamingZone-tab"
             data-bs-toggle="pill"
             data-bs-target="#GamingZone"
             type="button"
             role="tab"
             aria-controls="GamingZone"
-            aria-selected="false"
+            aria-selected={activeTab === "#GamingZone-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#GamingZone-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#GamingZone-tab")}
           >
             Gaming Zone
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Gadgets-tab"
             data-bs-toggle="pill"
             data-bs-target="#Gadgets"
             type="button"
             role="tab"
             aria-controls="Gadgets"
-            aria-selected="false"
+            aria-selected={activeTab === "#Gadgets-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#Gadgets-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Gadgets-tab")}
           >
             Gadgets
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Cameras-tab"
             data-bs-toggle="pill"
             data-bs-target="#Cameras"
             type="button"
             role="tab"
             aria-controls="Cameras"
-            aria-selected="false"
+            aria-selected={activeTab === "#Cameras-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#Cameras-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Cameras-tab")}
           >
             Cameras
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Projector-and-Screen-tab"
             data-bs-toggle="pill"
             data-bs-target="#Projector-and-Screen"
             type="button"
             role="tab"
             aria-controls="Projector-and-Screen"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#Projector-and-Screen-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#Projector-and-Screen-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Projector-and-Screen-tab")}
           >
             Projector & Screen
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="TV-and-Speaker-tab"
             data-bs-toggle="pill"
             data-bs-target="#TV-and-Speaker"
             type="button"
             role="tab"
             aria-controls="TV-and-Speaker"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#TV-and-Speaker-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#TV-and-Speaker-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#TV-and-Speaker-tab")}
           >
             TV & Speaker
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="IPS-Ups-tab"
             data-bs-toggle="pill"
             data-bs-target="#IPS-Ups"
             type="button"
             role="tab"
             aria-controls="IPS-Ups"
-            aria-selected="false"
+            aria-selected={activeTab === "#IPS-Ups-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#IPS-Ups-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#IPS-Ups-tab")}
           >
             IPS/Ups
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Security-Surveillance-tab"
             data-bs-toggle="pill"
             data-bs-target="#Security-Surveillance"
             type="button"
             role="tab"
             aria-controls="Security-Surveillance"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#Security-Surveillance-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#Security-Surveillance-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Security-Surveillance-tab")}
           >
             Security Surveillance
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="AC-Home-Appliance-tab"
             data-bs-toggle="pill"
             data-bs-target="#AC-Home-Appliance"
             type="button"
             role="tab"
             aria-controls="AC-Home-Appliance"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#AC-Home-Appliance-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#AC-Home-Appliance-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#AC-Home-Appliance-tab")}
           >
             AC & Home Appliance
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Software-tab"
             data-bs-toggle="pill"
             data-bs-target="#Software"
             type="button"
             role="tab"
             aria-controls="Software"
-            aria-selected="false"
+            aria-selected={activeTab === "#Software-tab" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#Software-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Software-tab")}
           >
             Software
           </button>
@@ -250,10 +328,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
           id="v-pills-tabContent"
         >
           <div
-            className="tab-pane fade show active"
             id="Laptop"
             role="tabpanel"
             aria-labelledby="Laptop-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Laptop-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -306,10 +386,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="DesktopBrandPC"
             role="tabpanel"
             aria-labelledby="DesktopBrandPC-tab"
+            className={`tab-pane fade ${
+              activeTab === "#DesktopBrandPC-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -390,10 +472,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Components"
             role="tabpanel"
             aria-labelledby="Components-tab"
+            className={`tab-pane fade ${
+              activeTab === "##Components-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -612,10 +696,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Accessories"
             role="tabpanel"
             aria-labelledby="Accessories-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Accessories-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -960,10 +1046,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="SmartphoneTablet"
             role="tabpanel"
             aria-labelledby="SmartphoneTablet-tab"
+            className={`tab-pane fade ${
+              activeTab === "#SmartphoneTablet-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -1024,10 +1112,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Monitor"
             role="tabpanel"
             aria-labelledby="Monitor-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Monitor-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -1054,10 +1144,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="NetworkAndRouter"
             role="tabpanel"
             aria-labelledby="NetworkAndRouter-tab"
+            className={`tab-pane fade ${
+              activeTab === "#NetworkAndRouter-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -1207,10 +1299,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
           </div>
 
           <div
-            className="tab-pane fade"
             id="OfficeEquipments"
             role="tabpanel"
             aria-labelledby="OfficeEquipments-tab"
+            className={`tab-pane fade ${
+              activeTab === "#OfficeEquipments-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -1589,10 +1683,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="GamingZone"
             role="tabpanel"
             aria-labelledby="GamingZone-tab"
+            className={`tab-pane fade ${
+              activeTab === "#GamingZone-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -1661,10 +1757,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Gadgets"
             role="tabpanel"
             aria-labelledby="Gadgets-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Gadgets-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -1717,10 +1815,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Cameras"
             role="tabpanel"
             aria-labelledby="Cameras-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Cameras-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -1831,10 +1931,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Projector-and-Screen"
             role="tabpanel"
             aria-labelledby="Projector-and-Screen-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Projector-and-Screen-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -1903,10 +2005,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="TV-and-Speaker"
             role="tabpanel"
             aria-labelledby="TV-and-Speaker-tab"
+            className={`tab-pane fade ${
+              activeTab === "#TV-and-Speaker-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -2015,10 +2119,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="IPS-Ups"
             role="tabpanel"
             aria-labelledby="IPS-Ups-tab"
+            className={`tab-pane fade ${
+              activeTab === "#IPS-Ups-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -2085,10 +2191,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Security-Surveillance"
             role="tabpanel"
             aria-labelledby="Security-Surveillance-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Security-Surveillance-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -2211,10 +2319,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="AC-Home-Appliance"
             role="tabpanel"
             aria-labelledby="AC-Home-Appliance-tab"
+            className={`tab-pane fade ${
+              activeTab === "#AC-Home-Appliance-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -2325,10 +2435,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             </section>
           </div>
           <div
-            className="tab-pane fade"
             id="Software"
             role="tabpanel"
             aria-labelledby="Software-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Software-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">

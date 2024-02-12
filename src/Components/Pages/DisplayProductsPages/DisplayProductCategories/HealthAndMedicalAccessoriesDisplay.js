@@ -8,6 +8,17 @@ import "./CategoryDisplay.css";
 import loader from "../../../Image/loder.gif";
 
 const BeautyAndPersonalCareDisplay = () => {
+  const [activeTab, setActiveTab] = useState("");
+
+  useEffect(() => {
+    const storedTab = localStorage.getItem("activeTab");
+    setActiveTab(storedTab || "#Personal_Care-tab"); // Setting default active tab
+  }, []);
+
+  const handleTabChange = (tab) => {
+    setActiveTab(tab);
+    localStorage.setItem("activeTab", tab);
+  };
   return (
     <>
       <AllHeader />
@@ -22,53 +33,71 @@ const BeautyAndPersonalCareDisplay = () => {
             <span>Health And Medical Accessories</span>
           </section>
           <button
-            className="nav-link active categoryButton"
             id="Personal_Care-tab"
             data-bs-toggle="pill"
             data-bs-target="#Personal_Care"
             type="button"
             role="tab"
             aria-controls="Personal_Care"
-            aria-selected="true"
+            aria-selected={activeTab === "#" ? "true" : "false"}
+            className={`nav-link categoryButton ${
+              activeTab === "#Personal_Care-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#")}
           >
             Personal Care & Safety
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Medical_Supplies-tab"
             data-bs-toggle="pill"
             data-bs-target="#Medical_Supplies"
             type="button"
             role="tab"
             aria-controls="Medical_Supplies"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#Medical_Supplies-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#Medical_Supplies-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Medical_Supplies-tab")}
           >
             Medical Supplies
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Food_Supplement-tab"
             data-bs-toggle="pill"
             data-bs-target="#Food_Supplement"
             type="button"
             role="tab"
             aria-controls="Food_Supplement"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#Food_Supplement-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#Food_Supplement-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Food_Supplement-tab")}
           >
             Food Supplement's
           </button>
 
           <button
-            className="nav-link categoryButton"
             id="Sexual_Wellness-tab"
             data-bs-toggle="pill"
             data-bs-target="#Sexual_Wellness"
             type="button"
             role="tab"
             aria-controls="Sexual_Wellness"
-            aria-selected="false"
+            aria-selected={
+              activeTab === "#Sexual_Wellness-tab" ? "true" : "false"
+            }
+            className={`nav-link categoryButton ${
+              activeTab === "#Sexual_Wellness-tab" ? "active" : ""
+            }`}
+            onClick={() => handleTabChange("#Sexual_Wellness-tab")}
           >
             Sexual Wellness
           </button>
@@ -82,10 +111,12 @@ const BeautyAndPersonalCareDisplay = () => {
         >
           {/* Personal Care And Safety */}
           <div
-            className="tab-pane fade show active"
             id="Personal_Care"
             role="tabpanel"
             aria-labelledby="Personal_Care-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Personal_Care-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -115,10 +146,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/*  Medical Supplies */}
           <div
-            className="tab-pane fade"
             id="Medical_Supplies"
             role="tabpanel"
             aria-labelledby="Medical_Supplies-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Medical_Supplies-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="img-fluid d-flex justify-content-center my-3 tab-content-head">
@@ -146,10 +179,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Food Supplements */}
           <div
-            className="tab-pane fade"
             id="Food_Supplement"
             role="tabpanel"
             aria-labelledby="Food_Supplement-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Food_Supplement-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
@@ -179,10 +214,12 @@ const BeautyAndPersonalCareDisplay = () => {
 
           {/* Sexual Wellness */}
           <div
-            className="tab-pane fade"
             id="Sexual_Wellness"
             role="tabpanel"
             aria-labelledby="Sexual_Wellness-tab"
+            className={`tab-pane fade ${
+              activeTab === "#Sexual_Wellness-tab" ? "show active" : ""
+            }`}
           >
             <section className="row tab-content-body">
               <section className="d-flex justify-content-center my-3 tab-content-head">
