@@ -8,16 +8,19 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import loader from "../../../Image/loder.gif";
 
 const ElectronicDevicesAndAccessoriesDisplay = () => {
-  const [activeTab, setActiveTab] = useState("");
+  const [
+    electronicDeviceActiveTab,
+    setElectronicDeviceelectronicDeviceActiveTab,
+  ] = useState("");
 
   useEffect(() => {
-    const storedTab = localStorage.getItem("activeTab");
-    setActiveTab(storedTab || "#Laptop-tab"); // Setting default active tab
+    const storedTab = localStorage.getItem("electronicDeviceActiveTab");
+    setElectronicDeviceelectronicDeviceActiveTab(storedTab || "#Laptop-tab"); // Setting default active tab
   }, []);
 
   const handleTabChange = (tab) => {
-    setActiveTab(tab);
-    localStorage.setItem("activeTab", tab);
+    setElectronicDeviceelectronicDeviceActiveTab(tab);
+    localStorage.setItem("electronicDeviceActiveTab", tab);
   };
   return (
     <>
@@ -39,9 +42,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="Laptop"
-            aria-selected={activeTab === "#Laptop-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#Laptop-tab" ? "true" : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#Laptop-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Laptop-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Laptop-tab")}
           >
@@ -56,10 +61,14 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tab"
             aria-controls="DesktopBrandPC"
             aria-selected={
-              activeTab === "#DesktopBrandPC-tab" ? "true" : "false"
+              electronicDeviceActiveTab === "#DesktopBrandPC-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#DesktopBrandPC-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#DesktopBrandPC-tab"
+                ? "active"
+                : ""
             }`}
             onClick={() => handleTabChange("#DesktopBrandPC-tab")}
           >
@@ -73,9 +82,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="Components"
-            aria-selected={activeTab === "#Components-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#Components-tab" ? "true" : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#Components-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Components-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Components-tab")}
           >
@@ -89,9 +100,13 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="Accessories"
-            aria-selected={activeTab === "#Accessories-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#Accessories-tab"
+                ? "true"
+                : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#Accessories-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Accessories-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Accessories-tab")}
           >
@@ -106,10 +121,14 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tab"
             aria-controls="SmartphoneTablet"
             aria-selected={
-              activeTab === "#SmartphoneTablet-tab" ? "true" : "false"
+              electronicDeviceActiveTab === "#SmartphoneTablet-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#SmartphoneTablet-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#SmartphoneTablet-tab"
+                ? "active"
+                : ""
             }`}
             onClick={() => handleTabChange("#SmartphoneTablet-tab")}
           >
@@ -123,9 +142,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="Monitor"
-            aria-selected={activeTab === "#Monitor-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#Monitor-tab" ? "true" : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#Monitor-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Monitor-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Monitor-tab")}
           >
@@ -140,10 +161,14 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tab"
             aria-controls="NetworkAndRouter"
             aria-selected={
-              activeTab === "#NetworkAndRouter-tab" ? "true" : "false"
+              electronicDeviceActiveTab === "#NetworkAndRouter-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#NetworkAndRouter-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#NetworkAndRouter-tab"
+                ? "active"
+                : ""
             }`}
             onClick={() => handleTabChange("#NetworkAndRouter-tab")}
           >
@@ -158,10 +183,14 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tab"
             aria-controls="OfficeEquipments"
             aria-selected={
-              activeTab === "#OfficeEquipments-tab" ? "true" : "false"
+              electronicDeviceActiveTab === "#OfficeEquipments-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#OfficeEquipments-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#OfficeEquipments-tab"
+                ? "active"
+                : ""
             }`}
             onClick={() => handleTabChange("#OfficeEquipments-tab")}
           >
@@ -175,9 +204,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="GamingZone"
-            aria-selected={activeTab === "#GamingZone-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#GamingZone-tab" ? "true" : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#GamingZone-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#GamingZone-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#GamingZone-tab")}
           >
@@ -191,9 +222,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="Gadgets"
-            aria-selected={activeTab === "#Gadgets-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#Gadgets-tab" ? "true" : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#Gadgets-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Gadgets-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Gadgets-tab")}
           >
@@ -207,9 +240,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="Cameras"
-            aria-selected={activeTab === "#Cameras-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#Cameras-tab" ? "true" : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#Cameras-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Cameras-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Cameras-tab")}
           >
@@ -224,10 +259,14 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tab"
             aria-controls="Projector-and-Screen"
             aria-selected={
-              activeTab === "#Projector-and-Screen-tab" ? "true" : "false"
+              electronicDeviceActiveTab === "#Projector-and-Screen-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#Projector-and-Screen-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Projector-and-Screen-tab"
+                ? "active"
+                : ""
             }`}
             onClick={() => handleTabChange("#Projector-and-Screen-tab")}
           >
@@ -242,10 +281,14 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tab"
             aria-controls="TV-and-Speaker"
             aria-selected={
-              activeTab === "#TV-and-Speaker-tab" ? "true" : "false"
+              electronicDeviceActiveTab === "#TV-and-Speaker-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#TV-and-Speaker-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#TV-and-Speaker-tab"
+                ? "active"
+                : ""
             }`}
             onClick={() => handleTabChange("#TV-and-Speaker-tab")}
           >
@@ -259,9 +302,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="IPS-Ups"
-            aria-selected={activeTab === "#IPS-Ups-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#IPS-Ups-tab" ? "true" : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#IPS-Ups-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#IPS-Ups-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#IPS-Ups-tab")}
           >
@@ -276,10 +321,14 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tab"
             aria-controls="Security-Surveillance"
             aria-selected={
-              activeTab === "#Security-Surveillance-tab" ? "true" : "false"
+              electronicDeviceActiveTab === "#Security-Surveillance-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#Security-Surveillance-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Security-Surveillance-tab"
+                ? "active"
+                : ""
             }`}
             onClick={() => handleTabChange("#Security-Surveillance-tab")}
           >
@@ -294,10 +343,14 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tab"
             aria-controls="AC-Home-Appliance"
             aria-selected={
-              activeTab === "#AC-Home-Appliance-tab" ? "true" : "false"
+              electronicDeviceActiveTab === "#AC-Home-Appliance-tab"
+                ? "true"
+                : "false"
             }
             className={`nav-link categoryButton ${
-              activeTab === "#AC-Home-Appliance-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#AC-Home-Appliance-tab"
+                ? "active"
+                : ""
             }`}
             onClick={() => handleTabChange("#AC-Home-Appliance-tab")}
           >
@@ -311,9 +364,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             type="button"
             role="tab"
             aria-controls="Software"
-            aria-selected={activeTab === "#Software-tab" ? "true" : "false"}
+            aria-selected={
+              electronicDeviceActiveTab === "#Software-tab" ? "true" : "false"
+            }
             className={`nav-link categoryButton ${
-              activeTab === "#Software-tab" ? "active" : ""
+              electronicDeviceActiveTab === "#Software-tab" ? "active" : ""
             }`}
             onClick={() => handleTabChange("#Software-tab")}
           >
@@ -332,7 +387,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Laptop-tab"
             className={`tab-pane fade ${
-              activeTab === "#Laptop-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#Laptop-tab" ? "show active" : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -390,7 +445,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="DesktopBrandPC-tab"
             className={`tab-pane fade ${
-              activeTab === "#DesktopBrandPC-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#DesktopBrandPC-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -476,7 +533,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Components-tab"
             className={`tab-pane fade ${
-              activeTab === "##Components-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "##Components-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -700,7 +759,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Accessories-tab"
             className={`tab-pane fade ${
-              activeTab === "#Accessories-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#Accessories-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -1050,7 +1111,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="SmartphoneTablet-tab"
             className={`tab-pane fade ${
-              activeTab === "#SmartphoneTablet-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#SmartphoneTablet-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -1116,7 +1179,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Monitor-tab"
             className={`tab-pane fade ${
-              activeTab === "#Monitor-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#Monitor-tab" ? "show active" : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -1148,7 +1211,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="NetworkAndRouter-tab"
             className={`tab-pane fade ${
-              activeTab === "#NetworkAndRouter-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#NetworkAndRouter-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -1303,7 +1368,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="OfficeEquipments-tab"
             className={`tab-pane fade ${
-              activeTab === "#OfficeEquipments-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#OfficeEquipments-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -1687,7 +1754,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="GamingZone-tab"
             className={`tab-pane fade ${
-              activeTab === "#GamingZone-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#GamingZone-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -1761,7 +1830,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Gadgets-tab"
             className={`tab-pane fade ${
-              activeTab === "#Gadgets-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#Gadgets-tab" ? "show active" : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -1819,7 +1888,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Cameras-tab"
             className={`tab-pane fade ${
-              activeTab === "#Cameras-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#Cameras-tab" ? "show active" : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -1935,7 +2004,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Projector-and-Screen-tab"
             className={`tab-pane fade ${
-              activeTab === "#Projector-and-Screen-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#Projector-and-Screen-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -2009,7 +2080,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="TV-and-Speaker-tab"
             className={`tab-pane fade ${
-              activeTab === "#TV-and-Speaker-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#TV-and-Speaker-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -2123,7 +2196,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="IPS-Ups-tab"
             className={`tab-pane fade ${
-              activeTab === "#IPS-Ups-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#IPS-Ups-tab" ? "show active" : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -2195,7 +2268,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Security-Surveillance-tab"
             className={`tab-pane fade ${
-              activeTab === "#Security-Surveillance-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#Security-Surveillance-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -2323,7 +2398,9 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="AC-Home-Appliance-tab"
             className={`tab-pane fade ${
-              activeTab === "#AC-Home-Appliance-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#AC-Home-Appliance-tab"
+                ? "show active"
+                : ""
             }`}
           >
             <section className="row tab-content-body">
@@ -2439,7 +2516,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             role="tabpanel"
             aria-labelledby="Software-tab"
             className={`tab-pane fade ${
-              activeTab === "#Software-tab" ? "show active" : ""
+              electronicDeviceActiveTab === "#Software-tab" ? "show active" : ""
             }`}
           >
             <section className="row tab-content-body">
