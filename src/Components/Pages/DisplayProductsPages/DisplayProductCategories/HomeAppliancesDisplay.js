@@ -11,7 +11,7 @@ const HomeAppliancesDisplay = () => {
   const [homeAppliancesActiveTab, setHomeAppliancesActiveTab] = useState("");
 
   useEffect(() => {
-    const storedTab = localStorage.getItem("Home_Entertainment");
+    const storedTab = localStorage.getItem("homeAppliancesActiveTab");
     setHomeAppliancesActiveTab(storedTab || "#Home_Entertainment-tab"); // Setting default active tab
   }, []);
 

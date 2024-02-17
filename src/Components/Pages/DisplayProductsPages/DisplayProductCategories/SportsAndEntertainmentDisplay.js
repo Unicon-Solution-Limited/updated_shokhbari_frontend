@@ -11,7 +11,7 @@ const SportsAndEntertainmentDisplay = () => {
   const [sportsActiveTab, setSportsActiveTab] = useState("");
 
   useEffect(() => {
-    const storedTab = localStorage.getItem("Exercise&Fitness");
+    const storedTab = localStorage.getItem("sportsActiveTab");
     setSportsActiveTab(storedTab || "#Exercise&Fitness-tab"); // Setting default active tab
   }, []);
 
