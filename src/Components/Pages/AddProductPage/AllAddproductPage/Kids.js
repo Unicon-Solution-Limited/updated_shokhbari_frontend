@@ -509,9 +509,8 @@ const Kids = () => {
           }}
         />
 
-        {/* product main color */}
+        {/* product Flash Sale */}
         <div className="row my-4">
-          {/* product Flash Sale */}
           <div className="col-md-4">
             <div>
               <label htmlFor="flashSale" className="form-label">
