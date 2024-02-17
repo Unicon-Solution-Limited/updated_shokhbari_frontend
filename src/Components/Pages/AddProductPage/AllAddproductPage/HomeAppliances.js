@@ -751,6 +751,12 @@ const HomeAppliances = () => {
                     <option value="Plugs and Outlets">Plugs & Outlets</option>
                   </>
                 )}
+
+                {selectOption === "Others Appliances" && (
+                  <>
+                    <option value="Others Appliances">Others Appliances</option>
+                  </>
+                )}
               </select>
             </div>
           </div>
