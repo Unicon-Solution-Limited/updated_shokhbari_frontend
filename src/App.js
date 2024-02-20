@@ -68,6 +68,7 @@ import MerchantFrontPage from "./Components/MerchantZone/MerchantFrontPage";
 import MerchantDashboard from "./Components/MerchantZone/Dashboard/MerchantDashboard";
 import MerchantAddProduct from "./Components/MerchantZone/Dashboard/Merchant-Add-Product/MerchantAddProduct";
 import MerchantsProduct from "./Components/Pages/MerchantDetails/MerchantsProduct";
+import DisplaySubCategories from "./Components/Pages/DisplayProductsPages/DisplaySubCategories";
 
 function App() {
   return (
@@ -260,6 +261,10 @@ function App() {
                   </Route>
 
                   {/* Merchant Zone ************** */}
+
+                  <Route path="/displaySubCategories/:childCatvalue">
+                    <DisplaySubCategories />
+                  </Route>
 
                   <Route path="/displayProduct/:childCatvalue">
                     <DisplayProduct />

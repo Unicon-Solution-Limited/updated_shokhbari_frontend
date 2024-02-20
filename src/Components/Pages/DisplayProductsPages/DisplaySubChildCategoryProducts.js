@@ -217,7 +217,7 @@ const DisplaySubChildCategoryProducts = () => {
   };
 
   //this is for pagination
-  const [showPerPage, setShowPerPage] = useState(12);
+  const [showPerPage, setShowPerPage] = useState(20);
   const [pagination, setPagination] = useState({
     start: 0,
     end: showPerPage,

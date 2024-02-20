@@ -11,7 +11,7 @@ import Pagination from "./../pagination/pagination";
 import { WishlistProvider } from "./../../AllContextApi/WishlistContext";
 import loader from "../../Image/loder.gif";
 
-const DisplayProduct = () => {
+const DisplaySubCategories = () => {
   const [allproducts, setAllProducts] = useState();
   const { childCatvalue } = useParams();
   const [filterdArray, setFilteredArray] = useState([]);
@@ -54,9 +54,7 @@ const DisplayProduct = () => {
   //matichg the childCatValue form parems with products
   useEffect(() => {
     setAllProducts(products);
-    let response = products.filter(
-      (pd) => pd?.childCategories == childCatvalue
-    );
+    let response = products.filter((pd) => pd?.subCategories == childCatvalue);
     setFilteredArray(response);
     setNewFilteredArray(response);
   }, [childCatvalue, products]);
@@ -549,4 +547,4 @@ const DisplayProduct = () => {
   );
 };
 
-export default DisplayProduct;
+export default DisplaySubCategories;
