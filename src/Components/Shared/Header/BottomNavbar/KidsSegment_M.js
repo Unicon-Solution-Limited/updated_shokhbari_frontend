@@ -16,7 +16,17 @@ const KidsSegment_M = () => {
             <h2 className="text-center py-3 headline">Kids Segment Worlds</h2>
             <div className="row">
               <div className="col-md-3">
-                <p className="text-center subHeadline">Baby Clothing</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"BabyClothing"}`}
+                  >
+                    Baby Clothing
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
@@ -53,7 +63,17 @@ const KidsSegment_M = () => {
               </div>
 
               <div className="col-md-3 subcategorySection">
-                <p className="text-center subHeadline">Baby Footwaer</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"BabyFootwaer"}`}
+                  >
+                    Baby Footwaer
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -86,7 +106,17 @@ const KidsSegment_M = () => {
               </div>
 
               <div className="col-md-3 subcategorySection">
-                <p className="text-center subHeadline">Baby Care</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"BabyCare"}`}
+                  >
+                    Baby Care
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -107,7 +137,17 @@ const KidsSegment_M = () => {
               </div>
 
               <div className="col-md-3">
-                <p className="text-center subHeadline">Baby Accessories</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"BabyAccessories"}`}
+                  >
+                    Baby Accessories
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
@@ -147,9 +187,18 @@ const KidsSegment_M = () => {
               <hr />
               <div className="row">
                 <div className="col-md-3">
-                  <p className="text-center subHeadline">
-                    Baby Feeding Nursery
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"BabyFeedingNursery"}`}
+                    >
+                      Baby Feeding Nursery
+                    </Link>
                   </p>
+
                   <hr />
                   <div className="row">
                     <div className="col">
@@ -167,9 +216,19 @@ const KidsSegment_M = () => {
                   </div>
 
                   <hr />
-                  <p className="text-center subHeadline mt-3">
-                    Baby Sports Outdoor
+
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"BabySportsOutdoor"}`}
+                    >
+                      Baby Sports Outdoor
+                    </Link>
                   </p>
+
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
@@ -184,7 +243,17 @@ const KidsSegment_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <p className="text-center subHeadline">Baby Toys & Games</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"BabyToysGames"}`}
+                    >
+                      Baby Toys Games
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
@@ -199,7 +268,17 @@ const KidsSegment_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <p className="text-center subHeadline">Baby Education</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"BabyEducation"}`}
+                    >
+                      Baby Education
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">

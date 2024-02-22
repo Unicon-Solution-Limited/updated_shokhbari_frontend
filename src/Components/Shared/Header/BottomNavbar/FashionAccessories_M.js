@@ -15,7 +15,18 @@ const FashionAccessories_M = () => {
             </h2>
             <div className="row">
               <div className="col-2">
-                <p className="text-center subHeadline">Hair Accessories</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Hair Accessories"}`}
+                  >
+                    Hair Accessories
+                  </Link>
+                </p>
+
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -53,7 +64,17 @@ const FashionAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-2 subcategorySection">
-                <p className="text-center subHeadline">Jewelry</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Jewelry"}`}
+                  >
+                    Jewelry
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -120,12 +141,22 @@ const FashionAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-2 subcategorySection">
-                <p className="text-center subHeadline">Bag for Man's</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displayProduct/${"Gents Bag"}`}
+                  >
+                    Bag for Man's
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Corporate Bags"}`}
+                      to={`/displaySubChildProduct/${"Corporate Bags"}`}
                       id="megaMenuLink"
                     >
                       Corporate Bags
@@ -133,7 +164,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Crossbody Bags"}`}
+                      to={`/displaySubChildProduct/${"Crossbody Bags"}`}
                       id="megaMenuLink"
                     >
                       Crossbody Bags
@@ -141,7 +172,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Back Pack"}`}
+                      to={`/displaySubChildProduct/${"Back Pack"}`}
                       id="megaMenuLink"
                     >
                       Back Pack
@@ -149,7 +180,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Laptop Bag"}`}
+                      to={`/displaySubChildProduct/${"Laptop Bag"}`}
                       id="megaMenuLink"
                     >
                       Laptop Bag
@@ -157,7 +188,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Messenger Bag"}`}
+                      to={`/displaySubChildProduct/${"Messenger Bag"}`}
                       id="megaMenuLink"
                     >
                       Messenger Bag
@@ -165,7 +196,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Wallet and long parse"}`}
+                      to={`/displaySubChildProduct/${"Wallet and long parse"}`}
                       id="megaMenuLink"
                     >
                       Wallet and long parse
@@ -174,14 +205,25 @@ const FashionAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-4 subcategorySection">
-                <p className="text-center subHeadline">Bag for Women</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displayProduct/${"Ladies Bag"}`}
+                  >
+                    Bag for Women
+                  </Link>
+                </p>
+
                 <hr />
                 <div className="row">
                   <div className="col">
                     <ul className="text-center" data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Purse and Clutches"}`}
+                          to={`/displaySubChildProduct/${"Purse and Clutches"}`}
                           id="megaMenuLink"
                         >
                           Purse and Clutches
@@ -197,7 +239,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Crossbody and Shoulder Bags"}`}
+                          to={`/displaySubChildProduct/${"Crossbody and Shoulder Bags"}`}
                           id="megaMenuLink"
                         >
                           Crossbody and Shoulder Bags
@@ -205,7 +247,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Parts Bags"}`}
+                          to={`/displaySubChildProduct/${"Parts Bags"}`}
                           id="megaMenuLink"
                         >
                           Parts Bags
@@ -213,7 +255,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Pouches and Coin Purse"}`}
+                          to={`/displaySubChildProduct/${"Pouches and Coin Purse"}`}
                           id="megaMenuLink"
                         >
                           Pouches and Coin Purse
@@ -225,7 +267,7 @@ const FashionAccessories_M = () => {
                     <ul className="text-center" data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Corporate Bags"}`}
+                          to={`/displaySubChildProduct/${"W-Corporate Bags"}`}
                           id="megaMenuLink"
                         >
                           Corporate Bags
@@ -241,7 +283,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Laptop Bags"}`}
+                          to={`/displaySubChildProduct/${"W-Laptop Bags"}`}
                           id="megaMenuLink"
                         >
                           Laptop Bags
@@ -249,7 +291,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Messenger Bags"}`}
+                          to={`/displaySubChildProduct/${"W-Messenger Bags"}`}
                           id="megaMenuLink"
                         >
                           Messenger Bags
@@ -257,7 +299,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Wallet and Long parse"}`}
+                          to={`/displaySubChildProduct/${"W-Wallet and Long parse"}`}
                           id="megaMenuLink"
                         >
                           Wallet and Long parse
@@ -268,12 +310,23 @@ const FashionAccessories_M = () => {
                 </div>
               </div>
               <div className="col-2 subcategorySection">
-                <p className="text-center subHeadline">Unisex Bag</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displayProduct/${"Unisex Bag"}`}
+                  >
+                    Unisex Bag
+                  </Link>
+                </p>
+
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Mobile and Tab Covers"}`}
+                      to={`/displaySubChildProduct/${"Mobile and Tab Covers"}`}
                       id="megaMenuLink"
                     >
                       Mobile and Tab Covers
@@ -281,7 +334,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Coin purse"}`}
+                      to={`/displaySubChildProduct/${"Coin purse"}`}
                       id="megaMenuLink"
                     >
                       Coin purse
@@ -289,7 +342,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Card Holder"}`}
+                      to={`/displaySubChildProduct/${"Card Holder"}`}
                       id="megaMenuLink"
                     >
                       Card Holder
@@ -297,7 +350,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Weekender Bags"}`}
+                      to={`/displaySubChildProduct/${"Weekender Bags"}`}
                       id="megaMenuLink"
                     >
                       Weekender Bags
@@ -305,7 +358,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Suitcase and Trolley Bags"}`}
+                      to={`/displaySubChildProduct/${"Suitcase and Trolley Bags"}`}
                       id="megaMenuLink"
                     >
                       Suitcase and Trolley Bags
@@ -313,7 +366,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Travel Bags"}`}
+                      to={`/displaySubChildProduct/${"Travel Bags"}`}
                       id="megaMenuLink"
                     >
                       Travel Bags
@@ -321,7 +374,7 @@ const FashionAccessories_M = () => {
                   </li>
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Others-Bag"}`}
+                      to={`/displaySubChildProduct/${"Others-Bag"}`}
                       id="megaMenuLink"
                     >
                       Others-Bag
@@ -333,16 +386,33 @@ const FashionAccessories_M = () => {
             <hr />
             <div className="row">
               <div className="col-4">
-                <p className="text-center subHeadline">Footwear</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Footwear"}`}
+                  >
+                    Footwear
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col-md-5">
                     <ul className="text-center" data-bs-dismiss="offcanvas">
-                      <p className="text-center">Men</p>
+                      <p className="text-center" data-bs-dismiss="offcanvas">
+                        <Link
+                          style={{ textDecoration: "none", color: "inherit" }}
+                          to={`/displayProduct/${"Gents Footwear"}`}
+                        >
+                          Men
+                        </Link>
+                      </p>
                       <hr />
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"M-Sneakers and Converses"}`}
+                          to={`/displaySubChildProduct/${"M-Sneakers and Converses"}`}
                           id="megaMenuLink"
                         >
                           Sneakers and Converses
@@ -350,7 +420,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"M-Sandals"}`}
+                          to={`/displaySubChildProduct/${"M-Sandals"}`}
                           id="megaMenuLink"
                         >
                           Sandals
@@ -358,7 +428,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"M-Shoes"}`}
+                          to={`/displaySubChildProduct/${"M-Shoes"}`}
                           id="megaMenuLink"
                         >
                           Shoes
@@ -366,7 +436,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"M-Loafers"}`}
+                          to={`/displaySubChildProduct/${"M-Loafers"}`}
                           id="megaMenuLink"
                         >
                           Loafers
@@ -374,7 +444,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"M-Flip Flops"}`}
+                          to={`/displaySubChildProduct/${"M-Flip Flops"}`}
                           id="megaMenuLink"
                         >
                           Flip Flops
@@ -382,7 +452,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"M-Slippers"}`}
+                          to={`/displaySubChildProduct/${"M-Slippers"}`}
                           id="megaMenuLink"
                         >
                           Slippers
@@ -390,7 +460,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"M-Boots"}`}
+                          to={`/displaySubChildProduct/${"M-Boots"}`}
                           id="megaMenuLink"
                         >
                           Boots
@@ -400,11 +470,18 @@ const FashionAccessories_M = () => {
                   </div>
                   <div className="col-md-7">
                     <ul className="text-center" data-bs-dismiss="offcanvas">
-                      <p className="text-center">Women</p>
+                      <p className="text-center" data-bs-dismiss="offcanvas">
+                        <Link
+                          style={{ textDecoration: "none", color: "inherit" }}
+                          to={`/displayProduct/${"Ladies Footwear"}`}
+                        >
+                          Women
+                        </Link>
+                      </p>
                       <hr />
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Sneakers and Converses"}`}
+                          to={`/displaySubChildProduct/${"W-Sneakers and Converses"}`}
                           id="megaMenuLink"
                         >
                           Sneakers and Converses
@@ -412,7 +489,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Sandals"}`}
+                          to={`/displaySubChildProduct/${"W-Sandals"}`}
                           id="megaMenuLink"
                         >
                           Sandals
@@ -420,7 +497,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Shoes"}`}
+                          to={`/displaySubChildProduct/${"W-Shoes"}`}
                           id="megaMenuLink"
                         >
                           Shoes
@@ -428,7 +505,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Loafers"}`}
+                          to={`/displaySubChildProduct/${"W-Loafers"}`}
                           id="megaMenuLink"
                         >
                           Loafers
@@ -436,7 +513,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Flip Flops"}`}
+                          to={`/displaySubChildProduct/${"W-Flip Flops"}`}
                           id="megaMenuLink"
                         >
                           Flip Flops
@@ -444,7 +521,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Slippers"}`}
+                          to={`/displaySubChildProduct/${"W-Slippers"}`}
                           id="megaMenuLink"
                         >
                           Slippers
@@ -452,7 +529,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"W-Boots"}`}
+                          to={`/displaySubChildProduct/${"W-Boots"}`}
                           id="megaMenuLink"
                         >
                           Boots
@@ -460,7 +537,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Heals"}`}
+                          to={`/displaySubChildProduct/${"Heals"}`}
                           id="megaMenuLink"
                         >
                           Heals
@@ -468,7 +545,7 @@ const FashionAccessories_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Wedges"}`}
+                          to={`/displaySubChildProduct/${"Wedges"}`}
                           id="megaMenuLink"
                         >
                           Wedges
@@ -480,7 +557,17 @@ const FashionAccessories_M = () => {
               </div>
               <div className="col-3 subcategorySection">
                 <ul className="text-center" data-bs-dismiss="offcanvas">
-                  <p className="text-center subHeadline">Sunglass</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Sunglass"}`}
+                    >
+                      Sunglass
+                    </Link>
+                  </p>
                   <hr />
                   <li className="megaMenu_li">
                     <Link
@@ -538,7 +625,17 @@ const FashionAccessories_M = () => {
               </div>
               <div className="col-2 subcategorySection">
                 <ul className="text-center" data-bs-dismiss="offcanvas">
-                  <p className="text-center subHeadline">Watch</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Watch"}`}
+                    >
+                      Watch
+                    </Link>
+                  </p>
                   <hr />
                   <li className="megaMenu_li">
                     <Link
@@ -566,7 +663,17 @@ const FashionAccessories_M = () => {
                   </li>
                 </ul>
                 <ul className="text-center mt-3" data-bs-dismiss="offcanvas">
-                  <p className="text-center subHeadline">Face Mask</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Face Mask"}`}
+                    >
+                      Face Mask
+                    </Link>
+                  </p>
                   <hr />
                   <li className="megaMenu_li">
                     <Link
@@ -596,7 +703,17 @@ const FashionAccessories_M = () => {
               </div>
               <div className="col-1 subcategorySection">
                 <ul className="text-center" data-bs-dismiss="offcanvas">
-                  <p className="text-center subHeadline">Ties</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Ties"}`}
+                    >
+                      Ties
+                    </Link>
+                  </p>
                   <hr />
                   <li className="megaMenu_li">
                     <Link to={`/displayProduct/${"Ties"}`} id="megaMenuLink">
@@ -615,7 +732,17 @@ const FashionAccessories_M = () => {
               </div>
               <div className="col-2">
                 <ul className="text-center" data-bs-dismiss="offcanvas">
-                  <p className="text-center subHeadline">Umbrellas</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Umbrellas"}`}
+                    >
+                      Umbrellas
+                    </Link>
+                  </p>
                   <hr />
                   <li className="megaMenu_li">
                     <Link

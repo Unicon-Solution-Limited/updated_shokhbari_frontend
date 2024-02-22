@@ -13,7 +13,17 @@ const TripTours_M = () => {
             <h2 className="text-center py-3 headline">Tour & Trips World</h2>
             <div className="row">
               <div className="col-3">
-                <p className="text-center subHeadline">Stay</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Stay"}`}
+                  >
+                    Stay
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -24,7 +34,17 @@ const TripTours_M = () => {
                 </ul>
               </div>
               <div className="col-3 subcategorySection">
-                <p className="text-center subHeadline">Tour Guide</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Tour_Guide"}`}
+                  >
+                    Tour Guide
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -38,7 +58,17 @@ const TripTours_M = () => {
                 </ul>
               </div>
               <div className="col-3 subcategorySection">
-                <p className="text-center subHeadline">Package_Tour</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Package_Tour"}`}
+                  >
+                    Package Tour
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -55,7 +85,17 @@ const TripTours_M = () => {
             <hr />
             <div className="row">
               <div className="col-12">
-                <p className="text-center subHeadline">Travel</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Travel"}`}
+                  >
+                    Travel
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col-md-4">

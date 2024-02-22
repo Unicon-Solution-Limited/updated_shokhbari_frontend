@@ -15,8 +15,17 @@ const HealthMedical_M = () => {
             </h2>
             <div className="row">
               <div className="col-md-4">
-                <p className="text-center subHeadline">
-                  Personal Care & Safety
+                <p className="text-center subHeadline"></p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"PersonalCareSafety"}`}
+                  >
+                    Personal Care & Safety
+                  </Link>
                 </p>
                 <hr />
                 <div className="row">
@@ -36,7 +45,17 @@ const HealthMedical_M = () => {
               </div>
 
               <div className="col-md-4 subcategorySection">
-                <p className="text-center subHeadline">Medical Supplies</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Medical_Supplies"}`}
+                  >
+                    Medical Supplies
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -87,7 +106,17 @@ const HealthMedical_M = () => {
               </div>
 
               <div className="col-md-4 subcategorySection">
-                <p className="text-center subHeadline">Food Supplements</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Food_Supplements"}`}
+                  >
+                    Food Supplements
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -130,7 +159,17 @@ const HealthMedical_M = () => {
               <hr />
               <div className="row">
                 <div className="col-md-4 subcategorySection">
-                  <p className="text-center subHeadline">Sexual Wellness</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Sexual_Wellness"}`}
+                    >
+                      Sexual Wellness
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">

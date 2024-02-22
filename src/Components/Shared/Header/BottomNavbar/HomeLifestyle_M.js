@@ -97,7 +97,17 @@ const HomeLifestyle_M = () => {
                 </div>
               </div>
               <div className="col-md-6 subcategorySection">
-                <p className="text-center subHeadline">Furniture</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Furniture"}`}
+                  >
+                    Furniture
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">

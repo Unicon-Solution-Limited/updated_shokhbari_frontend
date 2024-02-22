@@ -15,7 +15,18 @@ const ElectronicDevicesAccessories_M = () => {
             </h2>
             <div className="row">
               <div className="col-2">
-                <p className="text-center subHeadline">Laptop</p>
+                {/* <p className="text-center subHeadline">Laptop</p> */}
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Laptop"}`}
+                  >
+                    Laptop
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -51,7 +62,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Desktop & Brand PC</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"DesktopAndBrandPC"}`}
+                  >
+                    Desktop & Brand PC
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -94,7 +115,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Cameras</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Cameras"}`}
+                  >
+                    Cameras
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -156,7 +187,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-4 subcategorySection">
-                <p className="text-center subHeadline">Components</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Components"}`}
+                  >
+                    Components
+                  </Link>
+                </p>
                 <hr />
                 <ul
                   className="text-center d-flex justify-content-around"
@@ -286,7 +327,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Smartphone & Tablet</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"SmartphoneAndTablet"}`}
+                  >
+                    Smartphone & Tablet
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -315,7 +366,18 @@ const ElectronicDevicesAccessories_M = () => {
                   </li>
                 </ul>
                 <hr />
-                <p className="text-center subHeadline border-bottom">IPS/Ups</p>
+
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"IPS/Ups"}`}
+                  >
+                    IPS/Ups
+                  </Link>
+                </p>
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
                     <Link
@@ -350,7 +412,18 @@ const ElectronicDevicesAccessories_M = () => {
               </div>
               <hr />
               <div className="col-md-6 subcategorySection">
-                <p className="text-center subHeadline">Accessories</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Accessories"}`}
+                  >
+                    Accessories
+                  </Link>
+                </p>
+
                 <hr />
                 <ul
                   className="text-center d-flex justify-content-around"
@@ -554,7 +627,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">TV & Speaker</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"TVAndSpeaker"}`}
+                  >
+                    TV & Speaker
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -613,7 +696,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">AC & Home Appliance</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"ACAndHomeAppliance"}`}
+                  >
+                    AC & Home Appliance
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -672,7 +765,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Security Surveillance</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"SecuritySurveillance"}`}
+                  >
+                    Security Surveillance
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -740,7 +843,17 @@ const ElectronicDevicesAccessories_M = () => {
               </div>
               <hr />
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Network & Router</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"NetworkAndRouter"}`}
+                  >
+                    Network & Router
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -820,7 +933,18 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-6 subcategorySection">
-                <p className="text-center subHeadline">Office Equipments</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"OfficeEquipments"}`}
+                  >
+                    Office Equipments
+                  </Link>
+                </p>
+
                 <hr />
                 <ul
                   className="text-center d-flex justify-content-between"
@@ -1044,7 +1168,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Gaming Zone</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"GamingZone"}`}
+                  >
+                    Gaming Zone
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -1081,8 +1215,17 @@ const ElectronicDevicesAccessories_M = () => {
                   </li>
                 </ul>
                 <hr />
-                <p className="text-center subHeadline border-bottom">
-                  Projector & Screen
+
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"ProjectorAndScreen"}`}
+                  >
+                    Projector & Screen
+                  </Link>
                 </p>
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -1120,7 +1263,17 @@ const ElectronicDevicesAccessories_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Software</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Software"}`}
+                  >
+                    Software
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -1149,7 +1302,18 @@ const ElectronicDevicesAccessories_M = () => {
                   </li>
                 </ul>
                 <hr />
-                <p className="text-center subHeadline border-bottom">Gadgets</p>
+
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Gadgets"}`}
+                  >
+                    Gadgets
+                  </Link>
+                </p>
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
                     <Link

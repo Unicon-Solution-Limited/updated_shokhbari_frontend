@@ -75,7 +75,17 @@ const Automobile_M = () => {
                 </div>
               </div>
               <div className="col-md-3 subcategorySection">
-                <p className="text-center subHeadline">Bike</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Bike"}`}
+                  >
+                    Bike
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
@@ -101,8 +111,16 @@ const Automobile_M = () => {
                 </div>
               </div>
               <div className="col-md-5 subcategorySection">
-                <p className="text-center subHeadline">
-                  Bike Parts & Accessories
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Bike_Parts_Accessories"}`}
+                  >
+                    Bike Parts & Accessories
+                  </Link>
                 </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">

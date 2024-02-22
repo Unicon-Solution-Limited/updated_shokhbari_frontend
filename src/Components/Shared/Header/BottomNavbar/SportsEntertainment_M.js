@@ -18,8 +18,16 @@ const SportsEntertainment = () => {
             </h2>
             <div className="row">
               <div className="col-md-4">
-                <p className="text-center subHeadline">
-                  Exercise And Fitness, Yoga
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Exercise&Fitness"}`}
+                  >
+                    Exercise And Fitness, Yoga
+                  </Link>
                 </p>
                 <hr />
                 <div className="row">
@@ -39,7 +47,17 @@ const SportsEntertainment = () => {
               </div>
 
               <div className="col-md-4 subcategorySection">
-                <p className="text-center subHeadline">Outdoor Recreation</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"OutdoorRecreation"}`}
+                  >
+                    Outdoor Recreation
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -54,7 +72,17 @@ const SportsEntertainment = () => {
               </div>
 
               <div className="col-md-4 subcategorySection">
-                <p className="text-center subHeadline">Indoor Recreation</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"IndoorRecreation"}`}
+                  >
+                    Indoor Recreation
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -70,7 +98,17 @@ const SportsEntertainment = () => {
               <hr />
               <div className="row">
                 <div className="col-md-4 subcategorySection">
-                  <p className="text-center subHeadline">Camping Hiking</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Camping_Hiking"}`}
+                    >
+                      Camping Hiking
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">

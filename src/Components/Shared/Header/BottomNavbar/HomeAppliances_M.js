@@ -13,7 +13,17 @@ const HomeAppliances_M = () => {
             <h2 className="text-center py-4 headline">Home Appliances World</h2>
             <div className="row">
               <div className="col-2">
-                <p className="text-center subHeadline">Home Entertainment</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Home Entertainment"}`}
+                  >
+                    Home Entertainment
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -57,8 +67,17 @@ const HomeAppliances_M = () => {
                   </li>
                 </ul>
                 <hr />
-                <p className="text-center subHeadline border-bottom">
-                  Refrigerator and Freezer
+
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Refrigerator and Freezer"}`}
+                  >
+                    Refrigerator and Freezer
+                  </Link>
                 </p>
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -95,8 +114,16 @@ const HomeAppliances_M = () => {
                   </li>
                 </ul>
 
-                <p className="text-center subHeadline border-bottom mt-3">
-                  Cooling & Heating
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Cooling and Heating"}`}
+                  >
+                    Cooling & Heating
+                  </Link>
                 </p>
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -149,7 +176,17 @@ const HomeAppliances_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Kitchen Appliance</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Kitchen Appliance"}`}
+                  >
+                    Kitchen Appliance
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -227,7 +264,17 @@ const HomeAppliances_M = () => {
                   </li>
                 </ul>
 
-                <p className="text-center subHeadline mt-3">Home lighting</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Home lighting"}`}
+                  >
+                    Home lighting
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -253,7 +300,17 @@ const HomeAppliances_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Bath Fixtures</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Bath Fixtures"}`}
+                  >
+                    Bath Fixtures
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -288,7 +345,17 @@ const HomeAppliances_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Washing Machine</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Washing Machine"}`}
+                  >
+                    Washing Machine
+                  </Link>
+                </p>
                 <hr />
                 <ul
                   className="text-center d-flex justify-content-around"
@@ -325,7 +392,17 @@ const HomeAppliances_M = () => {
                 </ul>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Cleaning Equipments</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Cleaning Equipments"}`}
+                  >
+                    Cleaning Equipments
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">

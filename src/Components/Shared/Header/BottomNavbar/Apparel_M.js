@@ -13,7 +13,17 @@ const Apparel_M = () => {
             <h2 className="text-center py-3 headline">Apparel Worlds</h2>
             <div className="row">
               <div className="col-md-4">
-                <p className="text-center subHeadline">Men’s Clothing</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Men’s Clothing"}`}
+                  >
+                    Men’s Clothing
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
@@ -108,7 +118,17 @@ const Apparel_M = () => {
                 </div>
               </div>
               <div className="col-md-6 subcategorySection">
-                <p className="text-center subHeadline">Women’s Clothing</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Women's Clothing"}`}
+                  >
+                    Women’s Clothing
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
@@ -295,7 +315,17 @@ const Apparel_M = () => {
                 </div>
               </div>
               <div className="col-md-2 subcategorySection">
-                <p className="text-center subHeadline">Fabrics</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Fabrics"}`}
+                  >
+                    Fabrics
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">

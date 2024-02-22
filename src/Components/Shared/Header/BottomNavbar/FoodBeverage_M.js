@@ -18,7 +18,17 @@ const FoodBeverage_M = () => {
             </h2>
             <div className="row">
               <div className="col-md-3">
-                <p className="text-center subHeadline">Prime Food</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"PrimeFood"}`}
+                  >
+                    Prime Food
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
@@ -82,7 +92,17 @@ const FoodBeverage_M = () => {
               </div>
 
               <div className="col-md-3 subcategorySection">
-                <p className="text-center subHeadline">Fruits & Vagetables</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"FruitsVegtables"}`}
+                  >
+                    Fruits & Vagetables
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -112,7 +132,17 @@ const FoodBeverage_M = () => {
               </div>
 
               <div className="col-md-3 subcategorySection">
-                <p className="text-center subHeadline">Meat Fish & Seafood</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"MeatFishSeafood"}`}
+                  >
+                    Meat Fish & Seafood
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -146,6 +176,18 @@ const FoodBeverage_M = () => {
 
               <div className="col-md-3">
                 <p className="text-center subHeadline">Cooking Ingredient</p>
+
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"CookingIngredient"}`}
+                  >
+                    Cooking Ingredient
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
@@ -212,8 +254,16 @@ const FoodBeverage_M = () => {
               <hr />
               <div className="row">
                 <div className="col-md-3">
-                  <p className="text-center subHeadline">
-                    Breakfast Tea & Coffee
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"BreakfastTeaCoffee"}`}
+                    >
+                      Breakfast Tea & Coffee
+                    </Link>
                   </p>
                   <hr />
                   <div className="row">
@@ -250,8 +300,17 @@ const FoodBeverage_M = () => {
                   </div>
 
                   <hr />
-                  <p className="text-center subHeadline mt-3">
-                    Jarred and Canned Food
+
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"JarredCannedFood"}`}
+                    >
+                      Jarred and Canned Food
+                    </Link>
                   </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
@@ -275,7 +334,17 @@ const FoodBeverage_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <p className="text-center subHeadline">Sweets & Dairy</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"SweetsDairy"}`}
+                    >
+                      Sweets & Dairy
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
@@ -327,7 +396,17 @@ const FoodBeverage_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <p className="text-center subHeadline">Bakery Snacks</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"BakerySnacks"}`}
+                    >
+                      Bakery Snacks
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
@@ -363,15 +442,14 @@ const FoodBeverage_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <p className="text-center subHeadline">Forzen Item</p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
                       <Link
-                        to={`/displayProduct/${"ReadyToCook"}`}
+                        to={`/displayProduct/${"ForzenItem"}`}
                         id="megaMenuLink"
                       >
-                        Ready To Cook
+                        Forzen Item
                       </Link>
                     </li>
 
@@ -391,7 +469,17 @@ const FoodBeverage_M = () => {
               <hr />
               <div className="row">
                 <div className="col-md-3">
-                  <p className="text-center subHeadline">Beverage Chocolate</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"BeverageChocolate"}`}
+                    >
+                      Beverage Chocolate
+                    </Link>
+                  </p>
                   <hr />
                   <div className="row">
                     <div className="col">
@@ -446,7 +534,17 @@ const FoodBeverage_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <p className="text-center subHeadline">Soup & Noodle</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"SoupNoodles"}`}
+                    >
+                      Soup & Noodles
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
@@ -482,7 +580,17 @@ const FoodBeverage_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <p className="text-center subHeadline">Home Essentials</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"HomeEssentials"}`}
+                    >
+                      Home Essentials
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
@@ -512,7 +620,17 @@ const FoodBeverage_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <p className="text-center subHeadline">Clearing Needs</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"ClearingNeeds"}`}
+                    >
+                      Clearing Needs
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">

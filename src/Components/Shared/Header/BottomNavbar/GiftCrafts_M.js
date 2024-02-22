@@ -13,7 +13,17 @@ const GiftCrafts_M = () => {
             <h2 className="text-center py-3 headline">Gift And Craft Worlds</h2>
             <div className="row">
               <div className="col-md-4">
-                <p className="text-center subHeadline">Novelty Gifts</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Novelty Gifts"}`}
+                  >
+                    Novelty Gifts
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
@@ -32,7 +42,17 @@ const GiftCrafts_M = () => {
               </div>
 
               <div className="col-md-4 subcategorySection">
-                <p className="text-center subHeadline">Promotional Items</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Promotional Items"}`}
+                  >
+                    Promotional Items
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -47,7 +67,17 @@ const GiftCrafts_M = () => {
               </div>
 
               <div className="col-md-4 subcategorySection">
-                <p className="text-center subHeadline">Crafting Accessories</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Crafting Accessories"}`}
+                  >
+                    Crafting Accessories
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -63,7 +93,17 @@ const GiftCrafts_M = () => {
               <hr />
               <div className="row">
                 <div className="col-md-4 subcategorySection">
-                  <p className="text-center subHeadline">Festival Decoration</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Festival Decoration"}`}
+                    >
+                      Festival Decoration
+                    </Link>
+                  </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
@@ -78,8 +118,16 @@ const GiftCrafts_M = () => {
                 </div>
 
                 <div className="col-md-4 subcategorySection">
-                  <p className="text-center subHeadline">
-                    Gift Wrapping Supplies
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Gift Wrapping Supplies"}`}
+                    >
+                      Gift Wrapping Supplies
+                    </Link>
                   </p>
                   <hr />
                   <ul data-bs-dismiss="offcanvas">

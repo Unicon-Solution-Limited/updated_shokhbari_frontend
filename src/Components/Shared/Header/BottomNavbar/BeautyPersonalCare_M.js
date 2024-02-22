@@ -18,7 +18,17 @@ const BeautyPersonalCare = () => {
             </h2>
             <div className="row">
               <div className="col-2">
-                <p className="text-center subHeadline">Bath & Body</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Bath and Body"}`}
+                  >
+                    Bath and Body
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -88,7 +98,17 @@ const BeautyPersonalCare = () => {
                 </ul>
               </div>
               <div className="col-2 subcategorySection">
-                <p className="text-center subHeadline">Beauty Tools</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Beauty Tools"}`}
+                  >
+                    Beauty Tools
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -134,12 +154,22 @@ const BeautyPersonalCare = () => {
                 </ul>
               </div>
               <div className="col-4 subcategorySection">
-                <p className="text-center subHeadline">Fragrances</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Fragrances"}`}
+                  >
+                    Fragrances
+                  </Link>
+                </p>
                 <hr />
                 <div className="row">
                   <div className="col">
-                    <p className="text-center">Men Fragrances</p>
-                    <hr />
+                    {/* <p className="text-center">Men Fragrances</p> */}
+                    {/* <hr /> */}
                     <ul className="text-center" data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
@@ -179,8 +209,8 @@ const BeautyPersonalCare = () => {
                     </ul>
                   </div>
                   <div className="col">
-                    <p className="text-center">Women Fragrances</p>
-                    <hr />
+                    {/* <p className="text-center">Women Fragrances</p> */}
+                    {/* <hr /> */}
                     <ul className="text-center" data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
@@ -220,8 +250,8 @@ const BeautyPersonalCare = () => {
                     </ul>
                   </div>
                   <div className="col">
-                    <p className="text-center">Unisex Fragrances</p>
-                    <hr />
+                    {/* <p className="text-center">Unisex Fragrances</p> */}
+                    {/* <hr /> */}
                     <ul className="text-center" data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
@@ -263,7 +293,17 @@ const BeautyPersonalCare = () => {
                 </div>
               </div>
               <div className="col-2 subcategorySection">
-                <p className="text-center subHeadline">Hair Care</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Hair Care"}`}
+                  >
+                    Hair Care
+                  </Link>
+                </p>
                 <hr />
 
                 <ul className="text-center" data-bs-dismiss="offcanvas">
@@ -347,7 +387,17 @@ const BeautyPersonalCare = () => {
                 </ul>
               </div>
               <div className="col-2 subcategorySection">
-                <p className="text-center subHeadline">Skin Care</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Skin Care"}`}
+                  >
+                    Skin Care
+                  </Link>
+                </p>
                 <hr />
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -428,7 +478,17 @@ const BeautyPersonalCare = () => {
             <hr />
             <div className="row">
               <div className="col-2">
-                <p className="text-center subHeadline">Makeup</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Makeup"}`}
+                  >
+                    Makeup
+                  </Link>
+                </p>
                 <hr />
 
                 <ul className="text-center" data-bs-dismiss="offcanvas">
@@ -488,7 +548,17 @@ const BeautyPersonalCare = () => {
               </div>
 
               <div className="col-2 subcategorySection">
-                <p className="text-center subHeadline">Oral</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Oral Care"}`}
+                  >
+                    Oral Care
+                  </Link>
+                </p>
                 <hr />
 
                 <ul className="text-center" data-bs-dismiss="offcanvas">
@@ -529,7 +599,17 @@ const BeautyPersonalCare = () => {
 
               <div className="col-2 subcategorySection">
                 <ul className="text-center" data-bs-dismiss="offcanvas">
-                  <p className="text-center subHeadline">Feminine Care</p>
+                  <p
+                    className="text-center subHeadline"
+                    data-bs-dismiss="offcanvas"
+                  >
+                    <Link
+                      style={{ textDecoration: "none", color: "inherit" }}
+                      to={`/displaySubCategories/${"Feminine Care"}`}
+                    >
+                      Feminine Care
+                    </Link>
+                  </p>
                   <hr />
                   <li className="megaMenu_li">
                     <Link

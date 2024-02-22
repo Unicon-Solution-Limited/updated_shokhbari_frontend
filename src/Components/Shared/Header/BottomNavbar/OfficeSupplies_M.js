@@ -19,7 +19,17 @@ const OfficeSupplies_M = () => {
             </h2>
             <div className="row">
               <div className="col-md-4">
-                <p className="text-center subHeadline">Paper Products</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Paper Products"}`}
+                  >
+                    Paper Products
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -70,7 +80,17 @@ const OfficeSupplies_M = () => {
                 </ul>
               </div>
               <div className="col-md-3 subcategorySection">
-                <p className="text-center subHeadline">Books</p>
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Books"}`}
+                  >
+                    Books
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
@@ -93,6 +113,18 @@ const OfficeSupplies_M = () => {
               </div>
               <div className="col-md-5 subcategorySection">
                 <p className="text-center subHeadline">Others</p>
+
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/displaySubCategories/${"Others"}`}
+                  >
+                    Others
+                  </Link>
+                </p>
                 <hr />
                 <ul data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
