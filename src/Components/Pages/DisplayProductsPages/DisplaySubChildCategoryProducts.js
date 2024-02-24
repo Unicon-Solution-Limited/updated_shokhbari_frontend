@@ -54,11 +54,19 @@ const DisplaySubChildCategoryProducts = () => {
   //matichg the childCatValue form parems with products
   useEffect(() => {
     setAllProducts(products);
-    let response = products.filter(
-      (pd) => pd?.subChildCategories == childCatvalue
-    );
-    setFilteredArray(response);
-    setNewFilteredArray(response);
+    const fetchFilteredProducts = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.REACT_APP_BACKEND_URL}/getDisplaySubChildCategorisProduct?subChildCategories=${childCatvalue}`
+        );
+        const data = await response.json();
+        setFilteredArray(data);
+        setNewFilteredArray(data);
+      } catch (error) {
+        console.log("err", error);
+      }
+    };
+    fetchFilteredProducts();
   }, [childCatvalue, products]);
 
   useEffect(() => {
