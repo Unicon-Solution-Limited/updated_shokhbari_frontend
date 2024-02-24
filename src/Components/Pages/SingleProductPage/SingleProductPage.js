@@ -61,9 +61,24 @@ const SingleProductPsize = () => {
 
   const { ProductId } = useParams();
   // Filtering selected product for details
-  const productDetails = products.find((pd) => pd?._id == ProductId);
+  const [productDetails, setProductDetails] = useState([]);
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.REACT_APP_BACKEND_URL}/getSingleProductAcId?singleProduct=${ProductId}`
+        );
+        const data = await response.json();
+        setProductDetails(data);
+      } catch (error) {
+        console.log("err", error);
+      }
+    };
 
-  //filtering product for varient beside the product details
+    fetchOrders();
+  }, [ProductId]);
+
+  //filtering product for varient beside the product details(more releted product)
   const selectedChildCategories = products.filter(
     (pd) => pd.childCategories == subChildValue
   );
@@ -254,7 +269,7 @@ const SingleProductPsize = () => {
     <>
       <AllHeader />
       <main className="container-fluid singleProduct">
-        {products?.length === 0 ? (
+        {products?.length === 0 || productDetails?.length === 0 ? (
           <div
             className="d-flex justify-content-center"
             style={{ padding: "5% 0" }}
