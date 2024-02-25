@@ -17,6 +17,7 @@ const ManageProduct = () => {
   const [removeId, setRemoveId] = useState(0);
   const [deleteMessage, setDeleteMessage] = useState("");
   const [signleProduct, setSingleProduct] = useState([]);
+  const [searchMangValue, setSearchMangValue] = useState("");
 
   const [page, setPage] = useState(0);
   const [pageCount, setPageCount] = useState(0);
@@ -82,17 +83,21 @@ const ManageProduct = () => {
   }, [page, removeId]);
 
   //search handaling with condition for the reason of colse all searching product load
-  const handleSearch = (event) => {
-    const searchText = event.target.value;
-    if (searchText.length) {
-      const matchedProducts = product.filter((product) =>
-        product?.name.toLowerCase().includes(searchText.toLowerCase())
-      );
-      setDisplayProducts(matchedProducts);
-    } else if (searchText.length === 0) {
-      setDisplayProducts(displayProducts);
-    }
-  };
+  useEffect(() => {
+    const fetchProduct = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.REACT_APP_BACKEND_URL}/manageProductSearch?searchMangValue=` +
+            searchMangValue
+        );
+        const data = await response.json();
+        setDisplayProducts(data);
+      } catch (error) {
+        console.log("err", error);
+      }
+    };
+    fetchProduct();
+  }, [searchMangValue]);
 
   //Deleteing the product form product list
   const productDelete = async (productId) => {
@@ -148,10 +153,10 @@ const ManageProduct = () => {
         <div className="col-md-4">
           <div className="input-group mb-3">
             <DebounceInput
-              onChange={handleSearch}
+              onChange={(e) => setSearchMangValue(e.target.value)}
               type="text"
               className="form-control"
-              placeholder="Search By Product Name"
+              placeholder="Search Product"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
               minLength={2}
@@ -173,6 +178,7 @@ const ManageProduct = () => {
             <th>Image</th>
             {/* <th>Name</th> */}
             <th>Product Code</th>
+            <th>Product Name</th>
             <th>Current Price</th>
             <th>Old Price</th>
             <th>extraDeliveryCost</th>
@@ -193,8 +199,8 @@ const ManageProduct = () => {
                 />
               </td>
 
-              {/* <td>{data?.name}</td> */}
               <td>{data?.code}</td>
+              <td>{data?.name}</td>
               <td>{data?.currentPrice}</td>
               <td>{data?.oldPrice}</td>
               <td>{data?.extraDeliveryCost}</td>
