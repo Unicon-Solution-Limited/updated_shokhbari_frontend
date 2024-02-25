@@ -86,7 +86,7 @@ const ManageProduct = () => {
     const searchText = event.target.value;
     if (searchText.length) {
       const matchedProducts = product.filter((product) =>
-        product?.code.toLowerCase().includes(searchText.toLowerCase())
+        product?.name.toLowerCase().includes(searchText.toLowerCase())
       );
       setDisplayProducts(matchedProducts);
     } else if (searchText.length === 0) {
@@ -151,7 +151,7 @@ const ManageProduct = () => {
               onChange={handleSearch}
               type="text"
               className="form-control"
-              placeholder="Search By Product Id"
+              placeholder="Search By Product Name"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
               minLength={2}

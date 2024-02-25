@@ -79,9 +79,22 @@ const SingleProductPsize = () => {
   }, [ProductId]);
 
   //filtering product for varient beside the product details(more releted product)
-  const selectedChildCategories = products.filter(
-    (pd) => pd.childCategories == subChildValue
-  );
+  const [selectedChildCategories, setSelectedChildCategories] = useState([]);
+
+  useEffect(() => {
+    const fetchFilteredMoreProducts = async () => {
+      try {
+        const response = await fetch(
+          `${process.env.REACT_APP_BACKEND_URL}/getMoreReletedProduct?childCategories=${subChildValue}`
+        );
+        const data = await response.json();
+        setSelectedChildCategories(data);
+      } catch (error) {
+        console.log("err", error);
+      }
+    };
+    fetchFilteredMoreProducts();
+  }, [products, subChildValue]);
 
   //productDetails state makeing array to multiple size selecting
   const [selectedSize, setSelectedSize] = useState("");
@@ -742,7 +755,7 @@ const SingleProductPsize = () => {
             {selectedChildCategories
               ?.slice(pagination.start, pagination.end)
               ?.map((data) => (
-                <div className="col-md-2" key={data._id}>
+                <div className="col-md-2 mt-3" key={data._id}>
                   <div
                     className="card popularProductCard"
                     onClick={() => setImageAsSelectedColor("")}
