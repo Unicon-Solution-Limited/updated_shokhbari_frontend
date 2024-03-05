@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import AllHeader from "../../../Shared/Header/AllHeader";
 import AllFooter from "../../../Shared/Footer/AllFooter";
-import { Link, useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "./CategoryDisplay.css";
 import { LazyLoadImage } from "react-lazy-load-image-component";
 import "react-lazy-load-image-component/src/effects/blur.css";
@@ -27,7 +27,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
       <AllHeader />
       <div className="d-flex align-items-start categoryDisplay">
         {/* sidebar Start */}
-        <aside
+        {/* <aside
           className="nav flex-column nav-pills me-2 categoryButtonBody"
           role="tablist"
           aria-orientation="vertical"
@@ -374,14 +374,11 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
           >
             Software
           </button>
-        </aside>
+        </aside> */}
         {/* sidebar end */}
 
         {/* Categories start */}
-        <aside
-          className="tab-content me-2 categoryContentDisplay"
-          id="v-pills-tabContent"
-        >
+        <aside className="">
           <div
             id="Laptop"
             role="tabpanel"
@@ -391,13 +388,12 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
             }`}
           >
             <section className="row tab-content-body">
-              <section className="d-flex justify-content-center my-3 tab-content-head">
-                <LazyLoadImage
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1686392831/shokhbari_electronices/01-Laptop-Image_es3fkg.webp"
-                  alt=""
-                  className="img-fluid subCateBanner"
-                />
-              </section>
+              <LazyLoadImage
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1686392831/shokhbari_electronices/01-Laptop-Image_es3fkg.webp"
+                alt=""
+                className="img-fluid subCateBanner mb-5"
+              />
+
               <Link
                 className="col-12 col-lg-2 col-md-2 categoryContentBody"
                 to={`/displayProduct/${"Laptop"}`}

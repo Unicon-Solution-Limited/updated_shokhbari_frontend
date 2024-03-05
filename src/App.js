@@ -69,6 +69,21 @@ import MerchantDashboard from "./Components/MerchantZone/Dashboard/MerchantDashb
 import MerchantAddProduct from "./Components/MerchantZone/Dashboard/Merchant-Add-Product/MerchantAddProduct";
 import MerchantsProduct from "./Components/Pages/MerchantDetails/MerchantsProduct";
 import DisplaySubCategories from "./Components/Pages/DisplayProductsPages/DisplaySubCategories";
+import ElectronicMainCategory from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/ElectronicMainCategory";
+import ApparelMainCategory from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/ApparelMainCategory";
+import FashionAccessoriesMainCategory from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/FashionAccessoriesMainCategory";
+import BeautiPersonalMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/BeautiPersonalMainCategories";
+import GiftCraftMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/GiftCraftMainCategories";
+import OfficeEducationMainCategoris from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/OfficeEducationMainCategoris";
+import HomeAndLifeMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/HomeAndLifeMainCategories";
+import HomeApplianceMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/HomeApplianceMainCategories";
+import SportsMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/SportsMainCategories";
+import GroceriesMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/GroceriesMainCategories";
+import AutoMobileMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/AutoMobileMainCategories";
+import HealthMedicalMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/HealthMedicalMainCategories";
+import MatrimonialMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/MatrimonialMainCategories";
+import KidsMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/KidsMainCategories";
+import TourTipsMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/TourTipsMainCategories";
 
 function App() {
   return (
@@ -136,50 +151,111 @@ function App() {
                     <CashPaymentSuccess />
                   </PrivateRoute>
 
-                  {/* Routing for category wise Product Display Pages (Mid Row) */}
+                  {/* Routing for category wise Product Display Pages main cetegori (Mid Row) */}
                   <Route path="/category/ElectronicDevicesAndAccessories">
-                    <ElectronicDevicesAndAccessoriesDisplay />
+                    <ElectronicMainCategory />
                   </Route>
                   <Route path="/category/apparel">
-                    <ApparelProductsDisplay />
+                    <ApparelMainCategory />
                   </Route>
                   <Route path="/category/FashionAccessories">
-                    <FashionAccessoriesDisplay />
+                    <FashionAccessoriesMainCategory />
                   </Route>
                   <Route path="/category/beauty-and-personal-care">
-                    <Beauty />
+                    <BeautiPersonalMainCategories />
                   </Route>
                   <Route path="/category/gift-craft">
-                    <GiftCraft />
+                    <GiftCraftMainCategories />
                   </Route>
                   <Route path="/category/office-and-education">
-                    <OfficeEducation />
+                    <OfficeEducationMainCategoris />
                   </Route>
                   <Route path="/category/home-and-lifestyle">
-                    <HomeAndLifestyle />
+                    <HomeAndLifeMainCategories />
                   </Route>
                   <Route path="/category/home-appliance">
-                    <HomeAppliance />
+                    <HomeApplianceMainCategories />
                   </Route>
                   <Route path="/category/sports-and-entertainment">
-                    <Sports />
+                    <SportsMainCategories />
                   </Route>
                   <Route path="/category/groceries-and-home-essentials">
-                    <Groceries />
+                    <GroceriesMainCategories />
                   </Route>
                   <Route path="/category/automobile-items">
-                    <Automobile />
+                    <AutoMobileMainCategories />
                   </Route>
                   <Route path="/category/health-and-medical">
-                    <Health />
+                    <HealthMedicalMainCategories />
                   </Route>
                   <Route path="/category/matrimonial">
-                    <Matrimonial />
+                    <MatrimonialMainCategories />
                   </Route>
                   <Route path="/category/kids-zone">
-                    <Kids />
+                    <KidsMainCategories />
                   </Route>
                   <Route path="/category/trip-and-tours">
+                    <TourTipsMainCategories />
+                  </Route>
+
+                  {/* home main body cetegory */}
+                  <Route path="/ElectronicDevicesAndAccessoriesItem/:itemName">
+                    <ElectronicDevicesAndAccessoriesDisplay />
+                  </Route>
+
+                  <Route path="/ApparelsItem/:itemName">
+                    <ApparelProductsDisplay />
+                  </Route>
+
+                  <Route path="/FashionAccessoriesItem/:itemName">
+                    <FashionAccessoriesDisplay />
+                  </Route>
+
+                  <Route path="/BeautyItem/:itemName">
+                    <Beauty />
+                  </Route>
+
+                  <Route path="/GiftCraftItem/:itemName">
+                    <GiftCraft />
+                  </Route>
+
+                  <Route path="/OfficeEducationItem/:itemName">
+                    <OfficeEducation />
+                  </Route>
+
+                  <Route path="/HomeAndLifestyleItem/:itemName">
+                    <HomeAndLifestyle />
+                  </Route>
+
+                  <Route path="/HomeApplianceItem/:itemName">
+                    <HomeAppliance />
+                  </Route>
+
+                  <Route path="/SportsItem/:itemName">
+                    <Sports />
+                  </Route>
+
+                  <Route path="/GroceriesItem/:itemName">
+                    <Groceries />
+                  </Route>
+
+                  <Route path="/AutomobileItem/:itemName">
+                    <Automobile />
+                  </Route>
+
+                  <Route path="/HealthItem/:itemName">
+                    <Health />
+                  </Route>
+
+                  <Route path="/MatrimonialItem/:itemName">
+                    <Matrimonial />
+                  </Route>
+
+                  <Route path="/KidsItem/:itemName">
+                    <Kids />
+                  </Route>
+
+                  <Route path="/TripItem/:itemName">
                     <Trip />
                   </Route>
 
