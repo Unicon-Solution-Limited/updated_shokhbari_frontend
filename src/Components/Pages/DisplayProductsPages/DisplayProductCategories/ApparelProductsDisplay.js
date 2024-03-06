@@ -23,7 +23,7 @@ const ApparelProductsDisplay = () => {
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid m-0">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"M-Shirts"}`}
@@ -297,7 +297,7 @@ const ApparelProductsDisplay = () => {
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid m-0">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Kurtis"}`}
@@ -830,7 +830,7 @@ const ApparelProductsDisplay = () => {
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid m-0">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"F-Shirt"}`}
