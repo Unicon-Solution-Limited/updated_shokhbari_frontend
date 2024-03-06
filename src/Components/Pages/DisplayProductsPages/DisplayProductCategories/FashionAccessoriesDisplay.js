@@ -22,7 +22,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Hair Band"}`}
@@ -186,7 +186,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Gents Sunglass"}`}
@@ -240,7 +240,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Gents Watch"}`}
@@ -294,7 +294,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 {/* Gents bag Modals */}
                 <span
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
@@ -786,7 +786,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Gents Belt"}`}
@@ -840,7 +840,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Ties"}`}
@@ -878,7 +878,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 {/* Gents Footwear Modal */}
                 <span
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
@@ -1229,7 +1229,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Gents Umbrellas"}`}
@@ -1283,7 +1283,7 @@ const FashionAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Gents Face Mask"}`}

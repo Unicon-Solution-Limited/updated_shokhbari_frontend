@@ -22,7 +22,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Laptop"}`}
@@ -76,7 +76,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Brand-PCs"}`}
@@ -726,7 +726,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Smartphone"}`}
@@ -785,7 +785,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Monitor"}`}
@@ -1340,7 +1340,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Gaming-Chair"}`}
@@ -1408,7 +1408,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Smart-Watch"}`}
@@ -1572,7 +1572,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Projectors"}`}
@@ -1750,7 +1750,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Online-UPS"}`}
@@ -2048,7 +2048,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
                 alt=""
                 className="img-fluid subCateBanner mb-5"
               />
-              <section className="row tab-content-body container-fluid">
+              <section className="row tab-content-body container-fluid justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Operating-System"}`}
