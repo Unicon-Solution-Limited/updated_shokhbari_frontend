@@ -12,7 +12,7 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
   return (
     <>
       <AllHeader />
-      <div className="d-flex align-items-start categoryDisplay">
+      <div className="d-flex align-items-start">
         {/* Categories start */}
         <aside>
           {itemName === "Laptop" && (

@@ -23,7 +23,7 @@ const GiftAndCraftsDisplay = () => {
   return (
     <>
       <AllHeader />
-      <div className="d-flex align-items-start categoryDisplay">
+      <div className="d-flex align-items-start">
         {/* Sidebar start */}
         <aside
           className="nav flex-column nav-pills me-2 categoryButtonBody"

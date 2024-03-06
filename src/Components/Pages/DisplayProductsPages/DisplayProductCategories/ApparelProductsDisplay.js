@@ -12,7 +12,7 @@ const ApparelProductsDisplay = () => {
   return (
     <>
       <AllHeader />
-      <div className="d-flex align-items-start categoryDisplay">
+      <div className="d-flex align-items-start">
         {/* Categories start */}
         <aside>
           {itemName === "Men’s-Clothing" && (
