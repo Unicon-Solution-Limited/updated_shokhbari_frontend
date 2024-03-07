@@ -160,6 +160,19 @@ const HomeAndLifeMainCategories = () => {
               </button>
             </Link>
           </div>
+
+          <div className="col-xs-12 col-lg-4 mb-3">
+            <Link to={`/HomeAndLifestyleItem/${"Pet"}`} className="custom-link">
+              <button className="mb-2 mainCategory-button">
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
+                <span className="categoryHeadline">Pet</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
     </div>
