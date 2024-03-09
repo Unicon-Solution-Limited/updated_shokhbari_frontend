@@ -144,7 +144,6 @@ const TourAndTipsDisplay = () => {
           )}
 
           {/* Tour_Guide */}
-
           {itemName === "Tour_Guide" && (
             <div id="Tour_Guide">
               <LazyLoadImage

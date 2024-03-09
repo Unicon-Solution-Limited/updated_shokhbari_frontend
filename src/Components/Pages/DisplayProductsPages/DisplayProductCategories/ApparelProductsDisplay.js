@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import AllHeader from "../../../Shared/Header/AllHeader";
 import AllFooter from "../../../Shared/Footer/AllFooter";
 import { Link, useParams } from "react-router-dom";
