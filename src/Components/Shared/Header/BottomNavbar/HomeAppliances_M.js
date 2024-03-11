@@ -19,7 +19,7 @@ const HomeAppliances_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Home Entertainment"}`}
+                    to={`/HomeApplianceItem/Home_Entertainment`}
                   >
                     Home Entertainment
                   </Link>
@@ -74,7 +74,7 @@ const HomeAppliances_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Refrigerator and Freezer"}`}
+                    to={`/HomeApplianceItem/Refrigerator_Freezer`}
                   >
                     Refrigerator and Freezer
                   </Link>
@@ -115,12 +115,12 @@ const HomeAppliances_M = () => {
                 </ul>
 
                 <p
-                  className="text-center subHeadline"
+                  className="text-center subHeadline mt-2"
                   data-bs-dismiss="offcanvas"
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Cooling and Heating"}`}
+                    to={`/HomeApplianceItem/Cooling_Heating`}
                   >
                     Cooling & Heating
                   </Link>
@@ -182,7 +182,7 @@ const HomeAppliances_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Kitchen Appliance"}`}
+                    to={`/HomeApplianceItem/Kitchen_Appliance`}
                   >
                     Kitchen Appliance
                   </Link>
@@ -265,12 +265,12 @@ const HomeAppliances_M = () => {
                 </ul>
 
                 <p
-                  className="text-center subHeadline"
+                  className="text-center subHeadline mt-2"
                   data-bs-dismiss="offcanvas"
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Home lighting"}`}
+                    to={`/HomeApplianceItem/Home_lighting`}
                   >
                     Home lighting
                   </Link>
@@ -306,7 +306,7 @@ const HomeAppliances_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Bath Fixtures"}`}
+                    to={`/HomeApplianceItem/Bath_Fixtures`}
                   >
                     Bath Fixtures
                   </Link>
@@ -351,7 +351,7 @@ const HomeAppliances_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Washing Machine"}`}
+                    to={`/HomeApplianceItem/Washing_Machine`}
                   >
                     Washing Machine
                   </Link>
@@ -398,7 +398,7 @@ const HomeAppliances_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Cleaning Equipments"}`}
+                    to={`/HomeApplianceItem/Cleaning_Equipments`}
                   >
                     Cleaning Equipments
                   </Link>

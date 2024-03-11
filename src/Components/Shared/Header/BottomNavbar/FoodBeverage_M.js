@@ -24,7 +24,7 @@ const FoodBeverage_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"PrimeFood"}`}
+                    to={`/GroceriesItem/Prime_Food`}
                   >
                     Prime Food
                   </Link>
@@ -98,7 +98,7 @@ const FoodBeverage_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"FruitsVegtables"}`}
+                    to={`/GroceriesItem/Fruits_Vagetables`}
                   >
                     Fruits & Vagetables
                   </Link>
@@ -138,7 +138,7 @@ const FoodBeverage_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"MeatFishSeafood"}`}
+                    to={`/GroceriesItem/Meat_Fish_Seafood`}
                   >
                     Meat Fish & Seafood
                   </Link>
@@ -175,15 +175,13 @@ const FoodBeverage_M = () => {
               </div>
 
               <div className="col-md-3">
-                <p className="text-center subHeadline">Cooking Ingredient</p>
-
                 <p
                   className="text-center subHeadline"
                   data-bs-dismiss="offcanvas"
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"CookingIngredient"}`}
+                    to={`/GroceriesItem/Cooking_Ingredient`}
                   >
                     Cooking Ingredient
                   </Link>
@@ -260,7 +258,7 @@ const FoodBeverage_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"BreakfastTeaCoffee"}`}
+                      to={`/GroceriesItem/Breakfast_Tea_Coffee`}
                     >
                       Breakfast Tea & Coffee
                     </Link>
@@ -307,7 +305,7 @@ const FoodBeverage_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"JarredCannedFood"}`}
+                      to={`/GroceriesItem/Jarred_Canned`}
                     >
                       Jarred and Canned Food
                     </Link>
@@ -340,7 +338,7 @@ const FoodBeverage_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"SweetsDairy"}`}
+                      to={`/GroceriesItem/Sweets_Dairy`}
                     >
                       Sweets & Dairy
                     </Link>
@@ -402,7 +400,7 @@ const FoodBeverage_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"BakerySnacks"}`}
+                      to={`/GroceriesItem/Bakery_Snacks`}
                     >
                       Bakery Snacks
                     </Link>
@@ -442,22 +440,15 @@ const FoodBeverage_M = () => {
                 </div>
 
                 <div className="col-md-3 subcategorySection">
-                  <hr />
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
-                      <Link
-                        to={`/displayProduct/${"ForzenItem"}`}
-                        id="megaMenuLink"
-                      >
+                      <Link to={`/GroceriesItem/Forzen_Item`} id="megaMenuLink">
                         Forzen Item
                       </Link>
                     </li>
 
                     <li className="megaMenu_li">
-                      <Link
-                        to={`/displayProduct/${"OtherFrozenItem"}`}
-                        id="megaMenuLink"
-                      >
+                      <Link to={`/GroceriesItem/Forzen_Item`} id="megaMenuLink">
                         Other Frozen Item
                       </Link>
                     </li>
@@ -475,7 +466,7 @@ const FoodBeverage_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"BeverageChocolate"}`}
+                      to={`/GroceriesItem/Beverage_Chocolate`}
                     >
                       Beverage Chocolate
                     </Link>
@@ -540,7 +531,7 @@ const FoodBeverage_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"SoupNoodles"}`}
+                      to={`/GroceriesItem/Soup_Noodles`}
                     >
                       Soup & Noodles
                     </Link>
@@ -586,7 +577,7 @@ const FoodBeverage_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"HomeEssentials"}`}
+                      to={`/GroceriesItem/Home_Essentials`}
                     >
                       Home Essentials
                     </Link>
@@ -626,7 +617,7 @@ const FoodBeverage_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"ClearingNeeds"}`}
+                      to={`/GroceriesItem/Clearing_Needs`}
                     >
                       Clearing Needs
                     </Link>

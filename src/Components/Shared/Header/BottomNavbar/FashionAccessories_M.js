@@ -5,8 +5,11 @@ const FashionAccessories_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Fashion Accessories
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/FashionAccessories"
+        >
+          <span data-bs-dismiss="offcanvas">Fashion Accessories</span>
         </Link>
         <ul className="submenu dropdown-menu mega_menu" id="fashion_mega">
           <div className="container">
@@ -21,7 +24,7 @@ const FashionAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Hair Accessories"}`}
+                    to={`/FashionAccessoriesItem/Hair%20Accessories`}
                   >
                     Hair Accessories
                   </Link>
@@ -70,7 +73,7 @@ const FashionAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Jewelry"}`}
+                    to={`/FashionAccessoriesItem/Jewelry`}
                   >
                     Jewelry
                   </Link>
@@ -392,7 +395,7 @@ const FashionAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Footwear"}`}
+                    to={`/FashionAccessoriesItem/Footwear`}
                   >
                     Footwear
                   </Link>
@@ -563,7 +566,7 @@ const FashionAccessories_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Sunglass"}`}
+                      to={`/FashionAccessoriesItem/Sunglass`}
                     >
                       Sunglass
                     </Link>
@@ -595,7 +598,12 @@ const FashionAccessories_M = () => {
                   </li>
                 </ul>
                 <ul className="text-center mt-3" data-bs-dismiss="offcanvas">
-                  <p className="text-center subHeadline">Belt</p>
+                  <Link
+                    to="/FashionAccessoriesItem/Belt"
+                    style={{ textDecoration: "none", color: "inherit" }}
+                  >
+                    <p className="text-center subHeadline">Belt</p>
+                  </Link>
                   <hr />
                   <li className="megaMenu_li">
                     <Link
@@ -631,7 +639,7 @@ const FashionAccessories_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Watch"}`}
+                      to={`/FashionAccessoriesItem/Watch`}
                     >
                       Watch
                     </Link>
@@ -669,7 +677,7 @@ const FashionAccessories_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Face Mask"}`}
+                      to={`/FashionAccessoriesItem/Face Mask`}
                     >
                       Face Mask
                     </Link>
@@ -709,7 +717,7 @@ const FashionAccessories_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Ties"}`}
+                      to={`/FashionAccessoriesItem/Ties & Accessoires`}
                     >
                       Ties
                     </Link>
@@ -738,7 +746,7 @@ const FashionAccessories_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Umbrellas"}`}
+                      to={`/FashionAccessoriesItem/Umbrellas`}
                     >
                       Umbrellas
                     </Link>

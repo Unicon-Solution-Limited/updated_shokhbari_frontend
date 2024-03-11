@@ -5,8 +5,11 @@ const HealthMedical_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Health & Medical
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/health-and-medical"
+        >
+          <span data-bs-dismiss="offcanvas">Health & Medical</span>
         </Link>
         <ul className="submenu dropdown-menu mega_menu" id="Medical_mega">
           <div className="container">
@@ -22,7 +25,7 @@ const HealthMedical_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"PersonalCareSafety"}`}
+                    to={`/HealthItem/Personal_Care_Safety`}
                   >
                     Personal Care & Safety
                   </Link>
@@ -51,7 +54,7 @@ const HealthMedical_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Medical_Supplies"}`}
+                    to={`/HealthItem/Medical_Supplies`}
                   >
                     Medical Supplies
                   </Link>
@@ -112,7 +115,7 @@ const HealthMedical_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Food_Supplements"}`}
+                    to={`/HealthItem/Food_Supplement's`}
                   >
                     Food Supplements
                   </Link>
@@ -165,7 +168,7 @@ const HealthMedical_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Sexual_Wellness"}`}
+                      to={`/HealthItem/Sexual_Wellness`}
                     >
                       Sexual Wellness
                     </Link>

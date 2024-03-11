@@ -5,8 +5,11 @@ const OfficeSupplies_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Office & Educational Supplies
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/office-and-education"
+        >
+          <span data-bs-dismiss="offcanvas">Office & Educational Supplies</span>
         </Link>
         {/* mega_menu - class added in ul */}
         <ul
@@ -25,7 +28,7 @@ const OfficeSupplies_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Paper Products"}`}
+                    to={`/OfficeEducationItem/Paper_Products`}
                   >
                     Paper Products
                   </Link>
@@ -86,7 +89,7 @@ const OfficeSupplies_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Books"}`}
+                    to={`/OfficeEducationItem/Books`}
                   >
                     Books
                   </Link>
@@ -112,15 +115,13 @@ const OfficeSupplies_M = () => {
                 </ul>
               </div>
               <div className="col-md-5 subcategorySection">
-                <p className="text-center subHeadline">Others</p>
-
                 <p
                   className="text-center subHeadline"
                   data-bs-dismiss="offcanvas"
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Others"}`}
+                    to={`/OfficeEducationItem/Others_Stationeries`}
                   >
                     Others
                   </Link>

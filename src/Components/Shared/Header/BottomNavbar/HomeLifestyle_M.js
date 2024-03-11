@@ -5,8 +5,11 @@ const HomeLifestyle_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Home And Lifestyle
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/home-and-lifestyle"
+        >
+          <span data-bs-dismiss="offcanvas">Home And Lifestyle</span>
         </Link>
         <ul className="submenu dropdown-menu mega_menu" id="homeLifeStyle_mega">
           <div className="container">
@@ -20,7 +23,7 @@ const HomeLifestyle_M = () => {
                     <ul data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Dinnerware"}`}
+                          to={`/HomeAndLifestyleItem/DinnerWare`}
                           id="megaMenuLink"
                         >
                           Dinnerware
@@ -36,15 +39,15 @@ const HomeLifestyle_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Kitchen_Accessories"}`}
+                          to={`/HomeAndLifestyleItem/Kitchen Accessories`}
                           id="megaMenuLink"
                         >
-                          Kitchenm Accessories
+                          Kitchen Accessories
                         </Link>
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Decor"}`}
+                          to={`/HomeAndLifestyleItem/Decor`}
                           id="megaMenuLink"
                         >
                           Decor
@@ -53,7 +56,7 @@ const HomeLifestyle_M = () => {
 
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Wallart"}`}
+                          to={`/HomeAndLifestyleItem/Wallart`}
                           id="megaMenuLink"
                         >
                           Wallart
@@ -61,7 +64,7 @@ const HomeLifestyle_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Tools_Diy_and_outdoor"}`}
+                          to={`/HomeAndLifestyleItem/Tools_Diy_outdoor`}
                           id="megaMenuLink"
                         >
                           Tools Diy and_outdoor
@@ -73,10 +76,10 @@ const HomeLifestyle_M = () => {
                     <ul data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"EventPartySupplies"}`}
+                          to={`/HomeAndLifestyleItem/Event_Party_Supplies`}
                           id="megaMenuLink"
                         >
-                          EventPartySupplies
+                          Event Party Supplies
                         </Link>
                       </li>
                       <li className="megaMenu_li">
@@ -88,7 +91,10 @@ const HomeLifestyle_M = () => {
                         </Link>
                       </li>
                       <li className="megaMenu_li">
-                        <Link to={`/displayProduct/${"Pet"}`} id="megaMenuLink">
+                        <Link
+                          to={`/HomeAndLifestyleItem/Pet`}
+                          id="megaMenuLink"
+                        >
                           Pet
                         </Link>
                       </li>
@@ -103,7 +109,7 @@ const HomeLifestyle_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Furniture"}`}
+                    to={`/HomeAndLifestyleItem/Furniture`}
                   >
                     Furniture
                   </Link>

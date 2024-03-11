@@ -742,6 +742,15 @@ const MerchantHomeAppliances = () => {
                     </option>
                   </>
                 )}
+
+                {selectOption === "Iron and Garment steamers" && (
+                  <>
+                    <option value="Iron_and_Garment_steamers">
+                      Iron and Garment steamers
+                    </option>
+                  </>
+                )}
+
                 {selectOption === "Home lighting" && (
                   <>
                     <option value="Lights">Lights</option>

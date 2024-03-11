@@ -5,8 +5,8 @@ const KidsSegment_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Kids Segment
+        <Link className="nav-link offcanvasLink" to="/category/kids-zone">
+          <span data-bs-dismiss="offcanvas">Kids Segment</span>
         </Link>
         <ul
           className="submenu dropdown-menu mega_menu"
@@ -22,7 +22,7 @@ const KidsSegment_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"BabyClothing"}`}
+                    to={`/KidsItem/Baby_Clothing`}
                   >
                     Baby Clothing
                   </Link>
@@ -69,7 +69,7 @@ const KidsSegment_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"BabyFootwaer"}`}
+                    to={`/KidsItem/Baby_Footwaer`}
                   >
                     Baby Footwaer
                   </Link>
@@ -112,7 +112,7 @@ const KidsSegment_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"BabyCare"}`}
+                    to={`/KidsItem/Baby_Care`}
                   >
                     Baby Care
                   </Link>
@@ -143,7 +143,7 @@ const KidsSegment_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"BabyAccessories"}`}
+                    to={`/KidsItem/Baby_Accessories`}
                   >
                     Baby Accessories
                   </Link>
@@ -193,7 +193,7 @@ const KidsSegment_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"BabyFeedingNursery"}`}
+                      to={`/KidsItem/Baby_Feeding_Nursery`}
                     >
                       Baby Feeding Nursery
                     </Link>
@@ -223,7 +223,7 @@ const KidsSegment_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"BabySportsOutdoor"}`}
+                      to={`/KidsItem/Baby_Sports_Outdoor`}
                     >
                       Baby Sports Outdoor
                     </Link>
@@ -249,7 +249,7 @@ const KidsSegment_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"BabyToysGames"}`}
+                      to={`/KidsItem/Baby_Toys_Games`}
                     >
                       Baby Toys Games
                     </Link>
@@ -274,7 +274,7 @@ const KidsSegment_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"BabyEducation"}`}
+                      to={`/KidsItem/Baby_Education`}
                     >
                       Baby Education
                     </Link>

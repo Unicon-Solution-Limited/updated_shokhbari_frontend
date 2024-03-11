@@ -5,8 +5,13 @@ const ElectronicDevicesAccessories_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Computers, Electronic Devices and Accessories
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/ElectronicDevicesAndAccessories"
+        >
+          <span data-bs-dismiss="offcanvas">
+            Computers, Electronic Devices and Accessories
+          </span>
         </Link>
         <ul className="submenu dropdown-menu mega_menu" id="Electronics_mega">
           <div className="container">
@@ -22,7 +27,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Laptop"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/Laptop`}
                   >
                     Laptop
                   </Link>
@@ -55,7 +60,10 @@ const ElectronicDevicesAccessories_M = () => {
                 <p className="text-center subHeadline border-bottom">Monitor</p>
                 <ul className="text-center" data-bs-dismiss="offcanvas">
                   <li className="megaMenu_li">
-                    <Link to={`/displayProduct/${"Monitor"}`} id="megaMenuLink">
+                    <Link
+                      to={`/ElectronicDevicesAndAccessoriesItem/Monitor`}
+                      id="megaMenuLink"
+                    >
                       Monitor
                     </Link>
                   </li>
@@ -68,7 +76,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"DesktopAndBrandPC"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/DesktopBrandPC`}
                   >
                     Desktop & Brand PC
                   </Link>
@@ -121,7 +129,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Cameras"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/Cameras`}
                   >
                     Cameras
                   </Link>
@@ -193,7 +201,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Components"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/Components`}
                   >
                     Components
                   </Link>
@@ -333,7 +341,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"SmartphoneAndTablet"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/SmartphoneTablet`}
                   >
                     Smartphone & Tablet
                   </Link>
@@ -373,7 +381,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"IPS/Ups"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/IPSUps`}
                   >
                     IPS/Ups
                   </Link>
@@ -418,7 +426,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Accessories"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/Accessories`}
                   >
                     Accessories
                   </Link>
@@ -633,7 +641,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"TVAndSpeaker"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/TVSpeaker`}
                   >
                     TV & Speaker
                   </Link>
@@ -702,7 +710,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"ACAndHomeAppliance"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/ACHomeAppliance`}
                   >
                     AC & Home Appliance
                   </Link>
@@ -771,7 +779,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"SecuritySurveillance"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/SecuritySurveillance`}
                   >
                     Security Surveillance
                   </Link>
@@ -849,7 +857,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"NetworkAndRouter"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/NetworkRouter`}
                   >
                     Network & Router
                   </Link>
@@ -939,7 +947,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"OfficeEquipments"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/OfficeEquipments`}
                   >
                     Office Equipments
                   </Link>
@@ -1174,7 +1182,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"GamingZone"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/GamingZone`}
                   >
                     Gaming Zone
                   </Link>
@@ -1222,7 +1230,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"ProjectorAndScreen"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/ProjectorScreen`}
                   >
                     Projector & Screen
                   </Link>
@@ -1269,7 +1277,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Software"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/Software`}
                   >
                     Software
                   </Link>
@@ -1309,7 +1317,7 @@ const ElectronicDevicesAccessories_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Gadgets"}`}
+                    to={`/ElectronicDevicesAndAccessoriesItem/Gadgets`}
                   >
                     Gadgets
                   </Link>

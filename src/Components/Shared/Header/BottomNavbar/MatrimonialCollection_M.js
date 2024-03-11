@@ -5,8 +5,8 @@ const MatrimonialCollection_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Matrimonial Collection
+        <Link className="nav-link offcanvasLink" to="/category/matrimonial">
+          <span data-bs-dismiss="offcanvas">Matrimonial Collection</span>
         </Link>
         <ul className="submenu dropdown-menu mega_menu" id="Matrinonial_mega">
           <div className="container">
@@ -19,7 +19,7 @@ const MatrimonialCollection_M = () => {
                   <ul data-bs-dismiss="offcanvas">
                     <li className="megaMenu_li">
                       <Link
-                        to={`/displayProduct/${"Wedding_Planner"}`}
+                        to={`/MatrimonialItem/Wedding_Planner`}
                         id="megaMenuLink"
                       >
                         Wedding Planner
@@ -27,7 +27,7 @@ const MatrimonialCollection_M = () => {
                     </li>
                     <li className="megaMenu_li">
                       <Link
-                        to={`/displayProduct/${"Wedding_Dress_Collection"}`}
+                        to={`/MatrimonialItem/Wedding_Dress`}
                         id="megaMenuLink"
                       >
                         Wedding Dress Collection
@@ -35,7 +35,7 @@ const MatrimonialCollection_M = () => {
                     </li>
                     <li className="megaMenu_li">
                       <Link
-                        to={`/displayProduct/${"Wedding_Jewelry_Collection"}`}
+                        to={`/MatrimonialItem/Wedding_Jewelry`}
                         id="megaMenuLink"
                       >
                         Wedding Jewelry Collection
@@ -43,7 +43,7 @@ const MatrimonialCollection_M = () => {
                     </li>
                     <li className="megaMenu_li">
                       <Link
-                        to={`/displayProduct/${"Wedding_Footwear"}`}
+                        to={`/MatrimonialItem/Wedding_Footwear`}
                         id="megaMenuLink"
                       >
                         Wedding Footwear
@@ -52,7 +52,7 @@ const MatrimonialCollection_M = () => {
 
                     <li className="megaMenu_li">
                       <Link
-                        to={`/displayProduct/${"Wedding_Accessories"}`}
+                        to={`/MatrimonialItem/Wedding_Accessories`}
                         id="megaMenuLink"
                       >
                         Wedding Accessories
@@ -60,7 +60,7 @@ const MatrimonialCollection_M = () => {
                     </li>
                     <li className="megaMenu_li">
                       <Link
-                        to={`/displayProduct/${"Beauty_Park"}`}
+                        to={`/MatrimonialItem/Beauty_Park`}
                         id="megaMenuLink"
                       >
                         Beauty Park
@@ -75,7 +75,7 @@ const MatrimonialCollection_M = () => {
                     <ul data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Wedding_Vehicle"}`}
+                          to={`/MatrimonialItem/Wedding_Vehicle`}
                           id="megaMenuLink"
                         >
                           Wedding Vehicle
@@ -83,7 +83,7 @@ const MatrimonialCollection_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Cinemafogrophy_Photography"}`}
+                          to={`/MatrimonialItem/Cinemafogrophy_Photography`}
                           id="megaMenuLink"
                         >
                           Cinemafogrophy Photography
@@ -91,7 +91,7 @@ const MatrimonialCollection_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Wedding_Venue"}`}
+                          to={`/MatrimonialItem/Wedding_Venue`}
                           id="megaMenuLink"
                         >
                           Wedding Venue
@@ -100,7 +100,7 @@ const MatrimonialCollection_M = () => {
 
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Catering_Service"}`}
+                          to={`/MatrimonialItem/Catering_Service`}
                           id="megaMenuLink"
                         >
                           Catering Service
@@ -109,7 +109,7 @@ const MatrimonialCollection_M = () => {
 
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Sound_System"}`}
+                          to={`/MatrimonialItem/Sound_System`}
                           id="megaMenuLink"
                         >
                           Sound System

@@ -5,8 +5,8 @@ const Apparel_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Apparel
+        <Link className="nav-link offcanvasLink" to="/category/apparel">
+          <span data-bs-dismiss="offcanvas">Apparel</span>
         </Link>
         <ul className="submenu dropdown-menu mega_menu" id="apparel_mega">
           <div className="container">
@@ -19,7 +19,7 @@ const Apparel_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Men’s Clothing"}`}
+                    to={`/ApparelsItem/Men’s-Clothing`}
                   >
                     Men’s Clothing
                   </Link>
@@ -124,7 +124,7 @@ const Apparel_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Women's Clothing"}`}
+                    to={`/ApparelsItem/Women’s-Clothing`}
                   >
                     Women’s Clothing
                   </Link>
@@ -321,7 +321,7 @@ const Apparel_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Fabrics"}`}
+                    to={`/ApparelsItem/Fabrics`}
                   >
                     Fabrics
                   </Link>

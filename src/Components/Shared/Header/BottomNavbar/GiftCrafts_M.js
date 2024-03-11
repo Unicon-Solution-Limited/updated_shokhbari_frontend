@@ -19,7 +19,7 @@ const GiftCrafts_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Novelty Gifts"}`}
+                    to={`/GiftCraftItem/Novelty_Gifts`}
                   >
                     Novelty Gifts
                   </Link>
@@ -48,7 +48,7 @@ const GiftCrafts_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Promotional Items"}`}
+                    to={`/GiftCraftItem/Promotional_Items`}
                   >
                     Promotional Items
                   </Link>
@@ -99,7 +99,7 @@ const GiftCrafts_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Festival Decoration"}`}
+                      to={`/GiftCraftItem/Festival_Decoration`}
                     >
                       Festival Decoration
                     </Link>
@@ -124,7 +124,7 @@ const GiftCrafts_M = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Gift Wrapping Supplies"}`}
+                      to={`/GiftCraftItem/Gift_Wrapping_Supplies`}
                     >
                       Gift Wrapping Supplies
                     </Link>

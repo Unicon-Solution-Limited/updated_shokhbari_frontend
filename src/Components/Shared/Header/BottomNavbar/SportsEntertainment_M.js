@@ -5,8 +5,11 @@ const SportsEntertainment = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Sports & Entertainment
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/sports-and-entertainment"
+        >
+          <span data-bs-dismiss="offcanvas">Sports & Entertainment</span>
         </Link>
         <ul
           className="submenu dropdown-menu mega_menu"
@@ -24,7 +27,7 @@ const SportsEntertainment = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Exercise&Fitness"}`}
+                    to={`/SportsItem/Exercise&Fitness`}
                   >
                     Exercise And Fitness, Yoga
                   </Link>
@@ -53,7 +56,7 @@ const SportsEntertainment = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"OutdoorRecreation"}`}
+                    to={`/SportsItem/OutdoorRecreation`}
                   >
                     Outdoor Recreation
                   </Link>
@@ -78,7 +81,7 @@ const SportsEntertainment = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"IndoorRecreation"}`}
+                    to={`/SportsItem/IndoorRecreation`}
                   >
                     Indoor Recreation
                   </Link>
@@ -104,7 +107,7 @@ const SportsEntertainment = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Camping_Hiking"}`}
+                      to={`/SportsItem/Camping Hiking`}
                     >
                       Camping Hiking
                     </Link>

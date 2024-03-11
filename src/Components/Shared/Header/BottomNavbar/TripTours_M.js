@@ -5,8 +5,8 @@ const TripTours_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Tour & Trips
+        <Link className="nav-link offcanvasLink" to="/category/trip-and-tours">
+          <span data-bs-dismiss="offcanvas">Tour & Trips</span>
         </Link>
         <ul className="submenu dropdown-menu mega_menu" id="TripTours_mega">
           <div className="container">
@@ -19,7 +19,7 @@ const TripTours_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Stay"}`}
+                    to={`/TripItem/Stay`}
                   >
                     Stay
                   </Link>
@@ -40,7 +40,7 @@ const TripTours_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Tour_Guide"}`}
+                    to={`/TripItem/Tour_Guide`}
                   >
                     Tour Guide
                   </Link>
@@ -64,7 +64,7 @@ const TripTours_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Package_Tour"}`}
+                    to={`/TripItem/Package_Tour`}
                   >
                     Package Tour
                   </Link>
@@ -91,7 +91,7 @@ const TripTours_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Travel"}`}
+                    to={`/TripItem/Travel`}
                   >
                     Travel
                   </Link>

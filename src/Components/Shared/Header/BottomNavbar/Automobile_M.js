@@ -5,8 +5,11 @@ const Automobile_M = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Automobile & Motor Bike
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/automobile-items"
+        >
+          <span data-bs-dismiss="offcanvas"> Automobile & Motor Bike </span>
         </Link>
         <ul
           className="submenu dropdown-menu mega_menu"
@@ -23,7 +26,7 @@ const Automobile_M = () => {
                     <ul data-bs-dismiss="offcanvas">
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Automobile"}`}
+                          to={`/AutomobileItem/Automobile`}
                           id="megaMenuLink"
                         >
                           Automobile
@@ -31,7 +34,7 @@ const Automobile_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Automobile_Parts"}`}
+                          to={`/AutomobileItem/Automobile_Parts`}
                           id="megaMenuLink"
                         >
                           Automobile Parts
@@ -39,7 +42,7 @@ const Automobile_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Interior_Accessories_care"}`}
+                          to={`/AutomobileItem/Interior_Accessories_Care`}
                           id="megaMenuLink"
                         >
                           Interior Accessories care
@@ -47,7 +50,7 @@ const Automobile_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Exterior_Accessories_care"}`}
+                          to={`/AutomobileItem/Exterior_Accessories_Care`}
                           id="megaMenuLink"
                         >
                           Exterior Accessories care
@@ -56,7 +59,7 @@ const Automobile_M = () => {
 
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Oil_Fluids"}`}
+                          to={`/AutomobileItem/Oil_Fluids`}
                           id="megaMenuLink"
                         >
                           Oil Fluids
@@ -64,7 +67,7 @@ const Automobile_M = () => {
                       </li>
                       <li className="megaMenu_li">
                         <Link
-                          to={`/displayProduct/${"Riders_gear"}`}
+                          to={`/AutomobileItem/Riders Gear`}
                           id="megaMenuLink"
                         >
                           Riders Gear
@@ -81,7 +84,7 @@ const Automobile_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Bike"}`}
+                    to={`/category/automobile-items`}
                   >
                     Bike
                   </Link>
@@ -117,7 +120,7 @@ const Automobile_M = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Bike_Parts_Accessories"}`}
+                    to={`/AutomobileItem/Bike_Parts_Accessories`}
                   >
                     Bike Parts & Accessories
                   </Link>

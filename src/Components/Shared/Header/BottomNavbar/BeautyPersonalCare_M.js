@@ -5,8 +5,11 @@ const BeautyPersonalCare = () => {
   return (
     <>
       <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
-          Beauty & Personal Care
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/beauty-and-personal-care"
+        >
+          <span data-bs-dismiss="offcanvas">Beauty & Personal Care</span>
         </Link>
         <ul
           className="submenu dropdown-menu mega_menu"
@@ -24,7 +27,7 @@ const BeautyPersonalCare = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Bath and Body"}`}
+                    to={`/BeautyItem/Bath_Body`}
                   >
                     Bath and Body
                   </Link>
@@ -104,7 +107,7 @@ const BeautyPersonalCare = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Beauty Tools"}`}
+                    to={`/BeautyItem/Beauty_Tools`}
                   >
                     Beauty Tools
                   </Link>
@@ -160,7 +163,7 @@ const BeautyPersonalCare = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Fragrances"}`}
+                    to={`/BeautyItem/Fragrances`}
                   >
                     Fragrances
                   </Link>
@@ -299,7 +302,7 @@ const BeautyPersonalCare = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Hair Care"}`}
+                    to={`/BeautyItem/Hair_Care`}
                   >
                     Hair Care
                   </Link>
@@ -393,7 +396,7 @@ const BeautyPersonalCare = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Skin Care"}`}
+                    to={`/BeautyItem/Skin_Care`}
                   >
                     Skin Care
                   </Link>
@@ -484,7 +487,7 @@ const BeautyPersonalCare = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Makeup"}`}
+                    to={`/BeautyItem/Make_up`}
                   >
                     Makeup
                   </Link>
@@ -554,7 +557,7 @@ const BeautyPersonalCare = () => {
                 >
                   <Link
                     style={{ textDecoration: "none", color: "inherit" }}
-                    to={`/displaySubCategories/${"Oral Care"}`}
+                    to={`/BeautyItem/Oral_Care`}
                   >
                     Oral Care
                   </Link>
@@ -605,7 +608,7 @@ const BeautyPersonalCare = () => {
                   >
                     <Link
                       style={{ textDecoration: "none", color: "inherit" }}
-                      to={`/displaySubCategories/${"Feminine Care"}`}
+                      to={`/BeautyItem/Feminine_Care`}
                     >
                       Feminine Care
                     </Link>
