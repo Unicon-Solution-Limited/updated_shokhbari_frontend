@@ -53,7 +53,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1710146008/componets_ceatno.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Components</span>
               </button>
             </Link>
@@ -64,7 +68,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1710144520/components1_zofods.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Accessories</span>
               </button>
             </Link>
