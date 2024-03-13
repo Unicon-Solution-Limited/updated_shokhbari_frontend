@@ -102,14 +102,15 @@ const SingleProductPsize = () => {
   const [allSizeWithSelectedColor, setAllSizeWithSelectedColor] = useState([]);
   const [imageAsSelectedColor, setImageAsSelectedColor] = useState([]);
   const sizeRef = useRef();
+  const [selectedSameId, setSelectedSameId] = useState("");
 
   // Function to handle color selection
-  const handleColorProduct = (colorInput) => {
+  const handleColorProduct = (colorInput, sameVariantIdClicked) => {
     setSelectedColor(colorInput);
-
+    setSelectedSameId(sameVariantIdClicked);
     // If the selected color doesn't have the selected size, reset the size
     const singleColorProduct = productDetails?.variantItems?.map((data) =>
-      data.variants.find((v) => v?.colorInput === colorInput)
+      data.variants.find((v) => v?.sameVariantId === sameVariantIdClicked)
     );
     //here all kind of size according to the color
     setAllSizeWithSelectedColor(singleColorProduct[0]?.sizes);
@@ -301,7 +302,12 @@ const SingleProductPsize = () => {
                       data?.variants?.map((variant, variantIndex) => (
                         <span
                           className="img_wrap"
-                          onClick={() => handleColorProduct(variant.colorInput)}
+                          onClick={() =>
+                            handleColorProduct(
+                              variant.colorInput,
+                              variant.sameVariantId
+                            )
+                          }
                           key={`${variantIndex}`}
                         >
                           <LazyLoadImage
@@ -399,27 +405,34 @@ const SingleProductPsize = () => {
                                   <span key={`${dataIndex}-${variantIndex}`}>
                                     <input
                                       type="radio"
-                                      id={variant.colorInput}
+                                      id={variant?.sameVariantId}
                                       // name={variant[0]}
                                       name={`color-${dataIndex}`}
-                                      value={variant.colorInput}
+                                      value={variant?.sameVariantId}
                                       className="radioPoint"
                                       checked={
-                                        selectedColor === variant.colorInput
+                                        selectedSameId ===
+                                        variant?.sameVariantId
                                       }
                                       onChange={() => {
                                         setSelectedColor(variant.colorInput);
-                                        handleColorProduct(variant.colorInput);
                                       }}
+                                      onClick={() =>
+                                        handleColorProduct(
+                                          variant.colorInput,
+                                          variant.sameVariantId
+                                        )
+                                      }
                                       required
                                     />
                                     <label
-                                      htmlFor={variant.colorInput}
+                                      htmlFor={variant.sameVariantId}
                                       className="radioBackground"
                                       style={{
                                         backgroundColor: `${variant?.colorInput}`,
                                         border:
-                                          selectedColor === variant.colorInput
+                                          selectedSameId ===
+                                          variant.sameVariantId
                                             ? "2px solid black"
                                             : "none",
                                       }}
