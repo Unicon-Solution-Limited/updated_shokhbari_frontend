@@ -163,7 +163,39 @@ const Kids = () => {
     });
   };
 
+  // const addProduct = () => {
+  //   setProductVariants([...productVariants, newProduct]);
+  //   setNewProduct({
+  //     variants: [],
+  //   });
+  // };
   const addProduct = () => {
+    // Check if there are any variants added
+    if (newProduct?.variants?.length === 0) {
+      alert("Please add at least one variant.");
+      return;
+    }
+
+    // Check if any variant is missing size or stock information
+    const isVariantsValid = newProduct?.variants?.every((variant) => {
+      return (
+        variant?.sizes?.length > 0 &&
+        variant.sizes.every((size) => size.size && size.stock)
+      );
+    });
+
+    // Check if any variant is missing color or image
+    const isVariantsInfoValid = newProduct?.variants?.every((variant) => {
+      return variant.color && variant.colorInput && variant.image;
+    });
+
+    if (!isVariantsValid || !isVariantsInfoValid) {
+      alert(
+        "Please provide size, stock, color, color input, and image for all variants."
+      );
+      return;
+    }
+
     setProductVariants([...productVariants, newProduct]);
     setNewProduct({
       variants: [],
