@@ -87,23 +87,28 @@ const OrderReviewPage = () => {
   };
 
   // Handle Cart Items quantity with plus minus icon
-  const handlePlusMinus = (id, quantity) => {
+  const handlePlusMinus = (imageAsSelected, quantity) => {
     let newCart;
     cartData.map((item) => {
-      if (id === item._id) {
+      if (imageAsSelected === item.imageAsSelectedColor) {
         newCart = { ...item, quantity: quantity };
       }
     });
-    let newData = cartData.filter((item) => item._id != id);
+    let newData = cartData.filter(
+      (item) => item.imageAsSelectedColor != imageAsSelected
+    );
     newData = [...newData, newCart];
     setCartData(newData);
   };
 
   // Delete items from cart
-  const deleteItem = (id) => {
-    let newData = cartData.filter((item) => item._id != id);
+  const deleteItem = (selectedimage) => {
+    let newData = cartData.filter(
+      (item) => item.imageAsSelectedColor != selectedimage
+    );
     setCartData(newData);
     setcartProduct(newData);
+    window.location.reload();
   };
 
   //handle coupon code
@@ -127,6 +132,7 @@ const OrderReviewPage = () => {
       setCouponMessage(false);
     }
   };
+
   return (
     <>
       <AllHeader />

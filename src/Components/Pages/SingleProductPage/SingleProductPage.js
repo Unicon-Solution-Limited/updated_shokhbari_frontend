@@ -130,6 +130,7 @@ const SingleProductPsize = () => {
   const handleBuy = (pd) => {
     // setCartData([pd]);
     let isAdded = false;
+
     if (cartData.length === 0) {
       pd = {
         ...pd,
@@ -142,10 +143,11 @@ const SingleProductPsize = () => {
     }
 
     cartData.map((item) => {
-      if (item._id === pd._id) {
+      if (item.imageAsSelectedColor === imageAsSelectedColor) {
         isAdded = true;
       }
     });
+
     if (!isAdded) {
       pd = {
         ...pd,
@@ -156,6 +158,7 @@ const SingleProductPsize = () => {
       };
       setCartData([...cartData, pd]);
     }
+
     setAlertMsg(true);
     setTimeout(() => {
       setAlertMsg(false);

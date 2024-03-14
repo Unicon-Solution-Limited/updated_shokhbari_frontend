@@ -7,15 +7,15 @@ const OrderReviewsDetails = ({
 }) => {
   //setting the quentity only
   const [quantity, setQuantity] = useState(cartProductData?.quantity);
-  const plus = (id) => {
+  const plus = (imageAsSelected) => {
     setQuantity(quantity + 1);
-    handlePlusMinus(id, quantity + 1);
+    handlePlusMinus(imageAsSelected, quantity + 1);
   };
 
-  const minus = (id) => {
+  const minus = (imageAsSelected) => {
     if (quantity > 1) {
       setQuantity(quantity - 1);
-      handlePlusMinus(id, quantity - 1);
+      handlePlusMinus(imageAsSelected, quantity - 1);
     }
   };
 
@@ -55,7 +55,7 @@ const OrderReviewsDetails = ({
               <button className="incDec">
                 <i
                   className="bi bi-dash"
-                  onClick={() => minus(cartProductData._id)}
+                  onClick={() => minus(cartProductData.imageAsSelectedColor)}
                 ></i>
               </button>
               <input
@@ -67,7 +67,7 @@ const OrderReviewsDetails = ({
               <button className="incDec">
                 <i
                   className="bi bi-plus"
-                  onClick={() => plus(cartProductData._id)}
+                  onClick={() => plus(cartProductData.imageAsSelectedColor)}
                 ></i>
               </button>
             </div>
@@ -84,7 +84,7 @@ const OrderReviewsDetails = ({
           <span className="col-md-1 productDelete">
             <i
               className="bi bi-trash"
-              onClick={() => deleteItem(cartProductData._id)}
+              onClick={() => deleteItem(cartProductData.imageAsSelectedColor)}
             ></i>
           </span>
         </section>
