@@ -338,21 +338,20 @@ const Apparel = () => {
           ))}
 
           {/* button */}
-
           <div className="d-flex justify-content-center align-items-center">
             <button
               type="button"
               className="btn myBtn mr-2"
               onClick={addVariant}
             >
-              Add Color Variant
+              Add New Color Variant
             </button>
             <button
               type="button"
               className="btn myBtn mx-2"
               onClick={addProduct}
             >
-              Add Variant Product
+              Submit Variant Product
             </button>
             <i
               onClick={() => handleVarientDlete()}
