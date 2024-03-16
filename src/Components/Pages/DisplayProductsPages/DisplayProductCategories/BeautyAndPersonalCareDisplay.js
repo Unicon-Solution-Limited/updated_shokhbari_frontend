@@ -524,7 +524,7 @@ const BeautyAndPersonalCareDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Facial Clearance
+                    Facial Clear
                   </figcaption>
                 </Link>
 
