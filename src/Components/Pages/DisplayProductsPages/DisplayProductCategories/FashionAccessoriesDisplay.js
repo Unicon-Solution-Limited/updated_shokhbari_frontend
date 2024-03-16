@@ -1286,7 +1286,7 @@ const FashionAccessoriesDisplay = () => {
               <section className="row tab-content-body container-fluid m-0 justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
-                  to={`/displayProduct/${"Gents Face Mask"}`}
+                  to={`/displayProduct/${"Face Mask"}`}
                 >
                   <LazyLoadImage
                     src="https://res.cloudinary.com/shokhbari/image/upload/v1686221899/Fashion%20accessories/gents-mask_vj9ui3.webp"
@@ -1295,23 +1295,10 @@ const FashionAccessoriesDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Gents Face Mask
+                    Face Mask
                   </figcaption>
                 </Link>
-                <Link
-                  className="col-12 col-lg-2 col-md-2 categoryContentBody"
-                  to={`/displayProduct/${"Ladies Face Mask"}`}
-                >
-                  <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221899/Fashion%20accessories/womens-face-mask_fon8rq.webp"
-                    alt="Trulli"
-                    className="img-fluid categoryImage"
-                    placeholderSrc={loader}
-                  />
-                  <figcaption className="categoryImageCaption">
-                    Ladies Face Mask
-                  </figcaption>
-                </Link>
+
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Kids Face Mask"}`}

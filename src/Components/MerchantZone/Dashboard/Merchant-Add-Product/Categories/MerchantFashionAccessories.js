@@ -767,8 +767,7 @@ const MerchantFashionAccessories = () => {
                 )}
                 {selectOption === "Face Mask" && (
                   <>
-                    <option value="Gents Face Mask">Gents Face Mask</option>
-                    <option value="Ladies Face Mask">Ladies Face Mask</option>
+                    <option value="Face Mask">Gents Face Mask</option>
                     <option value="Kids Face Mask">Kids Face Mask</option>
                   </>
                 )}

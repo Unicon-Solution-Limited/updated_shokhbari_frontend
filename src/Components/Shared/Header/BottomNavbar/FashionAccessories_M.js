@@ -685,20 +685,13 @@ const FashionAccessories_M = () => {
                   <hr />
                   <li className="megaMenu_li">
                     <Link
-                      to={`/displayProduct/${"Gents Face Mask"}`}
+                      to={`/displayProduct/${"Face Mask"}`}
                       id="megaMenuLink"
                     >
-                      Gents Face Mask
+                      Face Mask
                     </Link>
                   </li>
-                  <li className="megaMenu_li">
-                    <Link
-                      to={`/displayProduct/${"Ladies Face Mask"}`}
-                      id="megaMenuLink"
-                    >
-                      Ladies Face Mask
-                    </Link>
-                  </li>
+
                   <li className="megaMenu_li">
                     <Link
                       to={`/displayProduct/${"Kids Face Mask"}`}
