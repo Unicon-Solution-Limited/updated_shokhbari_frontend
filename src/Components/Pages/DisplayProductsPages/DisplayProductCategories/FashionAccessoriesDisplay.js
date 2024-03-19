@@ -28,7 +28,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Hair Band"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217637/Fashion%20accessories/hairBand_czck9c.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755060/hair-band-1_w7vj2o.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -42,7 +42,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Hair Clip"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217637/Fashion%20accessories/hairClip_fncvkx.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755061/Hair-Clip-3_oiqbxd.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -56,7 +56,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Crown & Tiklies"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217636/Fashion%20accessories/crown_qedcc2.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755060/Crown-_-Tiklies-3_s1vlbu.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -82,7 +82,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Jewelry set"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217239/Fashion%20accessories/jewelery-ornament_hnsdat.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755305/Jewelry-set_qw393l.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -96,7 +96,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Ear Ornaments"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217238/Fashion%20accessories/ear-ornament_aqrmnc.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755301/Ear-Ornaments-5_dhazul.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -110,7 +110,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Neck Ornaments"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217239/Fashion%20accessories/neck-ornament_x7gace.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755309/Neck-Ornaments_gurkga.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -124,7 +124,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Hand Ornaments"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217239/Fashion%20accessories/hand-ornament_mupm6k.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755303/hand-ornaments_vv0ecg.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -138,7 +138,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Brooch"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217239/Fashion%20accessories/broch-ornament_mpjmwa.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755299/Brooch_1_suc61p.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -152,7 +152,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Leg Ornaments"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217239/Fashion%20accessories/leg-ornament_ec7vbq.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755307/leg-ornaments_fal36u.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -166,7 +166,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Nose Ornament"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217239/Fashion%20accessories/nose-ornament_tcqsnq.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755311/Nose-Ornament-3_zqdy0l.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -192,7 +192,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Gents Sunglass"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217970/Fashion%20accessories/mens-sunglass_kled5n.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755713/Unisex_Sunglass_ub04xs.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -206,7 +206,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Ladies Sunglass"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217970/Fashion%20accessories/womens-sunglass_cqvzrc.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755714/womens-sunglasses_t8rmrm.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -220,7 +220,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Unisex Sunglass"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686217970/Fashion%20accessories/unisex-sunglass_kix2zh.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755712/Gents-sunglasses_ip6npb.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -246,7 +246,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Gents Watch"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686218104/Fashion%20accessories/watch-m_rboozv.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755913/Gents_Watch_binc3h.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -260,7 +260,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Ladies Watch"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686218105/Fashion%20accessories/w-watch_mmunb7.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755914/ledis-watch_m1nvbi.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -274,7 +274,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Unisex Watch"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686218105/Fashion%20accessories/watch-uni_kqdbme.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710755915/Unisex-Watch_sklsx7.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -309,8 +309,12 @@ const FashionAccessoriesDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Gents Bag
+                    Gents Bag{" "}
                   </figcaption>
+                  <i
+                    className="bi bi-arrow-down-circle-fill mt-1 cursor-pointer"
+                    style={{ fontSize: "30px" }}
+                  ></i>
                 </span>
                 <div
                   className="modal fade"
@@ -450,6 +454,10 @@ const FashionAccessoriesDisplay = () => {
                   <figcaption className="categoryImageCaption">
                     Ladies Bag
                   </figcaption>
+                  <i
+                    className="bi bi-arrow-down-circle-fill mt-1 cursor-pointer"
+                    style={{ fontSize: "30px" }}
+                  ></i>
                 </span>
                 <div
                   className="modal fade"
@@ -636,6 +644,10 @@ const FashionAccessoriesDisplay = () => {
                   <figcaption className="categoryImageCaption">
                     Unisex Bag
                   </figcaption>
+                  <i
+                    className="bi bi-arrow-down-circle-fill mt-1 cursor-pointer"
+                    style={{ fontSize: "30px" }}
+                  ></i>
                 </span>
                 <div
                   className="modal fade"
@@ -792,7 +804,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Gents Belt"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221157/Fashion%20accessories/belt-mens_lnnhzh.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710833060/Gents-Belt-3_eawpph.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -806,7 +818,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Ladies Belt"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221157/Fashion%20accessories/belt-womens_fjttcp.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710833061/Ladies_Belt_3_z0o8ej.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -820,7 +832,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Unisex Belt"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221157/Fashion%20accessories/belt-uni_hbptxb.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710833063/Unisex_Belt_1_pejtel.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -846,7 +858,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Ties"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221327/Fashion%20accessories/ties_1_chb5v7.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710833730/Ties_oqhof5.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -858,7 +870,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Tie Accessories"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221327/Fashion%20accessories/tie-accessories_crtufx.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710833730/Tie-Accessories-2_gqsfag.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -886,7 +898,7 @@ const FashionAccessoriesDisplay = () => {
                   data-bs-target="#Gents-Footwear"
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221470/Fashion%20accessories/gents-shoes_qmmd6s.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710833786/Gents_Footwear_2_ll9kjo.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -894,6 +906,10 @@ const FashionAccessoriesDisplay = () => {
                   <figcaption className="categoryImageCaption">
                     Gents Footwear
                   </figcaption>
+                  <i
+                    className="bi bi-arrow-down-circle-fill mt-1 cursor-pointer"
+                    style={{ fontSize: "30px" }}
+                  ></i>
                 </span>
                 <div
                   className="modal fade"
@@ -1039,7 +1055,7 @@ const FashionAccessoriesDisplay = () => {
                   data-bs-target="#Ladies-Footwear"
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221470/Fashion%20accessories/ladies-shoes_fnwwgx.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710833787/Ladies_Footwear_1_sb8tyk.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -1047,6 +1063,10 @@ const FashionAccessoriesDisplay = () => {
                   <figcaption className="categoryImageCaption">
                     Ladies Footwear
                   </figcaption>
+                  <i
+                    className="bi bi-arrow-down-circle-fill mt-1 cursor-pointer"
+                    style={{ fontSize: "30px" }}
+                  ></i>
                 </span>
                 <div
                   className="modal fade"
@@ -1304,7 +1324,7 @@ const FashionAccessoriesDisplay = () => {
                   to={`/displayProduct/${"Kids Face Mask"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686221899/Fashion%20accessories/kids-mask_mhhop4.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710834374/Kids_Face_Mask_2_bag5uw.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
