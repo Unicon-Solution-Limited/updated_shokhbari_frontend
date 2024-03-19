@@ -29,7 +29,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Diary"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710838627/Diary-4_cqwmq1.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -44,7 +44,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Notebooks and Pads"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710838638/Notebooks-and-Pads-3_d5lhqv.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -59,7 +59,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Writing and Printing Papers"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710838908/Writing-and-Printing-Papers-2_qai5ps.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -74,7 +74,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Envelops & Mailers"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710838671/Envelops-_-Mailers-1_bgjqff.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -89,7 +89,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Calendars"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710839015/Calendars-2_tghy8u.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -104,7 +104,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"PaperProductsOthers"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710838676/Paper-Products-_-Others-3_onjr6i.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -132,7 +132,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Writing and Correction"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710839175/Writing-and-Correction-2_sxputi.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -160,7 +160,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Files and Folders"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710839277/Files-and-Folders-2_ycbaf0.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -188,7 +188,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Desk Accessories"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710839277/Desk_Accessories_2_y5xcqn.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -216,7 +216,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Academic"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710839417/Academic-1_ifdvq1.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -231,7 +231,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Non-Academic"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710839421/Non-Academic-3_nummjy.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -259,7 +259,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Others Stationeries"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710839281/Others_Stationeries_3_lscqh8.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
