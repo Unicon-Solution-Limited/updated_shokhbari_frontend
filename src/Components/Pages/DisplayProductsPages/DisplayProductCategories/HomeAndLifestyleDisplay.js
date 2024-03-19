@@ -19,7 +19,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Furniture" && (
             <div id="Furniture">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src=""
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -30,7 +30,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Living Room"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835717/Living-Room-5_adlo6w.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -45,7 +45,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Dining"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835702/Dining-6_zyjgvo.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -60,7 +60,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Bedroom"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835700/Bedroom-5_tl4qqh.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -75,7 +75,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Kitchen"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835714/Kitchen_4_pu5b89.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -90,7 +90,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Kid's_Room"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835711/Kid_s_Room_3_h7ihdf.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -105,7 +105,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Institutional"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835708/Institutional-3_tpffui.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -120,7 +120,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Office"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835721/Office-5_wzwj4b.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -135,7 +135,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Door"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835705/Door-4_id3uia.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -148,7 +148,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Storage_Organization"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835724/Storage-Organization-3_iltx6c.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -176,7 +176,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Home_Textile"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836128/Home_Textile_2_qqseul.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -204,7 +204,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"DinnerWare"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836201/DinnerWare-2_jqf4yy.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -218,7 +218,7 @@ const HomeAndLifestyleDisplay = () => {
           )}
 
           {/* Kitchen_Accessories */}
-          {itemName === "Kitchen_Accessories" && (
+          {itemName === "Kitchen Accessories" && (
             <div id="Kitchen_Accessories">
               <LazyLoadImage
                 src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
@@ -232,7 +232,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Kitchen_Accessories"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836212/Kitchen-Accessories-2_yiqwer.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -260,7 +260,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Decor"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836198/Decor-1_or89pp.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -288,7 +288,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Wallart"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836222/Wallart-4_niilwk.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -316,7 +316,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Tools_Diy_and_outdoor"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836218/Tools-Diy-and-outdoor-3_byq9ow.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -345,7 +345,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"EventPartySupplies"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836205/Event_Party_Supplies_1_cpsqae.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -373,7 +373,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Gardening"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836208/Gardening-3_wpcjqi.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -401,7 +401,7 @@ const HomeAndLifestyleDisplay = () => {
                   to={`/displayProduct/${"Pet"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710836215/Pet_3_e31wys.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}

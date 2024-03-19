@@ -31,7 +31,7 @@ const GiftAndCraftsDisplay = () => {
                   to={`/displayProduct/${"Novelty Gifts"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835075/Novelty_Gifts_2_schtqv.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -59,7 +59,7 @@ const GiftAndCraftsDisplay = () => {
                   to={`/displayProduct/${"Promotional Items"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835079/Promotional_Items_2_b2jggo.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -87,7 +87,7 @@ const GiftAndCraftsDisplay = () => {
                   to={`/displayProduct/${"Crafting Accessories"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835067/Crafting_Accessories_2_ivbyob.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -115,7 +115,7 @@ const GiftAndCraftsDisplay = () => {
                   to={`/displayProduct/${"Festival Decoration"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835069/Festival-Decoration-2_oswxci.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -143,7 +143,7 @@ const GiftAndCraftsDisplay = () => {
                   to={`/displayProduct/${"Gift Wrapping Supplies"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710835072/Gift-Wrapping-Supplies-1_efgqx0.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
