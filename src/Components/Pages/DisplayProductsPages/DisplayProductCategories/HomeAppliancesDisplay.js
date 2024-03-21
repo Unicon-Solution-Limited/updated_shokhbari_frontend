@@ -29,7 +29,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Television"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004671/Television--_1_drcvoy.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -44,7 +44,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Audio and Music Devices"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004669/Audio-and-Music-Devices-3_wxol8m.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -59,7 +59,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"VR and Glasses"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004673/VR-and-Glasses-1_fjisnd.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -74,7 +74,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Android Box"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004668/Android-Box-3_eevgcz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -102,7 +102,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Direct Cool refrigerator"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004841/Direct-Cool-refrigerator--_1_ptzdxz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -117,7 +117,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Non-frost refrigerator"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004845/Non-frost-refrigerator-1_drnhtz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -132,7 +132,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Freezer"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004843/Freezer-1_beruht.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -146,7 +146,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Beverage Cooler"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004838/Beverage-Cooler-3_q6am86.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -174,7 +174,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Air Conditioner"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005024/Air-Conditioner-3_s8b7nv.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -189,7 +189,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Air Cooler"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005026/Air-Cooler-1_n2dj7h.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -204,7 +204,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Fan"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005031/fan_3_uxfezv.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -217,7 +217,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Room Heater"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005033/Room-Heater-1_rhcsbm.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -232,7 +232,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Geyser"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005036/Geyser_3_ptt1po.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -247,7 +247,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Air Purifier"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005029/Air-Purifier-2_p3dvkx.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -275,7 +275,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Water Purifier and Filter"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005259/Water-Purifier-and-Filter-3_ejmxym.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -290,7 +290,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Kitchen Stove"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005254/Kitchen-Stove-2_hawd2j.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -305,7 +305,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Kitchen Hood"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005250/Kitchen-Hood-1_yh3ieu.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -320,7 +320,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Microwave and Electric Oven"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005252/Microwave-and-Electric-Oven-2_e99xm8.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -335,7 +335,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Cooker"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005247/Cooker-5_hmsh7a.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -350,7 +350,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Other electronic Appliance"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005257/Other-electronic-Appliance-2_m0f7ia.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -378,7 +378,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Basin"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005501/Basin-1_ifiams.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -392,7 +392,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Commode"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005561/Commode-1_g6oayo.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -406,7 +406,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Bath tub"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005549/Bath-tub-3_rjr6rp.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -420,7 +420,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Bath fittings"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005546/Bath-fittings-4_b5gg96.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -448,7 +448,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Automatic Front Load"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711006294/Automatic-Front-Load-3_aazx4t.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -463,22 +463,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Semi-Automatic"}`}
                 >
                   <LazyLoadImage
-                    src=""
-                    alt="Trulli"
-                    className="img-fluid categoryImage"
-                    placeholderSrc={loader}
-                  />
-                  <figcaption className="categoryImageCaption">
-                    Semi-Automatic
-                  </figcaption>
-                </Link>
-
-                <Link
-                  className="col-12 col-lg-2 col-md-2 categoryContentBody"
-                  to={`/displayProduct/${"Semi-Automatic"}`}
-                >
-                  <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711006295/Semi-Automatic-2_imswnq.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -506,7 +491,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Vacuum Cleaner"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711006397/Vacuum-Cleaner-3_mcdujn.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -521,7 +506,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Others Cleaning Equipments"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711006394/Others-Cleaning-Equipments-4_pexbxc.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -632,7 +617,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Others Appliances"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711006522/Others-Appliances-3_jlrbso.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}

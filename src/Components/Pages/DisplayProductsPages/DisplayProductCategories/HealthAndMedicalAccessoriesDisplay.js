@@ -30,7 +30,7 @@ const BeautyAndPersonalCareDisplay = () => {
                   to={`/displayProduct/${"PersonalCareSafety"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711003563/Personal-Care-_-Safety-1_hmbu7n.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -55,16 +55,16 @@ const BeautyAndPersonalCareDisplay = () => {
               <section className="row tab-content-body container-fluid m-0 justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
-                  to={`/displayProduct/${"Kurtis"}`}
+                  to={`/displayProduct/${"Medical_Supplies"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686203672/shokhbari_apparel/kurti_wcmdkl.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711003561/Medical-Supplies-4_ffnfbr.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Kurtis
+                    Medical Supplies
                   </figcaption>
                 </Link>
               </section>
@@ -83,16 +83,16 @@ const BeautyAndPersonalCareDisplay = () => {
               <section className="row tab-content-body container-fluid m-0 justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
-                  to={`/displayProduct/${"M-Shirts"}`}
+                  to={`/displayProduct/${"Food_Supplements"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/shirt_k99kte.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711003561/Food-Supplement_s-2_qj2vd8.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    testing
+                    Food Supplements
                   </figcaption>
                 </Link>
               </section>
@@ -112,16 +112,16 @@ const BeautyAndPersonalCareDisplay = () => {
               <section className="row tab-content-body container-fluid m-0 justify-content-center">
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
-                  to={`/displayProduct/${"M-Shirts"}`}
+                  to={`/displayProduct/${"Sexual_Wellness"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/shirt_k99kte.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711004069/Sexual-Wellness-1_new_io2ztx.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Shirts
+                    Sexual Wellness
                   </figcaption>
                 </Link>
               </section>
