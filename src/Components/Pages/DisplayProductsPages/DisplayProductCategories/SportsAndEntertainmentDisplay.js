@@ -29,7 +29,7 @@ const SportsAndEntertainmentDisplay = () => {
                   to={`/displayProduct/${"Exercise&Fitness"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711012963/Exercise-_-Fitness_-Yoga-2_yh1nct.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -57,7 +57,7 @@ const SportsAndEntertainmentDisplay = () => {
                   to={`/displayProduct/${"OutdoorRecreation"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711012974/Outdoor-Recreation-1_sduqwi.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -85,7 +85,7 @@ const SportsAndEntertainmentDisplay = () => {
                   to={`/displayProduct/${"IndoorRecreation"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711012970/Indoor-Recreation-1_k7gusu.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -113,7 +113,7 @@ const SportsAndEntertainmentDisplay = () => {
                   to={`/displayProduct/${"Camping_Hiking"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711012966/Camping-Hiking-3_tka3ck.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}

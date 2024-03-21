@@ -29,7 +29,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displaySubChildProduct/${"Bus_Ticket"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711013542/Bus-Ticket-1-_2_s3eubg.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -44,7 +44,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displaySubChildProduct/${"Train Ticket"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711013547/Train-Ticket-2_t4hpym.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -59,7 +59,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displaySubChildProduct/${"Air_Ticket"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711013530/Air-Ticket-3_nd7hmw.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -74,7 +74,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displaySubChildProduct/${"Car_Rent"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711013538/Car-Rent-2_mknl3q.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -89,7 +89,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displaySubChildProduct/${"Bus_Rent"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711013551/bus-rent-4_pz069b.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -104,7 +104,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displaySubChildProduct/${"Booking"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711013533/Booking-3_wegiim.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -122,7 +122,7 @@ const TourAndTipsDisplay = () => {
             <div id="Stay">
               <LazyLoadImage
                 src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
-                alt=""
+                alt="https://res.cloudinary.com/shokhbari/image/upload/v1711013795/Stay-2_xskuyv.jpg"
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
               />
@@ -158,7 +158,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displayProduct/${"Tour_Guide"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711013799/Tour-Guide-1_jhycko.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -187,7 +187,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displayProduct/${"Package_Tour"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711013790/Package_Tour3_rbdkuo.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}

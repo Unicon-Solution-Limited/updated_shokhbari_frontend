@@ -29,7 +29,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Wedding_Planner"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008143/Wedding-Planner-2_um2hpw.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -57,7 +57,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Wedding_Dress_Collection"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008139/wedding-dress-collection-3_bos1ql.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -85,7 +85,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Wedding_Jewelry_Collection"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008135/wedding-jewellery-2_kbv5tv.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -113,7 +113,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Wedding_Footwear"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008120/Wedding_Footwear_5_pgiixn.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -141,7 +141,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Wedding_Accessories"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008128/wedding-accessories-2_mao3ph.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -169,7 +169,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Beauty_Park"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008132/Beauty-Park-1_q0ppgn.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -197,7 +197,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Wedding_Vehicle"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008124/Wedding_Vehicle_2_uoiqm2.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -225,7 +225,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Cinemafogrophy_Photography"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008112/Cinemafogrophy_Photography_cinematography_and_photography_3_sk4ptc.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -253,7 +253,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Wedding_Venue"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008148/Wedding-Venue-_1_whbtbd.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -281,7 +281,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Catering_Service"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008108/Catering_Service_2_vadtuh.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -309,7 +309,7 @@ const MatrimonialDisplay = () => {
                   to={`/displayProduct/${"Sound_System"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711008116/Sound-System-4_w1pjw3.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
