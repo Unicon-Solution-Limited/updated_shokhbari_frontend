@@ -29,7 +29,7 @@ const AutomobileAndMotorBikeDisplay = () => {
                   to={`/displayProduct/${"Automobile"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711003092/Automobile-1-_4_pb5uuq.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -57,7 +57,7 @@ const AutomobileAndMotorBikeDisplay = () => {
                   to={`/displayProduct/${"Automobile_Parts"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711002751/Automobile-Parts-2_wfcmj6.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -85,7 +85,7 @@ const AutomobileAndMotorBikeDisplay = () => {
                   to={`/displayProduct/${"Interior_Accessories_care"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711002899/Interior-Accessories-Care-3_al0sea.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -113,7 +113,7 @@ const AutomobileAndMotorBikeDisplay = () => {
                   to={`/displayProduct/${"Exterior_Accessories_care"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711002771/Exterior-Accessories-Care-1_szevpq.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -141,7 +141,7 @@ const AutomobileAndMotorBikeDisplay = () => {
                   to={`/displayProduct/${"Bike"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711002301/bike-3_ow6jqn.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -167,7 +167,7 @@ const AutomobileAndMotorBikeDisplay = () => {
                   to={`/displayProduct/${"Bike_Parts_Accessories"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711002756/Bike-Parts-Accessories-1_p6im8i.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -195,7 +195,7 @@ const AutomobileAndMotorBikeDisplay = () => {
                   to={`/displayProduct/${"Oil_Fluids"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711002918/Oil_Fluids_1_xrisjn.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -223,7 +223,7 @@ const AutomobileAndMotorBikeDisplay = () => {
                   to={`/displayProduct/${"Riders_gear"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711002925/Riders-Gear-3_v6rj2z.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}

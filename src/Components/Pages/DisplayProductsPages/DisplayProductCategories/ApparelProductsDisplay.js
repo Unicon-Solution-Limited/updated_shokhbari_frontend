@@ -28,7 +28,7 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"M-Shirts"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/shirt_k99kte.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710926483/shirts-1_ixrj8b.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -42,7 +42,7 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"M-T-Shirts"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136780/shokhbari_apparel/tshirt_xa5ydc.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710926486/T-shirt_uycxoz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -56,7 +56,7 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"Polo Shirts"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/polo-shirt_h6lp6g.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710926486/Polo-Shirts-2_x65pam.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -70,7 +70,7 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"Mcoats-Jackets"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136778/shokhbari_apparel/jackets_qpbp2u.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710926482/Coats-AND-Jackets-4_co75vj.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -84,7 +84,7 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"M-Hoodies and Sweaters"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136778/shokhbari_apparel/hoddie_drayd5.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710926482/Hoodies-and-Sweaters-3_wkse6t.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -134,7 +134,7 @@ const ApparelProductsDisplay = () => {
                         >
                           <span data-bs-dismiss="modal">
                             <LazyLoadImage
-                              src="https://res.cloudinary.com/shokhbari/image/upload/v1686136778/shokhbari_apparel/jeans_yjsoct.webp"
+                              src="https://res.cloudinary.com/shokhbari/image/upload/v1710927679/Jeans-1_duuk7p.jpg"
                               alt="Trulli"
                               className="img-fluid categoryImage"
                               placeholderSrc={loader}
@@ -150,7 +150,7 @@ const ApparelProductsDisplay = () => {
                         >
                           <span data-bs-dismiss="modal">
                             <LazyLoadImage
-                              src="https://res.cloudinary.com/shokhbari/image/upload/v1686136777/shokhbari_apparel/gabading_rqdguk.webp"
+                              src="https://res.cloudinary.com/shokhbari/image/upload/v1710927678/Gabardine-1_kzdwdo.jpg"
                               alt="Trulli"
                               className="img-fluid categoryImage"
                               placeholderSrc={loader}
@@ -166,7 +166,7 @@ const ApparelProductsDisplay = () => {
                         >
                           <span data-bs-dismiss="modal">
                             <LazyLoadImage
-                              src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/trouser_tocdsh.webp"
+                              src="https://res.cloudinary.com/shokhbari/image/upload/v1710927689/Trousers_czvmwb.jpg"
                               alt="Trulli"
                               className="img-fluid categoryImage"
                               placeholderSrc={loader}
@@ -182,7 +182,7 @@ const ApparelProductsDisplay = () => {
                         >
                           <span data-bs-dismiss="modal">
                             <LazyLoadImage
-                              src="https://res.cloudinary.com/shokhbari/image/upload/v1686136778/shokhbari_apparel/jogers_ne23c0.webp"
+                              src="https://res.cloudinary.com/shokhbari/image/upload/v1710927682/Joggers-_-Sweats-1_irknpg.jpg"
                               alt="Trulli"
                               className="img-fluid categoryImage"
                               placeholderSrc={loader}
@@ -198,7 +198,7 @@ const ApparelProductsDisplay = () => {
                         >
                           <span data-bs-dismiss="modal">
                             <LazyLoadImage
-                              src="https://res.cloudinary.com/shokhbari/image/upload/v1686136780/shokhbari_apparel/short-pant_zq2yqt.webp"
+                              src="https://res.cloudinary.com/shokhbari/image/upload/v1710927687/Shorts-1_gssw7k.jpg"
                               alt="Trulli"
                               className="img-fluid categoryImage"
                               placeholderSrc={loader}
@@ -235,7 +235,7 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"Panjabi"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/panjabi_undoob.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710926482/Panjabi-1_h60sgh.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -249,7 +249,7 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"M-Koti"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136778/shokhbari_apparel/koti_f8aquj.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710926482/Koti-1_gqbxte.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -261,7 +261,7 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"M-Shawls"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/shawl_ebti5j.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710926487/Shawls-2_duided.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -835,13 +835,13 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"F-Shirt"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686138236/shokhbari_apparel/shirt-fabric_ffyjv3.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711000136/Shirt_Fabrics_k4gpab.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Shirt
+                    Shirt Fabrics
                   </figcaption>
                 </Link>
                 <Link
@@ -849,53 +849,42 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"F-Pant"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686138235/shokhbari_apparel/pant-fabrics_zvefl2.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711000131/Pant_Fabrics_r3wrux.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
-                  <figcaption className="categoryImageCaption">Pant</figcaption>
+                  <figcaption className="categoryImageCaption">
+                    Pant Fabrics
+                  </figcaption>
                 </Link>
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"F-Panjabi"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686138236/shokhbari_apparel/panjabi_pthw15.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711000126/Panjabi-Fabrics_ak60vm.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Panjabi
+                    Panjabi Fabrics
                   </figcaption>
                 </Link>
-                <Link
-                  className="col-12 col-lg-2 col-md-2 categoryContentBody"
-                  to={`/displayProduct/${"F-Kamiz"}`}
-                >
-                  <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686138234/shokhbari_apparel/kamiz_s7zevw.webp"
-                    alt="Trulli"
-                    className="img-fluid categoryImage"
-                    placeholderSrc={loader}
-                  />
-                  <figcaption className="categoryImageCaption">
-                    Kamiz
-                  </figcaption>
-                </Link>
+
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"F-Salwar"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686138236/shokhbari_apparel/salwar-fabrics_hmjnmf.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711000117/Mized-Fabrics_gd6mr2.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Salwar
+                    Mixed Fabrics
                   </figcaption>
                 </Link>
                 <Link
@@ -903,12 +892,14 @@ const ApparelProductsDisplay = () => {
                   to={`/displayProduct/${"F-Orna"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686138235/shokhbari_apparel/Orna-Fabric_qb1guh.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711000121/Orna_Fabrics_qifk0p.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
-                  <figcaption className="categoryImageCaption">Orna</figcaption>
+                  <figcaption className="categoryImageCaption">
+                    Orna Fabrics
+                  </figcaption>
                 </Link>
               </section>
             </div>

@@ -737,12 +737,11 @@ const Apparel = () => {
                   <>
                     {/* Fabrics */}
                     <option value="">Choose a category</option>
-                    <option value="F-Shirt">Shirt</option>
-                    <option value="F-Pant">Pant</option>
-                    <option value="F-Panjabi">Panjabi</option>
-                    <option value="F-Kamiz">Kamiz</option>
-                    <option value="F-Salwar">Salwar/Pajama</option>
-                    <option value="F-Orna">Orna</option>
+                    <option value="F-Shirt">Shirt Fabrics</option>
+                    <option value="F-Pant">Pant Fabrics</option>
+                    <option value="F-Panjabi">Panjabi Fabrics</option>
+                    <option value="F-Salwar">Mixed Fabrics</option>
+                    <option value="F-Orna">Orna Fabrics</option>
                   </>
                 )}
               </select>
