@@ -790,9 +790,12 @@ const MerchantApparel = () => {
                 {selectChildCategory === "Shari" && (
                   <>
                     <option value="">Choose a Sub Child Categories</option>
-                    <option value="Tant">Tant</option>
-                    <option value="Tangails">Tangails</option>
+                    <option value="Cotton">Cotton</option>
+                    <option value="Georgette">Georgette</option>
+                    <option value="HaterKaj">Hater-Kaj</option>
                     <option value="Jamdani">Jamdani</option>
+                    <option value="Muslin">Muslin</option>
+                    <option value="Silk">Silk</option>
                   </>
                 )}
               </select>
