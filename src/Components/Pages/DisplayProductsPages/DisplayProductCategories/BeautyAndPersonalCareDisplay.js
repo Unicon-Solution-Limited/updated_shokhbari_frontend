@@ -385,7 +385,7 @@ const BeautyAndPersonalCareDisplay = () => {
                   to={`/displayProduct/${"Hair Gel and Styles"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/shirt_k99kte.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711514479/Hair_Gel_and_Styles_lfbtz1.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -805,7 +805,7 @@ const BeautyAndPersonalCareDisplay = () => {
                   to={`/displayProduct/${"Feminine Care"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1686136779/shokhbari_apparel/shirt_k99kte.webp"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711514570/Feminine-Care_vg2igh.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}

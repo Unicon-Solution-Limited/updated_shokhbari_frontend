@@ -533,7 +533,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Iron_and_Garment_steamers"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711516170/Iron-and-Garment-steamers-1_yh2idq.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -545,6 +545,7 @@ const HomeAppliancesDisplay = () => {
               </section>
             </div>
           )}
+
           {/* Home lighting */}
           {itemName === "Home_lighting" && (
             <div id="Home_lighting">
@@ -560,7 +561,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Lights"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711514848/Lights_sffuzu.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -575,7 +576,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Switch"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711514854/Switch_lodscz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -590,7 +591,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Plugs and Outlets"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711514851/Plugs-and-Outlets_y1pvxi.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
