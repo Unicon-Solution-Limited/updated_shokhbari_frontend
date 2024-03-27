@@ -30,7 +30,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Rice"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711014641/Rice-2_s3gktq.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -43,7 +43,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Pulses"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711014632/Pulses-3_leb6bh.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -58,7 +58,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"AttaSuji"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711014624/Atta-_-Suji-2_n22llt.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -73,7 +73,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"SugerSalt"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711014646/Suger-_-Salt-1_ji92m1.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -88,7 +88,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"PowderedMilk"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711014627/Powdered-Milk-1_omfqb5.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -103,7 +103,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"OtherPriceFood"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711014637/Other-Prime-Food-2_fuvlts.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -131,7 +131,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Vegetables"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711171827/Vegetables-4_l4emip.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -146,7 +146,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Fruit"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711171814/Fruit-_3_zgi6zr.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -161,7 +161,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"DryFruit"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711171795/DryFruit_Nut_1_fzzatf.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -189,7 +189,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Meat"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711172086/Meat-3_o4cosb.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -202,7 +202,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Fish"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711172085/Fish-1_kvs5ah.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -215,7 +215,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Dry Fish"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711172084/Dry-Fish-4_ynsxje.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -230,7 +230,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"SeaFood"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711172086/Sea-Food-2_b1rrdy.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -258,7 +258,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"CookingOils"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259205/Cooking-Oils-1_ydfrjr.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -273,7 +273,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"SpicesCondiments"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259207/Spices-Condiments-4_vpo5gt.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -288,7 +288,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"FoodAdditives"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259205/Food-Additives-1_ej3kg1.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -303,7 +303,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Herbs"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259205/Herbs-1_kznqsu.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -318,7 +318,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Sauces"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259205/Sauces-5_nxycxt.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -333,7 +333,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"InstantMix"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259205/Instant-Mix-1_lugsms.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -361,7 +361,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"BreakfastFood"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259475/Breakfast-Food-4_rsamzz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -376,7 +376,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Tea"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259476/tea-_2_ppbvmd.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -389,7 +389,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Coffee"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259475/Coffee-_1_bm84fn.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -417,7 +417,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Milk"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259810/milk-1_wosx2h.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -430,7 +430,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Butter"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259799/Butter-4_kvcaoc.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -445,7 +445,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Cheese"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259799/Cheese-1_joxutz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -460,7 +460,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Yougrat"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259812/Yougrat-1_y2w1xi.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -475,7 +475,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"IceCrem"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259809/Ice_Crem_2_rgpuaz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -490,7 +490,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Sweets"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711259811/Sweets-2_sjgxrq.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -518,7 +518,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Breads"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711260146/Breads-_2_kyg5il.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -533,7 +533,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Cookies"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711260146/Cookies-1_v0sofj.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -548,7 +548,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Bakes"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711260146/Bakes_ntwotr.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -563,7 +563,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Snacks"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711260149/Snacks-1_ivm8dc.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -591,7 +591,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"ReadyToCook"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711260402/Ready-To-Cook-1_vljj1g.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -606,7 +606,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"OtherFrozenItem"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711260401/Other-Frozen-Item-1_mktf2v.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -634,7 +634,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"JarredFood"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513069/Jarred-Food-3_t3eujw.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -649,7 +649,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"CannedFoods"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513069/Canned-Foods-2_o1ekok.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -677,7 +677,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"SoftDrinks"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513200/Soft-Drinks-1_ii4qxk.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -692,7 +692,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Juice"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513198/Juice-1_jueyoz.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -707,7 +707,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Water"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513201/Water-3_xau6ur.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -717,7 +717,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   </figcaption>
                 </Link>
 
-                <Link
+                {/* <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"PowderedMlik"}`}
                 >
@@ -730,14 +730,14 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   <figcaption className="categoryImageCaption">
                     Powdered Mlik
                   </figcaption>
-                </Link>
+                </Link> */}
 
                 <Link
                   className="col-12 col-lg-2 col-md-2 categoryContentBody"
                   to={`/displayProduct/${"Chocolate"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513197/Chocolate-3_ztxilp.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -765,7 +765,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Noodles"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513400/Noodles-1_zubyva.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -780,13 +780,13 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Parta"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513401/pasta-2_ttikd2.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Parta
+                    Pasta
                   </figcaption>
                 </Link>
 
@@ -795,7 +795,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Soup"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513403/Soup-1_hnuxes.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -808,7 +808,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"InstandFood"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513398/Instand_Noodles_rrvhh3.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -836,7 +836,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Household"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513564/Household-2_tdrkne.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -851,7 +851,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"KitchenDining"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513566/Kitchen-_-Dining-1_aqyudx.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -866,7 +866,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"Bath"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513562/Bath-1_etbgi0.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -892,7 +892,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"ClearingNeedsHousehold"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513644/Household-2_zlralv.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -907,7 +907,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"CleaningKitchenDining"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513642/Cleaning-Kitchen-_-Dining-2_xtsxyj.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -922,7 +922,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
                   to={`/displayProduct/${"ClearingNeedsBath"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711513640/bath-1_vmwfot.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
