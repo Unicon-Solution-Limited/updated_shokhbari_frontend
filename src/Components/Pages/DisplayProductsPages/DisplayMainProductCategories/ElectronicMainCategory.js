@@ -54,7 +54,7 @@ const App = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1710146008/componets_ceatno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711523610/computerComponents_ipjkhc.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -83,7 +83,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711532999/tab_ls9kra.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Smartphone & Tablet</span>
               </button>
             </Link>
@@ -94,7 +98,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711533886/MONITOR_ebxklt.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Monitor</span>
               </button>
             </Link>
@@ -105,7 +113,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711605024/finalRouter_c5jsyz.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Network & Router</span>
               </button>
             </Link>
@@ -116,7 +128,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711781622/tf_glxeyw.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Office Equipments</span>
               </button>
             </Link>
@@ -127,7 +143,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711610853/finalgaming_eynevy.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Gaming Zone</span>
               </button>
             </Link>
@@ -138,7 +158,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711616287/finalGadget_k7khje.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Gadgets</span>
               </button>
             </Link>
@@ -149,7 +173,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711617687/final_camera_lbquqn.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Cameras</span>
               </button>
             </Link>
@@ -160,7 +188,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711619197/final_qnhyvv.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Projector & Screen</span>
               </button>
             </Link>
@@ -171,7 +203,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711619458/tvAndSpiker_fydbts.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">TV & Speaker</span>
               </button>
             </Link>
@@ -182,7 +218,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711781300/ff_fvn7mj.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">IPS/Ups</span>
               </button>
             </Link>
@@ -193,7 +233,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711776212/securityFinal2_wzlnpq.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Security Surveillance</span>
               </button>
             </Link>
@@ -204,7 +248,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711779132/new3_dnetlw.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">AC & Home Appliance</span>
               </button>
             </Link>
@@ -215,7 +263,11 @@ const App = () => {
               className="custom-link"
             >
               <button className="mb-2 mainCategory-button">
-                <img src="" alt="Logo" className="logo-category" />
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711780782/final_ijk1bj.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
                 <span className="categoryHeadline">Software</span>
               </button>
             </Link>
