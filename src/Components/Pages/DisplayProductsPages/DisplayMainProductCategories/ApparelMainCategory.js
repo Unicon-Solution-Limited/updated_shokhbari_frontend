@@ -24,7 +24,7 @@ const ApparelMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711790303/ht_bkaklu.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -39,7 +39,7 @@ const ApparelMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711789212/2_agr4fd.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -52,7 +52,7 @@ const ApparelMainCategory = () => {
             <Link to={`/ApparelsItem/${"Fabrics"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711789423/febirc_jqcakh.png"
                   alt="Logo"
                   className="logo-category"
                 />
