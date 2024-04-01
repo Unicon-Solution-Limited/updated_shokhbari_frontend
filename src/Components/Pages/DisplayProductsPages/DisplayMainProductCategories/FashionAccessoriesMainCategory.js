@@ -24,7 +24,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711791737/heair_y32uye.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -40,7 +40,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711860272/new_kiy6vy.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -56,7 +56,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711861298/yyyyyyy_xno5kf.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -72,7 +72,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711948093/new5_qmvdww.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -88,7 +88,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711862296/bag_talw5q.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -104,7 +104,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711862594/belt_m7qpax.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -120,7 +120,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711863153/new_e8javn.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -136,7 +136,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711947532/Untitled-1_uqbftq.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -152,7 +152,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711949868/ppp_kimgm4.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -168,7 +168,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711950141/facemask_ynxxps.png"
                   alt="Logo"
                   className="logo-category"
                 />
