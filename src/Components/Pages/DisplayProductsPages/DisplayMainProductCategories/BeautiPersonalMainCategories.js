@@ -22,7 +22,7 @@ const BeautiPersonalMainCategories = () => {
             <Link to={`/BeautyItem/${"Bath_Body"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711951668/Untitled-2_pw6l4e.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -35,7 +35,7 @@ const BeautiPersonalMainCategories = () => {
             <Link to={`/BeautyItem/${"Beauty_Tools"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711952410/new_o97usr.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -48,7 +48,7 @@ const BeautiPersonalMainCategories = () => {
             <Link to={`/BeautyItem/${"Fragrances"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711953071/ddddd_mznjtr.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -61,7 +61,7 @@ const BeautiPersonalMainCategories = () => {
             <Link to={`/BeautyItem/${"Hair_Care"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711953537/tttttt_diu2by.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -74,7 +74,7 @@ const BeautiPersonalMainCategories = () => {
             <Link to={`/BeautyItem/${"Skin_Care"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711954478/dmt_ov5l1h.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -87,7 +87,7 @@ const BeautiPersonalMainCategories = () => {
             <Link to={`/BeautyItem/${"Make_up"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711954690/lipistic_os8cdm.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -100,7 +100,7 @@ const BeautiPersonalMainCategories = () => {
             <Link to={`/BeautyItem/${"Oral_Care"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711955155/brash_s0k5kl.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -113,7 +113,7 @@ const BeautiPersonalMainCategories = () => {
             <Link to={`/BeautyItem/${"Feminine_Care"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711955499/pad_kzvhuq.png"
                   alt="Logo"
                   className="logo-category"
                 />
