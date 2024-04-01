@@ -24,7 +24,7 @@ const GiftCraftMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711956071/Untitled-1_pideb3.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -40,7 +40,7 @@ const GiftCraftMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711958474/Untitled-1_zs9mfg.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -56,7 +56,7 @@ const GiftCraftMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711960127/kechi_d5heir.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -72,7 +72,7 @@ const GiftCraftMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711961998/jjjjjjjjj_agshe5.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -88,7 +88,7 @@ const GiftCraftMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711961486/new_wduqgq.png"
                   alt="Logo"
                   className="logo-category"
                 />
