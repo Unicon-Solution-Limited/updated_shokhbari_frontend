@@ -24,7 +24,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712040684/uni_v2k99t.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -40,7 +40,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712041079/hello_x3csoy.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -58,7 +58,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712043452/5_kw58rk.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -74,7 +74,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712044723/red_nzdez0.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -90,7 +90,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712045256/data_pz3mnm.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -106,7 +106,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712045565/bg_cocnau.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -122,7 +122,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712047030/danda_uinxs3.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -138,7 +138,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712046697/hhhhhh_ajbtgg.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -156,7 +156,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712048411/new_nkcjtu.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -172,7 +172,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712048944/icon_ckxxqh.png"
                   alt="Logo"
                   className="logo-category"
                 />
