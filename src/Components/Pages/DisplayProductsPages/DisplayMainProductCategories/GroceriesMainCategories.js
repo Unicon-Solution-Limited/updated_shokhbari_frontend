@@ -21,7 +21,7 @@ const GroceriesMainCategories = () => {
             <Link to={`/GroceriesItem/${"Prime_Food"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712130581/prime_food_t6bwml.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -37,7 +37,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712130693/frouts_c4xd5a.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -53,7 +53,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712131431/Untitled-2_hc5jlg.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -69,7 +69,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712131646/cooking_ingredients_ipfyab.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -85,7 +85,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712132149/tttt_wu2pby.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -101,7 +101,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712132616/milk_rhfrij.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -117,7 +117,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712133032/bekary_kcvwcu.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -133,7 +133,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712133210/new_Frozen_ckb8z1.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -149,7 +149,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712133309/jar_and_cen_hjatcg.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -165,7 +165,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712134078/T_holsyz.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -181,7 +181,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712134248/noodles_j5pjsi.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -197,7 +197,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712134606/cook_jomow2.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -213,7 +213,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712135181/test_lgj00w.png"
                   alt="Logo"
                   className="logo-category"
                 />
