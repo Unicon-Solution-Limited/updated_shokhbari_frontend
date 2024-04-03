@@ -264,7 +264,7 @@ const App = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711780782/final_ijk1bj.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712126905/dmn_mfqmhp.png"
                   alt="Logo"
                   className="logo-category"
                 />
