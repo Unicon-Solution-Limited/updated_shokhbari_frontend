@@ -85,7 +85,7 @@ const GroceriesMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712132149/tttt_wu2pby.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712136542/breakfast_lh75f9.png"
                   alt="Logo"
                   className="logo-category"
                 />
