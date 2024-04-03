@@ -24,7 +24,7 @@ const SportsMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712049919/tt_hszlue.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -42,7 +42,7 @@ const SportsMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712125909/55555_mjhnbd.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -58,7 +58,7 @@ const SportsMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712126078/daba_k8ewsq.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -74,7 +74,7 @@ const SportsMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712125630/hellloooo_udd0s9.png"
                   alt="Logo"
                   className="logo-category"
                 />
