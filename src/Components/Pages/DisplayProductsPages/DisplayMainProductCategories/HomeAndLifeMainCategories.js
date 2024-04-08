@@ -24,7 +24,7 @@ const HomeAndLifeMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712033302/furniture_t47rdx.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712212928/dt1_g2zubd.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -40,7 +40,7 @@ const HomeAndLifeMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712033672/home_bysrag.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712213335/new_zlnyrf.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -72,11 +72,11 @@ const HomeAndLifeMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712034946/chamus_hzshhi.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712213831/spoon_qojbet.png"
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Kitchen_Accessories</span>
+                <span className="categoryHeadline">Kitchen Accessories</span>
               </button>
             </Link>
           </div>
@@ -88,7 +88,7 @@ const HomeAndLifeMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712035618/new_chair_ph7k9v.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712216945/smell_mmku2h.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -120,7 +120,7 @@ const HomeAndLifeMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712036693/jontro_bd1vex.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712382658/tools_ctg3dv.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -136,7 +136,7 @@ const HomeAndLifeMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712037815/belun_yhertq.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712381846/recov_arszhg.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -152,7 +152,7 @@ const HomeAndLifeMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712038139/222_cj0gf5.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712382366/gardening_s3cdm9.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -165,7 +165,7 @@ const HomeAndLifeMainCategories = () => {
             <Link to={`/HomeAndLifestyleItem/${"Pet"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712039301/pettt_yqegty.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712382838/new_pet_h4ecjk.png"
                   alt="Logo"
                   className="logo-category"
                 />

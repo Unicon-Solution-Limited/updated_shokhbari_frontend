@@ -24,7 +24,7 @@ const HealthMedicalMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712396410/Untitled-1-Recovered_nd55ct.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -40,7 +40,7 @@ const HealthMedicalMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712550077/newDt_j6jyfm.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -56,7 +56,7 @@ const HealthMedicalMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712397400/yt_ildnsw.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -72,7 +72,7 @@ const HealthMedicalMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712551083/sex_lypo0f.png"
                   alt="Logo"
                   className="logo-category"
                 />

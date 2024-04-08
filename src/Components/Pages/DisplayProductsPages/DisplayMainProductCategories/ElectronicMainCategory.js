@@ -24,7 +24,7 @@ const App = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712137501/laptop_lv3hs0.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -99,7 +99,7 @@ const App = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711533886/MONITOR_ebxklt.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712138521/monitor_p1virf.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -114,7 +114,7 @@ const App = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711605024/finalRouter_c5jsyz.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712138028/95_m1zcn9.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -174,7 +174,7 @@ const App = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711617687/final_camera_lbquqn.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712138638/camera_b4xqcb.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -189,7 +189,7 @@ const App = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711619197/final_qnhyvv.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712138826/pppppp_irquw9.png"
                   alt="Logo"
                   className="logo-category"
                 />

@@ -21,7 +21,7 @@ const TourTipsMainCategories = () => {
             <Link to={`/TripItem/${"Travel"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712559437/travelp_mzek9a.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -34,7 +34,7 @@ const TourTipsMainCategories = () => {
             <Link to={`/TripItem/${"Stay"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712562307/stay_pdem9x.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -47,7 +47,7 @@ const TourTipsMainCategories = () => {
             <Link to={`/TripItem/${"Tour_Guide"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712562014/tour_xuqarm.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -60,7 +60,7 @@ const TourTipsMainCategories = () => {
             <Link to={`/TripItem/${"Package_Tour"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712562176/tourPackgae_bbmg90.png"
                   alt="Logo"
                   className="logo-category"
                 />

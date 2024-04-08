@@ -56,7 +56,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711861298/yyyyyyy_xno5kf.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712383222/newGlass_ozn7ek.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -72,7 +72,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711948093/new5_qmvdww.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712209501/watch_e8yctt.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -88,7 +88,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711862296/bag_talw5q.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712209705/bag_yi178p.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -104,7 +104,7 @@ const FashionAccessoriesMainCategory = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711862594/belt_m7qpax.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712209974/belt_qjh30x.png"
                   alt="Logo"
                   className="logo-category"
                 />

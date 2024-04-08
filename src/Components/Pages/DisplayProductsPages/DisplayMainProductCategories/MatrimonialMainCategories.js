@@ -24,7 +24,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712554319/new1_ixvuka.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -40,7 +40,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712553349/jam_km9ut5.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -58,7 +58,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712553776/ring8_yn9gv1.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -76,7 +76,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712554139/juta1_nblgad.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -92,7 +92,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712554729/u_as4iac.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -108,7 +108,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712554936/cosmetics_a0nnyg.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -124,7 +124,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712555120/car1_vnizrh.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -140,7 +140,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712555332/camera_rnkheh.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -158,7 +158,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712555563/ghor_m73x0i.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -174,7 +174,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712556602/fooddt_ffvrzv.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -190,7 +190,7 @@ const MatrimonialMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709375778/brandPc1_uroglw.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712556469/box_tyglcg.png"
                   alt="Logo"
                   className="logo-category"
                 />

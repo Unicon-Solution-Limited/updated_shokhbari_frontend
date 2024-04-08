@@ -24,7 +24,7 @@ const OfficeEducationMainCategoris = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711962983/pic_nlzkk1.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712211140/paper_ozm2qo.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -72,7 +72,7 @@ const OfficeEducationMainCategoris = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1711963937/newt_r7tlpl.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712212516/table_vzd85t.png"
                   alt="Logo"
                   className="logo-category"
                 />

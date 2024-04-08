@@ -24,7 +24,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712040684/uni_v2k99t.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712566217/e_nwlsw1.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -40,7 +40,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712041079/hello_x3csoy.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712566109/ref_kneskt.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -58,7 +58,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712043452/5_kw58rk.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712565880/acNew_ouizss.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -74,7 +74,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712044723/red_nzdez0.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712563340/homeKitchen_vmrr27.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -90,7 +90,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712045256/data_pz3mnm.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712563812/t_y0a60i.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -106,7 +106,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712045565/bg_cocnau.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712564207/td_dibb7r.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -122,7 +122,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712047030/danda_uinxs3.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712564583/c_o7tspg.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -156,7 +156,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712048411/new_nkcjtu.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712564842/l1_y4p39j.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -172,7 +172,7 @@ const HomeApplianceMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712048944/icon_ckxxqh.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712565133/fan_vdkue0.png"
                   alt="Logo"
                   className="logo-category"
                 />

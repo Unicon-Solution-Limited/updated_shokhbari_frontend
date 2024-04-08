@@ -25,7 +25,7 @@ const AutoMobileMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712384022/car_bysdx9.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -41,7 +41,7 @@ const AutoMobileMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712384249/car_parts_w7lbd9.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -57,7 +57,7 @@ const AutoMobileMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712385605/nnn_hc6yoi.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -75,7 +75,7 @@ const AutoMobileMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712396149/cleaning_c8po2g.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -90,7 +90,7 @@ const AutoMobileMainCategories = () => {
             <Link to={`/AutomobileItem/${"Bike"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712396015/1_fjeckb.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -106,7 +106,7 @@ const AutoMobileMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712393286/timer_mxde23.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -122,7 +122,7 @@ const AutoMobileMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712393530/jarNew_xo7mow.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -138,7 +138,7 @@ const AutoMobileMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712394107/helmet_bjjtch.png"
                   alt="Logo"
                   className="logo-category"
                 />

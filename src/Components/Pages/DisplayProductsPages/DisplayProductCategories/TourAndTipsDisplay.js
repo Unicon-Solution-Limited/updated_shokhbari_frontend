@@ -132,7 +132,7 @@ const TourAndTipsDisplay = () => {
                   to={`/displayProduct/${"Stay"}`}
                 >
                   <LazyLoadImage
-                    src=""
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1712563151/Stay_2_hiaz6c.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}

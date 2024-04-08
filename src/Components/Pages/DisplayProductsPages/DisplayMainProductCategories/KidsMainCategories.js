@@ -21,7 +21,7 @@ const KidsMainCategories = () => {
             <Link to={`/KidsItem/${"Baby_Clothing"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712556790/babyClothin_v1nj78.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -34,7 +34,7 @@ const KidsMainCategories = () => {
             <Link to={`/KidsItem/${"Baby_Footwaer"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712557031/foot_bhfydc.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -47,7 +47,7 @@ const KidsMainCategories = () => {
             <Link to={`/KidsItem/${"Baby_Care"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712559110/saban_ubzydr.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -63,7 +63,7 @@ const KidsMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712558254/ac_ekvd2j.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -79,7 +79,7 @@ const KidsMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712557459/accesrois_tro1x7.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -95,7 +95,7 @@ const KidsMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712558655/car_ianbpj.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -108,7 +108,7 @@ const KidsMainCategories = () => {
             <Link to={`/KidsItem/${"Baby_Toys_Games"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712558819/toyyyyy_abhaca.png"
                   alt="Logo"
                   className="logo-category"
                 />
@@ -121,7 +121,7 @@ const KidsMainCategories = () => {
             <Link to={`/KidsItem/${"Baby_Education"}`} className="custom-link">
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1709189955/shokhbari_electronices/laptopIcon.jpg_vyfjno.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712558926/education_yvxd8m.png"
                   alt="Logo"
                   className="logo-category"
                 />
