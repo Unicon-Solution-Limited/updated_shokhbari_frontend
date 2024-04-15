@@ -152,7 +152,7 @@ const HomeAndLifeMainCategories = () => {
             >
               <button className="mb-2 mainCategory-button">
                 <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1712382366/gardening_s3cdm9.png"
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1713179372/gd_qv60ln.png"
                   alt="Logo"
                   className="logo-category"
                 />

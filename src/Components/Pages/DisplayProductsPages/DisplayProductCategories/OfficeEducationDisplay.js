@@ -149,7 +149,7 @@ const OfficeEducationDisplay = () => {
           {itemName === "Files_Folders" && (
             <div id="Files_Folders">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713173640/Files_and_Folders_1_g8nnfh.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -177,7 +177,7 @@ const OfficeEducationDisplay = () => {
           {itemName === "Desk_Accessories" && (
             <div id="Desk_Accessories">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713173593/Desk_Accessories_2_azm7tz.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -205,7 +205,7 @@ const OfficeEducationDisplay = () => {
           {itemName === "Books" && (
             <div id="Books">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713173567/Books_1_vcvcfn.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -248,7 +248,7 @@ const OfficeEducationDisplay = () => {
           {itemName === "Others_Stationeries" && (
             <div id="Others_Stationeries">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713173691/Others_Stationeries_2_ashtdh.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"

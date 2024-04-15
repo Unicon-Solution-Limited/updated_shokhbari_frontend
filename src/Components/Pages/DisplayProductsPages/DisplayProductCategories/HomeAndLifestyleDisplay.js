@@ -19,8 +19,8 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Furniture" && (
             <div id="Furniture">
               <LazyLoadImage
-                src=""
-                alt=""
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713172385/Furniture_1_n17eej.jpg"
+                alt="img"
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
               />
@@ -165,7 +165,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Home_Textile" && (
             <div id="Home_Textile">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713172676/Home_Textile_1_pbzrwu.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -193,7 +193,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "DinnerWare" && (
             <div id="DinnerWare">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713172838/DinnerWare_2_acxboo.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -221,7 +221,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Kitchen Accessories" && (
             <div id="Kitchen_Accessories">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713172744/Kitchen_Accessories_1_yzepg5.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
