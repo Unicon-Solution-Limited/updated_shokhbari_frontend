@@ -249,7 +249,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Decor" && (
             <div id="Decor">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713429679/Decor2_hzbwus.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -277,7 +277,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Wallart" && (
             <div id="Wallart">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713427898/Wallart1_v6fnwk.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -305,7 +305,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Tools_Diy_outdoor" && (
             <div id="Tools_Diy_and_outdoor">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713426963/Tools_Diy_and_outdoor1_mevgxg.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -334,7 +334,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Event_Party_Supplies" && (
             <div id="EventPartySupplies">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713429207/Event_Party_Supplies11_xnsle5.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -362,7 +362,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Gardening" && (
             <div id="Gardening">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713428362/Gardening1_jcpjyg.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -390,7 +390,7 @@ const HomeAndLifestyleDisplay = () => {
           {itemName === "Pet" && (
             <div id="Pet">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713426464/Pet1_u0tack.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"

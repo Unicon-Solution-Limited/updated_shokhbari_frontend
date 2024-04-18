@@ -8,7 +8,7 @@ const HomeApplianceMainCategories = () => {
       {/* Banner */}
       <div className="electronic-banner">
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1686396982/shokhbari_apparel/01_Mens-Clothings_ox7ynd.webp"
+          src="https://res.cloudinary.com/shokhbari/image/upload/v1713430191/Home_Appliance_1_r62fte.jpg"
           alt=""
         />
       </div>

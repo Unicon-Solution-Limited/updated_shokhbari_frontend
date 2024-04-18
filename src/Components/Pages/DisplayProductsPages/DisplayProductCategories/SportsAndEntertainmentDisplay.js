@@ -18,7 +18,7 @@ const SportsAndEntertainmentDisplay = () => {
           {itemName === "Exercise&Fitness" && (
             <div id="Exercise&Fitness">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713431986/Exercise_Fitness_Yoga_2_qppifn.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -46,7 +46,7 @@ const SportsAndEntertainmentDisplay = () => {
           {itemName === "OutdoorRecreation" && (
             <div id="OutdoorRecreation">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713432133/Outdoor_Recreation_2_oxzti1.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -74,7 +74,7 @@ const SportsAndEntertainmentDisplay = () => {
           {itemName === "IndoorRecreation" && (
             <div id="IndoorRecreation">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713432044/Indoor_Recreation2_m77eej.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -102,7 +102,7 @@ const SportsAndEntertainmentDisplay = () => {
           {itemName === "Camping Hiking" && (
             <div id="Camping_Hiking">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713431936/Camping_Hiking_1_rv0jmy.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"

@@ -18,7 +18,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Home_Entertainment" && (
             <div id="Home_Entertainment">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713430484/Home_Entertainment_k7odwi.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -91,7 +91,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Refrigerator_Freezer" && (
             <div id="Refrigerator_Freezer">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713431005/Refrigerator_and_Freezer_2_wtjjb2.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -163,7 +163,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Cooling_Heating" && (
             <div id="Cooling_Heating">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713430433/Cooling_and_Heating_1_bjtzsh.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -264,7 +264,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Kitchen_Appliance" && (
             <div id="Kitchen_Appliance">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713430894/Kitchen_Appliance_1_xshyg4.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -350,7 +350,7 @@ const HomeAppliancesDisplay = () => {
                   to={`/displayProduct/${"Other electronic Appliance"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1711005257/Other-electronic-Appliance-2_m0f7ia.jpg"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1713430948/Others_Appliances_2_tociel.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -367,7 +367,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Bath_Fixtures" && (
             <div id="Bath_Fixtures">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713430339/Bath_Fixtures_1_zbkpcv.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -437,7 +437,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Washing_Machine" && (
             <div id="Washing_Machine">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713431055/Washing_Machine_2_cutoox.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -480,7 +480,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Cleaning_Equipments" && (
             <div id="Cleaning_Equipments">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713430383/Cleaning_Equipments_1_bxmfla.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -522,7 +522,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Iron_Garment_steamers" && (
             <div id="Iron_Garment_steamers">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713430560/Iron_and_Garment_steamers_1_tgyxhx.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -550,7 +550,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Home_lighting" && (
             <div id="Home_lighting">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713430522/Home_lighting_1_vcad5i.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -607,7 +607,7 @@ const HomeAppliancesDisplay = () => {
           {itemName === "Others_Appliances" && (
             <div id="Others_Appliances">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713430948/Others_Appliances_2_tociel.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"

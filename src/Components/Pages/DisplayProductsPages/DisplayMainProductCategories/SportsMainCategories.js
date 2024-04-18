@@ -8,7 +8,7 @@ const SportsMainCategories = () => {
       {/* Banner */}
       <div className="electronic-banner">
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1686396982/shokhbari_apparel/01_Mens-Clothings_ox7ynd.webp"
+          src="https://res.cloudinary.com/shokhbari/image/upload/v1713431842/Sports_And_Entertainment_1_g5frh9.jpg"
           alt=""
         />
       </div>
