@@ -8,7 +8,7 @@ const GroceriesMainCategories = () => {
       {/* Banner */}
       <div className="electronic-banner">
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1686396982/shokhbari_apparel/01_Mens-Clothings_ox7ynd.webp"
+          src="https://res.cloudinary.com/shokhbari/image/upload/v1713786580/Groceries_And_Home_Essentials_2_ycsnr8.jpg"
           alt=""
         />
       </div>

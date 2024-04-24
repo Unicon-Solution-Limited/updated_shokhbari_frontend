@@ -19,7 +19,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Prime_Food" && (
             <div id="Prime_Food">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/01_Bath_Body_kkuokk.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713786738/Prime_Food2_nifwzp.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -120,7 +120,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Fruits_Vagetables" && (
             <div id="Fruits_Vagetables">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230012/02_Beauty_Tools_pfoksa.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713786833/Fruits_Vagetables2_pqxzy7.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -178,7 +178,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Meat_Fish_Seafood" && (
             <div id="MeatFish_Seafood">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/03_Fragraneces_Men_Women_rg9nv8.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713786954/Meat_Fish_Seafood2_zhaeln.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -247,7 +247,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Cooking_Ingredient" && (
             <div>
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/04_Hair_Care_cgm6d3.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713787017/Cooking_Ingredient3_zftppo.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -350,7 +350,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Breakfast_Tea_Coffee" && (
             <div id="Breakfast_Tea">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/05_Skin_Care_t1wx3a.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713950088/Breakfast_Tea_Coffee1_fh1hfk.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -406,7 +406,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Sweets_Dairy" && (
             <div id="Sweets_Dairy">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/06_MakeUp_d11nfa.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713950169/Sweets_Dairy2_npddxt.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -507,7 +507,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Bakery_Snacks" && (
             <div id="Bakery_Snacks">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/07_Oral_Care_jouacy.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713950498/Bakery_Snacks1_c3fuhm.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -580,7 +580,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Forzen_Item" && (
             <div id="Forzen_Item">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705233307/Feminine-care_pptwkw.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713950892/Forzen_Item1_btkqih.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -623,7 +623,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Jarred_Canned" && (
             <div id="Jarred_Canned">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705233307/Feminine-care_pptwkw.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713951023/Jarred_and_Canned_Food1_uhwbtn.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -666,7 +666,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Beverage_Chocolate" && (
             <div id="Beverage_Chocolate">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705233307/Feminine-care_pptwkw.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713951089/Beverage_Chocolate1_zhuo68.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -754,7 +754,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Soup_Noodles" && (
             <div id="Soup_Noodles">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705233307/Feminine-care_pptwkw.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713951143/Soup_Noodles2_kwqgad.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -825,7 +825,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Home_Essentials" && (
             <div id="Home_Essentials">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705233307/Feminine-care_pptwkw.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713951189/Home_Essentials1_vckc9h.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -881,7 +881,7 @@ const GroceriesAndHomeEssentialsDisplay = () => {
           {itemName === "Clearing_Needs" && (
             <div id="Clearing_Needs">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705233307/Feminine-care_pptwkw.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1713951258/Clearing_Needs1_pld7rc.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
