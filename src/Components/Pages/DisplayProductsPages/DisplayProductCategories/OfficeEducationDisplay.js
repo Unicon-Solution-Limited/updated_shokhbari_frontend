@@ -18,7 +18,7 @@ const OfficeEducationDisplay = () => {
           {itemName === "Paper_Products" && (
             <div id="Paper_Products">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714042168/Paper_Products_2_hisxg2.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -59,7 +59,7 @@ const OfficeEducationDisplay = () => {
                   to={`/displayProduct/${"Writing and Printing Papers"}`}
                 >
                   <LazyLoadImage
-                    src="https://res.cloudinary.com/shokhbari/image/upload/v1710838908/Writing-and-Printing-Papers-2_qai5ps.jpg"
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1714042214/Writing_and_Correction_1_q76mp0.jpg"
                     alt="Trulli"
                     className="img-fluid categoryImage"
                     placeholderSrc={loader}
@@ -121,7 +121,7 @@ const OfficeEducationDisplay = () => {
           {itemName === "Writing_Correction" && (
             <div id="Writing_Correction">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714042214/Writing_and_Correction_1_q76mp0.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -149,7 +149,7 @@ const OfficeEducationDisplay = () => {
           {itemName === "Files_Folders" && (
             <div id="Files_Folders">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1713173640/Files_and_Folders_1_g8nnfh.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714042529/Files_and_Folders_1_d8udiq.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
