@@ -8,7 +8,7 @@ const AutoMobileMainCategories = () => {
       {/* Banner */}
       <div className="electronic-banner">
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1686396982/shokhbari_apparel/01_Mens-Clothings_ox7ynd.webp"
+          src="https://res.cloudinary.com/shokhbari/image/upload/v1714207278/Automobile_Motorbike1_bkkvd7.jpg"
           alt=""
         />
       </div>

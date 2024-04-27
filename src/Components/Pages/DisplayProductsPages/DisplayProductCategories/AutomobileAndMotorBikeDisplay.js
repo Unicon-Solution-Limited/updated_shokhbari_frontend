@@ -18,7 +18,7 @@ const AutomobileAndMotorBikeDisplay = () => {
           {itemName === "Automobile" && (
             <div id="Automobile">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714207368/Automobile2_wuydsm.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -46,7 +46,7 @@ const AutomobileAndMotorBikeDisplay = () => {
           {itemName === "Automobile_Parts" && (
             <div id="Automobile_Parts">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714207411/Automobile_Parts2_h2sqa2.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -74,7 +74,7 @@ const AutomobileAndMotorBikeDisplay = () => {
           {itemName === "Interior_Accessories_Care" && (
             <div id="Interior_Accessories_care">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714207454/Interior_Accessories_Care2_om2yd9.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -102,7 +102,7 @@ const AutomobileAndMotorBikeDisplay = () => {
           {itemName === "Exterior_Accessories_Care" && (
             <div id="Exterior_Accessories_care">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714207480/Exterior_Accessories_Care2_sl1vrs.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -130,7 +130,7 @@ const AutomobileAndMotorBikeDisplay = () => {
           {itemName === "Bike" && (
             <div id="Bike">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714207536/bike2_s8dfoi.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -156,7 +156,7 @@ const AutomobileAndMotorBikeDisplay = () => {
           {itemName === "Bike_Parts_Accessories" && (
             <div id="Bike_Parts_Accessories">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714207582/Bike_Parts_Accessories2_zopq8t.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -184,7 +184,7 @@ const AutomobileAndMotorBikeDisplay = () => {
           {itemName === "Oil_Fluids" && (
             <div id="Oil_Fluids">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714207631/Oil_Fluids1_vugvcu.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -212,7 +212,7 @@ const AutomobileAndMotorBikeDisplay = () => {
           {itemName === "Riders Gear" && (
             <div id="Riders_gear">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714207665/Riders_Gear2_jxvjuk.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
