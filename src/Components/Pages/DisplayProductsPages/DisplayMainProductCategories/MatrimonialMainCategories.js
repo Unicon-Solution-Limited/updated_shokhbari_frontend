@@ -8,7 +8,7 @@ const MatrimonialMainCategories = () => {
       {/* Banner */}
       <div className="electronic-banner">
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1686396982/shokhbari_apparel/01_Mens-Clothings_ox7ynd.webp"
+          src="https://res.cloudinary.com/shokhbari/image/upload/v1714470113/Matrimonial2_cwtb7d.jpg"
           alt=""
         />
       </div>
@@ -144,9 +144,7 @@ const MatrimonialMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">
-                  Cinemafogrophy Photography
-                </span>
+                <span className="categoryHeadline">Cinematic Photography</span>
               </button>
             </Link>
           </div>

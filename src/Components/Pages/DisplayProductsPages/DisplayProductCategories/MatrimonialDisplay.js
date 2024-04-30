@@ -18,7 +18,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Wedding_Planner" && (
             <div id="Wedding_Planner">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470359/Wedding_Planner2_v4ib9i.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -46,7 +46,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Wedding_Dress" && (
             <div id="Wedding_Dress_Collection">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470412/Wedding_Dress_Collection2_tbu7q9.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -74,7 +74,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Wedding_Jewelry" && (
             <div id="Wedding_Jewelry_Collection">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470446/Wedding_Jewelry_Collection2_k2rs3u.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -102,7 +102,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Wedding_Footwear" && (
             <div id="Wedding_Footwear">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470476/Wedding_Footwear1_mxhqlz.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -130,7 +130,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Wedding_Accessories" && (
             <div id="Wedding_Accessories">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470570/Wedding_Accessories1_fon2yo.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -158,7 +158,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Beauty_Park" && (
             <div id="Beauty_Park">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470595/Beauty_Park2_cxwizd.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -186,7 +186,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Wedding_Vehicle" && (
             <div id="Wedding_Vehicle">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470630/Wedding_Vehicle1_tc0smv.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -214,7 +214,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Cinemafogrophy_Photography" && (
             <div id="Cinemafogrophy_Photography">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470716/cinematic_photography2_vziu8n.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -231,7 +231,7 @@ const MatrimonialDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Cinemafogrophy Photography
+                    Cinematic Photography
                   </figcaption>
                 </Link>
               </section>
@@ -242,7 +242,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Wedding_Venue" && (
             <div id="Wedding_Venue">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470812/Wedding_Venue2_osra1o.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -270,7 +270,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Catering_Service" && (
             <div id="Catering_Service">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470849/Catering_Service2_gyrlut.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -298,7 +298,7 @@ const MatrimonialDisplay = () => {
           {itemName === "Sound_System" && (
             <div id="Sound_System">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714470883/Sound_System1_brwvif.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"

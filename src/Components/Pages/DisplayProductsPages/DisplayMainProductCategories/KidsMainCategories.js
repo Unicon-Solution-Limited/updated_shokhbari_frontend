@@ -8,7 +8,7 @@ const KidsMainCategories = () => {
       {/* Banner */}
       <div className="electronic-banner">
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1686396982/shokhbari_apparel/01_Mens-Clothings_ox7ynd.webp"
+          src="https://res.cloudinary.com/shokhbari/image/upload/v1714471715/Kids_Segment2_ebk1sa.png"
           alt=""
         />
       </div>
@@ -25,7 +25,7 @@ const KidsMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Baby Clothing</span>
+                <span className="categoryHeadline">Kids Clothing</span>
               </button>
             </Link>
           </div>
@@ -38,7 +38,7 @@ const KidsMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Baby Footwaer</span>
+                <span className="categoryHeadline">Kids Footwaer</span>
               </button>
             </Link>
           </div>
@@ -51,7 +51,7 @@ const KidsMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Baby Care</span>
+                <span className="categoryHeadline">Kids Care</span>
               </button>
             </Link>
           </div>
@@ -67,7 +67,7 @@ const KidsMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Baby Accessories</span>
+                <span className="categoryHeadline">Kids Accessories</span>
               </button>
             </Link>
           </div>
@@ -83,7 +83,7 @@ const KidsMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Baby Feeding Nursery</span>
+                <span className="categoryHeadline">Kids Feeding</span>
               </button>
             </Link>
           </div>
@@ -99,7 +99,7 @@ const KidsMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Baby Sports Outdoor</span>
+                <span className="categoryHeadline">Kids Sports Outdoor</span>
               </button>
             </Link>
           </div>
@@ -112,7 +112,7 @@ const KidsMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Baby Toys Games</span>
+                <span className="categoryHeadline">Kids Toys Games</span>
               </button>
             </Link>
           </div>
@@ -125,7 +125,7 @@ const KidsMainCategories = () => {
                   alt="Logo"
                   className="logo-category"
                 />
-                <span className="categoryHeadline">Baby Education</span>
+                <span className="categoryHeadline">Kids Education</span>
               </button>
             </Link>
           </div>

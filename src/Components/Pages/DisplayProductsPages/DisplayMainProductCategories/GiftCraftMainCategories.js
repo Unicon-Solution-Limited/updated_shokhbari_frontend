@@ -8,7 +8,7 @@ const GiftCraftMainCategories = () => {
       {/* Banner */}
       <div className="electronic-banner">
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1686396982/shokhbari_apparel/01_Mens-Clothings_ox7ynd.webp"
+          src="https://res.cloudinary.com/shokhbari/image/upload/v1714476742/Gift_And_Craft1_zfz0w6.jpg"
           alt=""
         />
       </div>

@@ -18,7 +18,7 @@ const KidsSegmentDisplay = () => {
           {itemName === "Baby_Clothing" && (
             <div id="BabyClothing">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714471866/kids_Clothing2_gwexuq.png"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -76,7 +76,7 @@ const KidsSegmentDisplay = () => {
           {itemName === "Baby_Footwaer" && (
             <div id="BabyFootwaer">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714471916/kids_footwear1_c5xgrz.png"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -134,7 +134,7 @@ const KidsSegmentDisplay = () => {
           {itemName === "Baby_Care" && (
             <div id="BabyCare">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714471968/kids_Care1_imnmvx.png"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -151,7 +151,7 @@ const KidsSegmentDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Baby Body Care
+                    Kids Body Care
                   </figcaption>
                 </Link>
 
@@ -166,7 +166,7 @@ const KidsSegmentDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Baby Personal Care
+                    Kids Personal Care
                   </figcaption>
                 </Link>
               </section>
@@ -177,7 +177,7 @@ const KidsSegmentDisplay = () => {
           {itemName === "Baby_Accessories" && (
             <div id="BabyAccessories">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714472018/kids_Accessories1_nw7edr.png"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -235,7 +235,7 @@ const KidsSegmentDisplay = () => {
           {itemName === "Baby_Feeding_Nursery" && (
             <div id="BabyFeedingNursery">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714472191/kids_Feeding1_x05v8c.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -252,7 +252,7 @@ const KidsSegmentDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Baby Feeding Nursery
+                    Kids Feeding
                   </figcaption>
                 </Link>
               </section>
@@ -263,7 +263,7 @@ const KidsSegmentDisplay = () => {
           {itemName === "Baby_Sports_Outdoor" && (
             <div id="BabySportsOutdoor">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714472229/kids_Sports_Outdoor2_j8m5rw.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -280,7 +280,7 @@ const KidsSegmentDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Baby Sports Outdoor
+                    Kids Sports Outdoor
                   </figcaption>
                 </Link>
               </section>
@@ -291,7 +291,7 @@ const KidsSegmentDisplay = () => {
           {itemName === "Baby_Toys_Games" && (
             <div id="BabyToysGames">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714472267/kids_Toys_Games1_qldsne.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -308,7 +308,7 @@ const KidsSegmentDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Baby Toys Games
+                    Kids Toys Games
                   </figcaption>
                 </Link>
               </section>
@@ -320,7 +320,7 @@ const KidsSegmentDisplay = () => {
           {itemName === "Baby_Education" && (
             <div id="BabyEducation">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714472316/kids_Education1_ipsvcg.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -337,7 +337,7 @@ const KidsSegmentDisplay = () => {
                     placeholderSrc={loader}
                   />
                   <figcaption className="categoryImageCaption">
-                    Baby Education
+                    Kids Education
                   </figcaption>
                 </Link>
               </section>

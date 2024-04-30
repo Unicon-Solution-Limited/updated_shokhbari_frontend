@@ -19,7 +19,7 @@ const BeautyAndPersonalCareDisplay = () => {
           {itemName === "Personal_Care_Safety" && (
             <div id="Personal_Care">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/01_Bath_Body_kkuokk.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714469659/Personal_Care_Safety1_ljs22w.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -47,7 +47,7 @@ const BeautyAndPersonalCareDisplay = () => {
           {itemName === "Medical_Supplies" && (
             <div id="Medical_Supplies">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230012/02_Beauty_Tools_pfoksa.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714469707/Medical_Supplies1_cutxdn.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -75,7 +75,7 @@ const BeautyAndPersonalCareDisplay = () => {
           {itemName === "Food_Supplement's" && (
             <div id="Food_Supplement">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/03_Fragraneces_Men_Women_rg9nv8.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714469751/Food_Supplement_s1_xuzbbb.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -100,11 +100,10 @@ const BeautyAndPersonalCareDisplay = () => {
           )}
 
           {/* Sexual Wellness */}
-
           {itemName === "Sexual_Wellness" && (
             <div id="Sexual_Wellness">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705230011/04_Hair_Care_cgm6d3.jpg"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714472874/Sexual_Wellness2_t1dala.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"

@@ -8,7 +8,7 @@ const FashionAccessoriesMainCategory = () => {
       {/* Banner */}
       <div className="electronic-banner">
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1686396982/shokhbari_apparel/01_Mens-Clothings_ox7ynd.webp"
+          src="https://res.cloudinary.com/shokhbari/image/upload/v1714476653/Fashion_Accessories_uzxakm.jpg"
           alt=""
         />
       </div>

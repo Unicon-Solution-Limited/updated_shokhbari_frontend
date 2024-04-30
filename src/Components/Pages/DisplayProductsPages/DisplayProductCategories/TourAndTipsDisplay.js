@@ -18,7 +18,7 @@ const TourAndTipsDisplay = () => {
           {itemName === "Travel" && (
             <div id="Travel">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714473258/Travel5_gfedd7.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -121,7 +121,7 @@ const TourAndTipsDisplay = () => {
           {itemName === "Stay" && (
             <div id="Stay">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714473293/tourStay1_f6jz9l.jpg"
                 alt="https://res.cloudinary.com/shokhbari/image/upload/v1711013795/Stay-2_xskuyv.jpg"
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -147,7 +147,7 @@ const TourAndTipsDisplay = () => {
           {itemName === "Tour_Guide" && (
             <div id="Tour_Guide">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714473413/Tour_Guide1_fjp73o.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
@@ -176,7 +176,7 @@ const TourAndTipsDisplay = () => {
           {itemName === "Package_Tour" && (
             <div id="Package_Tour">
               <LazyLoadImage
-                src="https://res.cloudinary.com/shokhbari/image/upload/v1705565985/01-Novelty-Gifts_hnrm3w.png"
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1714473480/Package_Tour1_kftz5x.jpg"
                 alt=""
                 className="img-fluid subCateBanner mb-5"
                 effect="blur"
