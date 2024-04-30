@@ -1,10 +1,13 @@
 import React from "react";
 import "./DisplayMainProduct.css";
 import { Link } from "react-router-dom";
+import AllHeader from "../../../Shared/Header/AllHeader";
+import AllFooter from "../../../Shared/Footer/AllFooter";
 
 const MatrimonialMainCategories = () => {
   return (
-    <div>
+    <>
+      <AllHeader />
       {/* Banner */}
       <div className="electronic-banner">
         <img
@@ -198,7 +201,8 @@ const MatrimonialMainCategories = () => {
           </div>
         </div>
       </div>
-    </div>
+      <AllFooter />
+    </>
   );
 };
 
