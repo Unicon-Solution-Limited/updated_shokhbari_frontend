@@ -181,8 +181,13 @@ const ManageProduct = () => {
             <th>Product Name</th>
             <th>Current Price</th>
             <th>Old Price</th>
-            <th>extraDeliveryCost</th>
+            <th>
+              extra Delivery <br />
+              Cost
+            </th>
             <th>campain</th>
+            <th>Popular</th>
+            <th>Flash</th>
             <th>Action</th>
           </tr>
         </thead>
@@ -205,6 +210,8 @@ const ManageProduct = () => {
               <td>{data?.oldPrice}</td>
               <td>{data?.extraDeliveryCost}</td>
               <td>{data?.campain}</td>
+              <td>{data?.popularItems}</td>
+              <td>{data?.flashSale}</td>
               <td className="productAction">
                 <span>
                   <i

@@ -8,7 +8,7 @@ const CarouselForHomeBanner = [
   {
     id: 2,
     bannerImg:
-      "https://res.cloudinary.com/shokhbari/image/upload/v1688978488/02-Apperal_t0ghn4.webp",
+      "https://res.cloudinary.com/shokhbari/image/upload/v1714904469/main_aperel_ehwh8c.jpg",
   },
   {
     id: 3,
@@ -68,7 +68,7 @@ const CarouselForHomeBanner = [
   {
     id: 14,
     bannerImg:
-      "https://res.cloudinary.com/shokhbari/image/upload/v1687426260/14-Kids-Segment_gtrchi.webp",
+      "https://res.cloudinary.com/shokhbari/image/upload/v1714904468/main_kids_zdft9o.jpg",
   },
   {
     id: 15,
@@ -181,7 +181,7 @@ const DataCategories = [
     pageLink: "/category/trip-and-tours",
     cateImg:
       "https://res.cloudinary.com/shokhbari/image/upload/v1687429087/shokhbari_home_imgae/Tour_Trips_sdcveb.webp",
-    cateName: "Tour and Tips",
+    cateName: "Tour and Trips",
   },
 ];
 

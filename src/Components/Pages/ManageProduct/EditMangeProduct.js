@@ -4,7 +4,16 @@ import { useAuth } from "../../Authentication/AuthContext/AuthContext";
 
 const EditMangeProduct = ({ signleProduct }) => {
   const { currentUser } = useAuth();
-  const { _id } = signleProduct;
+  const {
+    _id,
+    popularItems,
+    flashSale,
+    currentPrice,
+    oldPrice,
+    stock,
+    campain,
+    extraDeliveryCost,
+  } = signleProduct;
   const [message, setMessage] = useState("");
   const flashRef = useRef();
   const popularItemsRef = useRef();
@@ -107,7 +116,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                 {/* flashSale */}
                 <div>
                   <label htmlFor="flashSale" className="form-label">
-                    Flash Sale
+                    Flash Sale ({flashSale})
                   </label>
                 </div>
                 <select
@@ -124,7 +133,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                 {/* popular item */}
                 <div>
                   <label htmlFor="PopularItems" className="form-label mt-2">
-                    Popular Items
+                    Popular Items ({popularItems})
                   </label>
                 </div>
                 <div>
@@ -151,7 +160,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                     ref={oldPriceRef}
                     type="number"
                     name="oldPrice"
-                    placeholder="Product Previous Price"
+                    placeholder={oldPrice}
                     className="input-group form-control"
                   />
                 </div>
@@ -167,7 +176,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                     ref={currentPriceRef}
                     type="number"
                     name="currentPrice"
-                    placeholder="Product discount Price"
+                    placeholder={currentPrice}
                     className="input-group form-control"
                     required
                   />
@@ -176,7 +185,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                 {/* product stock */}
                 <div>
                   <label htmlFor="stock" className="form-label mt-2 mb-2">
-                    Stock
+                    Stock ({stock})
                   </label>
                 </div>
                 <div>
@@ -195,7 +204,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                 {/* campain */}
                 <div>
                   <label htmlFor="stock" className="form-label mt-2 mb-2">
-                    Change Campaign status
+                    Change Campaign status ({campain})
                   </label>
                 </div>
                 <div>
@@ -238,6 +247,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                   name="deleveryCharge"
                   ref={extraDeliveryRef}
                   className="input-group form-control"
+                  placeholder={extraDeliveryCost}
                   required
                 />
                 <button type="submit" className="popup-edit-save-btn mt-2">
