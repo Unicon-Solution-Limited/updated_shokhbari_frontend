@@ -68,7 +68,7 @@ const CarouselForHomeBanner = [
   {
     id: 14,
     bannerImg:
-      "https://res.cloudinary.com/shokhbari/image/upload/v1714904468/main_kids_zdft9o.jpg",
+      "https://res.cloudinary.com/shokhbari/image/upload/v1687426260/14-Kids-Segment_gtrchi.webp",
   },
   {
     id: 15,
