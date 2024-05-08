@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 const GiftCrafts_M = () => {
   return (
     <>
-      <li className="nav-item">
-        <Link className="nav-link offcanvasLink" to="/">
+      <li className="nav-item" data-bs-dismiss="offcanvas">
+        <Link className="nav-link offcanvasLink" to="/category/gift-craft">
           Gift And Craft
         </Link>
         <ul className="submenu dropdown-menu mega_menu" id="GiftCraft_mega">

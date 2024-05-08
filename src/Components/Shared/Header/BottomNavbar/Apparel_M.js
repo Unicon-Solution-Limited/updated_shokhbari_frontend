@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Apparel_M = () => {
   return (
     <>
-      <li className="nav-item">
+      <li className="nav-item" data-bs-dismiss="offcanvas">
         <Link className="nav-link offcanvasLink" to="/category/apparel">
           <span data-bs-dismiss="offcanvas">Apparel</span>
         </Link>

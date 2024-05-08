@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const TripTours_M = () => {
   return (
     <>
-      <li className="nav-item">
+      <li className="nav-item" data-bs-dismiss="offcanvas">
         <Link className="nav-link offcanvasLink" to="/category/trip-and-tours">
           <span data-bs-dismiss="offcanvas">Tour & Trips</span>
         </Link>
