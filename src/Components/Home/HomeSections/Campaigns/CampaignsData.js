@@ -102,7 +102,7 @@ const CampaignsData = () => {
                       }
                     >
                       <LazyLoadImage
-                        src={campainPd?.img1}
+                        src={campainPd?.variantItems?.[0]?.variants?.[0]?.image}
                         className="card-img-top img-fluid productPageImg"
                         alt="ProductImage"
                         placeholderSrc={loader}
