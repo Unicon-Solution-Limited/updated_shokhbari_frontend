@@ -73,6 +73,58 @@ const BottomNavbar = () => {
         </div>
       </div>
 
+      {/* //mobile tab */}
+      {/* <nav className="navbar navbar-expand-lg mobile_sub_menu">
+        <div className="container-fluid d-flex ">
+          <ul className="navbar-nav bottomNavMenus">
+            <li>
+              <Link to="#offcanvas" data-bs-toggle="offcanvas" role="button">
+                <img src={category} alt="Categories" className="catLogo" />
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/flash-sale" className="bottomNavMenuLink">
+                Flash Sale
+              </Link>
+            </li>
+            <li>
+              <Link to="/popular" className="bottomNavMenuLink">
+                Popular Items
+              </Link>
+            </li>
+            <li>
+              <Link to="/campaigns" className="bottomNavMenuLink">
+                Campaigns
+              </Link>
+            </li>
+            <li>
+              <Link to="/merchant" className="bottomNavMenuLink">
+                Merchant Zone
+              </Link>
+            </li>
+          </ul>
+        </div>
+      </nav> */}
+
+      <section className="mobile_menu_main_section">
+        <Link to="/flash-sale" className="mobile_menu_item">
+          Flash Sale
+        </Link>
+
+        <Link to="/popular" className="mobile_menu_item">
+          Popular Item
+        </Link>
+
+        <Link to="/campaigns" className="mobile_menu_item">
+          Campaigns
+        </Link>
+
+        <Link to="/merchant" className="mobile_menu_item">
+          Merchant
+        </Link>
+      </section>
+
       {/* offcanvas */}
       <div className="offcanvas offcanvas-start" id="offcanvas">
         <div className="offcanvasHeader pb-2">

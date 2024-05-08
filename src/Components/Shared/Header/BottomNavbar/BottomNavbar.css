@@ -32,6 +32,36 @@
   }
 }
 
+.mobile_menu_main_section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.mobile_menu_item {
+  margin: 0.5rem;
+  /* border: 1px solid black;
+  padding: 2px;
+  border-radius: 10px; */
+  text-decoration: none;
+  color: inherit;
+}
+
+.mobile_menu_item:hover {
+  color: black;
+}
+
+.mobile_menu_main_section {
+  background-color: var(--yellow);
+  display: none;
+}
+@media only screen and (max-width: 900px) {
+  .mobile_menu_main_section {
+    display: block;
+    text-align: center;
+  }
+}
+
 /* ================Start Category Side Offcanvas Menus=================== */
 
 #offcanvas {
