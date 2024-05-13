@@ -38,7 +38,7 @@ const MobileFooter = () => {
               data-bs-target="#offcanvasBottom"
               to="/"
             >
-              <i className="bi bi-list"></i>
+              <i className="bi bi-list list_icon"></i>
             </Link>
           </div>
           <div>

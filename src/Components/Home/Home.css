@@ -148,11 +148,11 @@ This Page Contain All The design Of home page
     font-size: 2.5vw;
   }
 
-  .bannerImg {
+  /* .bannerImg {
     width: 100%;
     height: 40vh;
     object-fit: fill;
-  }
+  } */
 }
 /* =End Mid Menus= */
 /* Carousel section end ======================= */

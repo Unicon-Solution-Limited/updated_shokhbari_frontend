@@ -60,7 +60,7 @@ export default function Carousel() {
         <div className="carousel-inner">
           {banner.map((caroselBanner) => (
             <div
-              className={`carousel-item ${caroselBanner?.class}`}
+              className={`carousel-item  ${caroselBanner?.class}`}
               key={caroselBanner.id}
               data-bs-interval="3000"
             >

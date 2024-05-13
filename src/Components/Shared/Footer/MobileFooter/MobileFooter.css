@@ -29,6 +29,12 @@
   font-size: 25px;
   color: var(--white);
 }
+.list_icon {
+  background-color: var(--yellow);
+  padding: 5px;
+  border-radius: 10%;
+  border: 2px solid white;
+}
 .MobileFooter .MFMain div a.hamB i {
   font-size: 35px;
   margin-bottom: -20px;
