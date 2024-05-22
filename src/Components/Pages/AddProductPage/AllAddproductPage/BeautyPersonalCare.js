@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 const BeautyPersonalCare = () => {
   const { currentUser } = useAuth();
   const [message, setMessage] = useState("");
+  const [addInputProduct, setAddInputProduct] = useState(false);
 
   //Conditionally set category in select options
   const [selectOption, setSelectOption] = useState("");
@@ -200,6 +201,7 @@ const BeautyPersonalCare = () => {
     setNewProduct({
       variants: [],
     });
+    setAddInputProduct(true);
   };
 
   // Handle Image Upload (image upload by API to Cloudinary)
@@ -435,162 +437,164 @@ const BeautyPersonalCare = () => {
         ))}
         {/* varient end */}
 
-        <div className="row my-4">
-          <div className="col-md-8">
-            {/* product name */}
-            <div>
-              <label htmlFor="fname" className="form-label">
-                Product Name
-              </label>
-            </div>
-            <div>
-              <input
-                ref={nameRef}
-                type="text"
-                id="fname"
-                name="productName"
-                placeholder="Your product name.."
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="lname" className="form-label">
-                Product code
-              </label>
-            </div>
-            <div>
-              <input
-                ref={productCodeRef}
-                type="text"
-                id="lname"
-                name="productCode"
-                placeholder="your productCode.."
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* product Short description */}
-        <div className="row my-4">
+        {addInputProduct && (
           <div>
-            <label htmlFor="shortDescription" className="form-label">
-              Short Description
-            </label>
-          </div>
-          <div>
-            <textarea
-              ref={shortDescriptionRef}
-              id="shortDescription"
-              name="shortDescription"
-              placeholder="Write Short Description among 150 characters"
-              className="form-control"
-              required
-            ></textarea>
-          </div>
-        </div>
+            <div className="row my-4">
+              <div className="col-md-8">
+                {/* product name */}
+                <div>
+                  <label htmlFor="fname" className="form-label">
+                    Product Name
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={nameRef}
+                    type="text"
+                    id="fname"
+                    name="productName"
+                    placeholder="Your product name.."
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="lname" className="form-label">
+                    Product code
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={productCodeRef}
+                    type="text"
+                    id="lname"
+                    name="productCode"
+                    placeholder="your productCode.."
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
 
-        {/* product Full description */}
-        <div>
-          <label htmlFor="description" className="form-label">
-            Full Description
-          </label>
-        </div>
-        <ReactQuill
-          className="fullDescription"
-          theme="snow"
-          value={showDescription}
-          modules={{
-            toolbar: [
-              [{ header: "1" }, { header: "2" }, { font: [] }],
-              [{ size: [] }],
-              ["bold", "italic", "underline", "strike", "blockquote"],
-              [{ align: [] }],
-              [{ color: [] }, { background: [] }],
-              [
-                { list: "ordered" },
-                { list: "bullet" },
-                { indent: "-1" },
-                { indent: "+1" },
-              ],
-              ["code-block"],
-              ["clean"],
-            ],
-          }}
-          formats={[
-            "header",
-            "font",
-            "size",
-            "bold",
-            "italic",
-            "underline",
-            "strike",
-            "blockquote",
-            "color",
-            "background",
-            "list",
-            "bullet",
-            "indent",
-            "code-block",
-            "align",
-          ]}
-          onChange={(val) => {
-            setShowDescription(val);
-          }}
-        />
+            {/* product Short description */}
+            <div className="row my-4">
+              <div>
+                <label htmlFor="shortDescription" className="form-label">
+                  Short Description
+                </label>
+              </div>
+              <div>
+                <textarea
+                  ref={shortDescriptionRef}
+                  id="shortDescription"
+                  name="shortDescription"
+                  placeholder="Write Short Description among 150 characters"
+                  className="form-control"
+                  required
+                ></textarea>
+              </div>
+            </div>
 
-        {/* product main color */}
-        <div className="row my-4">
-          {/* product Flash Sale */}
-          <div className="col-md-4">
+            {/* product Full description */}
             <div>
-              <label htmlFor="flashSale" className="form-label">
-                Flash Sale
+              <label htmlFor="description" className="form-label">
+                Full Description
               </label>
             </div>
-            <div>
-              <select
-                id="flashSale"
-                name="flashSale"
-                className="input-group form-select"
-                ref={flashRef}
-                required
-              >
-                <option value="">Choose</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-          </div>
+            <ReactQuill
+              className="fullDescription"
+              theme="snow"
+              value={showDescription}
+              modules={{
+                toolbar: [
+                  [{ header: "1" }, { header: "2" }, { font: [] }],
+                  [{ size: [] }],
+                  ["bold", "italic", "underline", "strike", "blockquote"],
+                  [{ align: [] }],
+                  [{ color: [] }, { background: [] }],
+                  [
+                    { list: "ordered" },
+                    { list: "bullet" },
+                    { indent: "-1" },
+                    { indent: "+1" },
+                  ],
+                  ["code-block"],
+                  ["clean"],
+                ],
+              }}
+              formats={[
+                "header",
+                "font",
+                "size",
+                "bold",
+                "italic",
+                "underline",
+                "strike",
+                "blockquote",
+                "color",
+                "background",
+                "list",
+                "bullet",
+                "indent",
+                "code-block",
+                "align",
+              ]}
+              onChange={(val) => {
+                setShowDescription(val);
+              }}
+            />
 
-          {/* Popular Items */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="PopularItems" className="form-label">
-                Popular Items
-              </label>
-            </div>
-            <div>
-              <select
-                id="PopularItems"
-                name="PopularItems"
-                className="input-group form-select"
-                ref={PopularItemsRef}
-                required
-              >
-                <option value="">Choose</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-          </div>
+            {/* product main color */}
+            <div className="row my-4">
+              {/* product Flash Sale */}
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="flashSale" className="form-label">
+                    Flash Sale
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="flashSale"
+                    name="flashSale"
+                    className="input-group form-select"
+                    ref={flashRef}
+                    required
+                  >
+                    <option value="">Choose</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
 
-          {/* Campain */}
-          {/* <div className="col-md-4">
+              {/* Popular Items */}
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="PopularItems" className="form-label">
+                    Popular Items
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="PopularItems"
+                    name="PopularItems"
+                    className="input-group form-select"
+                    ref={PopularItemsRef}
+                    required
+                  >
+                    <option value="">Choose</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Campain */}
+              {/* <div className="col-md-4">
             <div>
               <label htmlFor="campain" className="form-label">
                 Campain
@@ -610,373 +614,397 @@ const BeautyPersonalCare = () => {
             </div>
           </div> */}
 
-          {/* Marchant  */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="marchent" className="form-label">
-                Merchant
-              </label>
+              {/* Marchant  */}
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="marchent" className="form-label">
+                    Merchant
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={marchentRef}
+                    type="text"
+                    id="marchent"
+                    name="marchent"
+                    placeholder="Your company"
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
             </div>
-            <div>
-              <input
-                ref={marchentRef}
-                type="text"
-                id="marchent"
-                name="marchent"
-                placeholder="Your company"
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-        </div>
 
-        <div className="row my-4">
-          {/* product categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="categories" className="form-label">
-                Categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="categories"
-                name="categories"
-                className="input-group form-select"
-                ref={categoriesRef}
-                required
-              >
-                <option value="Beauty and personal care">
-                  Beauty & personal care
-                </option>
-              </select>
-            </div>
-          </div>
-          {/* product sub categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="sub-categories" className="form-label">
-                Sub-Categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="sub-categories"
-                name="sub-categories"
-                className="input-group form-select"
-                ref={subCategoriesRef}
-                onClick={handleSelectOption}
-                required
-              >
-                <option value="">Choose a category</option>
-                <option value="Bath and Body">Bath & Body</option>
-                <option value="Beauty Tools">Beauty Tools</option>
-                <option value="Fragrances">Fragrances</option>
-                <option value="Hair Care">Hair Care</option>
-                <option value="Skin Care">Skin Care</option>
-                <option value="Make up">Make up</option>
-                <option value="Oral Care">Oral Care</option>
-                <option value="Feminine Care">Feminine Care</option>
-              </select>
-            </div>
-          </div>
-          {/* child categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="child-categories" className="form-label">
-                Child-Categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="child-categories"
-                name="child-categories"
-                className="input-group form-select"
-                ref={childCategoriesRef}
-                onClick={handleChildSelectOption}
-                required
-              >
-                {/* Bath and Body */}
-                {selectOption === "Bath and Body" && (
-                  <>
-                    <option value="Body Oils">Body Oils</option>
-                    <option value="Body Moisturizers">Body Moisturizers</option>
-                    <option value="Body Soaps and Shower Gels">
-                      Body Soaps & Shower Gels
+            <div className="row my-4">
+              {/* product categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="categories" className="form-label">
+                    Categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="categories"
+                    name="categories"
+                    className="input-group form-select"
+                    ref={categoriesRef}
+                    required
+                  >
+                    <option value="Beauty and personal care">
+                      Beauty & personal care
                     </option>
-                    <option value="Body Sun Care">Body Sun Care</option>
-                    <option value="Hand Care">Hand Care</option>
-                    <option value="Foot Care">Foot Care</option>
-                    <option value="Hair Removal">Hair Removal</option>
-                    <option value="Bath and Body Accessories">
-                      Bath & Body Accessories
-                    </option>
-                  </>
-                )}
-
-                {/* Beauty Tools */}
-                {selectOption === "Beauty Tools" && (
-                  <>
-                    <option value="Hair Irons and Styles">
-                      Hair Irons and Styles
-                    </option>
-                    <option value="Hair Dryers">Hair Dryers</option>
-                    <option value="Skins Care tools">Skins Care tools</option>
-                    <option value="Foot Relief Tools">Foot Relief Tools</option>
-                    <option value="Hair Removal Accessories">
-                      Hair Removal Accessories
-                    </option>
-                  </>
-                )}
-
-                {/* Hair Care */}
-                {selectOption === "Hair Care" && (
-                  <>
-                    <option value="Shampoo">Shampoo</option>
-                    <option value="Hair Conditioner">Hair Conditioner</option>
-                    <option value="HairTeatmentMaskSpa">
-                      Hair Treatment, mask & spa
-                    </option>
-                    <option value="Hair oil and Toner">Hair oil & Toner</option>
-                    <option value="Hair Color">Hair Color</option>
-                    <option value="Hair Gel and Styles">
-                      Hair Gel & Styles
-                    </option>
-                    <option value="Hair Brushes and Combs">
-                      Hair Brushes & Combs
-                    </option>
-                    <option value="Wigs-Hair Extension and Pads">
-                      Wigs, Hair Extension & Pads
-                    </option>
-                    <option value="Hair Care Accessories">
-                      Hair Care Accessories
-                    </option>
-                  </>
-                )}
-
-                {/* Skin Care */}
-                {selectOption === "Skin Care" && (
-                  <>
-                    <option value="Cream and Moisture">Cream & Moisture</option>
-                    <option value="Serum and Essence">Serum & Essence</option>
-                    <option value="Mask and Packs">Mask & Packs</option>
-                    <option value="Scrubs and Exfoliator">
-                      Scrubs & Exfoliator
-                    </option>
-                    <option value="Facial Clearance">Facial Clearance</option>
-                    <option value="Toner and Mists">Toner & Mists</option>
-                    <option value="Eye care Product">Eye care Product</option>
-                    <option value="Shaving and Grooming">
-                      Shaving & Grooming
-                    </option>
-                    <option value="Leap Balm and Treatments">
-                      Leap Balm and Treatments
-                    </option>
-                  </>
-                )}
-
-                {/* Make up */}
-                {selectOption === "Make up" && (
-                  <>
-                    <option value="Face">Face</option>
-                    <option value="Lips">Lips</option>
-                    <option value="Eyes">Eyes</option>
-                    <option value="Nails">Nails</option>
-                    <option value="Palettes and Sets">Palettes & Sets</option>
-                    <option value="Brushes and Sets">Brushes & Sets</option>
-                    <option value="Makeup Accessories">
-                      Makeup Accessories
-                    </option>
-                    <option value="Makeup Removers">Makeup Removers</option>
-                  </>
-                )}
-
-                {/* Oral Care */}
-                {selectOption === "Oral Care" && (
-                  <>
-                    <option value="Tooth paste">Tooth paste</option>
-                    <option value="Tooth Brush">Tooth Brush</option>
-                    <option value="Mouth Fresheners">Mouth Fresheners</option>
-                    <option value="Oral Care Accessories">
-                      Oral Care Accessories
-                    </option>
-                  </>
-                )}
-                {/* Fragrances */}
-                {selectOption === "Fragrances" && (
-                  <>
-                    <option value="Fragrances for Man">
-                      Fragrances for Man
-                    </option>
-                    <option value="Fragrances for Woman">
-                      Fragrances for Woman
-                    </option>
-                    <option value="Fragrances for Unisex">
-                      Fragrances for Unisex
-                    </option>
-                  </>
-                )}
-
-                {/* Feminine Care */}
-                {selectOption === "Feminine Care" && (
-                  <>
+                  </select>
+                </div>
+              </div>
+              {/* product sub categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="sub-categories" className="form-label">
+                    Sub-Categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="sub-categories"
+                    name="sub-categories"
+                    className="input-group form-select"
+                    ref={subCategoriesRef}
+                    onClick={handleSelectOption}
+                    required
+                  >
+                    <option value="">Choose a category</option>
+                    <option value="Bath and Body">Bath & Body</option>
+                    <option value="Beauty Tools">Beauty Tools</option>
+                    <option value="Fragrances">Fragrances</option>
+                    <option value="Hair Care">Hair Care</option>
+                    <option value="Skin Care">Skin Care</option>
+                    <option value="Make up">Make up</option>
+                    <option value="Oral Care">Oral Care</option>
                     <option value="Feminine Care">Feminine Care</option>
-                  </>
-                )}
-              </select>
-            </div>
-          </div>
-          {/* product sub child categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="sub-child-categories" className="form-label">
-                Sub-Child-Categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="sub-child-categories"
-                name="sub-child-categories"
-                className="input-group form-select"
-                ref={subChildCategoriesRef}
-              >
-                {selectChildCategory === "Fragrances for Man" && (
-                  <>
-                    <option value="M-Perfume">Men Perfume</option>
-                    <option value="M-Body Spray">Men Body Spray</option>
-                    <option value="M-Body Mist">Men Body Mist</option>
-                    <option value="M-Deodorant">Men Deodorant</option>
-                  </>
-                )}
+                  </select>
+                </div>
+              </div>
+              {/* child categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="child-categories" className="form-label">
+                    Child-Categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="child-categories"
+                    name="child-categories"
+                    className="input-group form-select"
+                    ref={childCategoriesRef}
+                    onClick={handleChildSelectOption}
+                    required
+                  >
+                    {/* Bath and Body */}
+                    {selectOption === "Bath and Body" && (
+                      <>
+                        <option value="Body Oils">Body Oils</option>
+                        <option value="Body Moisturizers">
+                          Body Moisturizers
+                        </option>
+                        <option value="Body Soaps and Shower Gels">
+                          Body Soaps & Shower Gels
+                        </option>
+                        <option value="Body Sun Care">Body Sun Care</option>
+                        <option value="Hand Care">Hand Care</option>
+                        <option value="Foot Care">Foot Care</option>
+                        <option value="Hair Removal">Hair Removal</option>
+                        <option value="Bath and Body Accessories">
+                          Bath & Body Accessories
+                        </option>
+                      </>
+                    )}
 
-                {selectChildCategory === "Fragrances for Woman" && (
-                  <>
-                    <option value="W-Perfume">Women Perfume</option>
-                    <option value="W-Body Spray">Women Body Spray</option>
-                    <option value="W-Body Mist">Women Body Mist</option>
-                    <option value="W-Deodorant">Women Deodorant</option>
-                  </>
-                )}
+                    {/* Beauty Tools */}
+                    {selectOption === "Beauty Tools" && (
+                      <>
+                        <option value="Hair Irons and Styles">
+                          Hair Irons and Styles
+                        </option>
+                        <option value="Hair Dryers">Hair Dryers</option>
+                        <option value="Skins Care tools">
+                          Skins Care tools
+                        </option>
+                        <option value="Foot Relief Tools">
+                          Foot Relief Tools
+                        </option>
+                        <option value="Hair Removal Accessories">
+                          Hair Removal Accessories
+                        </option>
+                      </>
+                    )}
 
-                {selectChildCategory === "Fragrances for Unisex" && (
-                  <>
-                    <option value="U-Perfume">Unisex Perfume</option>
-                    <option value="U-Body Spray">Unisex Body Spray</option>
-                    <option value="U-Body Mist">Unisex Body Mist</option>
-                    <option value="U-Deodorant">Unisex Deodorant</option>
-                  </>
-                )}
-              </select>
-            </div>
-          </div>
-        </div>
+                    {/* Hair Care */}
+                    {selectOption === "Hair Care" && (
+                      <>
+                        <option value="Shampoo">Shampoo</option>
+                        <option value="Hair Conditioner">
+                          Hair Conditioner
+                        </option>
+                        <option value="HairTeatmentMaskSpa">
+                          Hair Treatment, mask & spa
+                        </option>
+                        <option value="Hair oil and Toner">
+                          Hair oil & Toner
+                        </option>
+                        <option value="Hair Color">Hair Color</option>
+                        <option value="Hair Gel and Styles">
+                          Hair Gel & Styles
+                        </option>
+                        <option value="Hair Brushes and Combs">
+                          Hair Brushes & Combs
+                        </option>
+                        <option value="Wigs-Hair Extension and Pads">
+                          Wigs, Hair Extension & Pads
+                        </option>
+                        <option value="Hair Care Accessories">
+                          Hair Care Accessories
+                        </option>
+                      </>
+                    )}
 
-        <div className="row my-4">
-          {/* product stock */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="stock" className="form-label">
-                Stock
-              </label>
+                    {/* Skin Care */}
+                    {selectOption === "Skin Care" && (
+                      <>
+                        <option value="Cream and Moisture">
+                          Cream & Moisture
+                        </option>
+                        <option value="Serum and Essence">
+                          Serum & Essence
+                        </option>
+                        <option value="Mask and Packs">Mask & Packs</option>
+                        <option value="Scrubs and Exfoliator">
+                          Scrubs & Exfoliator
+                        </option>
+                        <option value="Facial Clearance">
+                          Facial Clearance
+                        </option>
+                        <option value="Toner and Mists">Toner & Mists</option>
+                        <option value="Eye care Product">
+                          Eye care Product
+                        </option>
+                        <option value="Shaving and Grooming">
+                          Shaving & Grooming
+                        </option>
+                        <option value="Leap Balm and Treatments">
+                          Leap Balm and Treatments
+                        </option>
+                      </>
+                    )}
+
+                    {/* Make up */}
+                    {selectOption === "Make up" && (
+                      <>
+                        <option value="Face">Face</option>
+                        <option value="Lips">Lips</option>
+                        <option value="Eyes">Eyes</option>
+                        <option value="Nails">Nails</option>
+                        <option value="Palettes and Sets">
+                          Palettes & Sets
+                        </option>
+                        <option value="Brushes and Sets">Brushes & Sets</option>
+                        <option value="Makeup Accessories">
+                          Makeup Accessories
+                        </option>
+                        <option value="Makeup Removers">Makeup Removers</option>
+                      </>
+                    )}
+
+                    {/* Oral Care */}
+                    {selectOption === "Oral Care" && (
+                      <>
+                        <option value="Tooth paste">Tooth paste</option>
+                        <option value="Tooth Brush">Tooth Brush</option>
+                        <option value="Mouth Fresheners">
+                          Mouth Fresheners
+                        </option>
+                        <option value="Oral Care Accessories">
+                          Oral Care Accessories
+                        </option>
+                      </>
+                    )}
+                    {/* Fragrances */}
+                    {selectOption === "Fragrances" && (
+                      <>
+                        <option value="Fragrances for Man">
+                          Fragrances for Man
+                        </option>
+                        <option value="Fragrances for Woman">
+                          Fragrances for Woman
+                        </option>
+                        <option value="Fragrances for Unisex">
+                          Fragrances for Unisex
+                        </option>
+                      </>
+                    )}
+
+                    {/* Feminine Care */}
+                    {selectOption === "Feminine Care" && (
+                      <>
+                        <option value="Feminine Care">Feminine Care</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+              </div>
+              {/* product sub child categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="sub-child-categories" className="form-label">
+                    Sub-Child-Categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="sub-child-categories"
+                    name="sub-child-categories"
+                    className="input-group form-select"
+                    ref={subChildCategoriesRef}
+                  >
+                    {selectChildCategory === "Fragrances for Man" && (
+                      <>
+                        <option value="M-Perfume">Men Perfume</option>
+                        <option value="M-Body Spray">Men Body Spray</option>
+                        <option value="M-Body Mist">Men Body Mist</option>
+                        <option value="M-Deodorant">Men Deodorant</option>
+                      </>
+                    )}
+
+                    {selectChildCategory === "Fragrances for Woman" && (
+                      <>
+                        <option value="W-Perfume">Women Perfume</option>
+                        <option value="W-Body Spray">Women Body Spray</option>
+                        <option value="W-Body Mist">Women Body Mist</option>
+                        <option value="W-Deodorant">Women Deodorant</option>
+                      </>
+                    )}
+
+                    {selectChildCategory === "Fragrances for Unisex" && (
+                      <>
+                        <option value="U-Perfume">Unisex Perfume</option>
+                        <option value="U-Body Spray">Unisex Body Spray</option>
+                        <option value="U-Body Mist">Unisex Body Mist</option>
+                        <option value="U-Deodorant">Unisex Deodorant</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+              </div>
             </div>
-            <div>
-              <select
-                ref={stockRef}
-                id="stock"
-                name="stock"
-                placeholder="Your product stock.."
-                className="input-group form-select"
+
+            <div className="row my-4">
+              {/* product stock */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="stock" className="form-label">
+                    Stock
+                  </label>
+                </div>
+                <div>
+                  <select
+                    ref={stockRef}
+                    id="stock"
+                    name="stock"
+                    placeholder="Your product stock.."
+                    className="input-group form-select"
+                    required
+                  >
+                    <option value="">Choose an option</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
+                  </select>
+                </div>
+              </div>
+              {/* product Weight */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="weight" className="form-label">
+                    Product Weight(gm)
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={weightRef}
+                    type="number"
+                    id="weight"
+                    name="weight"
+                    placeholder="Product weight"
+                    className="input-group form-control"
+                  />
+                </div>
+              </div>
+              {/* product discount price */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="currentPrice" className="form-label">
+                    Current price
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={currentPriceRef}
+                    type="number"
+                    id="currentPrice"
+                    name="currentPrice"
+                    placeholder="Product discount Price"
+                    className="input-group form-control"
+                    required
+                  />
+                </div>
+              </div>
+              {/* product current price */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="oldPrice" className="form-label">
+                    Old price
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={oldPriceRef}
+                    type="number"
+                    id="oldPrice"
+                    name="oldPrice"
+                    placeholder="Product Previous Price"
+                    className="input-group form-control"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* extra delvery charge */}
+            <div className="col-md-4">
+              <div>
+                <label htmlFor="extraDeliveryCost" className="form-label">
+                  Extra Delivery Cost
+                </label>
+              </div>
+              <input
+                type="number"
+                name="extraDeliveryCost"
+                id="extraDeliveryCost"
+                className="form-control"
+                ref={extraDeliveryCostRef}
+                placeholder="extra Delivery Cost"
                 required
-              >
-                <option value="">Choose an option</option>
-                <option value="In Stock">In Stock</option>
-                <option value="Out of Stock">Out of Stock</option>
-              </select>
-            </div>
-          </div>
-          {/* product Weight */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="weight" className="form-label">
-                Product Weight(gm)
-              </label>
-            </div>
-            <div>
-              <input
-                ref={weightRef}
-                type="number"
-                id="weight"
-                name="weight"
-                placeholder="Product weight"
-                className="input-group form-control"
               />
             </div>
-          </div>
-          {/* product discount price */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="currentPrice" className="form-label">
-                Current price
-              </label>
-            </div>
-            <div>
-              <input
-                ref={currentPriceRef}
-                type="number"
-                id="currentPrice"
-                name="currentPrice"
-                placeholder="Product discount Price"
-                className="input-group form-control"
-                required
-              />
-            </div>
-          </div>
-          {/* product current price */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="oldPrice" className="form-label">
-                Old price
-              </label>
-            </div>
-            <div>
-              <input
-                ref={oldPriceRef}
-                type="number"
-                id="oldPrice"
-                name="oldPrice"
-                placeholder="Product Previous Price"
-                className="input-group form-control"
-              />
-            </div>
-          </div>
-        </div>
 
-        {/* extra delvery charge */}
-        <div className="col-md-4">
-          <div>
-            <label htmlFor="extraDeliveryCost" className="form-label">
-              Extra Delivery Cost
-            </label>
+            <div className="row my-4">
+              <div className="col d-grid gap-2">
+                <button type="submit" value="Submit" className="btn myBtn">
+                  Submit
+                </button>
+              </div>
+            </div>
           </div>
-          <input
-            type="number"
-            name="extraDeliveryCost"
-            id="extraDeliveryCost"
-            className="form-control"
-            ref={extraDeliveryCostRef}
-            placeholder="extra Delivery Cost"
-            required
-          />
-        </div>
-
-        <div className="row my-4">
-          <div className="col d-grid gap-2">
-            <button type="submit" value="Submit" className="btn myBtn">
-              Submit
-            </button>
-          </div>
-        </div>
+        )}
       </form>
     </div>
   );

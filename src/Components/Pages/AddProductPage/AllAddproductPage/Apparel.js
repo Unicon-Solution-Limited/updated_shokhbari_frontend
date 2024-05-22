@@ -9,6 +9,7 @@ import { v4 as uuidv4 } from "uuid";
 const Apparel = () => {
   const { currentUser } = useAuth();
   const [message, setMessage] = useState("");
+  const [addInputProduct, setAddInputProduct] = useState(false);
 
   //Conditionally set category in select options
   const [selectOption, setSelectOption] = useState("");
@@ -200,6 +201,7 @@ const Apparel = () => {
     setNewProduct({
       variants: [],
     });
+    setAddInputProduct(true);
   };
 
   // Handle Image Upload (image upload by API to Cloudinary)
@@ -432,161 +434,163 @@ const Apparel = () => {
         ))}
         {/* varient end */}
 
-        <div className="row my-4">
-          <div className="col-md-8">
-            {/* product name */}
-            <div>
-              <label htmlFor="fname" className="form-label">
-                Product Name
-              </label>
-            </div>
-            <div>
-              <input
-                ref={nameRef}
-                type="text"
-                id="fname"
-                name="productName"
-                placeholder="Your product name.."
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="lname" className="form-label">
-                Product code
-              </label>
-            </div>
-            <div>
-              <input
-                ref={productCodeRef}
-                type="text"
-                id="lname"
-                name="productCode"
-                placeholder="your productCode.."
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* product Short description */}
-        <div className="row my-4">
+        {addInputProduct && (
           <div>
-            <label htmlFor="shortDescription" className="form-label">
-              Short Description
-            </label>
-          </div>
-          <div>
-            <textarea
-              ref={shortDescriptionRef}
-              id="shortDescription"
-              name="shortDescription"
-              placeholder="Write Short Description among 150 characters"
-              className="form-control"
-              required
-            ></textarea>
-          </div>
-        </div>
+            <div className="row my-4">
+              <div className="col-md-8">
+                {/* product name */}
+                <div>
+                  <label htmlFor="fname" className="form-label">
+                    Product Name
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={nameRef}
+                    type="text"
+                    id="fname"
+                    name="productName"
+                    placeholder="Your product name.."
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="lname" className="form-label">
+                    Product code
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={productCodeRef}
+                    type="text"
+                    id="lname"
+                    name="productCode"
+                    placeholder="your productCode.."
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
 
-        {/* product Full description */}
-        <div>
-          <label htmlFor="description" className="form-label">
-            Full Description
-          </label>
-        </div>
-        <ReactQuill
-          className="fullDescription"
-          theme="snow"
-          value={showDescription}
-          modules={{
-            toolbar: [
-              [{ header: "1" }, { header: "2" }, { font: [] }],
-              [{ size: [] }],
-              ["bold", "italic", "underline", "strike", "blockquote"],
-              [{ align: [] }],
-              [{ color: [] }, { background: [] }],
-              [
-                { list: "ordered" },
-                { list: "bullet" },
-                { indent: "-1" },
-                { indent: "+1" },
-              ],
-              ["code-block"],
-              ["clean"],
-            ],
-          }}
-          formats={[
-            "header",
-            "font",
-            "size",
-            "bold",
-            "italic",
-            "underline",
-            "strike",
-            "blockquote",
-            "color",
-            "background",
-            "list",
-            "bullet",
-            "indent",
-            "code-block",
-            "align",
-          ]}
-          onChange={(val) => {
-            setShowDescription(val);
-          }}
-        />
+            {/* product Short description */}
+            <div className="row my-4">
+              <div>
+                <label htmlFor="shortDescription" className="form-label">
+                  Short Description
+                </label>
+              </div>
+              <div>
+                <textarea
+                  ref={shortDescriptionRef}
+                  id="shortDescription"
+                  name="shortDescription"
+                  placeholder="Write Short Description among 150 characters"
+                  className="form-control"
+                  required
+                ></textarea>
+              </div>
+            </div>
 
-        <div className="row my-4">
-          {/* product Flash Sale */}
-          <div className="col-md-4">
+            {/* product Full description */}
             <div>
-              <label htmlFor="flashSale" className="form-label">
-                Flash Sale
+              <label htmlFor="description" className="form-label">
+                Full Description
               </label>
             </div>
-            <div>
-              <select
-                id="flashSale"
-                name="flashSale"
-                className="input-group form-select"
-                ref={flashRef}
-                required
-              >
-                <option value="">Choose</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-          </div>
+            <ReactQuill
+              className="fullDescription"
+              theme="snow"
+              value={showDescription}
+              modules={{
+                toolbar: [
+                  [{ header: "1" }, { header: "2" }, { font: [] }],
+                  [{ size: [] }],
+                  ["bold", "italic", "underline", "strike", "blockquote"],
+                  [{ align: [] }],
+                  [{ color: [] }, { background: [] }],
+                  [
+                    { list: "ordered" },
+                    { list: "bullet" },
+                    { indent: "-1" },
+                    { indent: "+1" },
+                  ],
+                  ["code-block"],
+                  ["clean"],
+                ],
+              }}
+              formats={[
+                "header",
+                "font",
+                "size",
+                "bold",
+                "italic",
+                "underline",
+                "strike",
+                "blockquote",
+                "color",
+                "background",
+                "list",
+                "bullet",
+                "indent",
+                "code-block",
+                "align",
+              ]}
+              onChange={(val) => {
+                setShowDescription(val);
+              }}
+            />
 
-          {/* Popular Items */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="PopularItems" className="form-label">
-                Popular Items
-              </label>
-            </div>
-            <div>
-              <select
-                id="PopularItems"
-                name="PopularItems"
-                className="input-group form-select"
-                ref={PopularItemsRef}
-                required
-              >
-                <option value="">Choose</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-          </div>
+            <div className="row my-4">
+              {/* product Flash Sale */}
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="flashSale" className="form-label">
+                    Flash Sale
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="flashSale"
+                    name="flashSale"
+                    className="input-group form-select"
+                    ref={flashRef}
+                    required
+                  >
+                    <option value="">Choose</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
 
-          {/* Campain */}
-          {/* <div className="col-md-4">
+              {/* Popular Items */}
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="PopularItems" className="form-label">
+                    Popular Items
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="PopularItems"
+                    name="PopularItems"
+                    className="input-group form-select"
+                    ref={PopularItemsRef}
+                    required
+                  >
+                    <option value="">Choose</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Campain */}
+              {/* <div className="col-md-4">
             <div>
               <label htmlFor="campain" className="form-label">
                 Campain
@@ -606,311 +610,319 @@ const Apparel = () => {
             </div>
           </div> */}
 
-          {/* Merchant  */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="marchent" className="form-label">
-                Merchant
-              </label>
+              {/* Merchant  */}
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="marchent" className="form-label">
+                    Merchant
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={marchentRef}
+                    type="text"
+                    id="marchent"
+                    name="marchent"
+                    placeholder="Your company"
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
             </div>
-            <div>
+
+            <div className="row my-4">
+              {/* product categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="categories" className="form-label">
+                    Categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="categories"
+                    name="categories"
+                    className="input-group form-select"
+                    ref={categoriesRef}
+                    required
+                  >
+                    <option value="APPAREL">APPAREL</option>
+                  </select>
+                </div>
+              </div>
+              {/* product sub categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="sub-categories" className="form-label">
+                    Sub-Categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="sub-categories"
+                    name="sub-categories"
+                    className="input-group form-select"
+                    ref={subCategoriesRef}
+                    onClick={handleSelectOption}
+                    required
+                  >
+                    <option value="">Choose a category</option>
+                    <option value="Men's Clothing">Men's Clothing</option>
+                    <option value="Women's Clothing">Women's Clothing</option>
+                    <option value="Fabrics">Fabrics</option>
+                  </select>
+                </div>
+              </div>
+              {/* child categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="child-categories" className="form-label">
+                    Child-Categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="child-categories"
+                    name="child-categories"
+                    className="input-group form-select"
+                    ref={childCategoriesRef}
+                    required
+                    onClick={handleChildSelectOption}
+                  >
+                    {selectOption === "Men's Clothing" && (
+                      <>
+                        {/* mens */}
+                        <option value="">Choose a category</option>
+                        <option value="M-Shirts">Shirts</option>
+                        <option value="M-T-Shirts">T-Shirts</option>
+                        <option value="Polo Shirts">Polo Shirts</option>
+                        <option value="Mcoats-Jackets">
+                          Coats AND Jackets
+                        </option>
+                        <option value="M-Hoodies and Sweaters">
+                          Hoodies and Sweaters
+                        </option>
+                        <option value="M-Pant">Pant</option>
+                        <option value="Panjabi">Panjabi</option>
+                        <option value="M-Koti">Koti</option>
+                        <option value="M-Shawls">Shawls</option>
+                        <option value="M-lingerie">Men's lingerie</option>
+                      </>
+                    )}
+                    {selectOption === "Women's Clothing" && (
+                      <>
+                        {/* Women */}
+                        <option value="">Choose a category</option>
+                        <option value="Kurtis">Kurtis</option>
+                        <option value="Tunic Fusion">Tunic Fusion</option>
+                        <option value="Tops">Tops</option>
+                        <option value="Western Attire">Western Attire</option>
+                        <option value="W-Shirts">Shirts</option>
+                        <option value="W-T-Shirts">T-Shirts</option>
+                        <option value="Gown">Gown</option>
+                        <option value="Lehenga">Lehenga</option>
+                        <option value="Salwar-kameez">Salwar kameez</option>
+                        <option value="Unstitched dress">
+                          Unstitched dress
+                        </option>
+                        <option value="Saree">Saree</option>
+                        <option value="W-Pant">Pant</option>
+                        <option value="W-Pajama">Pajama/Salwar</option>
+                        <option value="Scart">Scart</option>
+                        <option value="Scarves">Scarves</option>
+                        <option value="Dupatta">Dupatta</option>
+                        <option value="Wshawl-poncho">Shawl & poncho</option>
+                        <option value="Wcoats-Jackets">Coat & Jacket</option>
+                        <option value="W-Hoodies and Sweater">
+                          Hoodies & Sweater
+                        </option>
+                        <option value="W-lingerie">Women lingerie</option>
+                        <option value="W-kaftan">Kaftan</option>
+                      </>
+                    )}
+                    {selectOption === "Fabrics" && (
+                      <>
+                        {/* Fabrics */}
+                        <option value="">Choose a category</option>
+                        <option value="F-Shirt">Shirt Fabrics</option>
+                        <option value="F-Pant">Pant Fabrics</option>
+                        <option value="F-Panjabi">Panjabi Fabrics</option>
+                        <option value="F-Salwar">Mixed Fabrics</option>
+                        <option value="F-Orna">Orna Fabrics</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+              </div>
+              {/* product sub child categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="sub-child-categories" className="form-label">
+                    Sub-Child-Categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="sub-child-categories"
+                    name="sub-child-categories"
+                    className="input-group form-select"
+                    ref={subChildCategoriesRef}
+                  >
+                    {selectChildCategory === "M-Pant" && (
+                      <>
+                        <option value="">Choose a Sub Child Categories</option>
+                        <option value="Jeans">Jeans</option>
+                        <option value="Gabardine">Gabardine</option>
+                        <option value="Trousers">Trousers</option>
+                        <option value="Joggers and Sweats">
+                          Joggers & Sweats
+                        </option>
+                        <option value="Shorts">Shorts</option>
+                        <option value="M-Pajama">Pajama</option>
+                      </>
+                    )}
+
+                    {selectChildCategory === "Salwar-kameez" && (
+                      <>
+                        <option value="">Choose a Sub Child Categories</option>
+                        <option value="1piecesalwar">1 piece</option>
+                        <option value="2piecesalwar">2 pieces</option>
+                        <option value="3piecesalwar">3 pieces</option>
+                      </>
+                    )}
+                    {selectChildCategory === "Unstitched dress" && (
+                      <>
+                        <option value="">Choose a Sub Child Categories</option>
+                        <option value="1piecenstitched">1 piece</option>
+                        <option value="2piecenstitched">2 pieces</option>
+                        <option value="3piecenstitched">3 pieces</option>
+                        <option value="4piecenstitched">4 pieces</option>
+                      </>
+                    )}
+                    {selectChildCategory === "Shari" && (
+                      <>
+                        <option value="">Choose a Sub Child Categories</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Georgette">Georgette</option>
+                        <option value="HaterKaj">Hater-Kaj</option>
+                        <option value="Jamdani">Jamdani</option>
+                        <option value="Muslin">Muslin</option>
+                        <option value="Silk">Silk</option>
+                      </>
+                    )}
+                  </select>
+                </div>
+              </div>
+            </div>
+
+            <div className="row my-4">
+              {/* product stock */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="stock" className="form-label">
+                    Stock
+                  </label>
+                </div>
+                <div>
+                  <select
+                    ref={stockRef}
+                    id="stock"
+                    name="stock"
+                    placeholder="Your product stock.."
+                    className="input-group form-select"
+                    required
+                  >
+                    <option value="">Choose an option</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Stock Out</option>
+                  </select>
+                </div>
+              </div>
+              {/* product Weight */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="weight" className="form-label">
+                    Product Weight(gm)
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={weightRef}
+                    type="number"
+                    id="weight"
+                    name="weight"
+                    placeholder="Product weight"
+                    className="input-group form-control"
+                  />
+                </div>
+              </div>
+              {/* product price after Discount */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="CurrentPrice" className="form-label">
+                    Current price(Tk.)
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={currentPriceRef}
+                    type="number"
+                    id="CurrentPrice"
+                    name="CurrentPrice"
+                    placeholder="Product Current Price"
+                    className="input-group form-control"
+                    required
+                  />
+                </div>
+              </div>
+              {/* product price Before Discount */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="oldPrice" className="form-label">
+                    Old price(Tk.)
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={oldPriceRef}
+                    type="number"
+                    id="oldPrice"
+                    name="oldPrice"
+                    placeholder="Product Previous Price"
+                    className="input-group form-control"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* extra delvery charge */}
+            <div className="col-md-4">
+              <div>
+                <label htmlFor="extraDeliveryCost" className="form-label">
+                  Extra Delivery Cost
+                </label>
+              </div>
               <input
-                ref={marchentRef}
-                type="text"
-                id="marchent"
-                name="marchent"
-                placeholder="Your company"
+                type="number"
+                name="extraDeliveryCost"
+                id="extraDeliveryCost"
                 className="form-control"
+                ref={extraDeliveryCostRef}
+                placeholder="extra Delivery Cost"
                 required
               />
             </div>
-          </div>
-        </div>
 
-        <div className="row my-4">
-          {/* product categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="categories" className="form-label">
-                Categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="categories"
-                name="categories"
-                className="input-group form-select"
-                ref={categoriesRef}
-                required
-              >
-                <option value="APPAREL">APPAREL</option>
-              </select>
+            <div className="row my-4">
+              <div className="col d-grid gap-2">
+                <button type="submit" value="Submit" className="btn myBtn">
+                  Submit
+                </button>
+              </div>
             </div>
           </div>
-          {/* product sub categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="sub-categories" className="form-label">
-                Sub-Categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="sub-categories"
-                name="sub-categories"
-                className="input-group form-select"
-                ref={subCategoriesRef}
-                onClick={handleSelectOption}
-                required
-              >
-                <option value="">Choose a category</option>
-                <option value="Men's Clothing">Men's Clothing</option>
-                <option value="Women's Clothing">Women's Clothing</option>
-                <option value="Fabrics">Fabrics</option>
-              </select>
-            </div>
-          </div>
-          {/* child categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="child-categories" className="form-label">
-                Child-Categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="child-categories"
-                name="child-categories"
-                className="input-group form-select"
-                ref={childCategoriesRef}
-                required
-                onClick={handleChildSelectOption}
-              >
-                {selectOption === "Men's Clothing" && (
-                  <>
-                    {/* mens */}
-                    <option value="">Choose a category</option>
-                    <option value="M-Shirts">Shirts</option>
-                    <option value="M-T-Shirts">T-Shirts</option>
-                    <option value="Polo Shirts">Polo Shirts</option>
-                    <option value="Mcoats-Jackets">Coats AND Jackets</option>
-                    <option value="M-Hoodies and Sweaters">
-                      Hoodies and Sweaters
-                    </option>
-                    <option value="M-Pant">Pant</option>
-                    <option value="Panjabi">Panjabi</option>
-                    <option value="M-Koti">Koti</option>
-                    <option value="M-Shawls">Shawls</option>
-                    <option value="M-lingerie">Men's lingerie</option>
-                  </>
-                )}
-                {selectOption === "Women's Clothing" && (
-                  <>
-                    {/* Women */}
-                    <option value="">Choose a category</option>
-                    <option value="Kurtis">Kurtis</option>
-                    <option value="Tunic Fusion">Tunic Fusion</option>
-                    <option value="Tops">Tops</option>
-                    <option value="Western Attire">Western Attire</option>
-                    <option value="W-Shirts">Shirts</option>
-                    <option value="W-T-Shirts">T-Shirts</option>
-                    <option value="Gown">Gown</option>
-                    <option value="Lehenga">Lehenga</option>
-                    <option value="Salwar-kameez">Salwar kameez</option>
-                    <option value="Unstitched dress">Unstitched dress</option>
-                    <option value="Saree">Saree</option>
-                    <option value="W-Pant">Pant</option>
-                    <option value="W-Pajama">Pajama/Salwar</option>
-                    <option value="Scart">Scart</option>
-                    <option value="Scarves">Scarves</option>
-                    <option value="Dupatta">Dupatta</option>
-                    <option value="Wshawl-poncho">Shawl & poncho</option>
-                    <option value="Wcoats-Jackets">Coat & Jacket</option>
-                    <option value="W-Hoodies and Sweater">
-                      Hoodies & Sweater
-                    </option>
-                    <option value="W-lingerie">Women lingerie</option>
-                    <option value="W-kaftan">Kaftan</option>
-                  </>
-                )}
-                {selectOption === "Fabrics" && (
-                  <>
-                    {/* Fabrics */}
-                    <option value="">Choose a category</option>
-                    <option value="F-Shirt">Shirt Fabrics</option>
-                    <option value="F-Pant">Pant Fabrics</option>
-                    <option value="F-Panjabi">Panjabi Fabrics</option>
-                    <option value="F-Salwar">Mixed Fabrics</option>
-                    <option value="F-Orna">Orna Fabrics</option>
-                  </>
-                )}
-              </select>
-            </div>
-          </div>
-          {/* product sub child categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="sub-child-categories" className="form-label">
-                Sub-Child-Categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="sub-child-categories"
-                name="sub-child-categories"
-                className="input-group form-select"
-                ref={subChildCategoriesRef}
-              >
-                {selectChildCategory === "M-Pant" && (
-                  <>
-                    <option value="">Choose a Sub Child Categories</option>
-                    <option value="Jeans">Jeans</option>
-                    <option value="Gabardine">Gabardine</option>
-                    <option value="Trousers">Trousers</option>
-                    <option value="Joggers and Sweats">Joggers & Sweats</option>
-                    <option value="Shorts">Shorts</option>
-                    <option value="M-Pajama">Pajama</option>
-                  </>
-                )}
-
-                {selectChildCategory === "Salwar-kameez" && (
-                  <>
-                    <option value="">Choose a Sub Child Categories</option>
-                    <option value="1piecesalwar">1 piece</option>
-                    <option value="2piecesalwar">2 pieces</option>
-                    <option value="3piecesalwar">3 pieces</option>
-                  </>
-                )}
-                {selectChildCategory === "Unstitched dress" && (
-                  <>
-                    <option value="">Choose a Sub Child Categories</option>
-                    <option value="1piecenstitched">1 piece</option>
-                    <option value="2piecenstitched">2 pieces</option>
-                    <option value="3piecenstitched">3 pieces</option>
-                    <option value="4piecenstitched">4 pieces</option>
-                  </>
-                )}
-                {selectChildCategory === "Shari" && (
-                  <>
-                    <option value="">Choose a Sub Child Categories</option>
-                    <option value="Cotton">Cotton</option>
-                    <option value="Georgette">Georgette</option>
-                    <option value="HaterKaj">Hater-Kaj</option>
-                    <option value="Jamdani">Jamdani</option>
-                    <option value="Muslin">Muslin</option>
-                    <option value="Silk">Silk</option>
-                  </>
-                )}
-              </select>
-            </div>
-          </div>
-        </div>
-
-        <div className="row my-4">
-          {/* product stock */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="stock" className="form-label">
-                Stock
-              </label>
-            </div>
-            <div>
-              <select
-                ref={stockRef}
-                id="stock"
-                name="stock"
-                placeholder="Your product stock.."
-                className="input-group form-select"
-                required
-              >
-                <option value="">Choose an option</option>
-                <option value="In Stock">In Stock</option>
-                <option value="Out of Stock">Stock Out</option>
-              </select>
-            </div>
-          </div>
-          {/* product Weight */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="weight" className="form-label">
-                Product Weight(gm)
-              </label>
-            </div>
-            <div>
-              <input
-                ref={weightRef}
-                type="number"
-                id="weight"
-                name="weight"
-                placeholder="Product weight"
-                className="input-group form-control"
-              />
-            </div>
-          </div>
-          {/* product price after Discount */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="CurrentPrice" className="form-label">
-                Current price(Tk.)
-              </label>
-            </div>
-            <div>
-              <input
-                ref={currentPriceRef}
-                type="number"
-                id="CurrentPrice"
-                name="CurrentPrice"
-                placeholder="Product Current Price"
-                className="input-group form-control"
-                required
-              />
-            </div>
-          </div>
-          {/* product price Before Discount */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="oldPrice" className="form-label">
-                Old price(Tk.)
-              </label>
-            </div>
-            <div>
-              <input
-                ref={oldPriceRef}
-                type="number"
-                id="oldPrice"
-                name="oldPrice"
-                placeholder="Product Previous Price"
-                className="input-group form-control"
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* extra delvery charge */}
-        <div className="col-md-4">
-          <div>
-            <label htmlFor="extraDeliveryCost" className="form-label">
-              Extra Delivery Cost
-            </label>
-          </div>
-          <input
-            type="number"
-            name="extraDeliveryCost"
-            id="extraDeliveryCost"
-            className="form-control"
-            ref={extraDeliveryCostRef}
-            placeholder="extra Delivery Cost"
-            required
-          />
-        </div>
-
-        <div className="row my-4">
-          <div className="col d-grid gap-2">
-            <button type="submit" value="Submit" className="btn myBtn">
-              Submit
-            </button>
-          </div>
-        </div>
+        )}
       </form>
     </div>
   );
