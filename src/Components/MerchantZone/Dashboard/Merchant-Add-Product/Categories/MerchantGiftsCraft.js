@@ -8,6 +8,7 @@ import { v4 as uuidv4 } from "uuid";
 const MerchantGiftsCraft = () => {
   const { currentUser } = useAuth();
   const [message, setMessage] = useState("");
+  const [addInputProduct, setAddInputProduct] = useState(false);
 
   //Conditionally set category in select options
   const [selectOption, setSelectOption] = useState("");
@@ -197,6 +198,7 @@ const MerchantGiftsCraft = () => {
     setNewProduct({
       variants: [],
     });
+    setAddInputProduct(true);
   };
 
   // Handle Image Upload (image upload by API to Cloudinary)
@@ -430,140 +432,142 @@ const MerchantGiftsCraft = () => {
         ))}
         {/* varient end */}
 
-        <div className="row my-4">
-          <div className="col-md-8">
-            {/* product name */}
-            <div>
-              <label htmlFor="fname" className="form-label">
-                Product Name
-              </label>
-            </div>
-            <div>
-              <input
-                ref={nameRef}
-                type="text"
-                id="fname"
-                name="productName"
-                placeholder="Your product name.."
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="lname" className="form-label">
-                Product code
-              </label>
-            </div>
-            <div>
-              <input
-                ref={productCodeRef}
-                type="text"
-                id="lname"
-                name="productCode"
-                placeholder="your productCode.."
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-        </div>
-
-        {/* product Short description */}
-        <div className="row my-4">
+        {addInputProduct && (
           <div>
-            <label htmlFor="shortDescription" className="form-label">
-              Short Description
-            </label>
-          </div>
-          <div>
-            <textarea
-              ref={shortDescriptionRef}
-              id="shortDescription"
-              name="shortDescription"
-              placeholder="Write Short Description among 150 characters"
-              className="form-control"
-              required
-            ></textarea>
-          </div>
-        </div>
+            <div className="row my-4">
+              <div className="col-md-8">
+                {/* product name */}
+                <div>
+                  <label htmlFor="fname" className="form-label">
+                    Product Name
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={nameRef}
+                    type="text"
+                    id="fname"
+                    name="productName"
+                    placeholder="Your product name.."
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="lname" className="form-label">
+                    Product code
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={productCodeRef}
+                    type="text"
+                    id="lname"
+                    name="productCode"
+                    placeholder="your productCode.."
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
+            </div>
 
-        {/* product Full description */}
-        <div>
-          <label htmlFor="description" className="form-label">
-            Full Description
-          </label>
-        </div>
-        <ReactQuill
-          className="fullDescription"
-          theme="snow"
-          value={showDescription}
-          modules={{
-            toolbar: [
-              [{ header: "1" }, { header: "2" }, { font: [] }],
-              [{ size: [] }],
-              ["bold", "italic", "underline", "strike", "blockquote"],
-              [{ align: [] }],
-              [{ color: [] }, { background: [] }],
-              [
-                { list: "ordered" },
-                { list: "bullet" },
-                { indent: "-1" },
-                { indent: "+1" },
-              ],
-              ["code-block"],
-              ["clean"],
-            ],
-          }}
-          formats={[
-            "header",
-            "font",
-            "size",
-            "bold",
-            "italic",
-            "underline",
-            "strike",
-            "blockquote",
-            "color",
-            "background",
-            "list",
-            "bullet",
-            "indent",
-            "code-block",
-            "align",
-          ]}
-          onChange={(val) => {
-            setShowDescription(val);
-          }}
-        />
+            {/* product Short description */}
+            <div className="row my-4">
+              <div>
+                <label htmlFor="shortDescription" className="form-label">
+                  Short Description
+                </label>
+              </div>
+              <div>
+                <textarea
+                  ref={shortDescriptionRef}
+                  id="shortDescription"
+                  name="shortDescription"
+                  placeholder="Write Short Description among 150 characters"
+                  className="form-control"
+                  required
+                ></textarea>
+              </div>
+            </div>
 
-        {/* product main color */}
-        <div className="row my-4">
-          {/* product Flash Sale */}
-          <div className="col-md-4">
+            {/* product Full description */}
             <div>
-              <label htmlFor="flashSale" className="form-label">
-                Flash Sale
+              <label htmlFor="description" className="form-label">
+                Full Description
               </label>
             </div>
-            <div>
-              <select
-                id="flashSale"
-                name="flashSale"
-                className="input-group form-select"
-                ref={flashRef}
-                required
-              >
-                <option value="">Choose</option>
-                <option value="yes">Yes</option>
-                <option value="no">No</option>
-              </select>
-            </div>
-          </div>
+            <ReactQuill
+              className="fullDescription"
+              theme="snow"
+              value={showDescription}
+              modules={{
+                toolbar: [
+                  [{ header: "1" }, { header: "2" }, { font: [] }],
+                  [{ size: [] }],
+                  ["bold", "italic", "underline", "strike", "blockquote"],
+                  [{ align: [] }],
+                  [{ color: [] }, { background: [] }],
+                  [
+                    { list: "ordered" },
+                    { list: "bullet" },
+                    { indent: "-1" },
+                    { indent: "+1" },
+                  ],
+                  ["code-block"],
+                  ["clean"],
+                ],
+              }}
+              formats={[
+                "header",
+                "font",
+                "size",
+                "bold",
+                "italic",
+                "underline",
+                "strike",
+                "blockquote",
+                "color",
+                "background",
+                "list",
+                "bullet",
+                "indent",
+                "code-block",
+                "align",
+              ]}
+              onChange={(val) => {
+                setShowDescription(val);
+              }}
+            />
 
-          {/* Popular Items */}
-          {/* <div className="col-md-4">
+            {/* product main color */}
+            <div className="row my-4">
+              {/* product Flash Sale */}
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="flashSale" className="form-label">
+                    Flash Sale
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="flashSale"
+                    name="flashSale"
+                    className="input-group form-select"
+                    ref={flashRef}
+                    required
+                  >
+                    <option value="">Choose</option>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                  </select>
+                </div>
+              </div>
+
+              {/* Popular Items */}
+              {/* <div className="col-md-4">
             <div>
               <label htmlFor="PopularItems" className="form-label">
                 Popular Items
@@ -584,8 +588,8 @@ const MerchantGiftsCraft = () => {
             </div>
           </div> */}
 
-          {/* Campain */}
-          {/* <div className="col-md-4">
+              {/* Campain */}
+              {/* <div className="col-md-4">
             <div>
               <label htmlFor="campain" className="form-label">
                 Campain
@@ -605,210 +609,214 @@ const MerchantGiftsCraft = () => {
             </div>
           </div> */}
 
-          {/* Merchant  */}
-          <div className="col-md-4">
-            <div>
-              <label htmlFor="marchent" className="form-label">
-                Merchant
-              </label>
+              {/* Merchant  */}
+              <div className="col-md-4">
+                <div>
+                  <label htmlFor="marchent" className="form-label">
+                    Merchant
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={marchentRef}
+                    type="text"
+                    id="marchent"
+                    name="marchent"
+                    placeholder="Your company"
+                    className="form-control"
+                    required
+                  />
+                </div>
+              </div>
             </div>
-            <div>
-              <input
-                ref={marchentRef}
-                type="text"
-                id="marchent"
-                name="marchent"
-                placeholder="Your company"
-                className="form-control"
-                required
-              />
-            </div>
-          </div>
-        </div>
 
-        <div className="row my-4">
-          {/* product categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="Categories" className="form-label">
-                categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="Categories"
-                name="Categories"
-                className="input-group form-select"
-                ref={categoriesRef}
-                required
-              >
-                <option value="Gifts and Crafts">Gifts & Crafts</option>
-              </select>
-            </div>
-          </div>
-          {/* product sub categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="sub-Categories" className="form-label">
-                Sub-categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="sub-Categories"
-                name="sub-Categories"
-                className="input-group form-select"
-                ref={subCategoriesRef}
-                onClick={handleSelectOption}
-                required
-              >
-                <option value="">Choose a category</option>
-                <option value="Novelty Gifts">Novelty Gifts</option>
-                <option value="Promotional Items">Promotional Items</option>
-                <option value="Crafting Accessories">
-                  Crafting Accessories
-                </option>
-                <option value="Festival Decoration">Festival Decoration</option>
-                <option value="Gift Wrapping Supplies">
-                  Gift Wrapping Supplies
-                </option>
-              </select>
-            </div>
-          </div>
-          {/* child categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="child-Categories" className="form-label">
-                child-categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="child-Categories"
-                name="child-Categories"
-                className="input-group form-select"
-                ref={childCategoriesRef}
-                required
-              >
-                {selectOption === "Novelty Gifts" && (
-                  <>
+            <div className="row my-4">
+              {/* product categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="Categories" className="form-label">
+                    categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="Categories"
+                    name="Categories"
+                    className="input-group form-select"
+                    ref={categoriesRef}
+                    required
+                  >
+                    <option value="Gifts and Crafts">Gifts & Crafts</option>
+                  </select>
+                </div>
+              </div>
+              {/* product sub categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="sub-Categories" className="form-label">
+                    Sub-categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="sub-Categories"
+                    name="sub-Categories"
+                    className="input-group form-select"
+                    ref={subCategoriesRef}
+                    onClick={handleSelectOption}
+                    required
+                  >
+                    <option value="">Choose a category</option>
                     <option value="Novelty Gifts">Novelty Gifts</option>
-                  </>
-                )}
-                {selectOption === "Promotional Items" && (
-                  <>
                     <option value="Promotional Items">Promotional Items</option>
-                  </>
-                )}
-
-                {selectOption === "Crafting Accessories" && (
-                  <>
                     <option value="Crafting Accessories">
                       Crafting Accessories
                     </option>
-                  </>
-                )}
-
-                {selectOption === "Festival Decoration" && (
-                  <>
                     <option value="Festival Decoration">
                       Festival Decoration
                     </option>
-                  </>
-                )}
-
-                {selectOption === "Gift Wrapping Supplies" && (
-                  <>
                     <option value="Gift Wrapping Supplies">
                       Gift Wrapping Supplies
                     </option>
-                  </>
-                )}
-              </select>
-            </div>
-          </div>
-          {/* product sub child categories */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="sub-child-Categories" className="form-label">
-                Sub-Child-categories
-              </label>
-            </div>
-            <div>
-              <select
-                id="sub-child-Categories"
-                name="sub-child-Categories"
-                className="input-group form-select"
-                ref={subChildCategoriesRef}
-              >
-                <option value=""></option>
-              </select>
-            </div>
-          </div>
-        </div>
+                  </select>
+                </div>
+              </div>
+              {/* child categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="child-Categories" className="form-label">
+                    child-categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="child-Categories"
+                    name="child-Categories"
+                    className="input-group form-select"
+                    ref={childCategoriesRef}
+                    required
+                  >
+                    {selectOption === "Novelty Gifts" && (
+                      <>
+                        <option value="Novelty Gifts">Novelty Gifts</option>
+                      </>
+                    )}
+                    {selectOption === "Promotional Items" && (
+                      <>
+                        <option value="Promotional Items">
+                          Promotional Items
+                        </option>
+                      </>
+                    )}
 
-        <div className="row my-4">
-          {/* product stock */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="stock" className="form-label">
-                Stock
-              </label>
+                    {selectOption === "Crafting Accessories" && (
+                      <>
+                        <option value="Crafting Accessories">
+                          Crafting Accessories
+                        </option>
+                      </>
+                    )}
+
+                    {selectOption === "Festival Decoration" && (
+                      <>
+                        <option value="Festival Decoration">
+                          Festival Decoration
+                        </option>
+                      </>
+                    )}
+
+                    {selectOption === "Gift Wrapping Supplies" && (
+                      <>
+                        <option value="Gift Wrapping Supplies">
+                          Gift Wrapping Supplies
+                        </option>
+                      </>
+                    )}
+                  </select>
+                </div>
+              </div>
+              {/* product sub child categories */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="sub-child-Categories" className="form-label">
+                    Sub-Child-categories
+                  </label>
+                </div>
+                <div>
+                  <select
+                    id="sub-child-Categories"
+                    name="sub-child-Categories"
+                    className="input-group form-select"
+                    ref={subChildCategoriesRef}
+                  >
+                    <option value=""></option>
+                  </select>
+                </div>
+              </div>
             </div>
-            <div>
-              <select
-                ref={stockRef}
-                id="stock"
-                name="stock"
-                placeholder="Your product stock.."
-                className="input-group form-select"
-                required
-              >
-                <option value="">Choose an option</option>
-                <option value="In Stock">In Stock</option>
-                <option value="Out of Stock">Out of Stock</option>
-              </select>
-            </div>
-          </div>
-          {/* product Weight */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="weight" className="form-label">
-                Product Weight(gm)
-              </label>
-            </div>
-            <div>
-              <input
-                ref={weightRef}
-                type="number"
-                id="weight"
-                name="weight"
-                placeholder="Product weight"
-                className="input-group form-control"
-              />
-            </div>
-          </div>
-          {/* product discount price */}
-          <div className="col-md-3">
-            <div>
-              <label htmlFor="currentPrice" className="form-label">
-                Current price
-              </label>
-            </div>
-            <div>
-              <input
-                ref={currentPriceRef}
-                type="number"
-                id="currentPrice"
-                name="currentPrice"
-                placeholder="Product discount Price"
-                className="input-group form-control"
-                required
-              />
-            </div>
-          </div>
-          {/* product current price */}
-          {/* <div className="col-md-3">
+
+            <div className="row my-4">
+              {/* product stock */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="stock" className="form-label">
+                    Stock
+                  </label>
+                </div>
+                <div>
+                  <select
+                    ref={stockRef}
+                    id="stock"
+                    name="stock"
+                    placeholder="Your product stock.."
+                    className="input-group form-select"
+                    required
+                  >
+                    <option value="">Choose an option</option>
+                    <option value="In Stock">In Stock</option>
+                    <option value="Out of Stock">Out of Stock</option>
+                  </select>
+                </div>
+              </div>
+              {/* product Weight */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="weight" className="form-label">
+                    Product Weight(gm)
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={weightRef}
+                    type="number"
+                    id="weight"
+                    name="weight"
+                    placeholder="Product weight"
+                    className="input-group form-control"
+                  />
+                </div>
+              </div>
+              {/* product discount price */}
+              <div className="col-md-3">
+                <div>
+                  <label htmlFor="currentPrice" className="form-label">
+                    Current price
+                  </label>
+                </div>
+                <div>
+                  <input
+                    ref={currentPriceRef}
+                    type="number"
+                    id="currentPrice"
+                    name="currentPrice"
+                    placeholder="Product discount Price"
+                    className="input-group form-control"
+                    required
+                  />
+                </div>
+              </div>
+              {/* product current price */}
+              {/* <div className="col-md-3">
             <div>
               <label htmlFor="oldPrice" className="form-label">
                 Old price
@@ -825,10 +833,10 @@ const MerchantGiftsCraft = () => {
               />
             </div>
           </div> */}
-        </div>
+            </div>
 
-        {/* extra delvery charge */}
-        {/* <div className="col-md-4">
+            {/* extra delvery charge */}
+            {/* <div className="col-md-4">
           <div>
             <label htmlFor="extraDeliveryCost" className="form-label">
               Extra Delivery Cost
@@ -845,13 +853,15 @@ const MerchantGiftsCraft = () => {
           />
         </div> */}
 
-        <div className="row my-4">
-          <div className="col d-grid gap-2">
-            <button type="submit" value="Submit" className="btn myBtn">
-              Submit
-            </button>
+            <div className="row my-4">
+              <div className="col d-grid gap-2">
+                <button type="submit" value="Submit" className="btn myBtn">
+                  Submit
+                </button>
+              </div>
+            </div>
           </div>
-        </div>
+        )}
       </form>
     </div>
   );
