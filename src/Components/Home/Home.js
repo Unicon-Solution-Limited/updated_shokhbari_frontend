@@ -63,7 +63,7 @@ const Home = () => {
           &times;
         </button>
         <img
-          src="https://res.cloudinary.com/shokhbari/image/upload/v1714474123/cAMPAIGN-POPUP-02_luxquj.jpg"
+          src="https://res.cloudinary.com/shokh-bari/image/upload/v1716725094/shokhbari_POPUP_3_mgjpr7.jpg"
           alt="15% Discount"
         />
       </div>

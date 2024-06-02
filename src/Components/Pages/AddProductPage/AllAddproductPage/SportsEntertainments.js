@@ -818,7 +818,6 @@ const SportsEntertainments = () => {
                     name="oldPrice"
                     placeholder="Product Previous Price"
                     className="input-group form-control"
-                    required
                   />
                 </div>
               </div>

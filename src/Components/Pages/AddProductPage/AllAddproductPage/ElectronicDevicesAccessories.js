@@ -36,7 +36,7 @@ const ElectronicDevicesAccessories = () => {
   const categoriesRef = useRef();
   const subCategoriesRef = useRef();
   const childCategoriesRef = useRef();
-  const subChildCategoriesRef = useRef();
+  // const subChildCategoriesRef = useRef();
   const stockRef = useRef();
   const currentPriceRef = useRef();
   const oldPriceRef = useRef();
@@ -61,7 +61,7 @@ const ElectronicDevicesAccessories = () => {
       categories: categoriesRef.current.value,
       subCategories: subCategoriesRef.current.value,
       childCategories: childCategoriesRef.current.value,
-      subChildCategories: subChildCategoriesRef.current.value,
+      // subChildCategories: subChildCategoriesRef.current.value,
       stock: stockRef.current.value,
       currentPrice: currentPriceRef.current.value,
       oldPrice: oldPriceRef.current.value,
@@ -96,7 +96,7 @@ const ElectronicDevicesAccessories = () => {
         categoriesRef.current.value = "";
         subCategoriesRef.current.value = "";
         childCategoriesRef.current.value = "";
-        subChildCategoriesRef.current.value = "";
+        // subChildCategoriesRef.current.value = "";
         stockRef.current.value = "";
         currentPriceRef.current.value = "";
         oldPriceRef.current.value = "";
@@ -1088,7 +1088,6 @@ const ElectronicDevicesAccessories = () => {
                     name="oldPrice"
                     placeholder="Product Previous Price"
                     className="input-group form-control"
-                    required
                   />
                 </div>
               </div>

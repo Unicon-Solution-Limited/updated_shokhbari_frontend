@@ -36,7 +36,7 @@ const MerchantElectronicDevicesAccessories = () => {
   const categoriesRef = useRef();
   const subCategoriesRef = useRef();
   const childCategoriesRef = useRef();
-  const subChildCategoriesRef = useRef();
+  // const subChildCategoriesRef = useRef();
   const stockRef = useRef();
   const currentPriceRef = useRef();
   // const oldPriceRef = useRef();
@@ -61,7 +61,7 @@ const MerchantElectronicDevicesAccessories = () => {
       categories: categoriesRef.current.value,
       subCategories: subCategoriesRef.current.value,
       childCategories: childCategoriesRef.current.value,
-      subChildCategories: subChildCategoriesRef.current.value,
+      // subChildCategories: subChildCategoriesRef.current.value,
       stock: stockRef.current.value,
       currentPrice: currentPriceRef.current.value,
       oldPrice: "",
@@ -95,7 +95,7 @@ const MerchantElectronicDevicesAccessories = () => {
         categoriesRef.current.value = "";
         subCategoriesRef.current.value = "";
         childCategoriesRef.current.value = "";
-        subChildCategoriesRef.current.value = "";
+        // subChildCategoriesRef.current.value = "";
         stockRef.current.value = "";
         currentPriceRef.current.value = "";
         window.location.reload();
