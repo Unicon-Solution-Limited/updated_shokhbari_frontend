@@ -279,7 +279,6 @@ const Checkoutpage = () => {
                   cols="50"
                   placeholder="Additional Information"
                   ref={extraInformationRef}
-                  required
                 />
               </div>
             </div>

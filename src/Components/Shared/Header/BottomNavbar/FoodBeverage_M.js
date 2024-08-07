@@ -5,7 +5,10 @@ const FoodBeverage_M = () => {
   return (
     <>
       <li className="nav-item" data-bs-dismiss="offcanvas">
-        <Link className="nav-link offcanvasLink" to="/">
+        <Link
+          className="nav-link offcanvasLink"
+          to="/category/groceries-and-home-essentials"
+        >
           Food Beverage And Groceries
         </Link>
         <ul
