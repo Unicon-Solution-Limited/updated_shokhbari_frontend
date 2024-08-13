@@ -773,6 +773,7 @@ const SingleProductPsize = () => {
               ?.map((data) => (
                 <div className="col-md-2 mt-3" key={data._id}>
                   <div
+                    style={{ height: "360px" }}
                     className="card popularProductCard"
                     onClick={() => setImageAsSelectedColor("")}
                   >
