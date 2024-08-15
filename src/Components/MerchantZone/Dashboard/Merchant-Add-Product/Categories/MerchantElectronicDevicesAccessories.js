@@ -698,6 +698,9 @@ const MerchantElectronicDevicesAccessories = () => {
                       AC & Home Appliance
                     </option>
                     <option value="Software">Software</option>
+                    <option value="OtherElectronicDevice">
+                      Other Electronic Device
+                    </option>
                   </select>
                 </div>
               </div>
@@ -808,6 +811,7 @@ const MerchantElectronicDevicesAccessories = () => {
                         <option value="External-Optical-Drive">
                           External Optical Drive
                         </option>
+                        <option value="Adapter">Adapter & Charger</option>
                       </>
                     )}
 
@@ -1004,6 +1008,11 @@ const MerchantElectronicDevicesAccessories = () => {
                         </option>
                         <option value="Antivirus">Antivirus</option>
                       </>
+                    )}
+                    {selectOption === "OtherElectronicDevice" && (
+                      <option value="Office-Application">
+                        Other Electronic Device
+                      </option>
                     )}
                   </select>
                 </div>

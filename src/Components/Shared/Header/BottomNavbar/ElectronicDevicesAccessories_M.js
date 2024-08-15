@@ -447,6 +447,14 @@ const ElectronicDevicesAccessories_M = () => {
                       </Link>
                     </li>
                     <li className="megaMenu_li">
+                      <Link
+                        to={`/displayProduct/${"Adapter"}`}
+                        id="megaMenuLink"
+                      >
+                        Adapter & Charger
+                      </Link>
+                    </li>
+                    <li className="megaMenu_li">
                       <Link to={`/displayProduct/${"Mouse"}`} id="megaMenuLink">
                         Mouse
                       </Link>
