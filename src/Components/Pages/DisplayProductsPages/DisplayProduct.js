@@ -225,7 +225,7 @@ const DisplayProduct = () => {
   };
 
   //this is for pagination
-  const [showPerPage, setShowPerPage] = useState(20);
+  const [showPerPage, setShowPerPage] = useState(24);
   const [pagination, setPagination] = useState({
     start: 0,
     end: showPerPage,
