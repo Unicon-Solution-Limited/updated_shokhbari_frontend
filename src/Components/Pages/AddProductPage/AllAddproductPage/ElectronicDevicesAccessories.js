@@ -506,6 +506,7 @@ const ElectronicDevicesAccessories = () => {
             </div>
             <ReactQuill
               className="fullDescription"
+              style={{ height: "auto" }}
               theme="snow"
               value={showDescription}
               modules={{
