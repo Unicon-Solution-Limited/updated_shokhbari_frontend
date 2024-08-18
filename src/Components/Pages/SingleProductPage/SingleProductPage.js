@@ -566,7 +566,9 @@ const SingleProductPsize = () => {
                     role="tabpanel"
                     aria-labelledby="Description-tab"
                   >
-                    {productDetails?.shortDescription.slice(0, 150)}
+                    {productDetails?.shortDescription.slice(0, 300)}
+                    <br />
+                    <br />
                     {ReactHtmlParser(productDetails?.description)}
 
                     <div

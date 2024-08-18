@@ -1,9 +1,13 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./ManageProduct.css";
 import { useAuth } from "../../Authentication/AuthContext/AuthContext";
+import ReactQuill from "react-quill";
+import "react-quill/dist/quill.snow.css";
 
 const EditMangeProduct = ({ signleProduct }) => {
   const { currentUser } = useAuth();
+  const [showDescription, setShowDescription] = useState("");
+
   const {
     _id,
     popularItems,
@@ -12,6 +16,7 @@ const EditMangeProduct = ({ signleProduct }) => {
     oldPrice,
     stock,
     campain,
+    name,
     extraDeliveryCost,
   } = signleProduct;
   const [message, setMessage] = useState("");
@@ -23,6 +28,7 @@ const EditMangeProduct = ({ signleProduct }) => {
   const stockRef = useRef();
   const campainRef = useRef();
   const extraDeliveryRef = useRef();
+  const nameRef = useRef();
 
   // update product and send to the database
   const handleEditProduct = (e) => {
@@ -37,6 +43,64 @@ const EditMangeProduct = ({ signleProduct }) => {
     };
     fetch(
       `${process.env.REACT_APP_BACKEND_URL}/updateProduct/${_id}?email=${currentUser?.email}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
+        },
+        body: JSON.stringify(editProduct),
+      }
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          setMessage("Your Product Update Successfully");
+          window.location.reload();
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  //name edit
+  const handleProductNameEdit = (even) => {
+    even.preventDefault();
+    const editProduct = {
+      name: nameRef?.current.value,
+    };
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/productNameEdit/${_id}?email=${currentUser?.email}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
+        },
+        body: JSON.stringify(editProduct),
+      }
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          setMessage("Your Product Update Successfully");
+          window.location.reload();
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  //description edit
+  const handleProductDescriptionEdit = (even) => {
+    even.preventDefault();
+    const editProduct = {
+      description: showDescription,
+    };
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/pdDescriptionEdit/${_id}?email=${currentUser?.email}`,
       {
         method: "PATCH",
         headers: {
@@ -237,6 +301,83 @@ const EditMangeProduct = ({ signleProduct }) => {
                     Update
                   </button>
                 </div>
+              </form>
+
+              {/* name */}
+              <form onSubmit={handleProductNameEdit}>
+                <div className="input-group mt-3 mb-3">
+                  <input
+                    type="text"
+                    ref={extraDeliveryRef}
+                    className="form-control"
+                    placeholder={name}
+                    required
+                  />
+                  <button
+                    type="submit"
+                    className="input-group-text popup-edit-save-btn"
+                  >
+                    Submit Name
+                  </button>
+                </div>
+              </form>
+
+              <form
+                onSubmit={handleProductDescriptionEdit}
+                className="mt-5 mb-4"
+              >
+                {/* product Full description */}
+                <div>
+                  <label htmlFor="description" className="form-label">
+                    Full Description
+                  </label>
+                </div>
+                <ReactQuill
+                  className="fullDescription mt-3 mb-3"
+                  style={{ height: "auto" }}
+                  theme="snow"
+                  value={showDescription}
+                  modules={{
+                    toolbar: [
+                      [{ header: "1" }, { header: "2" }, { font: [] }],
+                      [{ size: [] }],
+                      ["bold", "italic", "underline", "strike", "blockquote"],
+                      [{ align: [] }],
+                      [{ color: [] }, { background: [] }],
+                      [
+                        { list: "ordered" },
+                        { list: "bullet" },
+                        { indent: "-1" },
+                        { indent: "+1" },
+                      ],
+                      ["code-block"],
+                      ["clean"],
+                    ],
+                  }}
+                  formats={[
+                    "header",
+                    "font",
+                    "size",
+                    "bold",
+                    "italic",
+                    "underline",
+                    "strike",
+                    "blockquote",
+                    "color",
+                    "background",
+                    "list",
+                    "bullet",
+                    "indent",
+                    "code-block",
+                    "align",
+                  ]}
+                  onChange={(val) => {
+                    setShowDescription(val);
+                  }}
+                />
+                <button type="submit" className="popup-edit-save-btn">
+                  Submit Description
+                </button>
               </form>
 
               {/* edit product for the extra delevery charge  */}
