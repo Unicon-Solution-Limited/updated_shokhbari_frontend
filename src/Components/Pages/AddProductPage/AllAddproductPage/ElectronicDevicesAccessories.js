@@ -5,6 +5,7 @@ import "../AddProductPage.css";
 import "react-quill/dist/quill.snow.css";
 import { useAuth } from "./../../../Authentication/AuthContext/AuthContext";
 import { v4 as uuidv4 } from "uuid";
+import JoditEditor from "jodit-react";
 
 const ElectronicDevicesAccessories = () => {
   const { currentUser } = useAuth();
@@ -14,7 +15,39 @@ const ElectronicDevicesAccessories = () => {
   //Conditionally set category in select options
   const [selectOption, setSelectOption] = useState("");
   const [selectChildCategory, setSelectChildCategory] = useState("");
+  const editor = useRef(null);
   const [showDescription, setShowDescription] = useState("");
+  console.log(showDescription);
+
+  const config = {
+    readonly: false,
+    placeholder: "Start typing...",
+    toolbarButtonSize: "small",
+    buttons: [
+      "bold",
+      "italic",
+      "underline",
+      "strikethrough",
+      "eraser",
+      "ul",
+      "ol",
+      "outdent",
+      "indent",
+      "font",
+      "fontsize",
+      "brush",
+      "paragraph",
+      "align",
+      "undo",
+      "redo",
+      "cut",
+      "copy",
+      "paste",
+      "hr",
+      "link",
+      "unlink",
+    ],
+  };
 
   const handleSelectOption = (e) => {
     setSelectOption(e.target.value);
@@ -504,48 +537,14 @@ const ElectronicDevicesAccessories = () => {
                 Full Description
               </label>
             </div>
-            <ReactQuill
-              className="fullDescription"
-              style={{ height: "auto" }}
-              theme="snow"
+
+            <JoditEditor
+              ref={editor}
               value={showDescription}
-              modules={{
-                toolbar: [
-                  [{ header: "1" }, { header: "2" }, { font: [] }],
-                  [{ size: [] }],
-                  ["bold", "italic", "underline", "strike", "blockquote"],
-                  [{ align: [] }],
-                  [{ color: [] }, { background: [] }],
-                  [
-                    { list: "ordered" },
-                    { list: "bullet" },
-                    { indent: "-1" },
-                    { indent: "+1" },
-                  ],
-                  ["code-block"],
-                  ["clean"],
-                ],
-              }}
-              formats={[
-                "header",
-                "font",
-                "size",
-                "bold",
-                "italic",
-                "underline",
-                "strike",
-                "blockquote",
-                "color",
-                "background",
-                "list",
-                "bullet",
-                "indent",
-                "code-block",
-                "align",
-              ]}
-              onChange={(val) => {
-                setShowDescription(val);
-              }}
+              config={config}
+              tabIndex={1}
+              onBlur={(newContent) => setShowDescription(newContent)}
+              onChange={(newContent) => {}}
             />
 
             <div className="row my-4">
