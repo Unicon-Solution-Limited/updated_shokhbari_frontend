@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import "./SingleProductPage.css";
 import AllHeader from "./../../Shared/Header/AllHeader";
 import AllFooter from "./../../Shared/Footer/AllFooter";
-import { useParams, useHistory } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
 import Pagination from "./../pagination/pagination";
