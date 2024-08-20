@@ -17,7 +17,6 @@ const ElectronicDevicesAccessories = () => {
   const [selectChildCategory, setSelectChildCategory] = useState("");
   const editor = useRef(null);
   const [showDescription, setShowDescription] = useState("");
-  console.log(showDescription);
 
   const config = {
     readonly: false,

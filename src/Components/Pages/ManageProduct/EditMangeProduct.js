@@ -1,12 +1,42 @@
 import React, { useEffect, useRef, useState } from "react";
 import "./ManageProduct.css";
 import { useAuth } from "../../Authentication/AuthContext/AuthContext";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import JoditEditor from "jodit-react";
 
 const EditMangeProduct = ({ signleProduct }) => {
   const { currentUser } = useAuth();
+  const editor = useRef(null);
   const [showDescription, setShowDescription] = useState("");
+
+  const config = {
+    readonly: false,
+    placeholder: "Start typing...",
+    toolbarButtonSize: "small",
+    buttons: [
+      "bold",
+      "italic",
+      "underline",
+      "strikethrough",
+      "eraser",
+      "ul",
+      "ol",
+      "outdent",
+      "indent",
+      "font",
+      "fontsize",
+      "brush",
+      "paragraph",
+      "align",
+      "undo",
+      "redo",
+      "cut",
+      "copy",
+      "paste",
+      "hr",
+      "link",
+      "unlink",
+    ],
+  };
 
   const {
     _id,
@@ -332,48 +362,13 @@ const EditMangeProduct = ({ signleProduct }) => {
                     Full Description
                   </label>
                 </div>
-                <ReactQuill
-                  className="fullDescription mt-3 mb-3"
-                  style={{ height: "auto" }}
-                  theme="snow"
+                <JoditEditor
+                  ref={editor}
                   value={showDescription}
-                  modules={{
-                    toolbar: [
-                      [{ header: "1" }, { header: "2" }, { font: [] }],
-                      [{ size: [] }],
-                      ["bold", "italic", "underline", "strike", "blockquote"],
-                      [{ align: [] }],
-                      [{ color: [] }, { background: [] }],
-                      [
-                        { list: "ordered" },
-                        { list: "bullet" },
-                        { indent: "-1" },
-                        { indent: "+1" },
-                      ],
-                      ["code-block"],
-                      ["clean"],
-                    ],
-                  }}
-                  formats={[
-                    "header",
-                    "font",
-                    "size",
-                    "bold",
-                    "italic",
-                    "underline",
-                    "strike",
-                    "blockquote",
-                    "color",
-                    "background",
-                    "list",
-                    "bullet",
-                    "indent",
-                    "code-block",
-                    "align",
-                  ]}
-                  onChange={(val) => {
-                    setShowDescription(val);
-                  }}
+                  config={config}
+                  tabIndex={1}
+                  onBlur={(newContent) => setShowDescription(newContent)}
+                  onChange={(newContent) => {}}
                 />
                 <button type="submit" className="popup-edit-save-btn">
                   Submit Description

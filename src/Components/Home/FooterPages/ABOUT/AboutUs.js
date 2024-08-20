@@ -6,11 +6,7 @@ import Aos from "aos";
 import "aos/dist/aos.css";
 
 import ContentJson from "../JsonData/TranslateData.json";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
+import ReactHtmlParser from "react-html-parser";
 import LanguageBtn from "./../JsonData/LanguageBtn";
 
 const AboutUs = () => {

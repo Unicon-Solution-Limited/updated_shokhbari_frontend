@@ -6,11 +6,6 @@ import AllFooter from "./../../Shared/Footer/AllFooter";
 import { useParams, useHistory } from "react-router-dom";
 import Aos from "aos";
 import "aos/dist/aos.css";
-import ReactHtmlParser, {
-  processNodes,
-  convertNodeToElement,
-  htmlparser2,
-} from "react-html-parser";
 import Pagination from "./../pagination/pagination";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { WishlistProvider } from "./../../AllContextApi/WishlistContext";
@@ -22,7 +17,6 @@ import loader from "../../Image/loder.gif";
 
 const SingleProductPsize = () => {
   const { currentUser } = useAuth();
-  const history = useHistory();
 
   // Animation on scroll
   useEffect(() => {
@@ -569,7 +563,12 @@ const SingleProductPsize = () => {
                     {productDetails?.shortDescription.slice(0, 300)}
                     <br />
                     <br />
-                    {ReactHtmlParser(productDetails?.description)}
+
+                    <div
+                      dangerouslySetInnerHTML={{
+                        __html: productDetails?.description,
+                      }}
+                    />
 
                     <div
                       style={{
