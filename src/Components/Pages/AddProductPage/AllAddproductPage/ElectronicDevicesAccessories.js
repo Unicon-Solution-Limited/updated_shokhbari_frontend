@@ -702,6 +702,7 @@ const ElectronicDevicesAccessories = () => {
                     <option value="OtherElectronicDevice">
                       Other Electronic Device
                     </option>
+                    <option value="ElectricCombo">Combo product</option>
                   </select>
                 </div>
               </div>
@@ -1012,9 +1013,13 @@ const ElectronicDevicesAccessories = () => {
                     )}
 
                     {selectOption === "OtherElectronicDevice" && (
-                      <option value="Office-Application">
+                      <option value="OtherElectronicDevice">
                         Other Electronic Device
                       </option>
+                    )}
+
+                    {selectOption === "ElectricCombo" && (
+                      <option value="ElectricCombo">Combo Product</option>
                     )}
                   </select>
                 </div>

@@ -86,7 +86,7 @@ const EditMangeProduct = ({ signleProduct }) => {
       .then((result) => {
         if (result.modifiedCount > 0) {
           setMessage("Your Product Update Successfully");
-          window.location.reload();
+          // window.location.reload();
         }
       })
       .catch((error) => {
