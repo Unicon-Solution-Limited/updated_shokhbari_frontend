@@ -1353,6 +1353,30 @@ const ElectronicDevicesAccessories_M = () => {
                     </Link>
                   </li>
                 </ul>
+
+                <hr />
+
+                <p
+                  className="text-center subHeadline"
+                  data-bs-dismiss="offcanvas"
+                >
+                  <Link
+                    style={{ textDecoration: "none", color: "inherit" }}
+                    to={`/ElectronicDevicesAndAccessoriesItem/comboItem`}
+                  >
+                    Combo Item
+                  </Link>
+                </p>
+                <ul className="text-center" data-bs-dismiss="offcanvas">
+                  <li className="megaMenu_li">
+                    <Link
+                      to={`/displayProduct/${"ElectricCombo"}`}
+                      id="megaMenuLink"
+                    >
+                      Combo Item
+                    </Link>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
