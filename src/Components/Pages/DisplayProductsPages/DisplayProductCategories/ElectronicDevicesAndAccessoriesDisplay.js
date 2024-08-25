@@ -2094,6 +2094,32 @@ const ElectronicDevicesAndAccessoriesDisplay = () => {
               </section>
             </div>
           )}
+
+          {itemName === "comboItem" && (
+            <div id="comboItem">
+              <LazyLoadImage
+                src="https://res.cloudinary.com/shokhbari/image/upload/v1724568999/combo_banner_2_wbdcnz.jpg"
+                alt=""
+                className="img-fluid subCateBanner mb-5"
+              />
+              <section className="row tab-content-body container-fluid m-0 justify-content-center">
+                <Link
+                  className="col-12 col-lg-2 col-md-2 categoryContentBody"
+                  to={`/displayProduct/${"ElectricCombo"}`}
+                >
+                  <LazyLoadImage
+                    src="https://res.cloudinary.com/shokhbari/image/upload/v1724568999/combo-img-3_ivehkx.jpg"
+                    alt="Trulli"
+                    className="img-fluid categoryImage"
+                    placeholderSrc={loader}
+                  />
+                  <figcaption className="categoryImageCaption">
+                    Combo Item
+                  </figcaption>
+                </Link>
+              </section>
+            </div>
+          )}
         </aside>
         {/* Categories start */}
       </div>

@@ -275,6 +275,22 @@ const App = () => {
               </button>
             </Link>
           </div>
+
+          <div className="col-xs-12 col-lg-4 mb-3">
+            <Link
+              to={`/ElectronicDevicesAndAccessoriesItem/${"comboItem"}`}
+              className="custom-link"
+            >
+              <button className="mb-2 mainCategory-button">
+                <img
+                  src="https://res.cloudinary.com/shokhbari/image/upload/v1724571291/dt_kedjfz.png"
+                  alt="Logo"
+                  className="logo-category"
+                />
+                <span className="categoryHeadline">Combo Item</span>
+              </button>
+            </Link>
+          </div>
         </div>
       </div>
       <AllFooter />
