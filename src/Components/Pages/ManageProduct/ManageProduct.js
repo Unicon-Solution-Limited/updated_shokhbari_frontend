@@ -191,50 +191,7 @@ const ManageProduct = () => {
             <th>Action</th>
           </tr>
         </thead>
-        <tbody>
-          {displayProducts?.map((data, index) => (
-            <tr key={index}>
-              <td className="table1stCol">{index + 1}</td>
-              <td>
-                <LazyLoadImage
-                  style={{ width: "50px", height: "50px" }}
-                  src={data?.variantItems?.[0]?.variants?.[0]?.image}
-                  alt=""
-                  placeholderSrc={loader}
-                />
-              </td>
-
-              <td>{data?.code}</td>
-              <td>{data?.name}</td>
-              <td>{data?.currentPrice}</td>
-              <td>{data?.oldPrice}</td>
-              <td>{data?.extraDeliveryCost}</td>
-              <td>{data?.campain}</td>
-              <td>{data?.popularItems}</td>
-              <td>{data?.flashSale}</td>
-              <td className="productAction">
-                <span>
-                  <i
-                    className="bi bi-x-square-fill"
-                    onClick={() => productDelete(data?._id)}
-                  ></i>
-                </span>
-
-                <span className="mx-3 editIcon">
-                  <i
-                    className="bi bi-pencil-square"
-                    onClick={() => fetchSingleProduct(data?._id)}
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop001"
-                  ></i>
-                </span>
-
-                {/*product edit popup component */}
-                <EditMangeProduct signleProduct={signleProduct} />
-              </td>
-            </tr>
-          ))}
-        </tbody>
+        <tbody></tbody>
       </table>
 
       {/* this is pagination */}
