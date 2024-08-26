@@ -340,24 +340,21 @@ const DisplayProduct = () => {
                   Brand <hr className="filterHead" />
                 </b>
 
-                {uniqueMarchent?.map((filterBrand) => (
-                  <div
-                    key={filterBrand?._id}
-                    onClick={() => handleBrand(`${filterBrand?.marchent}`)}
-                    className="colorCheckbox"
-                  >
-                    <input
-                      type="radio"
-                      id={filterBrand?.marchent}
-                      name="brand"
-                      className="radio"
-                    />{" "}
-                    <label htmlFor={filterBrand?.marchent}>
+                <select
+                  onChange={(e) => handleBrand(e.target.value)}
+                  className="form-select"
+                >
+                  {uniqueMarchent?.map((filterBrand) => (
+                    <option
+                      key={filterBrand?._id}
+                      value={filterBrand?.marchent}
+                    >
                       {filterBrand?.marchent}
-                    </label>
-                  </div>
-                ))}
+                    </option>
+                  ))}
+                </select>
               </div>
+
               <br />
             </section>
           </div>
@@ -438,24 +435,18 @@ const DisplayProduct = () => {
               Brand <hr className="filterHead" />
             </b>
 
-            {uniqueMarchent?.map((filterBrand) => (
-              <div
-                key={filterBrand?._id}
-                onClick={() => handleBrand(`${filterBrand?.marchent}`)}
-                className="colorCheckbox"
-              >
-                <input
-                  type="radio"
-                  id={filterBrand?.marchent + "a"}
-                  name="brand"
-                  className="radio"
-                />{" "}
-                <label htmlFor={filterBrand?.marchent + "a"}>
+            <select
+              onChange={(e) => handleBrand(e.target.value)}
+              className="form-select"
+            >
+              {uniqueMarchent?.map((filterBrand) => (
+                <option key={filterBrand?._id} value={filterBrand?.marchent}>
                   {filterBrand?.marchent}
-                </label>
-              </div>
-            ))}
+                </option>
+              ))}
+            </select>
           </div>
+
           <br />
         </section>
 
