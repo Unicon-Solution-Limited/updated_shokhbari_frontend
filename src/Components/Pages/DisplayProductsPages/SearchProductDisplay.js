@@ -291,21 +291,17 @@ const SearchProductDisplay = () => {
                 <b className="text-bold">
                   Color <hr className="filterHead" />
                 </b>
-                {uniqueColors?.map((filterColor) => (
-                  <div
-                    key={filterColor?._id}
-                    onClick={() => handleColor(`${filterColor}`)}
-                    className="colorCheckbox"
-                  >
-                    <input
-                      type="radio"
-                      id={filterColor}
-                      name="color"
-                      className="radio"
-                    />{" "}
-                    <label htmlFor={filterColor}>{filterColor}</label>
-                  </div>
-                ))}
+
+                <select
+                  onChange={(e) => handleColor(e.target.value)}
+                  className="form-select"
+                >
+                  {uniqueColors?.map((filterColor) => (
+                    <option key={filterColor?._id} value={filterColor}>
+                      {filterColor}
+                    </option>
+                  ))}
+                </select>
               </div>
               <br />
               {/* filtering the unique size */}
@@ -314,21 +310,16 @@ const SearchProductDisplay = () => {
                   Size <hr className="filterHead" />
                 </b>
 
-                {uniqueSizes?.map((filterSize, i) => (
-                  <div
-                    key={i}
-                    onClick={() => handleSize(`${filterSize}`)}
-                    className="colorCheckbox"
-                  >
-                    <input
-                      type="radio"
-                      id={filterSize}
-                      name="size"
-                      className="radio"
-                    />{" "}
-                    <label htmlFor={filterSize}>{filterSize}</label>
-                  </div>
-                ))}
+                <select
+                  onChange={(e) => handleSize(e.target.value)}
+                  className="form-select"
+                >
+                  {uniqueSizes?.map((filterSize, i) => (
+                    <option key={i} value={filterSize}>
+                      {filterSize}
+                    </option>
+                  ))}
+                </select>
               </div>
               <br />
               {/* filtering the unique brand/marchent */}
@@ -395,21 +386,17 @@ const SearchProductDisplay = () => {
             <b className="text-bold">
               Color <hr className="filterHead" />
             </b>
-            {uniqueColors?.map((filterColor, i) => (
-              <div
-                key={i}
-                onClick={() => handleColor(`${filterColor}`)}
-                className="colorCheckbox"
-              >
-                <input
-                  type="radio"
-                  id={filterColor + "a"}
-                  name="color"
-                  className="radio"
-                />{" "}
-                <label htmlFor={filterColor + "a"}>{filterColor}</label>
-              </div>
-            ))}
+
+            <select
+              onChange={(e) => handleColor(e.target.value)}
+              className="form-select"
+            >
+              {uniqueColors?.map((filterColor, i) => (
+                <option key={i} value={filterColor}>
+                  {filterColor}
+                </option>
+              ))}
+            </select>
           </div>
           <br />
           {/* filtering the unique size */}
@@ -418,21 +405,16 @@ const SearchProductDisplay = () => {
               Size <hr className="filterHead" />
             </b>
 
-            {uniqueSizes?.map((filterSize) => (
-              <div
-                key={filterSize?._id}
-                onClick={() => handleSize(`${filterSize}`)}
-                className="colorCheckbox"
-              >
-                <input
-                  type="radio"
-                  id={filterSize + "a"}
-                  name="size"
-                  className="radio"
-                />{" "}
-                <label htmlFor={filterSize + "a"}>{filterSize}</label>
-              </div>
-            ))}
+            <select
+              onChange={(e) => handleSize(e.target.value)}
+              className="form-select"
+            >
+              {uniqueSizes?.map((filterSize) => (
+                <option key={filterSize?._id} value={filterSize}>
+                  {filterSize}
+                </option>
+              ))}
+            </select>
           </div>
           <br />
           {/* filtering the unique brand/marchent */}
