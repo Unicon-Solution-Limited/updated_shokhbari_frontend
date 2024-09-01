@@ -98,7 +98,7 @@ const EditMangeProduct = ({ signleProduct }) => {
   const handleProductNameEdit = (even) => {
     even.preventDefault();
     const editProduct = {
-      name: nameRef?.current.value,
+      name: nameRef?.current?.value,
     };
     fetch(
       `${process.env.REACT_APP_BACKEND_URL}/productNameEdit/${_id}?email=${currentUser?.email}`,
@@ -338,7 +338,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                 <div className="input-group mt-3 mb-3">
                   <input
                     type="text"
-                    ref={extraDeliveryRef}
+                    ref={nameRef}
                     className="form-control"
                     placeholder={name}
                     required

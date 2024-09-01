@@ -8,6 +8,8 @@ import "react-lazy-load-image-component/src/effects/blur.css";
 import { DebounceInput } from "react-debounce-input";
 import loader from "../../Image/loder.gif";
 import { useAuth } from "../../Authentication/AuthContext/AuthContext";
+import axios from "axios";
+import { FixedSizeList as List } from "react-window";
 
 const ManageProduct = () => {
   const { currentUser } = useAuth();
@@ -17,38 +19,14 @@ const ManageProduct = () => {
   const [removeId, setRemoveId] = useState(0);
   const [deleteMessage, setDeleteMessage] = useState("");
   const [signleProduct, setSingleProduct] = useState([]);
-  const [searchMangValue, setSearchMangValue] = useState("");
 
+  const [products, setProducts] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [code, setCode] = useState(""); // For code search
+  const [categories, setCategories] = useState(""); // For category search
   const [page, setPage] = useState(0);
-  const [pageCount, setPageCount] = useState(0);
-  // products to be rendered on the UI
-  const [displayProducts, setDisplayProducts] = useState([]);
-  //this is total product size
-  const size = 80;
-
-  //search product store
-  // const [filteredProducts, setFilteredProducts] = useState([]);
-
-  //for searching product
-  // const handleSearch = (e) => {
-  //   setSearch(e.target.value);
-  // };
-
-  // this is for searching product
-  // useEffect(() => {
-  //   const fetchProduct = async () => {
-  //     try {
-  //       const response = await fetch(
-  //         `${process.env.REACT_APP_BACKEND_URL}/ManageProductSearch?search=` + search
-  //       );
-  //       const data = await response.json();
-  //       setFilteredProducts(data);
-  //     } catch (error) {
-  //       console.log("err", error);
-  //     }
-  //   };
-  //   fetchProduct();
-  // }, [search, product]);
+  const [size, setSize] = useState(10); // Default items per page (initially set to 10)
+  const [totalProducts, setTotalProducts] = useState(0);
 
   //all product getting for searching
   useEffect(() => {
@@ -70,34 +48,56 @@ const ManageProduct = () => {
 
   //posting the page and size to the backend for pagination
   useEffect(() => {
-    fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/productsForPagination?page=${page}&&size=${size}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setDisplayProducts(data.products);
-        const count = data.count;
-        const pageNumber = Math.ceil(count / size);
-        setPageCount(pageNumber);
-      });
-  }, [page, removeId]);
+    fetchProducts();
+  }, [page, size, searchTerm, code, categories, removeId]);
 
-  //search handaling with condition for the reason of colse all searching product load
-  useEffect(() => {
-    const fetchProduct = async () => {
-      try {
-        const response = await fetch(
-          `${process.env.REACT_APP_BACKEND_URL}/manageProductSearch?searchMangValue=` +
-            searchMangValue
-        );
-        const data = await response.json();
-        setDisplayProducts(data);
-      } catch (error) {
-        console.log("err", error);
-      }
-    };
-    fetchProduct();
-  }, [searchMangValue]);
+  const fetchProducts = async () => {
+    try {
+      const response = await axios.get(
+        `${process.env.REACT_APP_BACKEND_URL}/productsForPagination`,
+        {
+          params: {
+            page,
+            size,
+            name: searchTerm,
+            code: code,
+            childCategories: categories,
+          },
+        }
+      );
+      setProducts(response.data.products);
+      setTotalProducts(response.data.count);
+    } catch (error) {
+      console.error("Error fetching products:", error);
+    }
+  };
+
+  const handleSearchTermChange = (e) => {
+    setSearchTerm(e.target.value);
+    setPage(0); // Reset to the first page when searching
+  };
+
+  const handleCodeChange = (e) => {
+    setCode(e.target.value);
+    setPage(0); // Reset to the first page when searching
+  };
+
+  const handleCategoryChange = (e) => {
+    setCategories(e.target.value);
+    setPage(0); // Reset to the first page when searching
+  };
+
+  const handlePageSizeChange = (e) => {
+    const newSize = parseInt(e.target.value);
+    setSize(newSize);
+    setPage(0); // Reset to the first page when page size changes
+  };
+
+  const handlePageChange = (newPage) => {
+    setPage(newPage);
+  };
+
+  const totalPages = Math.ceil(totalProducts / size);
 
   //Deleteing the product form product list
   const productDelete = async (productId) => {
@@ -144,101 +144,147 @@ const ManageProduct = () => {
     setLoading(false);
   };
 
+  const Row = ({ index, style }) => {
+    const data = products[index];
+
+    return (
+      <div style={style} className="d-flex">
+        <tr key={index} className="d-flex w-100">
+          <td className="table1stCol col">{index + 1}</td>
+          <td className="col">
+            <LazyLoadImage
+              style={{ width: "50px", height: "50px" }}
+              src={data?.variantItems?.[0]?.variants?.[0]?.image}
+              alt=""
+              placeholderSrc={loader}
+            />
+          </td>
+          <td className="col">{data?.code}</td>
+          {/* <td className="col">{data?.name}</td> */}
+          <td className="col">{data?.currentPrice}</td>
+          <td className="col">{data?.oldPrice}</td>
+          <td className="col">{data?.extraDeliveryCost}</td>
+          <td className="col">{data?.campain}</td>
+          <td className="col">{data?.popularItems}</td>
+          <td className="col">{data?.flashSale}</td>
+          <td className="productAction col">
+            <span>
+              <i
+                className="bi bi-x-square-fill"
+                onClick={() => productDelete(data?._id)}
+              ></i>
+            </span>
+            <span className="mx-3 editIcon">
+              <i
+                className="bi bi-pencil-square"
+                onClick={() => fetchSingleProduct(data?._id)}
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop001"
+              ></i>
+            </span>
+          </td>
+        </tr>
+      </div>
+    );
+  };
+
   return (
     <>
       <div className="row productListHeader mb-3">
-        <div className="col-md-8">
+        <div className="col-md-4">
           <h2>Total Product: {product.length}</h2>
         </div>
-        <div className="col-md-4">
-          <div className="input-group mb-3">
+
+        <div className="col-md-8">
+          <div className="d-flex gap-1 mb-3">
             <DebounceInput
-              onChange={(e) => setSearchMangValue(e.target.value)}
               type="text"
+              placeholder="Search by name..."
+              value={searchTerm}
+              onChange={handleSearchTermChange}
               className="form-control"
-              placeholder="Search Product"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+              minLength={2}
+              debounceTimeout={300}
+            />
+
+            <DebounceInput
+              type="text"
+              placeholder="Search by category..."
+              value={categories}
+              onChange={handleCategoryChange}
+              className="form-control"
+              aria-label="Recipient's username"
+              aria-describedby="basic-addon2"
+              minLength={2}
+              debounceTimeout={300}
+            />
+
+            <DebounceInput
+              type="text"
+              placeholder="Search by code..."
+              value={code}
+              onChange={handleCodeChange}
+              className="form-control"
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
               minLength={2}
               debounceTimeout={300}
             />
             <div className="input-group-append">
-              <button className="btn btn-outline-secondary" type="button">
+              {/* <button className="btn btn-outline-secondary" type="button">
                 <i className="bi bi-search"></i>
-              </button>
+              </button> */}
+              <select
+                id="pageSize"
+                value={size}
+                onChange={handlePageSizeChange}
+              >
+                <option value={10}>10</option>
+                <option value={20}>20</option>
+                <option value={50}>50</option>
+              </select>
             </div>
           </div>
         </div>
       </div>
 
-      <table className="table table-hover ProductTable">
-        <thead>
-          <tr>
-            <th className="table1stCol">SL.</th>
-            <th>Image</th>
-            {/* <th>Name</th> */}
-            <th>Product Code</th>
-            <th>Product Name</th>
-            <th>Current Price</th>
-            <th>Old Price</th>
-            <th>
-              extra Delivery <br />
-              Cost
-            </th>
-            <th>campain</th>
-            <th>Popular</th>
-            <th>Flash</th>
-            <th>Action</th>
-          </tr>
-        </thead>
-        <tbody>
-          {displayProducts?.map((data, index) => (
-            <tr key={index}>
-              <td className="table1stCol">{index + 1}</td>
-              <td>
-                <LazyLoadImage
-                  style={{ width: "50px", height: "50px" }}
-                  src={data?.variantItems?.[0]?.variants?.[0]?.image}
-                  alt=""
-                  placeholderSrc={loader}
-                />
-              </td>
-
-              <td>{data?.code}</td>
-              <td>{data?.name}</td>
-              <td>{data?.currentPrice}</td>
-              <td>{data?.oldPrice}</td>
-              <td>{data?.extraDeliveryCost}</td>
-              <td>{data?.campain}</td>
-              <td>{data?.popularItems}</td>
-              <td>{data?.flashSale}</td>
-              <td className="productAction">
-                <span>
-                  <i
-                    className="bi bi-x-square-fill"
-                    onClick={() => productDelete(data?._id)}
-                  ></i>
-                </span>
-
-                <span className="mx-3 editIcon">
-                  <i
-                    className="bi bi-pencil-square"
-                    onClick={() => fetchSingleProduct(data?._id)}
-                    data-bs-toggle="modal"
-                    data-bs-target="#staticBackdrop001"
-                  ></i>
-                </span>
-
-                {/*product edit popup component */}
-                <EditMangeProduct signleProduct={signleProduct} />
-              </td>
+      <div className="table-responsive">
+        <table className="table table-hover ProductTable">
+          <thead>
+            <tr className="d-flex w-100">
+              <th className="table1stCol col">SL.</th>
+              <th className="col">Image</th>
+              <th className="col">Product Code</th>
+              {/* <th className="col">Product Name</th> */}
+              <th className="col">Current Price</th>
+              <th className="col">Old Price</th>
+              <th className="col">extra Delivery Cost</th>
+              <th className="col">campain</th>
+              <th className="col">Popular</th>
+              <th className="col">Flash</th>
+              <th className="col">Action</th>
             </tr>
-          ))}
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <List
+              height={400} // Adjust height as needed
+              itemCount={products.length}
+              itemSize={50} // Adjust row height as needed
+              width="100%"
+              outerElementType="div"
+              innerElementType="tbody"
+            >
+              {Row}
+            </List>
+            <EditMangeProduct signleProduct={signleProduct} />
+          </tbody>
+        </table>
+      </div>
 
       {/* this is pagination */}
-      <div className="pagination">
+      {/* <div>
         {[...Array(pageCount).keys()].map((number) => (
           <button
             className={number === page ? "selected" : ""}
@@ -248,6 +294,23 @@ const ManageProduct = () => {
             {number + 1}
           </button>
         ))}
+      </div> */}
+      <div className="pagination">
+        <button
+          onClick={() => handlePageChange(page - 1)}
+          disabled={page === 0}
+        >
+          Previous
+        </button>
+        <span>
+          Page {page + 1} of {totalPages}
+        </span>
+        <button
+          onClick={() => handlePageChange(page + 1)}
+          disabled={page + 1 >= totalPages}
+        >
+          Next
+        </button>
       </div>
 
       <h5 className="deleteSuccessMessage alert-success">{deleteMessage}</h5>
