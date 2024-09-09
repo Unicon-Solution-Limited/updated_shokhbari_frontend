@@ -207,13 +207,22 @@ const EditMangeProduct = ({ signleProduct }) => {
       )
         .then((res) => res.json())
         .then((result) => {
-          if (result.modifiedCount > 0) {
+          console.log(result, "Update result"); // Log the result for debugging
+
+          // Check for success message and update the state or reload as needed
+          if (result.message === "Color input updated successfully") {
             setMessage("Your Product Update Successfully");
+
+            // Optionally reload, though it’s better to update state instead of reloading the whole page
             window.location.reload();
+          } else {
+            // Handle errors or unexpected results here
+            setMessage("Product Update Failed. Please try again.");
           }
         })
         .catch((error) => {
-          console.log(error);
+          console.error("Error updating color:", error);
+          setMessage("An error occurred. Please try again.");
         });
     }
   };
@@ -240,13 +249,15 @@ const EditMangeProduct = ({ signleProduct }) => {
       )
         .then((res) => res.json())
         .then((result) => {
-          if (result.modifiedCount > 0) {
+          if (result.message === "Color updated successfully") {
             setMessage("Your Product Update Successfully");
-            window.location.reload();
+            window.location.reload(); // Trigger page reload
+          } else {
+            console.error("Failed to update the color:", result);
           }
         })
         .catch((error) => {
-          console.log(error);
+          console.error("Error updating color:", error);
         });
     }
   };
@@ -705,7 +716,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                               id="colorInputForUpdate"
                               className="form-control"
                               name="colorInput"
-                              placeholder={variant.colorInput}
+                              value={variant?.colorInput}
                               onChange={handleColorInputChange}
                               required
                             />
@@ -714,7 +725,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                             type="submit"
                             className="btn btn-primary"
                             onClick={() =>
-                              setCommonVarientId(variant.variantId)
+                              setCommonVarientId(variant?.variantId)
                             }
                           >
                             Submit Color
