@@ -334,49 +334,9 @@ const EditMangeProduct = ({ signleProduct }) => {
   //size and stock
   const [newSize, setNewSize] = useState("");
   const [newStock, setNewStock] = useState("");
-  console.log(newStock, newSize, commonVarientId);
-
-  // const handleSizeAndStock = (e) => {
-  //   e.preventDefault();
-  //   console.log(newSize, newStock, commonVarientId);
-
-  //   setImgIsLoading(true); // Start loading
-  //   console.log("hit");
-
-  //   fetch(
-  //     `${process.env.REACT_APP_BACKEND_URL}/mngStockSizeUpdate/${commonVarientId}?email=${currentUser?.email}`,
-  //     {
-  //       method: "PATCH",
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //         authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
-  //       },
-  //       body: JSON.stringify({ size: newSize, stock: newStock }),
-  //     }
-  //   )
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       setImgIsLoading(false); // Stop loading
-
-  //       if (result.modifiedCount > 0) {
-  //         setMessage("Your Product Update Successfully");
-
-  //         // Reload after a short delay to allow the message to display
-  //         setTimeout(() => {
-  //           window.location.reload();
-  //         }, 500);
-  //       }
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //       setImgIsLoading(false); // Stop loading in case of error
-  //       setMessage("Failed to update product.");
-  //     });
-  // };
 
   const handleSizeAndStock = (e) => {
     e.preventDefault();
-    console.log(newSize, newStock, commonVarientId);
 
     setImgIsLoading(true); // Start loading
 
@@ -411,6 +371,38 @@ const EditMangeProduct = ({ signleProduct }) => {
         setImgIsLoading(false); // Stop loading in case of error
         setMessage("Failed to update product.");
       });
+  };
+
+  //delete size and sotck
+  const [deleteMessage, setDeleteMessage] = useState("");
+  const sizeStockDelete = async (commonVarientId) => {
+    try {
+      const url = `${process.env.REACT_APP_BACKEND_URL}/mngStockSizeDelete/${commonVarientId}?email=${currentUser?.email}`;
+      const response = await fetch(url, {
+        method: "DELETE",
+        headers: {
+          "Content-type": "application/json; charset=UTF-8",
+          authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
+        },
+      });
+
+      if (response.ok) {
+        const data = await response.json();
+
+        if (data) {
+          setDeleteMessage("Product deleted successfully");
+          // setRemoveId(productId);
+          setTimeout(() => {
+            setDeleteMessage("");
+            window.location.reload();
+          }, 6000);
+        }
+      } else {
+        console.log("Request failed with status:", response.status);
+      }
+    } catch (error) {
+      console.log("Error:", error);
+    }
   };
 
   return (
@@ -884,7 +876,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                         </form>
 
                         {variant.sizes.map((size) => (
-                          <div key={size.variantItemId}>
+                          <div key={size.variantItemId} className="mt-2">
                             {/* <td className="small">{size.size}</td>
                                 <td className="small">{size.stock}</td> */}
                             <form onSubmit={handleSizeAndStock}>
@@ -904,6 +896,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                               />
                               <button
                                 type="submit"
+                                className="btn btn-primary"
                                 onClick={() =>
                                   setCommonVarientId(size?.variantItemId)
                                 }
@@ -911,6 +904,14 @@ const EditMangeProduct = ({ signleProduct }) => {
                                 Update
                               </button>
                             </form>
+                            <button
+                              className="btn btn-danger"
+                              onClick={() => {
+                                sizeStockDelete(size?.variantItemId);
+                              }}
+                            >
+                              Stock & Size delete
+                            </button>
                           </div>
                         ))}
                       </div>
