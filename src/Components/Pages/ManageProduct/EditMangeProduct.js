@@ -331,6 +331,88 @@ const EditMangeProduct = ({ signleProduct }) => {
     }
   };
 
+  //size and stock
+  const [newSize, setNewSize] = useState("");
+  const [newStock, setNewStock] = useState("");
+  console.log(newStock, newSize, commonVarientId);
+
+  // const handleSizeAndStock = (e) => {
+  //   e.preventDefault();
+  //   console.log(newSize, newStock, commonVarientId);
+
+  //   setImgIsLoading(true); // Start loading
+  //   console.log("hit");
+
+  //   fetch(
+  //     `${process.env.REACT_APP_BACKEND_URL}/mngStockSizeUpdate/${commonVarientId}?email=${currentUser?.email}`,
+  //     {
+  //       method: "PATCH",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //         authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
+  //       },
+  //       body: JSON.stringify({ size: newSize, stock: newStock }),
+  //     }
+  //   )
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       setImgIsLoading(false); // Stop loading
+
+  //       if (result.modifiedCount > 0) {
+  //         setMessage("Your Product Update Successfully");
+
+  //         // Reload after a short delay to allow the message to display
+  //         setTimeout(() => {
+  //           window.location.reload();
+  //         }, 500);
+  //       }
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       setImgIsLoading(false); // Stop loading in case of error
+  //       setMessage("Failed to update product.");
+  //     });
+  // };
+
+  const handleSizeAndStock = (e) => {
+    e.preventDefault();
+    console.log(newSize, newStock, commonVarientId);
+
+    setImgIsLoading(true); // Start loading
+
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/mngStockSizeUpdate/${commonVarientId}?email=${currentUser?.email}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
+        },
+        body: JSON.stringify({ size: newSize, stock: newStock }),
+      }
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        setImgIsLoading(false); // Stop loading
+
+        if (result.message === "Size and stock updated successfully") {
+          setMessage("Your Product Update Successfully");
+
+          // Reload after a short delay to allow the message to display
+          setTimeout(() => {
+            window.location.reload();
+          }, 500);
+        } else {
+          setMessage("Failed to update product.");
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        setImgIsLoading(false); // Stop loading in case of error
+        setMessage("Failed to update product.");
+      });
+  };
+
   return (
     // <div>
     //   <div
@@ -801,26 +883,36 @@ const EditMangeProduct = ({ signleProduct }) => {
                           </button>
                         </form>
 
-                        <table className="table table-sm table-bordered mb-0">
-                          <thead className="table-light">
-                            <tr>
-                              <th scope="col" className="small">
-                                Size
-                              </th>
-                              <th scope="col" className="small">
-                                Stock
-                              </th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            {variant.sizes.map((size) => (
-                              <tr key={size.variantItemId}>
-                                <td className="small">{size.size}</td>
-                                <td className="small">{size.stock}</td>
-                              </tr>
-                            ))}
-                          </tbody>
-                        </table>
+                        {variant.sizes.map((size) => (
+                          <div key={size.variantItemId}>
+                            {/* <td className="small">{size.size}</td>
+                                <td className="small">{size.stock}</td> */}
+                            <form onSubmit={handleSizeAndStock}>
+                              Size:
+                              <input
+                                type="text"
+                                name="newSize"
+                                placeholder={size.size}
+                                onChange={(e) => setNewSize(e.target.value)}
+                              />
+                              Stock:
+                              <input
+                                type="text"
+                                name="newStock"
+                                placeholder={size.stock}
+                                onChange={(e) => setNewStock(e.target.value)}
+                              />
+                              <button
+                                type="submit"
+                                onClick={() =>
+                                  setCommonVarientId(size?.variantItemId)
+                                }
+                              >
+                                Update
+                              </button>
+                            </form>
+                          </div>
+                        ))}
                       </div>
                     ))}
                   </div>
