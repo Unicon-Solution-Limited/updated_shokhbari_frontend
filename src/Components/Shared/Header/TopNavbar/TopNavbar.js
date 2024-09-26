@@ -144,12 +144,6 @@ const TopNavbar = () => {
               <li className="d-flex align-items-center">
                 <i className="bi bi-envelope-fill"></i>{" "}
                 <span className="mx-2">shokhbari@gmail.com</span>
-                <button
-                  className="button-animated"
-                  onClick={() => history.push("/add")}
-                >
-                  Click
-                </button>
               </li>
             </ul>
           </div>

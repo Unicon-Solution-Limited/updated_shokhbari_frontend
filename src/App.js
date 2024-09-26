@@ -84,7 +84,6 @@ import HealthMedicalMainCategories from "./Components/Pages/DisplayProductsPages
 import MatrimonialMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/MatrimonialMainCategories";
 import KidsMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/KidsMainCategories";
 import TourTipsMainCategories from "./Components/Pages/DisplayProductsPages/DisplayMainProductCategories/TourTipsMainCategories";
-import Add from "./Components/Home/Add/Add";
 
 function App() {
   return (
@@ -103,10 +102,6 @@ function App() {
 
                   <Route path="/home">
                     <Home />
-                  </Route>
-
-                  <Route path="/add">
-                    <Add />
                   </Route>
 
                   <Route path="/singleProduct/:ProductId">

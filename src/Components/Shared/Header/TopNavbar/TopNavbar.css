@@ -83,38 +83,6 @@
   color: var(--white);
 }
 
-/* In your CSS file or inside a styled component */
-.button-animated {
-  padding: 5px;
-  height: 30px;
-  font-size: 12px;
-  color: white;
-  border: none;
-  cursor: pointer;
-  border-radius: 100%;
-  background-color: #ff0000; /* Start with red */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  animation: smoothRGB 5s infinite alternate; /* 5 seconds for smooth transitions */
-}
-
-@keyframes smoothRGB {
-  0% {
-    background-color: rgb(255, 0, 0); /* Red */
-  }
-  25% {
-    background-color: rgb(128, 0, 128); /* Purple */
-  }
-  50% {
-    background-color: rgb(0, 0, 255); /* Blue */
-  }
-  75% {
-    background-color: rgb(0, 255, 255); /* Teal/Cyan */
-  }
-  100% {
-    background-color: rgb(0, 255, 0); /* Green */
-  }
-}
-
 @media only screen and (min-width: 890px) {
   .MobileNav {
     display: none;
