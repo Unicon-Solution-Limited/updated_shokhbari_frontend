@@ -11,7 +11,7 @@ const Add = () => {
         style={{ position: "relative", height: "100vh", overflow: "hidden" }}
       >
         {/* Video Element */}
-        <video
+        {/* <video
           style={{
             position: "absolute",
             top: 0,
@@ -27,7 +27,24 @@ const Add = () => {
           src="https://www.w3schools.com/html/mov_bbb.mp4"
         >
           Your browser does not support the video tag.
-        </video>
+        </video> */}
+
+        <iframe
+          style={{
+            position: "absolute",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            objectFit: "cover", // Ensures the video covers the screen
+          }}
+          src="https://www.youtube.com/embed/etjIx8wD21k?autoplay=1&loop=1&playlist=etjIx8wD21k&mute=1&si=liuBKumy5aqnog-O"
+          title="YouTube video player"
+          frameBorder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerPolicy="strict-origin-when-cross-origin"
+          allowFullScreen
+        ></iframe>
 
         {/* Back to Home Button */}
         <button
@@ -37,12 +54,13 @@ const Add = () => {
             top: "20px",
             left: "20px",
             zIndex: 1050, // Higher z-index to be on top of the video
-            padding: "10px 20px",
+            padding: "5px 10px",
             backgroundColor: "rgba(255, 255, 255, 0.8)", // Semi-transparent background
-            border: "none",
+            // border: "none",
             borderRadius: "5px",
             cursor: "pointer",
             fontSize: "16px",
+            border: "1px solid yellow",
           }}
         >
           Back to Home
