@@ -141,9 +141,15 @@ const TopNavbar = () => {
                 <i className="bi bi-telephone-fill"></i>{" "}
                 <span> +8801841477361</span>
               </li>
-              <li className="d-flex">
+              <li className="d-flex align-items-center">
                 <i className="bi bi-envelope-fill"></i>{" "}
                 <span className="mx-2">shokhbari@gmail.com</span>
+                <button
+                  className="button-animated"
+                  onClick={() => history.push("/add")}
+                >
+                  Click
+                </button>
               </li>
             </ul>
           </div>
