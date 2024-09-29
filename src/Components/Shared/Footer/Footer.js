@@ -173,6 +173,9 @@ const Footer = () => {
                   src="https://res.cloudinary.com/shokhbari/image/upload/v1686820765/Footer-img/Rocket_urvxq1.webp"
                   alt="Rocket"
                 />
+              </div>
+              <br />
+              <div id="paymentImg">
                 <img
                   src="https://res.cloudinary.com/shokhbari/image/upload/v1686820764/Footer-img/Nagad_hgkudx.webp"
                   alt="Nagad"
@@ -211,27 +214,38 @@ const Footer = () => {
                 >
                   <i className="bi bi-instagram"></i>
                 </a>
+                <span>
+                  <h5 className="text-uppercase mt-4">Secured by</h5>
+                  <a
+                    href="https://www.escanav.com/"
+                    target="_blank"
+                    rel="noreferrer"
+                    id="Secure"
+                  >
+                    <img
+                      src="https://res.cloudinary.com/shokhbari/image/upload/v1687428399/shokhbari_home_imgae/eScan_ur0os9.webp"
+                      alt="eScan"
+                      className="secure_img mt-3"
+                    />
+                  </a>
+                </span>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 securedBy">
-              <h5 className="text-uppercase mb-2">Secured by</h5>
-              <a
-                href="https://www.escanav.com/"
-                target="_blank"
-                rel="noreferrer"
-                id="Secure"
-              >
-                <img
-                  src="https://res.cloudinary.com/shokhbari/image/upload/v1687428399/shokhbari_home_imgae/eScan_ur0os9.webp"
-                  alt="eScan"
-                  className="secure_img"
-                />
-              </a>
+              <iframe
+                width="auto"
+                height="200"
+                src="https://www.youtube.com/embed/DVNNL3wT4Q0?si=JWHLoLTq2NYzWlzM&autoplay=1&loop=1&playlist=DVNNL3wT4Q0"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
         </div>
         {/* MESSANGER */}
-        
 
         {/* <!-- Copyright --> */}
         <div className="text-center p-3 copyRight">
