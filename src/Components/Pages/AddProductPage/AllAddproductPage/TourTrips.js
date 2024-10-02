@@ -540,7 +540,7 @@ const TourTrips = () => {
               value={showDescription}
               config={config}
               tabIndex={1}
-              onBlur={(newContent) => setShowDescription(newContent)}
+              onChange={(newContent) => setShowDescription(newContent)}
             />
 
             {/* product main color */}

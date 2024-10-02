@@ -542,7 +542,7 @@ const FashionAccessories = () => {
               value={showDescription}
               config={config}
               tabIndex={1}
-              onBlur={(newContent) => setShowDescription(newContent)}
+              onChange={(newContent) => setShowDescription(newContent)}
             />
 
             <div className="row my-4">
