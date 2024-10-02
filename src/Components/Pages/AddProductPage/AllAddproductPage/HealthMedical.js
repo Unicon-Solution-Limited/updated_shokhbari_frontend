@@ -1,7 +1,6 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
 import "../AddProductPage.css";
-import "react-quill/dist/quill.snow.css";
 import { useAuth } from "./../../../Authentication/AuthContext/AuthContext";
 import { v4 as uuidv4 } from "uuid";
 import JoditEditor from "jodit-react";
