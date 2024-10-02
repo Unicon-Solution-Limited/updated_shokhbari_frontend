@@ -1,10 +1,10 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
-import ReactQuill from "react-quill";
 import "../AddProductPage.css";
 import "react-quill/dist/quill.snow.css";
 import { useAuth } from "./../../../Authentication/AuthContext/AuthContext";
 import { v4 as uuidv4 } from "uuid";
+import JoditEditor from "jodit-react";
 
 const TourTrips = () => {
   const { currentUser } = useAuth();
@@ -15,6 +15,38 @@ const TourTrips = () => {
   const [selectOption, setSelectOption] = useState("");
   const [selectChildCategory, setSelectChildCategory] = useState("");
   const [showDescription, setShowDescription] = useState("");
+
+  const editor = useRef(null);
+
+  const config = {
+    readonly: false,
+    placeholder: "Start typing...",
+    toolbarButtonSize: "small",
+    buttons: [
+      "bold",
+      "italic",
+      "underline",
+      "strikethrough",
+      "eraser",
+      "ul",
+      "ol",
+      "outdent",
+      "indent",
+      "font",
+      "fontsize",
+      "brush",
+      "paragraph",
+      "align",
+      "undo",
+      "redo",
+      "cut",
+      "copy",
+      "paste",
+      "hr",
+      "link",
+      "unlink",
+    ],
+  };
 
   const handleSelectOption = (e) => {
     setSelectOption(e.target.value);
@@ -101,7 +133,9 @@ const TourTrips = () => {
         currentPriceRef.current.value = "";
         oldPriceRef.current.value = "";
         extraDeliveryCostRef.current.value = "";
-        window.location.reload();
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
       }
     } catch (error) {
       console.log("err", error);
@@ -502,47 +536,12 @@ const TourTrips = () => {
                 Full Description
               </label>
             </div>
-            <ReactQuill
-              className="fullDescription"
-              theme="snow"
+            <JoditEditor
+              ref={editor}
               value={showDescription}
-              modules={{
-                toolbar: [
-                  [{ header: "1" }, { header: "2" }, { font: [] }],
-                  [{ size: [] }],
-                  ["bold", "italic", "underline", "strike", "blockquote"],
-                  [{ align: [] }],
-                  [{ color: [] }, { background: [] }],
-                  [
-                    { list: "ordered" },
-                    { list: "bullet" },
-                    { indent: "-1" },
-                    { indent: "+1" },
-                  ],
-                  ["code-block"],
-                  ["clean"],
-                ],
-              }}
-              formats={[
-                "header",
-                "font",
-                "size",
-                "bold",
-                "italic",
-                "underline",
-                "strike",
-                "blockquote",
-                "color",
-                "background",
-                "list",
-                "bullet",
-                "indent",
-                "code-block",
-                "align",
-              ]}
-              onChange={(val) => {
-                setShowDescription(val);
-              }}
+              config={config}
+              tabIndex={1}
+              onBlur={(newContent) => setShowDescription(newContent)}
             />
 
             {/* product main color */}

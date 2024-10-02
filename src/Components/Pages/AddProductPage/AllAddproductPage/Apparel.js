@@ -1,8 +1,6 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
-import ReactQuill from "react-quill";
 import "../AddProductPage.css";
-import "react-quill/dist/quill.snow.css";
 import { useAuth } from "./../../../Authentication/AuthContext/AuthContext";
 import { v4 as uuidv4 } from "uuid";
 import JoditEditor from "jodit-react";
@@ -133,7 +131,9 @@ const Apparel = () => {
         currentPriceRef.current.value = "";
         oldPriceRef.current.value = "";
         extraDeliveryCostRef.current.value = "";
-        window.location.reload();
+        setTimeout(() => {
+          window.location.reload();
+        }, 500);
       }
     } catch (error) {
       console.log("err", error);
