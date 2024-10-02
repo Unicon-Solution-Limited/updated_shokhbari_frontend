@@ -560,7 +560,7 @@ const SingleProductPsize = () => {
                     role="tabpanel"
                     aria-labelledby="Description-tab"
                   >
-                    {productDetails?.shortDescription.slice(0, 300)}
+                    {productDetails?.shortDescription}
                     <br />
                     <br />
 
