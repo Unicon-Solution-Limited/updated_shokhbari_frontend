@@ -28,20 +28,12 @@ const DashboardBody = () => {
   //     });
   // }, [currentUser?.email]);
   useEffect(() => {
-    const headers = {
-      "Content-Type": "application/json",
-      authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
-    };
-
-    fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/findAdmin?email=${currentUser.email}`,
-      {
-        headers,
-      }
-    )
+    fetch(`${process.env.REACT_APP_BACKEND_URL}/findAdmin`)
       .then((res) => res.json())
       .then((result) => {
-        setIsAdmin(true);
+        if (result) {
+          setIsAdmin(true);
+        }
       });
   }, [currentUser?.email]);
 
