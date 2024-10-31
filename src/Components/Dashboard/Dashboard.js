@@ -20,22 +20,24 @@ const DashboardBody = () => {
   const [isAdmin, setIsAdmin] = useState(false);
 
   // FIND ADMIN
-  // useEffect(() => {
-  //   fetch(`${process.env.REACT_APP_BACKEND_URL}/findAdmin?email=${currentUser.email}`)
-  //     .then((res) => res.json())
-  //     .then((result) => {
-  //       setIsAdmin(true);
-  //     });
-  // }, [currentUser?.email]);
   useEffect(() => {
-    fetch(`${process.env.REACT_APP_BACKEND_URL}/findAdmin`)
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/findAdmin?email=${currentUser.email}`
+    )
       .then((res) => res.json())
       .then((result) => {
-        if (result) {
-          setIsAdmin(true);
-        }
+        setIsAdmin(true);
       });
   }, [currentUser?.email]);
+  // useEffect(() => {
+  //   fetch(`${process.env.REACT_APP_BACKEND_URL}/findAdmin`)
+  //     .then((res) => res.json())
+  //     .then((result) => {
+  //       if (result) {
+  //         setIsAdmin(true);
+  //       }
+  //     });
+  // }, [currentUser?.email]);
 
   //remove shokhbari token
   const removeShokhbariToken = () => {

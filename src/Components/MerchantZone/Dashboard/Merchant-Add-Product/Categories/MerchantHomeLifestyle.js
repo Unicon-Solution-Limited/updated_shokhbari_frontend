@@ -1,14 +1,44 @@
 import axios from "axios";
 import React, { useRef, useState } from "react";
-import ReactQuill from "react-quill";
-import "react-quill/dist/quill.snow.css";
+import JoditEditor from "jodit-react";
 import { useAuth } from "./../../../../Authentication/AuthContext/AuthContext";
 import { v4 as uuidv4 } from "uuid";
 
 const MerchantHomeLifestyle = () => {
   const { currentUser } = useAuth();
   const [message, setMessage] = useState("");
+  const editor = useRef(null);
   const [addInputProduct, setAddInputProduct] = useState(false);
+
+  const config = {
+    readonly: false,
+    placeholder: "Start typing...",
+    toolbarButtonSize: "small",
+    buttons: [
+      "bold",
+      "italic",
+      "underline",
+      "strikethrough",
+      "eraser",
+      "ul",
+      "ol",
+      "outdent",
+      "indent",
+      "font",
+      "fontsize",
+      "brush",
+      "paragraph",
+      "align",
+      "undo",
+      "redo",
+      "cut",
+      "copy",
+      "paste",
+      "hr",
+      "link",
+      "unlink",
+    ],
+  };
 
   //Conditionally set category in select options
   const [selectOption, setSelectOption] = useState("");
@@ -501,47 +531,13 @@ const MerchantHomeLifestyle = () => {
                 Full Description
               </label>
             </div>
-            <ReactQuill
-              className="fullDescription"
-              theme="snow"
+
+            <JoditEditor
+              ref={editor}
               value={showDescription}
-              modules={{
-                toolbar: [
-                  [{ header: "1" }, { header: "2" }, { font: [] }],
-                  [{ size: [] }],
-                  ["bold", "italic", "underline", "strike", "blockquote"],
-                  [{ align: [] }],
-                  [{ color: [] }, { background: [] }],
-                  [
-                    { list: "ordered" },
-                    { list: "bullet" },
-                    { indent: "-1" },
-                    { indent: "+1" },
-                  ],
-                  ["code-block"],
-                  ["clean"],
-                ],
-              }}
-              formats={[
-                "header",
-                "font",
-                "size",
-                "bold",
-                "italic",
-                "underline",
-                "strike",
-                "blockquote",
-                "color",
-                "background",
-                "list",
-                "bullet",
-                "indent",
-                "code-block",
-                "align",
-              ]}
-              onChange={(val) => {
-                setShowDescription(val);
-              }}
+              config={config}
+              tabIndex={1}
+              onChange={(newContent) => setShowDescription(newContent)}
             />
 
             {/* product main color */}
