@@ -48,6 +48,7 @@ const EditMangeProduct = ({ signleProduct }) => {
     stock,
     campain,
     name,
+    marchent,
     extraDeliveryCost,
   } = signleProduct;
   const [message, setMessage] = useState("");
@@ -60,6 +61,7 @@ const EditMangeProduct = ({ signleProduct }) => {
   const campainRef = useRef();
   const extraDeliveryRef = useRef();
   const nameRef = useRef();
+  const marchentRef = useRef();
 
   // update product and send to the database
   const handleEditProduct = (e) => {
@@ -123,6 +125,36 @@ const EditMangeProduct = ({ signleProduct }) => {
         console.log(error);
       });
   };
+  //marchent edit
+  const handleProductMarchentEdit = (even) => {
+    even.preventDefault();
+    const editProduct = {
+      marchent: marchentRef?.current?.value,
+    };
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/productMarchentEdit/${_id}?email=${currentUser?.email}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
+        },
+        body: JSON.stringify(editProduct),
+      }
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          setMessage("Your Product Update Successfully");
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   //description edit
   const handleProductDescriptionEdit = (even) => {
@@ -145,7 +177,9 @@ const EditMangeProduct = ({ signleProduct }) => {
       .then((result) => {
         if (result.modifiedCount > 0) {
           setMessage("Your Product Update Successfully");
-          window.location.reload();
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
         }
       })
       .catch((error) => {
@@ -697,6 +731,7 @@ const EditMangeProduct = ({ signleProduct }) => {
 
               {/* Edit Product Name */}
               <form onSubmit={handleProductNameEdit} className="mt-4">
+                <h5>Product Name</h5>
                 <div className="input-group mb-3">
                   <input
                     type="text"
@@ -707,6 +742,23 @@ const EditMangeProduct = ({ signleProduct }) => {
                   />
                   <button type="submit" className="btn btn-primary">
                     Submit Name
+                  </button>
+                </div>
+              </form>
+
+              {/* edit the poruct brand  */}
+              <form onSubmit={handleProductMarchentEdit} className="mt-4">
+                <h5>Product Brand</h5>
+                <div className="input-group mb-3">
+                  <input
+                    type="text"
+                    ref={marchentRef}
+                    className="form-control"
+                    placeholder={marchent}
+                    required
+                  />
+                  <button type="submit" className="btn btn-primary">
+                    Submit brand
                   </button>
                 </div>
               </form>
