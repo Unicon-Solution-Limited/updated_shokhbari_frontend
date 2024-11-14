@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import "./ManageProduct.css";
 import { useAuth } from "../../Authentication/AuthContext/AuthContext";
 import JoditEditor from "jodit-react";
@@ -8,6 +8,7 @@ const EditMangeProduct = ({ signleProduct }) => {
   const { currentUser } = useAuth();
   const editor = useRef(null);
   const [showDescription, setShowDescription] = useState("");
+  const editorContentRef = useRef(showDescription);
 
   const config = {
     readonly: false,
@@ -37,6 +38,14 @@ const EditMangeProduct = ({ signleProduct }) => {
       "link",
       "unlink",
     ],
+  };
+
+  const handleEditorChange = useCallback((newContent) => {
+    editorContentRef.current = newContent;
+  }, []);
+
+  const handleEditorBlur = () => {
+    setShowDescription(editorContentRef.current);
   };
 
   const {
@@ -774,11 +783,11 @@ const EditMangeProduct = ({ signleProduct }) => {
                   </label>
                   <JoditEditor
                     ref={editor}
-                    value={showDescription}
+                    value={editorContentRef.current}
                     config={config}
                     tabIndex={1}
-                    onBlur={(newContent) => setShowDescription(newContent)}
-                    onChange={(newContent) => {}}
+                    onBlur={handleEditorBlur}
+                    onChange={handleEditorChange}
                   />
                 </div>
                 <button type="submit" className="btn btn-primary">

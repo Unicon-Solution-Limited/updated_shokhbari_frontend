@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import "../AddProductPage.css";
 import { useAuth } from "./../../../Authentication/AuthContext/AuthContext";
 import { v4 as uuidv4 } from "uuid";
@@ -15,6 +15,16 @@ const GiftsCraft = () => {
   const [selectChildCategory, setSelectChildCategory] = useState("");
   const editor = useRef(null);
   const [showDescription, setShowDescription] = useState("");
+
+  const editorContentRef = useRef(showDescription);
+
+  const handleEditorChange = useCallback((newContent) => {
+    editorContentRef.current = newContent;
+  }, []);
+
+  const handleEditorBlur = () => {
+    setShowDescription(editorContentRef.current);
+  };
 
   const config = {
     readonly: false,
@@ -534,12 +544,14 @@ const GiftsCraft = () => {
                 Full Description
               </label>
             </div>
+
             <JoditEditor
               ref={editor}
-              value={showDescription}
+              value={editorContentRef.current}
               config={config}
               tabIndex={1}
-              onChange={(newContent) => setShowDescription(newContent)}
+              onBlur={handleEditorBlur}
+              onChange={handleEditorChange}
             />
 
             {/* product main color */}

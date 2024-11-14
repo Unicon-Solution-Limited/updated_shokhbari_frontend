@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useCallback } from "react";
 import { useAuth } from "./../../../../Authentication/AuthContext/AuthContext";
 import { v4 as uuidv4 } from "uuid";
 import JoditEditor from "jodit-react";
@@ -9,6 +9,20 @@ const MerchantSportsEntertainments = () => {
   const [message, setMessage] = useState("");
   const editor = useRef(null);
   const [addInputProduct, setAddInputProduct] = useState(false);
+  //Conditionally set category in select options
+  const [selectOption, setSelectOption] = useState("");
+  const [selectChildCategory, setSelectChildCategory] = useState("");
+  const [showDescription, setShowDescription] = useState("");
+
+  const editorContentRef = useRef(showDescription);
+
+  const handleEditorChange = useCallback((newContent) => {
+    editorContentRef.current = newContent;
+  }, []);
+
+  const handleEditorBlur = () => {
+    setShowDescription(editorContentRef.current);
+  };
 
   const config = {
     readonly: false,
@@ -39,11 +53,6 @@ const MerchantSportsEntertainments = () => {
       "unlink",
     ],
   };
-
-  //Conditionally set category in select options
-  const [selectOption, setSelectOption] = useState("");
-  const [selectChildCategory, setSelectChildCategory] = useState("");
-  const [showDescription, setShowDescription] = useState("");
 
   const handleSelectOption = (e) => {
     setSelectOption(e.target.value);
@@ -534,10 +543,11 @@ const MerchantSportsEntertainments = () => {
 
             <JoditEditor
               ref={editor}
-              value={showDescription}
+              value={editorContentRef.current}
               config={config}
               tabIndex={1}
-              onChange={(newContent) => setShowDescription(newContent)}
+              onBlur={handleEditorBlur}
+              onChange={handleEditorChange}
             />
 
             <div className="row my-4">
