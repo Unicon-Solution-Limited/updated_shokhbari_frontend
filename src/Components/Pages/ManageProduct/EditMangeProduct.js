@@ -6,6 +6,7 @@ import axios from "axios";
 
 const EditMangeProduct = ({ signleProduct }) => {
   const { currentUser } = useAuth();
+  const shortDescriptionRef = useRef();
   const editor = useRef(null);
   const [showDescription, setShowDescription] = useState("");
   const editorContentRef = useRef(showDescription);
@@ -58,6 +59,7 @@ const EditMangeProduct = ({ signleProduct }) => {
     campain,
     name,
     marchent,
+    shortDescription,
     extraDeliveryCost,
   } = signleProduct;
   const [message, setMessage] = useState("");
@@ -158,6 +160,35 @@ const EditMangeProduct = ({ signleProduct }) => {
           setTimeout(() => {
             window.location.reload();
           }, 1000);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  //short descriptoin
+  const handleShortDescriptionEdit = (even) => {
+    even.preventDefault();
+    const editProduct = {
+      shortDescription: shortDescriptionRef?.current?.value,
+    };
+    fetch(
+      `${process.env.REACT_APP_BACKEND_URL}/shortDescriptionEdit/${_id}?email=${currentUser?.email}`,
+      {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          authorization: `Bearer ${localStorage.getItem("shokhbari-token")}`,
+        },
+        body: JSON.stringify(editProduct),
+      }
+    )
+      .then((res) => res.json())
+      .then((result) => {
+        if (result.modifiedCount > 0) {
+          setMessage("Your Product Update Successfully");
+          window.location.reload();
         }
       })
       .catch((error) => {
@@ -772,6 +803,22 @@ const EditMangeProduct = ({ signleProduct }) => {
                 </div>
               </form>
 
+              {/* handleShortDescriptionEdit */}
+              <h6>Short Description</h6>
+              <form onSubmit={handleShortDescriptionEdit} className="mb-4">
+                <input
+                  type="text"
+                  name="shortDescription"
+                  ref={shortDescriptionRef}
+                  className="form-control"
+                  placeholder={shortDescription}
+                  required
+                />
+                <button type="submit" className="btn btn-primary mt-2">
+                  Submit Short Description
+                </button>
+              </form>
+
               {/* Edit Product Description */}
               <form
                 onSubmit={handleProductDescriptionEdit}
@@ -791,7 +838,7 @@ const EditMangeProduct = ({ signleProduct }) => {
                   />
                 </div>
                 <button type="submit" className="btn btn-primary">
-                  Submit Description
+                  Submit Full Description
                 </button>
               </form>
 
