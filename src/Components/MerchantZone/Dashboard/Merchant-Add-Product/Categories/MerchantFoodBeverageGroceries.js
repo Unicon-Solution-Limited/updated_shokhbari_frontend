@@ -265,6 +265,34 @@ const MerchantFoodBeverageGroceries = () => {
     window.location.reload();
   };
 
+  const duplicatePreviousVariant = () => {
+    if (newProduct.variants.length === 0) {
+      alert("No previous variant to duplicate.");
+      return;
+    }
+
+    const lastVariant = newProduct.variants[newProduct.variants.length - 1];
+    const duplicatedVariant = {
+      variantId: uuidv4(),
+      sameVariantId: uuidv4(),
+      color: lastVariant.color,
+      colorInput: lastVariant.colorInput,
+      image: "", // New image will be uploaded
+      sizes: lastVariant.sizes.map((size) => ({
+        variantItemId: uuidv4(),
+        sameVariantItemId: lastVariant.sameVariantId,
+        size: size.size,
+        stock: size.stock,
+        price: size.price,
+      })),
+    };
+
+    setNewProduct({
+      ...newProduct,
+      variants: [...newProduct.variants, duplicatedVariant],
+    });
+  };
+
   return (
     <div className="addProductBody my-2">
       <div className="headline">
@@ -411,21 +439,30 @@ const MerchantFoodBeverageGroceries = () => {
           ))}
 
           {/* button */}
-
+          {/* button */}
           <div className="d-flex justify-content-center align-items-center">
             <button
               type="button"
               className="btn myBtn mr-2"
               onClick={addVariant}
             >
-              Add New Color Variant
+              Add New product
             </button>
+
+            <button
+              type="button"
+              className="btn myBtn mx-2"
+              onClick={duplicatePreviousVariant}
+            >
+              Add more Image
+            </button>
+
             <button
               type="button"
               className="btn myBtn mx-2"
               onClick={addProduct}
             >
-              Submit Variant Product
+              Submit Product
             </button>
             <i
               onClick={() => handleVarientDlete()}
